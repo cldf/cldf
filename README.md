@@ -1,2 +1,5 @@
-# cldf
-Cross-linguistic Data Formats
+# Cross-linguistic Data Formats
+
+To allow exchange of cross-linguistic data and decouple development of tools and methods from that of databases, standardized data formats are necessary.
+
+The main types of cross-linguistic data we are concerned with here are wordlists and structure datasets which are used in historical linguistics.
