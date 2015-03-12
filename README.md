@@ -9,3 +9,16 @@ The main types of cross-linguistic data we are concerned with here are wordlists
 
 - Data should be both editable "by hand" and amenable to reading and writing by software.
 - UTF-8 encoded text files.
+
+
+## Core format specification
+
+Data file accompanied by metadata
+
+- `Language_ID`
+
+
+## Data types
+
+- [Wordlists](wordlist.md)
+- [Structure dataset](structure_dataset.md)
