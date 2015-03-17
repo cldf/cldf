@@ -9,11 +9,22 @@ The main types of cross-linguistic data we are concerned with here are wordlists
 
 - Data should be both editable "by hand" and amenable to reading and writing by software.
 - UTF-8 encoded text files.
+- Reference entities rather than duplicate.
+- IDs should be resolvable HTTP URLs if possible.
 
 
 ## Core format specification
 
-Data file accompanied by metadata
+A cross-linguistic dataset is encoded in the following set of files:
+
+- The core data file, encoded in csv, 
+- additional metadata provided as JSON file following the guidelines of the [Model for Tabular Data and Metadata on the Web](http://www.w3.org/TR/tabular-data-model/#standard-file-metadata), 
+- sources - if not referenced by Glottolog ID - supplied as BibTeX file (with the citation keys serving as local Source IDs).
+
+If the name of the dataset is `clds`, the respective filenames are
+- `clds.csv`
+- `clds-metadata.json`
+- `clds.bib`
 
 
 ### Identifiers
