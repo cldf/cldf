@@ -36,9 +36,17 @@ Alternatively, identifiers may be used to reference dataset local entities which
 
 ### The data file
 
-- `Language_ID`
+The core data file is encoded in [csv](http://tools.ietf.org/html/rfc4180) using the [UTF-8](http://en.wikipedia.org/wiki/UTF-8) character encoding. This file must have a header, i.e. the first row
+must contain the list of column names. While the file may contain any number of columns, columns with a specific 
+meaning in our context are detected by name:
+
+- `Language_ID`: identifies the language or variety the data in the row is about. A [Glottolog languoid URL](http://glottolog.org), or `glottocode` or ISO-639-3 code (FIXME: require a URL, or a disambiguating prefix?), or a local identifier.
 - `Source`
 - `Comment`
+
+Notes:
+
+- Using UTF-8 as character encoding means editing these files with MS Excel is not completely trivial, because Excel assumes cp1252 as default character encoding.
 
 
 ## Data types
