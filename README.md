@@ -26,6 +26,8 @@ Alternatively, identifiers may be used to reference dataset local entities which
 ### The data file
 
 - `Language_ID`
+- `Source`
+- `Comment`
 
 
 ## Data types
