@@ -49,6 +49,12 @@ Notes:
 - Using UTF-8 as character encoding means editing these files with MS Excel is not completely trivial, because Excel assumes cp1252 as default character encoding.
 
 
+### The metadata file
+
+Should be [JSON-LD](http://json-ld.org/), containing a dataset description using the [DCAT vocabulary](http://www.w3.org/TR/vocab-dcat/#Class:_Dataset). This will make it easy to [catalog](http://www.w3.org/TR/vocab-dcat/#class-catalog)
+cross-linguistic datasets.
+
+
 ## Data types
 
 - [Wordlists](wordlist.md)
