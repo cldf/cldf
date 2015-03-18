@@ -40,9 +40,9 @@ The core data file is encoded in [csv](http://tools.ietf.org/html/rfc4180) using
 must contain the list of column names. While the file may contain any number of columns, columns with a specific 
 meaning in our context are detected by name:
 
-- `Language_ID`: identifies the language or variety the data in the row is about. A [Glottolog languoid URL](http://glottolog.org), or `glottocode` or ISO-639-3 code (FIXME: require a URL, or a disambiguating prefix?), or a local identifier.
-- `Source`
-- `Comment`
+- `Language_ID`: identifies the language or variety the data in the row is about. A [Glottolog languoid URL](http://glottolog.org), or *glottocode* or ISO-639-3 code (FIXME: require a URL, or a disambiguating prefix?), or a local identifier.
+- `Source`: Semikolon-separated source specifications, of the form *<source_ID>[<source context>]*, e.g. *http://glottolog.org/resource/reference/id/318814[34]*, or *meier2015[3-12]* where *meier2015* is a citation key in the accompanying BibTeX file.
+- `Comment`: Free text comment.
 
 Notes:
 
