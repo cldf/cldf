@@ -51,7 +51,7 @@ Notes:
 
 ### The metadata file
 
-Should be [JSON-LD](http://json-ld.org/), containing a dataset description using the [DCAT vocabulary](http://www.w3.org/TR/vocab-dcat/#Class:_Dataset). This will make it easy to [catalog](http://www.w3.org/TR/vocab-dcat/#class-catalog)
+Should be [JSON-LD](http://json-ld.org/), containing a dataset distribution description using the [DCAT vocabulary](http://www.w3.org/TR/vocab-dcat/#class-distribution). This will make it easy to [catalog](http://www.w3.org/TR/vocab-dcat/#class-catalog)
 cross-linguistic datasets.
 
 
