@@ -1,6 +1,14 @@
 # Cross-linguistic Data Formats
 
+
+## Why?
+
 To allow exchange of cross-linguistic data and decouple development of tools and methods from that of databases, standardized data formats are necessary.
+
+Once established, these dataformats could become a foundation not only for tools but also for instruction material in the spirit of [Data Carpentry](http://datacarpentry.org/) for historical linguistics.
+
+
+## What?
 
 The main types of cross-linguistic data we are concerned with here are wordlists and structure datasets which are used in historical linguistics.
 
