@@ -6,6 +6,20 @@
 - http://lemon-model.net/
 - http://www.lexicalmarkupframework.org/
 
+
+### The data file
+
+In addition to the core column names required in each row of the data file, the following columns are required in wordlists:
+
+- `Word_form`: the entry as it occurs in the source.
+- `IPA`: IPA transcription (in phonological segmentation with help of space separators, allowing also for morphemic segmentation, full format description pending) 
+- `Concept_ID`: concepticon URL (currently not yet implemented, but will be added before end of April), lexibank URL?, ...
+- `Cognateset_ID`: e.g. http://ielex.mpi.nl/cognate/2549/
+- Space-separated list of tags to allow filtering, etc.
+- `Inventory_ID`: [PHOIBLE inventory ID](http://phoible.org/inventories/view/1617) specifying the symbol set used for the IPA transcription?
+- `Gloss_in_source`: may turn out to be redundant in certain cases but is essential for consistency when merging different data sources.
+
+
 ### Specific design features
 
 For the computer-human interface and the interaction between various software tools (be they based on purely computer-based or computer-assisted frameworks), we need to define certain aspects of data representation, including a representation of multiple alignments, cognate sets, and the like.
