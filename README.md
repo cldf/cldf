@@ -41,6 +41,8 @@ Following our design goal to reference rather than duplicate entities, identifie
 
 Alternatively, identifiers may be used to reference dataset local entities which are defined in the datasets metadata (or not at all). In this case identiers must be composed of the characters defined by the regular expression `[a-zA-Z0-9\-_]`. This restriction makes sure that these identifiers can be used as path components of HTTP URLs (see [rfc3986](https://tools.ietf.org/html/rfc3986#section-2.3)).
 
+Issues: #3
+
 
 ### The data file
 
