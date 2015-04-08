@@ -52,3 +52,9 @@ Here, we define relations between sequences. The important pre-condition is that
   - `1 3` for "Haus+meister",
   indicating that the first part of the compound words is cognate.
 
+
+### Compatibility
+
+Using tools like [csvkit](https://csvkit.readthedocs.org/en/stable/) it should be simple to convert a set of wordlists in cldf format into
+
+- [input](http://www.gabmap.nl/~app/doc/manual/datafile.html) for [Gabmap](http://www.gabmap.nl/).
