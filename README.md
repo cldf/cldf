@@ -19,6 +19,7 @@ The main types of cross-linguistic data we are concerned with here are wordlists
 - UTF-8 encoded text files.
 - Reference entities rather than duplicate.
 - IDs should be resolvable HTTP URLs if possible.
+- Compatibility with existing tools, standards and practice should alsways be kept in mind.
 
 
 ## Core format specification
@@ -55,9 +56,13 @@ meaning in our context are detected by name:
 - `Source`: Semikolon-separated source specifications, of the form *<source_ID>[<source context>]*, e.g. *http://glottolog.org/resource/reference/id/318814[34]*, or *meier2015[3-12]* where *meier2015* is a citation key in the accompanying BibTeX file.
 - `Comment`: Free text comment.
 
-Notes:
 
-- Using UTF-8 as character encoding means editing these files with MS Excel is not completely trivial, because Excel assumes cp1252 as default character encoding.
+#### Compatibility
+
+- Using UTF-8 as character encoding means editing these files with MS Excel is not completely trivial, because Excel assumes cp1252 as default character encoding - Libre Office Calc on the other hand handles these files just fine.
+- The tool support for csv files is getting better and better due to the hype around "data science". Some particularly useful tools are
+  - [csvkit](https://csvkit.readthedocs.org/en/stable/)
+  - [q - Text as Data](http://harelba.github.io/q/)
 
 
 ### The metadata file
