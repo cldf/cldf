@@ -32,7 +32,7 @@ A cross-linguistic dataset is encoded in the following set of files:
 
 If the name of the dataset is `clds`, the respective filenames are
 - `clds.csv`
-- `clds-metadata.json`
+- `clds.csv-metadata.json`
 - `clds.bib`
 
 
