@@ -75,6 +75,7 @@ cross-linguistic datasets.
 
 - [Wordlists](wordlist.md)
 - [Structure dataset](structure_dataset.md)
+- [IGT](igt.md)
 - [Language metadata](language_metadata.md)
 
 
