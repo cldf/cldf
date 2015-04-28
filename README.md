@@ -29,11 +29,13 @@ A cross-linguistic dataset is encoded in the following set of files:
 - The core data file, encoded in csv, 
 - additional metadata provided as JSON file following the guidelines of the [Model for Tabular Data and Metadata on the Web](http://www.w3.org/TR/tabular-data-model/#standard-file-metadata), 
 - sources - if not referenced by Glottolog ID - supplied as BibTeX file (with the citation keys serving as local Source IDs).
+- Examples - if not referenced - may be supplied as [*cldf* IGT](igt.md) file.
 
 If the name of the dataset is `clds`, the respective filenames are
 - `clds.csv`
 - `clds.csv-metadata.json`
 - `clds.bib`
+- `clds.igt.csv`
 
 
 ### Identifiers
@@ -54,6 +56,7 @@ meaning in our context are detected by name:
 - `ID`: identifies a row in the data file; either a local ID - preferably an [UUID](http://en.wikipedia.org/wiki/Universally_unique_identifier) - or an (equally universally unique) URL like http://wold.clld.org/word/7214142329897819 or http://wals.info/valuesets/1A-niv
 - `Language_ID`: identifies the language or variety the data in the row is about. A [Glottolog languoid URL](http://glottolog.org), or *glottocode* or ISO-639-3 code (FIXME: require a URL, or a disambiguating prefix?), or a local identifier.
 - `Source`: Semikolon-separated source specifications, of the form *<source_ID>[<source context>]*, e.g. *http://glottolog.org/resource/reference/id/318814[34]*, or *meier2015[3-12]* where *meier2015* is a citation key in the accompanying BibTeX file.
+- `Example`: Semikolon-separated example specifications, of the form *<example_ID>[<context>]*, e.g. *http://apics-online.info/sentences/1-1[exception]*, or* sentence5* where *sentence5* is an ID in `clds.igt.csv`.
 - `Comment`: Free text comment.
 
 
@@ -75,7 +78,7 @@ cross-linguistic datasets.
 
 - [Wordlists](wordlist.md)
 - [Structure dataset](structure_dataset.md)
-- [IGT](igt.md)
+- [Interlinear glossed text](igt.md)
 - [Language metadata](language_metadata.md)
 
 
