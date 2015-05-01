@@ -92,3 +92,4 @@ Additionally cldf data providers may serve their datasets as [JSONP](http://en.w
 ## Open questions
 
 - What about example sentences, formatted as [interlinear glossed text](http://en.wikipedia.org/wiki/Interlinear_gloss)? One solution would be to treat them like other structured properties of core data rows like sources, i.e. just add references in the core data file. Of course this would be facilitated with example collections - or [corpus journals](http://dlc.hypotheses.org/691).
+- Should language IDs follow the [BCP 47](https://tools.ietf.org/html/bcp47) standard?
