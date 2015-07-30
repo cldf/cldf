@@ -89,6 +89,16 @@ The core format specification is already following the guidelines of the [Model 
 Additionally cldf data providers may serve their datasets as [JSONP](http://en.wikipedia.org/wiki/JSONP) to make it possible to retrieve data from a browser-based application. For cldf data served as JSONP we specify the name of the callback function as `cldf_data` to make it possible to serve static files.
 
 
+## Examples
+
+To stipulate further discussion and help experiments with tools, some variant of cldf data may be obtained here:
+
+- [WALS as cldf](http://wals.info/download)
+- [SAILS as cldf](http://sails.clld.org/download)
+
+These downloads have been created using the [clld toolkit](https://github.com/clld/clld/blob/master/clld/web/adapters/cldf.py).
+
+
 ## Open questions
 
 - What about example sentences, formatted as [interlinear glossed text](http://en.wikipedia.org/wiki/Interlinear_gloss)? One solution would be to treat them like other structured properties of core data rows like sources, i.e. just add references in the core data file. Of course this would be facilitated with example collections - or [corpus journals](http://dlc.hypotheses.org/691).
