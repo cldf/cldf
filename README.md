@@ -3,7 +3,7 @@
 
 ## Why?
 
-To allow exchange of cross-linguistic data and decouple development of tools and methods from that of databases, standardized data formats are necessary.
+To allow exchange of cross-linguistic data and [decouple development of tools and methods from that of databases](bigger_picture.md), standardized data formats are necessary.
 
 Once established, these dataformats could become a foundation not only for tools but also for instruction material in the spirit of [Data Carpentry](http://datacarpentry.org/) for historical linguistics.
 
