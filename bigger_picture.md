@@ -9,3 +9,5 @@ historical linguistics, e.g. [LingPy](http://lingpy.org/tutorial/workflow.html),
 If suitable text- and line-based formats are available, this pipeline-style does also allow for easy extensibility;
 E.g. a workflow for automatic cognate judgements based on LingPy functionality could be extended with phylogenetic
 analysis and post-processing via [phyltr](https://github.com/lmaurits/phyltr), which processes sets of phylogenetic trees represented in the newick format.
+
+If cross-linguistic comparisons procede in the footsteps of bioinformatics, workflows based UNIX pipelines may at some point be formalized using a [common workflow language](http://common-workflow-language.github.io/).
