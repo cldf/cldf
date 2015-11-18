@@ -70,8 +70,12 @@ meaning in our context are detected by name:
 
 ### The metadata file
 
-Should be [JSON-LD](http://json-ld.org/), containing a dataset distribution description using the [DCAT vocabulary](http://www.w3.org/TR/vocab-dcat/#class-distribution). This will make it easy to [catalog](http://www.w3.org/TR/vocab-dcat/#class-catalog)
-cross-linguistic datasets.
+Metadata should be specified using [JSON-LD](http://json-ld.org/) as described in the [Metadata Vocabulary for Tabular Data](http://www.w3.org/TR/tabular-metadata/), containing a dataset distribution description using the 
+[DCAT vocabulary](http://www.w3.org/TR/vocab-dcat/#class-distribution). This will make it easy to  
+[catalog](http://www.w3.org/TR/vocab-dcat/#class-catalog) cross-linguistic datasets.
+
+It would also provide a well-specified mechanism to document the particular CSV dialect used for the data files, as described in the [example for object properties](http://www.w3.org/TR/2015/WD-tabular-metadata-20150416/#object-properties); thus, the sometimes heated 
+debate over "tab" versus "comma" could be elegantly circumvented.
 
 
 ## Data types
