@@ -109,3 +109,9 @@ These downloads have been created using the [clld toolkit](https://github.com/cl
 - Should language IDs follow the [BCP 47](https://tools.ietf.org/html/bcp47) standard?
 - Since the metadata file will often contain metadata about languages, i.e. about things with a spatial extension, we might consider using GeoJSON as format, because this will be more immediately useful. Unfortunately, the things described in a GeoJSON file are called *features*, which might be confusing, when used for languages which in turn may be described by *features* in the typological sense.
 - Some data strcutures often encountered in historical linguistics cannot readily be represented by simple csv files, e.g. alignments (in particular multiple alignments), phylogenetic trees, and to a lesser degree distance matrices.
+
+
+## History
+
+Work on this concrete proposal for a cross-linguistic data formats was triggered by the [LANCLID 2 workshop](http://www.eva.mpg.de/linguistics/conferences/2014-ws-lanclid2/index.html) held in April 2015 in Leipzig -
+in particular by Harald Hammarström's presentation [A Proposal for Data Interface Formats for Cross-Linguistic Data](https://github.com/clld/lanclid2/blob/master/presentations/hammarstrom.pdf).
