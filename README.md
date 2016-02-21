@@ -5,7 +5,7 @@
 
 To allow exchange of cross-linguistic data and [decouple development of tools and methods from that of databases](bigger_picture.md), standardized data formats are necessary.
 
-Once established, these dataformats could become a foundation not only for tools but also for instruction material in the spirit of [Data Carpentry](http://datacarpentry.org/) for historical linguistics.
+Once established, these dataformats could become a foundation not only for tools but also for instruction material in the spirit of [Data Carpentry](http://datacarpentry.org/) for historical linguistics and linguistic typology.
 
 
 ## What?
@@ -18,7 +18,7 @@ The main types of cross-linguistic data we are concerned with here are wordlists
 - Data should be both editable "by hand" and amenable to reading and writing by software.
 - UTF-8 encoded text files.
 - Reference entities rather than duplicate.
-- IDs should be resolvable HTTP URLs if possible.
+- IDs should be resolvable HTTP URLs if possible. If not, they should be documented in the metadata.
 - Compatibility with existing tools, standards and practice should alsways be kept in mind.
 
 
@@ -58,6 +58,9 @@ meaning in our context are detected by name:
 - `Source`: Semikolon-separated source specifications, of the form *<source_ID>[<source context>]*, e.g. *http://glottolog.org/resource/reference/id/318814[34]*, or *meier2015[3-12]* where *meier2015* is a citation key in the accompanying BibTeX file.
 - `Example`: Semikolon-separated example specifications, of the form *<example_ID>[<context>]*, e.g. *http://apics-online.info/sentences/1-1[exception]*, or* sentence5* where *sentence5* is an ID in `clds.igt.csv`.
 - `Comment`: Free text comment.
+
+The core data file may also be encoded in tsv, i.e. using the `tab` character as column separator. If so, this must be
+indicated by using `.tsv` as filename extension. (Tools like `csvkit` can be used to easily convert from tsv to csv.)
 
 
 #### Compatibility
