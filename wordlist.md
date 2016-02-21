@@ -13,11 +13,14 @@ In addition to the core column names required in each row of the data file, the 
 
 - `Word_form`: the entry as it occurs in the source.
 - `IPA`: IPA transcription (in phonological segmentation with help of space separators, allowing also for morphemic segmentation, full format description pending) 
-- `Concept_ID`: concepticon URL (currently not yet implemented, but will be added before end of April), lexibank URL?, ...
+- `Concept_ID`: concepticon concept set URL or ID
+
+Recognized optional columns:
+
 - `Cognateset_ID`: e.g. http://ielex.mpi.nl/cognate/2549/
 - Space-separated list of tags to allow filtering, etc.
-- `Inventory_ID`: [PHOIBLE inventory ID](http://phoible.org/inventories/view/1617) specifying the symbol set used for the IPA transcription?
-- `Gloss_in_source`: may turn out to be redundant in certain cases but is essential for consistency when merging different data sources.
+- `Inventory_ID`: [PHOIBLE inventory ID](http://phoible.org/inventories/view/1617) specifying the symbol set used for the IPA transcription
+- `Gloss_in_source`: The gloss as it appeared in the source.
 
 
 ### Specific design features
