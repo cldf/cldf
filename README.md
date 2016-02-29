@@ -1,6 +1,5 @@
 # Cross-linguistic Data Formats
 
-
 ## Why?
 
 To allow exchange of cross-linguistic data and [decouple development of tools and methods from that of databases](bigger_picture.md), standardized data formats are necessary.
