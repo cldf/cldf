@@ -211,6 +211,21 @@ rigidly in the general format, but allow for a lot of flexibility. Only when we
 allow for this, we will be able to handle, for example, multiple cognate
 judgments, in the same file.
 
+#### Beyond Cognacy
+
+It is clear that cognacy is in its core not a binary concept (word X is cognate with Y or not), but rather a concept of "degree". Depending on our perspective, words can exhibit different degrees of cognacy, and in all these cases, morphological change plays a crucial role. When dealing with compounding patterns, for example, we could talk of "partial cognacy", and in this way, we could say that English *fingernail* is partially cognate with Russian *nogot'*, since the *nail* in English is cognate with *nogot'* in Russian (albeit not completely, as can be seen from the *l* in English which misses a counterpart in Russian, or the *t'* in Russian, missing a cognate sound in English).
+
+LingPy and EDICTOR allow for a rough handling of partial cognacy, which is represented as a sequence of integer IDs separated by a space which describes the cognate relations of each morpheme in a word. Our example of English and Russian would thus be displayed as:
+
+Language | Word Form | Segments | Cognate IDs |
+--- | --- | --- | --- |
+English | fingernail | f i ŋ ə r + n æi l | 1 2 |
+Russian | nogot' | n o g o tj | 2 |
+
+This format requires that the field for SEGMENTS contains as many morphemes as the field for COGNATE IDs. As a general convention, elements which are not assigned to anything else (or not yet inspected by anybody), are represented with a 0 in LingPy and EDICTOR. This distinction is important, since there is a different quality between annotating that one has not really looked at a word, or does not know whether it has cognate elements in other words, or that one knows that it has no reflex in any other language. If we did not know what to do with the *finger* in English, we could thus also simply annotated it as a "0".
+
+While LingPy has automatic ways to infer partial cognates in datasets, EDICTOR provides ways to specifically annotated partial cognates. The current system of annotation has thus already been sufficiently tested, and was even very successful in allowing us to quickly annotate large amounts of data in this way.
+
 
 
 
