@@ -54,7 +54,6 @@ def write_cldf(req, contrib, valuesets, features, outdir):
         type='glottolog', name='{Language_ID}').url()
     ds.metadata['tableSchema']['columns'][3]['valueUrl'] = url_template(
         req, 'parameter', 'Parameter_ID')
-    ds.metadata['tableSchema']['columns'][5]['datatype'] = 'anyURI'
 
     ds.metadata['dc:bibliographicCitation '] = text_citation(req, contrib)
     ds.metadata['dc:publisher'] = '%s, %s' % (
