@@ -10,6 +10,7 @@
     "dc:isPartOf": "http://wals.info/", 
     "dc:issued": "2013-08-15", 
     "dc:format": "cldf-1.0", 
+    "dcat:accessURL": "http://wals.info/download", 
     "dc:identifier": "http://wals.info/chapter/1", 
     "dc:license": "http://creativecommons.org/licenses/by/4.0/", 
     "dc:publisher": "Max Planck Institute for Evolutionary Anthropology", 
