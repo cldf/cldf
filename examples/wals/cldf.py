@@ -17,15 +17,18 @@ def bibrecord2source(req, src):
     return Source(rec.id, rec.genre.value if rec.genre else 'misc', **dict(rec.items()))
 
 
+def cldf_pages(pages):
+    if pages:
+        return '[%s]' % pages.replace(';', '.').replace('[', '{').replace(']', '}')
+    return ''
+
+
 def format_refs(req, obj):
     sources = []
     refs = []
     for r in obj.references:
         if r.source:
-            ref = r.source.id
-            if r.description:
-                ref += '[%s]' % r.description
-            refs.append(ref)
+            refs.append('%s%s' % (r.source.id, cldf_pages(r.description)))
             sources.append(bibrecord2source(req, r.source))
     return ';'.join(refs), sources
 
@@ -67,7 +70,7 @@ def write_cldf(req, contrib, valuesets, features, outdir):
     for vs in valuesets:
         refs, sources = format_refs(req, vs)
         ds.sources.add(*sources)
-        ds.add_row([
+        row = [
             vs.id,
             vs.language.glottocode or req.resource_url(vs.language),
             vs.language.name,
@@ -75,7 +78,8 @@ def write_cldf(req, contrib, valuesets, features, outdir):
             vs.values[0].domainelement.name,
             refs,
             vs.source or '',
-        ])
+        ]
+        ds.add_row(row)
     ds.write(outdir)
 
 
