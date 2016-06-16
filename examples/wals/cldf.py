@@ -59,13 +59,13 @@ def write_cldf(req, contrib, valuesets, features, outdir):
     ds.metadata['dc:bibliographicCitation '] = text_citation(req, contrib)
     ds.metadata['dc:publisher'] = '%s, %s' % (
         req.dataset.publisher_name, req.dataset.publisher_place)
-    ds.metadata['dc:publisher'] = req.dataset.publisher_name
     ds.metadata['dc:license'] = req.dataset.license
     ds.metadata['dc:issued'] = req.dataset.published.isoformat()
     ds.metadata['dc:title'] = contrib.name
     ds.metadata['dc:creator'] = contrib.formatted_contributors()
     ds.metadata['dc:identifier'] = req.resource_url(contrib)
     ds.metadata['dc:isPartOf'] = req.resource_url(req.dataset)
+    ds.metadata['dcat:accessURL'] = req.route_url('download')
 
     for vs in valuesets:
         refs, sources = format_refs(req, vs)
