@@ -99,10 +99,9 @@ Additionally cldf data providers may serve their datasets as [JSONP](http://en.w
 
 To stipulate further discussion and help experiments with tools, some variant of cldf data may be obtained here:
 
-- [WALS as cldf](http://wals.info/download)
-- [SAILS as cldf](http://sails.clld.org/download)
+- [A WALS chapter as cldf](examples/wals)
 
-These downloads have been created using the [clld toolkit](https://github.com/clld/clld/blob/master/clld/web/adapters/cldf.py).
+These downloads have been created using the [pycldf package](https://github.com/glottobank/pycldf).
 
 
 ## Open questions
