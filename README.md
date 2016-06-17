@@ -72,11 +72,50 @@ indicated by using `.tsv` as filename extension. (Tools like `csvkit` can be use
 
 ### The metadata file
 
-Metadata should be specified using [JSON-LD](http://json-ld.org/) as described in the [Metadata Vocabulary for Tabular Data](http://www.w3.org/TR/tabular-metadata/), containing a dataset distribution description using the 
+Metadata must be specified using [JSON-LD](http://json-ld.org/) as described in the [Metadata Vocabulary for Tabular Data](http://www.w3.org/TR/tabular-metadata/). 
+
+However, to make tooling simpler, we restrict the metadata specification as follows:
+- Metadata files must specify a `tables` property on top-level.
+- The table provided in the CLDF data file must be listed in `tables` using a `dc:type` attribute with value `cldf-values`.
+- If each row in the data file corresponds to a resource on the web, the `tableSchema` property should provide an `aboutUrl` property.
+- If individual cells in a row correspond to resources on the web, the corresponding column specification should provide a `valueUrl` property.
+
+Each dataset should provide a dataset distribution description using the 
 [DCAT vocabulary](http://www.w3.org/TR/vocab-dcat/#class-distribution). This will make it easy to  
 [catalog](http://www.w3.org/TR/vocab-dcat/#class-catalog) cross-linguistic datasets.
 
-It would also provide a well-specified mechanism to document the particular CSV dialect used for the data files, as described in the [example for object properties](http://www.w3.org/TR/2015/WD-tabular-metadata-20150416/#object-properties); thus, the sometimes heated 
+An example for a metadata file could thus look as follows:
+```python
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "dc:title": "The Dataset",
+  "dc:bibliographicCitation": "Cite me like this!",
+  "dc:license": "http://creativecommons.org/licenses/by/4.0/",
+  "tables": [{
+    "url": "clds.csv",
+    "tableSchema": {
+      "columns": [{
+        "name": "ID",
+        "datatype": "string"
+      }, {
+        "name": "Language_ID",
+        "datatype": "string"        
+        "valueUrl": "http://glottolog.org/resource/languoid/id/{Language_ID}"
+      }, {
+        "name": "Parameter_ID",
+        "datatype": "string"
+      }, {
+        "name": "Value",
+        "datatype": "string"
+      }],
+      "aboutUrl": "http://example.org/valuesets/{ID}",
+      "primaryKey": "ID"
+    }
+  ]
+}
+```
+
+This also provides a well-specified mechanism to document the particular CSV dialect used for the data files, as described in the [example for object properties](http://www.w3.org/TR/2015/WD-tabular-metadata-20150416/#object-properties); thus, the sometimes heated 
 debate over "tab" versus "comma" could be elegantly circumvented.
 
 
