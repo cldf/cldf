@@ -91,25 +91,41 @@ An example for a metadata file could thus look as follows:
   "dc:title": "The Dataset",
   "dc:bibliographicCitation": "Cite me like this!",
   "dc:license": "http://creativecommons.org/licenses/by/4.0/",
-  "tables": [{
-    "url": "clds.csv",
-    "tableSchema": {
-      "columns": [{
-        "name": "ID",
-        "datatype": "string"
-      }, {
-        "name": "Language_ID",
-        "datatype": "string"        
-        "valueUrl": "http://glottolog.org/resource/languoid/id/{Language_ID}"
-      }, {
-        "name": "Parameter_ID",
-        "datatype": "string"
-      }, {
-        "name": "Value",
-        "datatype": "string"
-      }],
-      "aboutUrl": "http://example.org/valuesets/{ID}",
-      "primaryKey": "ID"
+  "tables": [
+    {
+      "url": "ds1.csv",
+      "dc:type": "cldf-values",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "ID",
+            "datatype": "string"
+          },
+          {
+            "name": "Language_ID",
+            "datatype": "string",
+            "valueUrl": "http://glottolog.org/resource/languoid/id/{Language_ID}"
+          },
+          {
+            "name": "Parameter_ID",
+            "datatype": "string"
+          },
+          {
+            "name": "Value",
+            "datatype": "string"
+          },
+          {
+            "name": "Comment",
+            "datatype": "string"
+          },
+          {
+            "name": "Source",
+            "datatype": "string"
+          }
+        ],
+        "aboutUrl": "http://example.org/valuesets/{ID}",
+        "primaryKey": "ID"
+      }
     }
   ]
 }
