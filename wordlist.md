@@ -198,7 +198,7 @@ identifiers as global:
   cognate set coding used for most phylogenetic analyses.
 
 While LingPy has a pre-defined set of names for cognate identifiers, the
-EDICTOR potentially treats all column names ending in *ID as identifiers for
+EDICTOR potentially treats all column names ending in `*`ID as identifiers for
 cognate words, or, more specifically, as identifiers with integer keys.
 LingPy-2.5 still retains this behaviour but now also allows for non-integer
 identifiers for cognate sets, and the EDICTOR allows any column
