@@ -1,5 +1,15 @@
 ## Structure Dataset
 
+Structure datasets are lists of values measured/coded/determined for a language and a (often typological) feature.
+Typical examples are WALS datasets, e.g. the [list of coded values for the language Abau](http://wals.info/languoid/lect/wals_code_aba).
+
+
+### The data file
+
+In addition to the core column names required in each row of the data file, the following columns are required in structure datasets:
+
+- `Feature_ID`: An identifier of a feature (a.k.a. parameter) the `Value` is associated with.
+
 
 ### Multi-dimensional features
 
