@@ -12,7 +12,7 @@ Once established, these dataformats could become a foundation not only for tools
 The main types of cross-linguistic data we are concerned with here are wordlists and structure datasets which are used in historical linguistics.
 
 
-## Design goals
+## Design principles
 
 - Data should be both editable "by hand" and amenable to reading and writing by software.
 - UTF-8 encoded text files.
@@ -35,6 +35,8 @@ If the name of the dataset is `clds`, the respective filenames are
 - `clds.csv-metadata.json`
 - `clds.bib`
 - `clds.igt.csv`
+
+Additional tabular data, e.g. cognate judgements accompanying a wordlist, can be tied in using additional table descriptions in the metadata file.
 
 
 ### Identifiers
@@ -75,7 +77,7 @@ indicated by using `.tsv` as filename extension. (Tools like `csvkit` can be use
 Metadata must be specified using [JSON-LD](http://json-ld.org/) as described in the [Metadata Vocabulary for Tabular Data](http://www.w3.org/TR/tabular-metadata/). 
 
 However, to make tooling simpler, we restrict the metadata specification as follows:
-- Metadata files must specify a `tables` property on top-level.
+- Metadata files must specify a `tables` property on top-level. While this add a bit of verbosity to the metadata description, it makes it possible to describe mutiple data tables in one metadata file.
 - The table provided in the CLDF data file must be listed in `tables` using a `dc:type` attribute with value `cldf-values`.
 - If each row in the data file corresponds to a resource on the web, the `tableSchema` property should provide an `aboutUrl` property.
 - If individual cells in a row correspond to resources on the web, the corresponding column specification should provide a `valueUrl` property.
