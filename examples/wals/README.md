@@ -4,6 +4,7 @@ A WALS Chapter as CLDF dataset
 - [core data file](wals-chapter-1.csv)
 - [metadata file](wals-chapter-1.csv-metadata.json)
 - [bibliography](wals-chapter-1.bib)
+- [additional data file listing details about allowed values](wals-chapter-1-domain.csv)
 
 Thes files have been created using [`pycldf` version 0.2.1](https://github.com/glottobank/pycldf) from within a script operating within the WALS clld app:
 
