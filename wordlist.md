@@ -33,15 +33,15 @@ format thus requires four fields (columns) in the CSV file:
 
 * ID: (line, word) identifier
 * Language_ID: the language identifier (e.g.m unique name or glottocode, if available)
-* Concept_ID: the concept identifier (e.g., concepticon concept_set, if available)
-* Word_form: the word form, the main value, for the given language and the
-  given concept 
+* Parameter_ID: the concept identifier (e.g., concepticon concept_set, if available)
+* Value: the word form, the main value, for the given language and the
+  given concept (may have different degrees of  
 
 Language and concept labels may drastically vary across datasets, although the
 same entities are referenced. Given the purpose of CLDF, we therefore encourage
 the use of Glottolog and the CLLD Concepticon as basic sources for
 standardization of language and concept identifiers. We should note, however,
-that a Glottolog_ID and a Concept_ID as provided by Glottolog and the
+that a Glottolog_ID and a Concepticon_ID as provided by Glottolog and the
 Concepticon are not necessarily enough. First, if dialects are the object of
 investigation, or different sources of a given language variety, we will want
 to keep the data distinct, and additional identifiers for specific language
@@ -53,25 +53,25 @@ would cover two or more concepts. In all these cases, one needs to keep the
 original data distinct.
  
 In order to handle these cases, one could either modify the Language_ID and the
-Concept_ID, or, one adds two more columns in which the data is represented as
-originally intended and collected, with Language_ID and Concept_ID then serving
+Parameter_ID, or, one adds two more columns in which the data is represented as
+originally intended and collected, with a local Language_ID and a local Parameter_ID then serving
 as a cross-linguistic reference, and the language and the concept column
 serving for the original data. This would yield a new structure of a basic
 dataset, with:
 
 * ID
-* Language (arbitrary unique identifier, usually the name that is used to
+* Language_ID (arbitrary unique identifier, usually the name that is used to
   denote the variety)
-* Concept (arbitrary unique identifier, usually the original concept label)  
-* Word_Form
-* Language_ID
-* Concept_ID
+* Parameter_ID (arbitrary unique identifier, usually the original concept label)  
+* Value
+* Glottolog_ID
+* Concepticon_ID
 
 Note that, since we allow for additional meta-data in JSON-format, the
 information regarding the cross-linguistic identifiers could as well be
 provided in the meta-data and would thus reduce redundancy. 
  
-The minimal form of ID, Language, Concept, and Word Form is generally accepted
+The minimal form of ID, Language, Concept (=Parameter), and Word Form (=Value) is generally accepted
 by LingPy and EDICTOR. When passed additional columns named CONCEPTICON_ID and
 GLOTTOLOG, the EDICTOR further automatically creates a hyperlink to the entries
 in the two databases. For future versions of LingPy, a Concepticon
