@@ -12,7 +12,7 @@ Once established, these dataformats could become a foundation not only for tools
 The main types of cross-linguistic data we are concerned with here are wordlists and structure datasets which are used in historical linguistics.
 
 
-## Design goals
+## Design principles
 
 - Data should be both editable "by hand" and amenable to reading and writing by software.
 - UTF-8 encoded text files.
@@ -36,6 +36,8 @@ If the name of the dataset is `clds`, the respective filenames are
 - `clds.bib`
 - `clds.igt.csv`
 
+Additional tabular data, e.g. cognate judgements accompanying a wordlist, can be tied in using additional table descriptions in the metadata file.
+
 
 ### Identifiers
 
@@ -54,8 +56,8 @@ meaning in our context are detected by name:
 
 - `ID`: identifies a row in the data file; either a local ID - preferably an [UUID](http://en.wikipedia.org/wiki/Universally_unique_identifier) - or an (equally universally unique) URL like http://wold.clld.org/word/7214142329897819 or http://wals.info/valuesets/1A-niv
 - `Language_ID`: identifies the language or variety the data in the row is about. A [Glottolog languoid URL](http://glottolog.org), or *glottocode* or ISO-639-3 code (FIXME: require a URL, or a disambiguating prefix?), or a local identifier.
-- `Source`: Semikolon-separated source specifications, of the form *<source_ID>[<source context>]*, e.g. *http://glottolog.org/resource/reference/id/318814[34]*, or *meier2015[3-12]* where *meier2015* is a citation key in the accompanying BibTeX file.
-- `Example`: Semikolon-separated example specifications, of the form *<example_ID>[<context>]*, e.g. *http://apics-online.info/sentences/1-1[exception]*, or* sentence5* where *sentence5* is an ID in `clds.igt.csv`.
+- `Source`: Semicolon-separated source specifications, of the form *<source_ID>[<source context>]*, e.g. *http://glottolog.org/resource/reference/id/318814[34]*, or *meier2015[3-12]* where *meier2015* is a citation key in the accompanying BibTeX file.
+- `Example`: Semicolon-separated example specifications, of the form *<example_ID>[<context>]*, e.g. *http://apics-online.info/sentences/1-1[exception]*, or* sentence5* where *sentence5* is an ID in `clds.igt.csv`.
 - `Comment`: Free text comment.
 
 The core data file may also be encoded in tsv, i.e. using the `tab` character as column separator. If so, this must be
@@ -75,7 +77,7 @@ indicated by using `.tsv` as filename extension. (Tools like `csvkit` can be use
 Metadata must be specified using [JSON-LD](http://json-ld.org/) as described in the [Metadata Vocabulary for Tabular Data](http://www.w3.org/TR/tabular-metadata/). 
 
 However, to make tooling simpler, we restrict the metadata specification as follows:
-- Metadata files must specify a `tables` property on top-level.
+- Metadata files must specify a `tables` property on top-level. While this add a bit of verbosity to the metadata description, it makes it possible to describe mutiple data tables in one metadata file.
 - The table provided in the CLDF data file must be listed in `tables` using a `dc:type` attribute with value `cldf-values`.
 - If each row in the data file corresponds to a resource on the web, the `tableSchema` property should provide an `aboutUrl` property.
 - If individual cells in a row correspond to resources on the web, the corresponding column specification should provide a `valueUrl` property.

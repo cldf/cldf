@@ -3,6 +3,7 @@ from sqlalchemy.orm import joinedload, contains_eager, joinedload_all
 
 from pycldf.dataset import Dataset
 from pycldf.sources import Source
+from clldutils.dsv import UnicodeWriter
 from clld.scripts.util import parsed_args, ExistingDir
 from clld.db.meta import DBSession
 from clld.db.models.common import (
@@ -14,7 +15,7 @@ from clld.web.util.helpers import text_citation
 def bibrecord2source(req, src):
     rec = src.bibtex()
     rec['wals_url'] = req.resource_url(src)
-    return Source(rec.id, rec.genre.value if rec.genre else 'misc', **dict(rec.items()))
+    return Source(rec.genre.value if rec.genre else 'misc', rec.id, **dict(rec.items()))
 
 
 def cldf_pages(pages):
@@ -46,13 +47,13 @@ def write_cldf(req, contrib, valuesets, features, outdir):
         'Language_name',
         'Parameter_ID',
         'Value',
+        'DomainElement',
         'Source',
         'Comment')
-    ds.metadata['tableSchema']['aboutUrl'] = url_template(req, 'valueset', 'ID')
-
-    ds.metadata['tableSchema']['columns'][1]['valueUrl'] = Identifier(
+    ds.table.schema.aboutUrl = url_template(req, 'valueset', 'ID')
+    ds.table.schema.columns['Language_ID'].valueUrl = Identifier(
         type='glottolog', name='{Language_ID}').url()
-    ds.metadata['tableSchema']['columns'][3]['valueUrl'] = url_template(
+    ds.table.schema.columns['Parameter_ID'].valueUrl = url_template(
         req, 'parameter', 'Parameter_ID')
 
     ds.metadata['dc:bibliographicCitation '] = text_citation(req, contrib)
@@ -66,19 +67,51 @@ def write_cldf(req, contrib, valuesets, features, outdir):
     ds.metadata['dc:isPartOf'] = req.resource_url(req.dataset)
     ds.metadata['dcat:accessURL'] = req.route_url('download')
 
-    for vs in valuesets:
+    domain = set()
+
+    for i, vs in enumerate(valuesets):
+        if i == 0:
+            ds.table.schema.columns['DomainElement'].valueUrl = \
+                vs.values[0].domainelement.url(req).split('#DE-')[0] \
+                + '#DE-{DomainElement}'
+
         refs, sources = format_refs(req, vs)
         ds.sources.add(*sources)
-        row = [
+        ds.add_row([
             vs.id,
             vs.language.glottocode or req.resource_url(vs.language),
             vs.language.name,
             features[vs.parameter_pk].id,
             vs.values[0].domainelement.name,
+            vs.values[0].domainelement.id,
             refs,
             vs.source or '',
+        ])
+        domain.add(vs.values[0].domainelement)
+
+    if domain:
+        fname = outdir.joinpath("%s-domain.csv" % ds.name)
+        ds.table.schema["foreignKeys"] = [
+            {
+                "columnReference": "DomainElement",
+                "reference": {
+                    "resource": fname.name,
+                    "columnReference": "ID"
+                }
+            }
         ]
-        ds.add_row(row)
+        header = ['ID', 'Name', 'Numeric', 'Description']
+        ds.metadata['tables'].append({
+            'url': fname.name,
+            'tableSchema': {
+                'columns': [{'name': n, 'datatype': 'string'} for n in header]
+            }
+        })
+        with UnicodeWriter(fname) as writer:
+            writer.writerow(header)
+            for de in sorted(domain, key=lambda d: (d.parameter_pk, d.number)):
+                writer.writerow([de.id, de.name, de.number, de.description])
+
     ds.write(outdir)
 
 
