@@ -1,18 +1,19 @@
-# Dictionary specification for CLDF
+# Dictionary Module
 
-(the following were basic information I received from @haspelmath, please feel free to edit further)
+A simple dictionary (e.g. for publication in [Dictionaria](http://dictionaria.clld.org)) is a set of three tables.
 
-## (1) The entry table*
+## Entries
 
-Each entry must contain information in the following three fields:
+Dictionary entries must be stored as rows in a CSV file either named `entries.csv` or specified as table with 
+common property `"dc:type": "dictionaria:entries"` in the metadata file.
 
- 
+Each entry row must contain information in the following three columns:
 
-* (entry) ID (a unique alphanumeric code, chosen arbitrarily)
-* headword (= lemma, or citation form)
-* part-of-speech
+* `ID`: a unique alphanumeric code, chosen arbitrarily
+* `headword`: lemma, or citation form
+* `part-of-speech`
 
-### standard fields:
+In addition, some optional standard columns are recognized:
 
 * lemma in original script
 * pronunciation of lemma
@@ -24,26 +25,27 @@ Each entry must contain information in the following three fields:
 * source word (for loanwords)
 * sound file ID
 
-### language-specific fields (some examples):
+Entries may have additional language-specific fields, e.g.
 
 * gender
 * inflectional class
 * form in divergent dialect X
 * sociolinguistic information such as literary vs. colloquial, obsolete, taboo, etc.
- 
+
 Finally, an entry can contain (standard or language-specific)
 *association fields*, i.e. fields that establish a relationship between
 the entry and some other entry. The content of an association field is a
 list of entry IDs. The name of an association field is relational, i.e.
 it is a transitive or copula verb or ends in a preposition, e.g.
 
+`FIXME`: Specify syntax for column names of association fields!
 
 * it contains*(list of entry IDs)
 * it is part of*(list of entry IDs)
 * its causative is*(list of entry IDs)
 * its numeral classifier is*(list of entry IDs)
 
-## (2) The sense table
+## Senses
 
 The sense table contains all the senses which are represented in the
 dictionary. Each sense is linked to exactly one entry, but entries may
@@ -54,9 +56,9 @@ entries.
 Each sense must minimally contain information in the following
 three fields (again, the ID is a code that can be chosen arbitrarily):
 
-* (sense) ID
-* sense description (= list of semicolon-delimited sense descriptors)
-* ID of related entry
+* `ID`
+* `description`: sense description (= list of semicolon-delimited sense descriptors)
+* `entry_ID`: ID of related entry
 
 standard fields:
 
@@ -76,8 +78,7 @@ Like entries, senses can contain fields for associated senses, e.g.
 * antonymous with (list of sense IDs)
 
 
-## (3) The example table
- 
+## Examples
 
 The example table contains all the examples which are represented in the
 dictionary. Each example is linked to one or more senses, and senses may
@@ -87,12 +88,10 @@ relationship between examples and senses.
 Each example must minimally contain information in the following
 four fields:
 
- 
-
-* (example) ID
+* `ID`
 * primary text
 * translation
-* list of IDs of related senses (this is a list, not a single ID,
+* `sense_ID`: semicolon-separated list of IDs of related senses (this is a list, not a single ID,
 because an example may illustrate several senses)
  
 
