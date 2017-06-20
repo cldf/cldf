@@ -16,7 +16,7 @@
                 "columns": [
                     {
                         "name": "ID", 
-                        "datatype": {"base": "string", "format": "[a-zA-Z0-9\-]+"},
+                        "datatype": {"base": "string", "format": "[a-zA-Z0-9\\-]+"},
                         "required": true
                     },
                     {
