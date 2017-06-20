@@ -24,6 +24,17 @@ analysed using quantitative (automated) methods or visualised using software too
 - IDs should be resolvable HTTP URLs if possible. If not, they should be documented in the metadata.
 - Compatibility with existing tools, standards and practice should alsways be kept in mind.
 
+Since we are concerned with tabular data here, CLDF relies heavily on W3C's 
+[Model for Tabular Data and Metadata on the Web](http://www.w3.org/TR/tabular-data-model/#standard-file-metadata).
+While there is a basic CLDF conformance level which allows for datasets without accompanying metadata,
+adding metadata makes it possible to
+- use a different [CSV dialect](http://w3c.github.io/csvw/metadata/#dialect-descriptions) for the data files,
+- add metadata describing attribution and provenance of the data,
+- specify [relations between multiple tables](http://w3c.github.io/csvw/metadata/#common-properties) in a dataset.
+
+For each type of CLDF dataset there is a default metadata profile describing the required tables, columns and datatypes.
+*CLDF conformance level 0* means data files will be read as if they were accompanied by the corresponding default metadata.
+
 
 ## Core format specification
 
