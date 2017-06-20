@@ -20,7 +20,7 @@
                 "columns": [
                     {
                         "name": "ID", 
-                        "datatype": {"base": "string", "format": "[a-zA-Z0-9\\-]+"},
+                        "datatype": {"base": "string"},
                         "required": true
                     },
                     {
@@ -29,7 +29,7 @@
                         "required": true
                     },
                     {
-                        "name": "part-of-speech",
+                        "name": "part_of_speech",
                         "datatype": "string"
                     }
                 ]
@@ -42,7 +42,7 @@
                 "columns": [
                     {
                         "name": "ID",
-                        "datatype": {"base": "string", "format": "[a-zA-Z0-9\\-]+"},
+                        "datatype": {"base": "string"},
                         "required": true
                     },
                     {
@@ -75,7 +75,7 @@
                 "columns": [
                     {
                         "name": "ID",
-                        "datatype": {"base": "string", "format": "[a-zA-Z0-9\\-]+"},
+                        "datatype": {"base": "string"},
                         "required": true
                     },
                     {
