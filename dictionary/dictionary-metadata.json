@@ -1,0 +1,39 @@
+{
+    "@context": [
+        "http://www.w3.org/ns/csvw",
+        {
+            "@language": "en"
+        }
+    ],
+    "dialect": {
+        "doubleQuote": false
+    },
+    "tables": [
+        {
+            "url": "entries.csv",
+            "dc:type": "cldf:dictionary-entries",
+            "tableSchema": {
+                "columns": [
+                    {
+                        "name": "ID", 
+                        "datatype": {"base": "string", "format": "[a-zA-Z0-9\-]+"},
+                        "required": true
+                    },
+                    {
+                        "name": "headword",
+                        "datatype": "string",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "url": "senses.csv",
+            "dc:type": "cldf:dictionary-senses"
+        },
+        {
+            "url": "examples.csv",
+            "dc:type": "cldf:dictionary-examples"
+        }
+    ]
+}
