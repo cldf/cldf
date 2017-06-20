@@ -40,7 +40,23 @@ For each type of CLDF dataset there is a *CLDF module*, i.e. a default metadata 
 
 A cross-linguistic dataset is encoded in the following set of files:
 
-- The core data file, encoded in csv, 
+- The core data file, encoded in CSV using the dialect specified by
+```python
+{
+  "encoding": "utf-8",
+  "lineTerminators": ["\r\n", "\n"],
+  "quoteChar": "\"",
+  "doubleQuote": false,
+  "skipRows": 0,
+  "header": true,
+  "headerRowCount": 1,
+  "delimiter": ",",
+  "skipColumns": 0,
+  "skipBlankRows": false,
+  "skipInitialSpace": false,
+  "trim": false
+}
+```
 - additional metadata provided as JSON file following the guidelines of the [Model for Tabular Data and Metadata on the Web](http://www.w3.org/TR/tabular-data-model/#standard-file-metadata), 
 - sources - if not referenced by Glottolog ID - supplied as BibTeX file (with the citation keys serving as local Source IDs).
 - Examples - if not referenced - may be supplied as [*cldf* IGT](igt.md) file.
