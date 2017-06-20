@@ -32,7 +32,7 @@ adding metadata makes it possible to
 - add metadata describing attribution and provenance of the data,
 - specify [relations between multiple tables](http://w3c.github.io/csvw/metadata/#common-properties) in a dataset.
 
-For each type of CLDF dataset there is a default metadata profile describing the required tables, columns and datatypes.
+For each type of CLDF dataset there is a *CLDF module*, i.e. a default metadata profile describing the required tables, columns and datatypes.
 *CLDF conformance level 0* means data files will be read as if they were accompanied by the corresponding default metadata.
 
 
@@ -152,11 +152,11 @@ This also provides a well-specified mechanism to document the particular CSV dia
 debate over "tab" versus "comma" could be elegantly circumvented.
 
 
-## Data types
+## CLDF Modules
 
-- [Wordlists](wordlist.md)
-- [Structure dataset](structure_dataset.md)
-- [Interlinear glossed text](igt.md)
+- [Wordlist](wordlists/)
+- [Structure dataset](structure_dataset/)
+- [Dictionary](dictionary/)
 - [Language metadata](language_metadata.md)
 
 
