@@ -9,8 +9,8 @@ Once established, these dataformats could become a foundation not only for tools
 
 ## What?
 
-The main types of cross-linguistic data we are concerned with here are any mostly tabular data which is typically
-analysed using quantitative (automated) methods or visualised using software tools, such as
+The main types of cross-linguistic data we are concerned with here are any tabular data which is typically
+analysed using quantitative (automated) methods or made accessible using software tools like the `clld` framework, such as
 - wordlists (or more complex lexical data including e.g. cognate judgements),
 - structure datasets (e.g. [WALS features](http://wals.info/feature)),
 - simple dictionaries.
@@ -18,176 +18,93 @@ analysed using quantitative (automated) methods or visualised using software too
 
 ## Design principles
 
-- Data should be both editable "by hand" and amenable to reading and writing by software.
+- Data should be both editable "by hand" and amenable to reading and writing by software (preferably software the typical linguist can be expected to use correctly).
 - Data should be encoded as UTF-8 text files.
-- Reference entities rather than duplicate.
-- IDs should be resolvable HTTP URLs if possible. If not, they should be documented in the metadata.
-- Compatibility with existing tools, standards and practice should alsways be kept in mind.
+- If entities can be referenced, e.g. languages through their Glottocode, 
+  this should be done rather than duplicating information like language names.
+- Identifier should be resolvable HTTP URLs if possible. If not, they should be documented in the metadata.
+- Compatibility with existing tools, standards and practice should always be kept in mind.
 
-Since we are concerned with tabular data here, CLDF relies heavily on W3C's 
-[Model for Tabular Data and Metadata on the Web](http://www.w3.org/TR/tabular-data-model/#standard-file-metadata).
-While there is a basic CLDF conformance level which allows for datasets without accompanying metadata,
-adding metadata makes it possible to
-- use a different [CSV dialect](http://w3c.github.io/csvw/metadata/#dialect-descriptions) for the data files,
+Since we are concerned with tabular data here, CLDF is built on W3C's 
+[Model for Tabular Data and Metadata on the Web](http://www.w3.org/TR/tabular-data-model/#standard-file-metadata) and 
+[Metadata Vocabulary for Tabular Data](https://www.w3.org/TR/tabular-metadata/).
+
+The CLDF specification is split into a [core specification](core.md), applying to
+all kinds of CLDF data and [modules](#modules), describing the data model for a particular kind of cross-linguistic data.
+
+
+## Conformance Levels
+
+While the [JSON-LD dialect](https://www.w3.org/TR/tabular-metadata/#json-ld-dialect) to be used for metadata according to the
+[Metadata Vocabulary for Tabular Data](https://www.w3.org/TR/tabular-metadata/)
+can be edited by hand, this may be already be beyond what can be expected by
+typical linguists.
+
+Thus, CLDF specifies two conformance levels for datasets:
+
+### Metadata-free conformance
+
+A dataset can be CLDF conformant without providing a separate metadata description file. To do so, the dataset must follow the default specification
+for the appropriate module regarding
+- file names
+- CSV dialect
+- column names
+
+exactly.
+
+
+### Extended conformance
+
+A dataset is CLDF conformant if it uses a custom metadata file, derived from
+the default profile for the appropriate module, possibly overriding/customizing
+- the CSV [dialect description](http://w3c.github.io/csvw/metadata/#dialect-descriptions)
+- the table property [url](http://w3c.github.io/csvw/metadata/#tables)
+- the column property [titles](http://w3c.github.io/csvw/metadata/#columns)
+- the inherited column properties
+  - [default](http://w3c.github.io/csvw/metadata/#cell-default)
+  - [null](http://w3c.github.io/csvw/metadata/#cell-null)
+  - [separator](http://w3c.github.io/csvw/metadata/#cell-separator)
+
+and by adding
+- common properties,
+- foreign keys, to specify relations between tables of the dataset.
+
+Thus, using extended conformance via metadata, a dataset may
+- use tab-separated data files,
+- use non-standard file names,
+- use non-standard column names,
 - add metadata describing attribution and provenance of the data,
 - specify [relations between multiple tables](http://w3c.github.io/csvw/metadata/#common-properties) in a dataset.
+
+Note that it is possible to convert a CLDF dataset with metadata into one
+without, automatically; although this means added metadata will be lost.
+
+
+<a id="modules"> </a>
+
+## CLDF Modules
 
 For each type of CLDF dataset there is a *CLDF module*, i.e. a default metadata profile describing the required tables, columns and datatypes.
 *CLDF conformance level 0* means data files will be read as if they were accompanied by the corresponding default metadata.
 
-
-## Core format specification
-
-A cross-linguistic dataset is encoded in the following set of files:
-
-- The core data file, encoded in CSV using the dialect specified by
-```python
-{
-  "encoding": "utf-8",
-  "lineTerminators": ["\r\n", "\n"],
-  "quoteChar": "\"",
-  "doubleQuote": false,
-  "skipRows": 0,
-  "header": true,
-  "headerRowCount": 1,
-  "delimiter": ",",
-  "skipColumns": 0,
-  "skipBlankRows": false,
-  "skipInitialSpace": false,
-  "trim": false
-}
-```
-- additional metadata provided as JSON file following the guidelines of the [Model for Tabular Data and Metadata on the Web](http://www.w3.org/TR/tabular-data-model/#standard-file-metadata), 
-- sources - if not referenced by Glottolog ID - supplied as BibTeX file (with the citation keys serving as local Source IDs).
-- Examples - if not referenced - may be supplied as [*cldf* IGT](igt.md) file.
-
-If the name of the dataset is `clds`, the respective filenames are
-- `clds.csv`
-- `clds.csv-metadata.json`
-- `clds.bib`
-- `clds.igt.csv`
-
-Additional tabular data, e.g. cognate judgements accompanying a wordlist, can be tied in using additional table descriptions in the metadata file.
-
-
-### Identifiers
-
-Following our design goal to reference rather than duplicate entities, identifiers should be used to reference existing entities (e.g. Glottolog languages, WALS features, etc.). To do so, identifiers must be formatted as resolvable HTTP(S) URLs.
-
-Alternatively, identifiers may be used to reference dataset local entities which are defined in the datasets metadata (or not at all). In this case identiers must be composed of the characters defined by the regular expression `[a-zA-Z0-9\-_]`. This restriction makes sure that these identifiers can be used as path components of HTTP URLs (see [rfc3986](https://tools.ietf.org/html/rfc3986#section-2.3)).
-
-Issues: #3
-
-
-### The data file
-
-The core data file is encoded in [csv](http://tools.ietf.org/html/rfc4180) using the [UTF-8](http://en.wikipedia.org/wiki/UTF-8) character encoding. This file must have a header, i.e. the first row
-must contain the list of column names. While the file may contain any number of columns, columns with a specific 
-meaning in our context are detected by name:
-
-- `ID`: identifies a row in the data file; either a local ID - preferably an [UUID](http://en.wikipedia.org/wiki/Universally_unique_identifier) - or an (equally universally unique) URL like http://wold.clld.org/word/7214142329897819 or http://wals.info/valuesets/1A-niv
-- `Language_ID`: identifies the language or variety the data in the row is about. A [Glottolog languoid URL](http://glottolog.org), or *glottocode* or ISO-639-3 code (FIXME: require a URL, or a disambiguating prefix?), or a local identifier.
-- `Source`: Semicolon-separated source specifications, of the form *<source_ID>[<source context>]*, e.g. *http://glottolog.org/resource/reference/id/318814[34]*, or *meier2015[3-12]* where *meier2015* is a citation key in the accompanying BibTeX file.
-- `Example`: Semicolon-separated example specifications, of the form *<example_ID>[<context>]*, e.g. *http://apics-online.info/sentences/1-1[exception]*, or* sentence5* where *sentence5* is an ID in `clds.igt.csv`.
-- `Comment`: Free text comment.
-
-The core data file may also be encoded in tsv, i.e. using the `tab` character as column separator. If so, this must be
-indicated by using `.tsv` as filename extension. (Tools like `csvkit` can be used to easily convert from tsv to csv.)
-
-
-#### Compatibility
-
-- Using UTF-8 as character encoding means editing these files with MS Excel is not completely trivial, because Excel assumes cp1252 as default character encoding - Libre Office Calc on the other hand handles these files just fine.
-- The tool support for csv files is getting better and better due to the hype around "data science". Some particularly useful tools are
-  - [csvkit](https://csvkit.readthedocs.org/en/stable/)
-  - [q - Text as Data](http://harelba.github.io/q/)
-
-
-### The metadata file
-
-Metadata must be specified using [JSON-LD](http://json-ld.org/) as described in the [Metadata Vocabulary for Tabular Data](http://www.w3.org/TR/tabular-metadata/). 
-
-However, to make tooling simpler, we restrict the metadata specification as follows:
-- Metadata files must specify a `tables` property on top-level. While this add a bit of verbosity to the metadata description, it makes it possible to describe mutiple data tables in one metadata file.
-- The table provided in the CLDF data file must be listed in `tables` using a `dc:type` attribute with value `cldf-values`.
-- If each row in the data file corresponds to a resource on the web, the `tableSchema` property should provide an `aboutUrl` property.
-- If individual cells in a row correspond to resources on the web, the corresponding column specification should provide a `valueUrl` property.
-
-Each dataset should provide a dataset distribution description using the 
-[DCAT vocabulary](http://www.w3.org/TR/vocab-dcat/#class-distribution). This will make it easy to  
-[catalog](http://www.w3.org/TR/vocab-dcat/#class-catalog) cross-linguistic datasets.
-
-An example for a metadata file could thus look as follows:
-```python
-{
-  "@context": "http://www.w3.org/ns/csvw",
-  "dc:title": "The Dataset",
-  "dc:bibliographicCitation": "Cite me like this!",
-  "dc:license": "http://creativecommons.org/licenses/by/4.0/",
-  "tables": [
-    {
-      "url": "ds1.csv",
-      "dc:type": "cldf-values",
-      "tableSchema": {
-        "columns": [
-          {
-            "name": "ID",
-            "datatype": "string"
-          },
-          {
-            "name": "Language_ID",
-            "datatype": "string",
-            "valueUrl": "http://glottolog.org/resource/languoid/id/{Language_ID}"
-          },
-          {
-            "name": "Parameter_ID",
-            "datatype": "string"
-          },
-          {
-            "name": "Value",
-            "datatype": "string"
-          },
-          {
-            "name": "Comment",
-            "datatype": "string"
-          },
-          {
-            "name": "Source",
-            "datatype": "string"
-          }
-        ],
-        "aboutUrl": "http://example.org/valuesets/{ID}",
-        "primaryKey": "ID"
-      }
-    }
-  ]
-}
-```
-
-This also provides a well-specified mechanism to document the particular CSV dialect used for the data files, as described in the [example for object properties](http://www.w3.org/TR/2015/WD-tabular-metadata-20150416/#object-properties); thus, the sometimes heated 
-debate over "tab" versus "comma" could be elegantly circumvented.
-
-
-## CLDF Modules
-
-- [Wordlist](wordlists/)
+- [Wordlist](wordlist/)
 - [Structure dataset](structure_dataset/)
 - [Dictionary](dictionary/)
 - [Language metadata](language_metadata.md)
 
 
-## cldf data on the Web
+## CLDF data on the Web
 
-The core format specification is already following the guidelines of the [Model for Tabular Data and Metadata on the Web](http://www.w3.org/TR/tabular-data-model/), thus makes sure our formats follow best prectices for Web publishing.
+The core format specification is already following the guidelines of the [Model for Tabular Data and Metadata on the Web](http://www.w3.org/TR/tabular-data-model/), thus makes sure our formats follow best practices for Web publishing.
 
-Additionally cldf data providers may serve their datasets as [JSONP](http://en.wikipedia.org/wiki/JSONP) to make it possible to retrieve data from a browser-based application. For cldf data served as JSONP we specify the name of the callback function as `cldf_data` to make it possible to serve static files.
+Additionally CLDF data providers may serve their datasets as [JSONP](http://en.wikipedia.org/wiki/JSONP) to make it possible to retrieve data from a browser-based application. For CLDF data served as JSONP we specify the name of the callback function as `cldf_data` to make it possible to serve static files.
 
 
 ## Examples
 
-To stipulate further discussion and help experiments with tools, some variant of cldf data may be obtained here:
+To stipulate further discussion and help experiments with tools, some variant of CLDF data may be obtained here:
 
-- [A WALS chapter as cldf](examples/wals)
+- [A WALS chapter as CLDF](examples/wals)
 
 These downloads have been created using the [pycldf package](https://github.com/glottobank/pycldf).
 

@@ -5,13 +5,17 @@
             "@language": "en"
         }
     ],
+    "dc:format": "cldf:v1.0",
+    "dc:type": "cldf:dictionary",
     "dialect": {
-        "doubleQuote": false
+        "doubleQuote": false,
+        "commentPrefix": null,
+        "trim": true
     },
     "tables": [
         {
             "url": "entries.csv",
-            "dc:type": "cldf:dictionary-entries",
+            "dc:type": "cldf:entries",
             "tableSchema": {
                 "columns": [
                     {
@@ -23,17 +27,83 @@
                         "name": "headword",
                         "datatype": "string",
                         "required": true
+                    },
+                    {
+                        "name": "part-of-speech",
+                        "datatype": "string"
                     }
                 ]
             }
         },
         {
             "url": "senses.csv",
-            "dc:type": "cldf:dictionary-senses"
+            "dc:type": "cldf:senses",
+            "tableSchema": {
+                "columns": [
+                    {
+                        "name": "ID",
+                        "datatype": {"base": "string", "format": "[a-zA-Z0-9\\-]+"},
+                        "required": true
+                    },
+                    {
+                        "name": "description",
+                        "datatype": "string",
+                        "separator": ";",
+                        "required": true
+                    },
+                    {
+                        "name": "entry_ID",
+                        "datatype": "string",
+                        ""
+                    }
+                ],
+               "foreignKeys": [
+                   {
+                        "columnReference": "entry_ID",
+                        "reference": {
+                            "resource": "entries.csv",
+                            "columnReference": "ID"
+                        }
+                    }
+               ]
+            }
         },
         {
             "url": "examples.csv",
-            "dc:type": "cldf:dictionary-examples"
+            "dc:type": "cldf:examples",
+            "tableSchema": {
+                "columns": [
+                    {
+                        "name": "ID",
+                        "datatype": {"base": "string", "format": "[a-zA-Z0-9\\-]+"},
+                        "required": true
+                    },
+                    {
+                        "name": "primary_text",
+                        "datatype": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "translation",
+                        "datatype": "string",
+                        "required": true
+                    },
+                    {
+                        "name": "sense_ID",
+                        "datatype": "string",
+                        "separator": ";"
+                    }
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": "sense_ID",
+                        "reference": {
+                            "resource": "senses.csv",
+                            "columnReference": "ID"
+                        }
+                    }
+                ]
+            }
         }
     ]
 }
