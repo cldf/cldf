@@ -1,0 +1,44 @@
+{
+    "@context": "http://www.w3.org/ns/csvw",
+    "dc:format": "cldf:v1.0",
+    "dc:type": "cldf:wordlist",
+    "dialect": {
+        "doubleQuote": false,
+        "commentPrefix": null
+    },
+    "tables": [
+        {
+            "url": "forms.csv",
+            "dc:type": "cldf:forms",
+            "tableSchema": {
+                "columns": [
+                    {
+                        "name": "ID",
+                        "datatype": "string"
+                    },
+                    {
+                        "name": "Language_ID",
+                        "datatype": "string",
+                    },
+                    {
+                        "name": "Parameter_ID",
+                        "datatype": "string"
+                    },
+                    {
+                        "name": "Value",
+                        "datatype": "string"
+                    },
+                    {
+                        "name": "Comment",
+                        "datatype": "string"
+                    },
+                    {
+                        "name": "Source",
+                        "datatype": "string"
+                    }
+                ],
+                "primaryKey": "ID"
+            }
+        }
+    ]
+}

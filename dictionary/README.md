@@ -89,8 +89,8 @@ Each example must minimally contain information in the following
 four fields:
 
 * `ID`
-* primary text
-* translation
+* `primary_text`
+* `translation`
 * `sense_ID`: semicolon-separated list of IDs of related senses (this is a list, not a single ID,
 because an example may illustrate several senses)
  

@@ -1,6 +1,6 @@
 # The Bigger Picture
 
-One of the main goals of the **cldf** specification is a useful delineation of data and tools. Using a `csv` 
+One of the main goals of the **CLDF** specification is a useful delineation of data and tools. Using a `CSV` 
 based format makes it really easy to use this data in a 
 [UNIX-style pipeline](https://en.wikipedia.org/wiki/Pipeline_%28Unix%29) of data transformation commands.
 This pipeline-style of data transformation and analysis seems to be at the core of typical workflows e.g. in 
