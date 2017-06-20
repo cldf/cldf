@@ -9,13 +9,17 @@ Once established, these dataformats could become a foundation not only for tools
 
 ## What?
 
-The main types of cross-linguistic data we are concerned with here are wordlists and structure datasets which are used in historical linguistics.
+The main types of cross-linguistic data we are concerned with here are any mostly tabular data which is typically
+analysed using quantitative (automated) methods or visualised using software tools, such as
+- wordlists (or more complex lexical data including e.g. cognate judgements),
+- structure datasets (e.g. [WALS features](http://wals.info/feature)),
+- simple dictionaries.
 
 
 ## Design principles
 
 - Data should be both editable "by hand" and amenable to reading and writing by software.
-- UTF-8 encoded text files.
+- Data should be encoded as UTF-8 text files.
 - Reference entities rather than duplicate.
 - IDs should be resolvable HTTP URLs if possible. If not, they should be documented in the metadata.
 - Compatibility with existing tools, standards and practice should alsways be kept in mind.
