@@ -11,7 +11,7 @@ Each entry row must contain information in the following three columns:
 
 * `ID`: a unique alphanumeric code, chosen arbitrarily
 * `headword`: lemma, or citation form
-* `part-of-speech`
+* `part_of_speech`
 
 In addition, some optional standard columns are recognized:
 
