@@ -90,6 +90,13 @@ For each type of CLDF dataset there is a *CLDF module*, i.e. a default metadata 
 - [Wordlist](wordlist/)
 - [Structure dataset](structure_dataset/)
 - [Dictionary](dictionary/)
+
+
+## CLDF Components
+
+Some types of cross-linguistic data may be part of different CLDF modules. These
+types are specified as *components* in a way that can be re-used across modules.
+
 - [Language metadata](language_metadata.md)
 
 

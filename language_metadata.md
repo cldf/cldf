@@ -1,20 +1,10 @@
 ## Language Metadata
 
-Since core data files only reference languages by URL, it must be possible to retrieve and link metadata about these
-languages. The format for this metadata should be the same no matter whether it is contained within the data packages 
-metadata file, or delivered from language metadata providers (like Glottolog).
+If a CLDF dataset provides language metadata which goes beyond what could be
+retrieved from a catalog like [Glottolog](http://glottolog.org), it must
+include a data file `languages.csv` or a table with `"dc:type": "cldf:languages"`.
 
-This constrains us already to JSON. Considering that often a geographic coordinate is part of the metadata and that
-often the metadata will be used to draw maps, GeoJSON seems a natural candidate for the language metadata:
-
-```javascript
-        {
-            "geometry": {"type": "Point", "coordinates": [-77.33963, 25.053879]}, 
-            "type": "Feature", 
-            "properties": {
-                "url": "http://glottolog.org/resource/languoid/id/muya1239",
-                "name": "Muya",
-                ...
-            }
-        }
-```
+Any column named `Language_ID` in any of the other data files will then be
+interpreted as foreign key referencing an `ID` in the languages file. Thus,
+if a dataset provides metadata for at least one language it must list all its
+languages in the languages file.
