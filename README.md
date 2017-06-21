@@ -98,6 +98,7 @@ Some types of cross-linguistic data may be part of different CLDF modules. These
 types are specified as *components* in a way that can be re-used across modules.
 
 - [Language metadata](language_metadata.md)
+- [Glossed examples](igt.md)
 
 
 ## CLDF data on the Web
@@ -126,5 +127,5 @@ These downloads have been created using the [pycldf package](https://github.com/
 
 ## History
 
-Work on this concrete proposal for a cross-linguistic data formats was triggered by the [LANCLID 2 workshop](http://www.eva.mpg.de/linguistics/conferences/2014-ws-lanclid2/index.html) held in April 2015 in Leipzig -
+Work on this concrete proposal for a cross-linguistic data format was triggered by the [LANCLID 2 workshop](http://www.eva.mpg.de/linguistics/conferences/2014-ws-lanclid2/index.html) held in April 2015 in Leipzig -
 in particular by Harald Hammarström's presentation [A Proposal for Data Interface Formats for Cross-Linguistic Data](https://github.com/clld/lanclid2/blob/master/presentations/hammarstrom.pdf).
