@@ -67,43 +67,6 @@
                     }
                ]
             }
-        },
-        {
-            "url": "examples.csv",
-            "dc:type": "cldf:examples",
-            "tableSchema": {
-                "columns": [
-                    {
-                        "name": "ID",
-                        "datatype": {"base": "string"},
-                        "required": true
-                    },
-                    {
-                        "name": "primary_text",
-                        "datatype": "string",
-                        "required": true
-                    },
-                    {
-                        "name": "translation",
-                        "datatype": "string",
-                        "required": true
-                    },
-                    {
-                        "name": "sense_ID",
-                        "datatype": "string",
-                        "separator": ";"
-                    }
-                ],
-                "foreignKeys": [
-                    {
-                        "columnReference": "sense_ID",
-                        "reference": {
-                            "resource": "senses.csv",
-                            "columnReference": "ID"
-                        }
-                    }
-                ]
-            }
         }
     ]
 }

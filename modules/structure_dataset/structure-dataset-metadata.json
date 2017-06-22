@@ -22,6 +22,7 @@
                     },
                     {
                         "name": "Parameter_ID",
+                        "titles": "Feature_ID",
                         "datatype": "string"
                     },
                     {

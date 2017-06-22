@@ -1,6 +1,6 @@
 # Dictionary Module
 
-A simple dictionary (e.g. for publication in [Dictionaria](http://dictionaria.clld.org)) is a set of three tables.
+A simple dictionary (e.g. for publication in [Dictionaria](http://dictionaria.clld.org)) is a set of two tables.
 
 ## Entries
 
@@ -80,24 +80,12 @@ Like entries, senses can contain fields for associated senses, e.g.
 
 ## Examples
 
-The example table contains all the examples which are represented in the
+A CLDF dictionary may have an [examples component](../../components/examples/README.md),
+which contains all the examples which are represented in the
 dictionary. Each example is linked to one or more senses, and senses may
 have multiple examples linked to them. There is thus a many-to-many
-relationship between examples and senses.
+relationship between examples and senses. The links between examples
+and senses must be specified in a column
+* `sense_ID`: semicolon-separated list of IDs of related senses
 
-Each example must minimally contain information in the following
-four fields:
-
-* `ID`
-* `primary_text`
-* `translation`
-* `sense_ID`: semicolon-separated list of IDs of related senses (this is a list, not a single ID,
-because an example may illustrate several senses)
- 
-
-standard fields:
-
-* analyzed text (including hyphens between morphemes, or more abstract morphophonological representation)
-* literal translation 
-* name of speaker who provided the example
-* date
+in the examples table.

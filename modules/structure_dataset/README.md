@@ -7,7 +7,7 @@ Structure datasets require only one data file `values.csv` or a table with
 `"dc:type": "cldf:values"`. This table must contain columns
 - `ID`
 - `Language_ID`
-- `Parameter_ID`: An identifier of a feature (a.k.a. parameter) the `Value` is associated with.
+- `Parameter_ID`: An identifier of a feature (a.k.a. parameter) the `Value` is associated with. `Feature_ID` can be used as an alias for `Parameter_ID`.
 - `Value`
 
 

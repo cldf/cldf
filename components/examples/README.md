@@ -15,9 +15,9 @@ with two properties: The aligned primary text and aligned glosses.
 
 Thus, an `examples.csv` file or a table ẁith `"dc:type": "cldf:examples"` has
 the following columns:
-- `Primary_text`: required
-- `Primary_text_aligned`: optional, words separated by tab `\t` (or a different separator if indicated by metadata)
-- `Gloss_aligned`: optional, words separated by tab `\t` (or a different separator if indicated by metadata)
+- `Primary`: required
+- `Analyzed`: optional, words separated by tab `\t` (or a different separator if indicated by metadata)
+- `Gloss`: optional, words separated by tab `\t` (or a different separator if indicated by metadata)
 - `Translation`: required
 - `Translation_language_ID`: optional. If missing, translations are interpreted as
   English text.
@@ -45,7 +45,7 @@ a Toolbox example like
 ```
 (which uses markers as exported from tools like ELAN), we would map 
 - `ID` to `\ref`
-- `Primary_text` to `\tx`
-- `Primary_text_aligned` to `\mb`
-- `Gloss_aligned` to `\gl`
+- `Primary` to `\tx`
+- `Analyzed` to `\mb`
+- `Gloss` to `\gl`
 - `Translation` to `\ft`

@@ -8,16 +8,16 @@
 				"datatype": "string"
 			},
 			{
-				"name": "Primary_text",
+				"name": "Primary",
 				"datatype": "string"
 			},
 			{
-				"name": "Primary_text_aligned",
+				"name": "Analyzed",
 				"datatype": "string",
 				"separator": "\t"
 			},
 			{
-				"name": "Gloss_aligned",
+				"name": "Gloss",
 				"datatype": "string",
 				"separator": "\t"
 			},
