@@ -9,6 +9,9 @@ The following list of column names (either specified in the CSV files or as `nam
 
 - `ID`: identifies a row in the data file; either a local ID - preferably an [UUID](http://en.wikipedia.org/wiki/Universally_unique_identifier) - or an (equally universally unique) URL like http://wold.clld.org/word/7214142329897819 or http://wals.info/valuesets/1A-niv
 - `Language_ID`: identifies the language or variety the data in the row is about.
+  To mark the language identifier as Glottocode, the column specification should
+  have a [`valueUrl`](http://w3c.github.io/csvw/metadata/#cell-valueUrl) property
+  of `"http://glottolog.org/resource/languoid/id/{Language_ID}"`.
 - `Source`: Semicolon-separated source specifications, of the form *<source_ID>[<source context>]*, e.g. *http://glottolog.org/resource/reference/id/318814[34]*, or *meier2015[3-12]* where *meier2015* is a citation key in the accompanying BibTeX file.
 - `Example_ID`: Semicolon-separated example IDs.
 - `Comment`: Free text comment.

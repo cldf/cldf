@@ -18,7 +18,7 @@
                     },
                     {
                         "name": "Language_ID",
-                        "datatype": "string",
+                        "datatype": "string"
                     },
                     {
                         "name": "Parameter_ID",

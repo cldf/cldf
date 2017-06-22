@@ -1,4 +1,18 @@
-# Wordlist Specification
+# Wordlist Module
+
+A simple wordlist can be modeled in CLDF as a single file `forms.csv` or
+table of `"dc:type": "cldf:forms"`. This table has required columns
+- `ID`
+- `Language_ID`
+- `Parameter_ID`: An identifier of a concept the `Value` is a form for. `Concept_ID` can be used as an alias for `Parameter_ID`.
+- `Value`: The form of a lexeme.
+
+Note: If the lexemes in a wordlist are linked to [Concepticon concept sets](http://concepticon.clld.org/parameters),
+the `Parameter_ID` column should have numeric concept sets IDs as values and a `ValueUrl` property of `"http://concepticon.clld.org/parameters/{Parameter_ID}"`.
+
+The following optional columns of the forms table are recognized:
+- `Segments`: A space-separated list of strings.
+
 
 ## Introduction
 
