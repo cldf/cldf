@@ -1,0 +1,35 @@
+{
+	"url": "examples.csv",
+	"dc:type": "cldf:examples",
+	"tableSchema": {
+		"columns": [
+			{
+				"name": "ID",
+				"datatype": "string"
+			},
+			{
+				"name": "Primary_text",
+				"datatype": "string"
+			},
+			{
+				"name": "Primary_text_aligned",
+				"datatype": "string",
+				"separator": "\t"
+			},
+			{
+				"name": "Gloss_aligned",
+				"datatype": "string",
+				"separator": "\t"
+			},
+			{
+				"name": "Translation",
+				"datatype": "string"
+			},
+			{
+				"name": "Translation_language_ID",
+				"datatype": "string"
+			}
+		],
+		"primaryKey": "ID"
+	}
+}

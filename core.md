@@ -8,16 +8,16 @@ The exact set of required data files varies per [module](README.md#modules).
 The following list of column names (either specified in the CSV files or as `name` property of a column's metadata) is recognized by CLDF:
 
 - `ID`: identifies a row in the data file; either a local ID - preferably an [UUID](http://en.wikipedia.org/wiki/Universally_unique_identifier) - or an (equally universally unique) URL like http://wold.clld.org/word/7214142329897819 or http://wals.info/valuesets/1A-niv
-- `Language_ID`: identifies the language or variety the data in the row is about. A [Glottolog languoid URL](http://glottolog.org), or *glottocode* or ISO-639-3 code (FIXME: require a URL, or a disambiguating prefix?), or a local identifier.
+- `Language_ID`: identifies the language or variety the data in the row is about.
 - `Source`: Semicolon-separated source specifications, of the form *<source_ID>[<source context>]*, e.g. *http://glottolog.org/resource/reference/id/318814[34]*, or *meier2015[3-12]* where *meier2015* is a citation key in the accompanying BibTeX file.
-- `Example`: Semicolon-separated example specifications, of the form *<example_ID>[<context>]*, e.g. *http://apics-online.info/sentences/1-1[exception]*, or* sentence5* where *sentence5* is an ID in `clds.igt.csv`.
+- `Example_ID`: Semicolon-separated example IDs.
 - `Comment`: Free text comment.
 
 Note: CLDF datasets with a metadata file may override the separator used for
-lists in `Source` or `Example` values.
+lists in `Source` or `Example_ID` values.
 
-If the dataset contains a file `languages.csv` or a table with `"dc:type": "cldf:languages"`, values for `Language_ID` will interpreted as foreign keys
-referencing rows in the table or languages.
+If the dataset contains a [languages component](components/languages/), values for `Language_ID` will be interpreted as foreign keys
+referencing rows in this component.
 
 
 #### CSV dialect for metadata-free conformance
@@ -30,7 +30,7 @@ i.e. use the CSV dialect specified by
   "encoding": "utf-8",
   "lineTerminators": ["\r\n", "\n"],
   "quoteChar": "\"",
-  "doubleQuote": false,
+  "doubleQuote": true,
   "skipRows": 0,
   "header": true,
   "headerRowCount": 1,

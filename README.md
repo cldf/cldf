@@ -85,20 +85,20 @@ without, automatically; although this means added metadata will be lost.
 ## CLDF Modules
 
 For each type of CLDF dataset there is a *CLDF module*, i.e. a default metadata profile describing the required tables, columns and datatypes.
-*CLDF conformance level 0* means data files will be read as if they were accompanied by the corresponding default metadata.
+*metadata-free conformance* means data files will be read as if they were accompanied by the corresponding default metadata.
 
-- [Wordlist](wordlist/)
-- [Structure dataset](structure_dataset/)
-- [Dictionary](dictionary/)
+- [Wordlist](modules/wordlist/)
+- [Structure dataset](modules/structure_dataset/)
+- [Dictionary](modules/dictionary/)
 
 
 ## CLDF Components
 
 Some types of cross-linguistic data may be part of different CLDF modules. These
-types are specified as *components* in a way that can be re-used across modules.
+types are specified as *components* in a way that can be re-used across modules (typically as [table descriptions](http://w3c.github.io/csvw/metadata/#tables), which can be appended to the `tables` property of a module's metadata).
 
-- [Language metadata](language_metadata.md)
-- [Glossed examples](igt.md)
+- [Language metadata](components/languages/)
+- [Examples](components/examples/)
 
 
 ## CLDF data on the Web
@@ -119,10 +119,8 @@ These downloads have been created using the [pycldf package](https://github.com/
 
 ## Open questions
 
-- What about example sentences, formatted as [interlinear glossed text](http://en.wikipedia.org/wiki/Interlinear_gloss)? One solution would be to treat them like other structured properties of core data rows like sources, i.e. just add references in the core data file. Of course this would be facilitated with example collections - or [corpus journals](http://dlc.hypotheses.org/691).
 - Should language IDs follow the [BCP 47](https://tools.ietf.org/html/bcp47) standard?
-- Since the metadata file will often contain metadata about languages, i.e. about things with a spatial extension, we might consider using GeoJSON as format, because this will be more immediately useful. Unfortunately, the things described in a GeoJSON file are called *features*, which might be confusing, when used for languages which in turn may be described by *features* in the typological sense.
-- Some data strcutures often encountered in historical linguistics cannot readily be represented by simple csv files, e.g. alignments (in particular multiple alignments), phylogenetic trees, and to a lesser degree distance matrices.
+- Some data structures often encountered in historical linguistics cannot readily be represented by simple csv files, e.g. alignments (in particular multiple alignments), phylogenetic trees, and to a lesser degree distance matrices.
 
 
 ## History
