@@ -80,9 +80,20 @@ Note that it is possible to convert a CLDF dataset with metadata into one
 without, automatically; although this means added metadata will be lost.
 
 
+## CLDF Ontology
+
+Columns in tabular data recognized by CLDF-aware applications typically contain
+linguistic data (apart from bookkeeping information like identifiers). For this
+data we try to describe the specific data values using terms from the
+[General Ontology for Linguistic Description - GOLD](http://linguistics-ontology.org/).
+
+
 <a id="modules"> </a>
 
 ## CLDF Modules
+
+Much like [Dublin Core Application Profiles](http://dublincore.org/documents/profile-guidelines/), CLDF Modules describe of linguistic 
+datatypes using terms of the CLDF Ontology grouped into tables.
 
 For each type of CLDF dataset there is a *CLDF module*, i.e. a default metadata profile describing the required tables, columns and datatypes.
 *metadata-free conformance* means data files will be read as if they were accompanied by the corresponding default metadata.

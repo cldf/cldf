@@ -23,6 +23,7 @@
                     {
                         "name": "Parameter_ID",
                         "titles": "Feature_ID",
+                        "propertyUrl": "http://www.w3.org/2004/02/skos/core#Concept",
                         "datatype": "string"
                     },
                     {
