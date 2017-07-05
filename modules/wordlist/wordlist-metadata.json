@@ -13,10 +13,12 @@
                 "columns": [
                     {
                         "name": "ID",
+                        "propertyUrl": "http://purl.org/dc/terms/identifier",
                         "datatype": "string"
                     },
                     {
                         "name": "Language_ID",
+                        "propertyUrl": "http://linguistics-ontology.org/gold/2010/Language",
                         "datatype": "string"
                     },
                     {
@@ -27,7 +29,7 @@
                     },
                     {
                         "name": "Value",
-                        "propertyUrl": "http://linguistics-ontology.org/gold/2010/WrittenLinguisticExpression",
+                        "propertyUrl": "http://linguistics-ontology.org/gold/2010/FormUnit",
                         "datatype": "string"
                     },
                     {
@@ -38,10 +40,12 @@
                     },
                     {
                         "name": "Comment",
+                        "propertyUrl": "http://purl.org/dc/terms/description",
                         "datatype": "string"
                     },
                     {
                         "name": "Source",
+                        "propertyUrl": "http://purl.org/dc/terms/source",
                         "datatype": "string"
                     }
                 ],
