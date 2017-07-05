@@ -19,18 +19,21 @@
             "tableSchema": {
                 "columns": [
                     {
-                        "name": "ID", 
+                        "name": "ID",
+                        "propertyUrl": "http://purl.org/dc/terms/identifier",
                         "datatype": {"base": "string"},
                         "required": true
                     },
                     {
                         "name": "headword",
                         "datatype": "string",
+                        "propertyUrl": "http://purl.org/linguistics/gold/OrthographicWord",
                         "required": true
                     },
                     {
                         "name": "part_of_speech",
-                        "datatype": "string"
+                        "datatype": "string",
+                        "propertyUrl": "http://purl.org/linguistics/gold/PartOfSpeechProperty"
                     }
                 ]
             }
@@ -42,19 +45,20 @@
                 "columns": [
                     {
                         "name": "ID",
+                        "propertyUrl": "http://purl.org/dc/terms/identifier",
                         "datatype": {"base": "string"},
                         "required": true
                     },
                     {
                         "name": "description",
                         "datatype": "string",
+                        "propertyUrl": "http://purl.org/linguistics/gold/LexicalizedConcept",
                         "separator": ";",
                         "required": true
                     },
                     {
                         "name": "entry_ID",
-                        "datatype": "string",
-                        ""
+                        "datatype": "string"
                     }
                 ],
                "foreignKeys": [

@@ -7,14 +7,13 @@ The exact set of required data files varies per [module](README.md#modules).
 
 The following list of column names (either specified in the CSV files or as `name` property of a column's metadata) is recognized by CLDF:
 
-- `ID`: identifies a row in the data file; either a local ID - preferably an [UUID](http://en.wikipedia.org/wiki/Universally_unique_identifier) - or an (equally universally unique) URL like http://wold.clld.org/word/7214142329897819 or http://wals.info/valuesets/1A-niv
-- `Language_ID`: identifies the language or variety the data in the row is about.
-  To mark the language identifier as Glottocode, the column specification should
-  have a [`valueUrl`](http://w3c.github.io/csvw/metadata/#cell-valueUrl) property
-  of `"http://glottolog.org/resource/languoid/id/{Language_ID}"`.
-- `Source`: Semicolon-separated source specifications, of the form *<source_ID>[<source context>]*, e.g. *http://glottolog.org/resource/reference/id/318814[34]*, or *meier2015[3-12]* where *meier2015* is a citation key in the accompanying BibTeX file.
-- `Example_ID`: Semicolon-separated example IDs.
-- `Comment`: Free text comment.
+name | property | description
+--- | --- | ---
+`ID` | [`dc:identifier`](http://dublincore.org/documents/dcmi-terms/#terms-identifier) | identifies a row in the data file; either a local ID - preferably an [UUID](http://en.wikipedia.org/wiki/Universally_unique_identifier) - or an (equally universally unique) URL like http://wold.clld.org/word/7214142329897819 or http://wals.info/valuesets/1A-niv
+`Language_ID` | [`gold:Language`](http://linguistics-ontology.org/gold/2010/Language) | identifies the language or variety the data in the row is about. To mark the language identifier as Glottocode, the column specification should have a [`valueUrl`](http://w3c.github.io/csvw/metadata/#cell-valueUrl) property of `"http://glottolog.org/resource/languoid/id/{Language_ID}"`.
+`Source` | [`dc:source`](http://dublincore.org/documents/dcmi-terms/#terms-source) | Semicolon-separated source specifications, of the form *<source_ID>[<source context>]*, e.g. *http://glottolog.org/resource/reference/id/318814[34]*, or *meier2015[3-12]* where *meier2015* is a citation key in the accompanying BibTeX file.
+`Example_ID` | | Semicolon-separated example IDs.
+`Comment` | [`dc:description`](http://dublincore.org/documents/dcmi-terms/#terms-description) | Free text comment.
 
 Note: CLDF datasets with a metadata file may override the separator used for
 lists in `Source` or `Example_ID` values.

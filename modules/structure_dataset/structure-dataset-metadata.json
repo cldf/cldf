@@ -3,7 +3,6 @@
     "dc:format": "cldf:v1.0",
     "dc:type": "cldf:structure-dataset",
     "dialect": {
-        "doubleQuote": false,
         "commentPrefix": null
     },
     "tables": [
@@ -14,10 +13,12 @@
                 "columns": [
                     {
                         "name": "ID",
+                        "propertyUrl": "http://purl.org/dc/terms/identifier",
                         "datatype": "string"
                     },
                     {
                         "name": "Language_ID",
+                        "propertyUrl": "http://linguistics-ontology.org/gold/2010/Language",
                         "datatype": "string"
                     },
                     {
@@ -28,14 +29,17 @@
                     },
                     {
                         "name": "Value",
+                        "propertyUrl": "http://purl.org/linguistics/gold/dataStructureRelation",
                         "datatype": "string"
                     },
                     {
                         "name": "Comment",
+                        "propertyUrl": "http://purl.org/dc/terms/description",
                         "datatype": "string"
                     },
                     {
                         "name": "Source",
+                        "propertyUrl": "http://purl.org/dc/terms/source",
                         "datatype": "string"
                     }
                 ],
