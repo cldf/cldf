@@ -1,0 +1,31 @@
+{
+    "@context": ["http://www.w3.org/ns/csvw", {"@language": "en"}],
+    "dialect": {
+        "header": true,
+        "delimiter": "\t",
+        "encoding": "utf-8-sig"
+    },
+    "tables": [
+        {
+            "url": "example.tsv",
+            "tableSchema": {
+                "columns": [
+		    {"name": "ID", "datatype": "integer"},
+                    {"name": "ALIGNMENT", "datatype": "string", "separator": " "},
+		    {"name": "COGNATE_SET", "datatype": "integer"},
+		    {"name": "COGNATE_SETS", "datatype": "integer", "separator" : " "},
+		    {"name": "ALIGNMENTS", "datatype": "string", "separator" : " + "},
+		    {"name": "SEGMENTS", "datatype": "string", "separator" : " + "},
+		    {"name": "VALUE", "datatype": "string"},
+		    {"name": "ENTRY", "datatype": "string"},
+		    {"name": "MORPHEMES", "datatype": "string", "separator" : " "},
+		    {"name": "CONCEPT", "datatype": "string"},
+		    {"name": "PARAMETER_ID", "datatype": "string"},
+		    {"name": "SOURCE", "datatype": "string"},
+		    {"name": "LANGUAGE", "datatype": "string"},
+		    {"name": "LANGUAGE_ID", "datatype": "string"}
+                ]
+            }
+        }
+    ]
+} 
