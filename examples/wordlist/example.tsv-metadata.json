@@ -1,31 +1,104 @@
 {
-    "@context": ["http://www.w3.org/ns/csvw", {"@language": "en"}],
-    "dialect": {
-        "header": true,
-        "delimiter": "\t",
-        "encoding": "utf-8-sig"
-    },
-    "tables": [
-        {
-            "url": "example.tsv",
-            "tableSchema": {
-                "columns": [
-		    {"name": "ID", "datatype": "integer"},
-                    {"name": "ALIGNMENT", "datatype": "string", "separator": " "},
-		    {"name": "COGNATE_SET", "datatype": "integer"},
-		    {"name": "COGNATE_SETS", "datatype": "integer", "separator" : " "},
-		    {"name": "ALIGNMENTS", "datatype": "string", "separator" : " + "},
-		    {"name": "SEGMENTS", "datatype": "string", "separator" : " + "},
-		    {"name": "VALUE", "datatype": "string"},
-		    {"name": "ENTRY", "datatype": "string"},
-		    {"name": "MORPHEMES", "datatype": "string", "separator" : " "},
-		    {"name": "CONCEPT", "datatype": "string"},
-		    {"name": "PARAMETER_ID", "datatype": "string"},
-		    {"name": "SOURCE", "datatype": "string"},
-		    {"name": "LANGUAGE", "datatype": "string"},
-		    {"name": "LANGUAGE_ID", "datatype": "string"}
-                ]
-            }
-        }
-    ]
+  "@context": ["http://www.w3.org/ns/csvw", {"@language": "en"}],
+  "dialect": {
+    "header": true,
+    "delimiter": "\t",
+    "encoding": "utf-8-sig"
+  },
+  "tables": [
+    {
+      "url": "example.tsv",
+      "tableSchema": {
+	"columns": [
+	  {
+	    "name": "ID", 
+	    "datatype": "integer", 
+	    "propertyUrl": "http://purl.org/dc/terms/identifier"
+	  },
+	  {
+	    "name": "Language_ID", 
+	    "datatype": "string", 
+	    "propertyUrl": "http://linguistics-ontology.org/gold/2010/Language",
+	    "valueUrl": "http://glottolog.org/resource/languoid/id/{Language_ID}"
+	  },
+	  {
+	    "name": "Language", 
+	    "datatype": "string",
+	    "propertyUrl": "http://linguistics-ontology.org/gold/2010/Language"
+	  },
+	  {
+	    "name": "Concept", 
+	    "datatype": "string",
+	    "propertyUrl": "http://linguistics-ontology.org/gold/2010/LexicalizedConcept"
+	  },
+	  {
+	    "name": "Parameter_ID", 
+	    "datatype": "string",
+	    "propertyUrl": "http://linguistics-ontology.org/gold/2010/LexicalizedConcept",
+	    "valueUrl": "http://concepticon.clld.org/parameters/{Parameter_ID}"
+	  },
+	  {
+	    "name": "Value", 
+	    "datatype": "string",
+	    "propertyUrl": "http://cldf.clld.org/cldf/LexicalUnit"
+	  },
+	  {
+	    "name": "Form", 
+	    "datatype": "string",
+	    "propertyUrl": "http://linguistics-ontology.org/gold/2010/FormUnit"
+	  },
+	  {
+	    "name": "Segments", 
+	    "datatype": "string", "separator" : " ",
+	    "propertyUrl": "http://cldf.clld.org/cldf/Segments",
+	    "valueUrl": "http://clpn.clld.org/paramters/{Segments}"
+	  },
+	  {
+	    "name": "Cognate_Set", 
+	    "datatype": "integer",
+	    "propertyUrl": "http://cldf.clld.org/cldf/Cognate_Set"
+	  },
+	  {
+	    "name": "Alignment", 
+	    "datatype": "string", 
+	    "separator": " ",
+	    "propertyUrl": "http://cldf.clld.org/cldf/Alignment"
+	  },
+	  {
+	    "name": "Cognate_Sets", 
+	    "datatype": "integer", "separator" : " ",
+	    "propertyUrl": "http://cldf.clld.org/cldf/Cognate_Sets"
+	  },
+	  {
+	    "name": "Alignments", 
+	    "datatype": "string", "separator" : " ",
+	    "propertyUrl": "http://cldf.clld.org/cldf/Alignments"
+	  },
+	  {
+	    "name": "Morphemes", 
+	    "datatype": "string", 
+	    "separator": " ",
+	    "propertyUrl": "http://cldf.clld.org/cldf/Morphemes"
+	  },
+	  {
+	    "name": "Prosodic_Structure",
+	    "datatype": "string",
+	    "separator": " ",
+	    "propertyUrl": "http://cldf.clld.org/cldf/Prosodic_Structure"
+	  },
+	  {"name": "Source", 
+	    "datatype": "string",
+	    "separator": ",",
+	    "propertyUrl": "http://purl.org/dc/terms/source",
+	    "valueUrl": "http://evobib.lingpy.org?key={Source}"
+	  },
+	  {
+	    "name": "Comment",
+	    "propertyUrl": "http://purl.org/dc/terms/description",
+	    "datatype": "string"
+	  }
+	]            
+      }
+    }
+  ]
 } 
