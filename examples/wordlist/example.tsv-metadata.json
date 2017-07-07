@@ -1,104 +1,182 @@
 {
-  "@context": ["http://www.w3.org/ns/csvw", {"@language": "en"}],
-  "dialect": {
-    "header": true,
-    "delimiter": "\t",
-    "encoding": "utf-8-sig"
-  },
-  "tables": [
-    {
-      "url": "example.tsv",
-      "tableSchema": {
-	"columns": [
-	  {
-	    "name": "ID", 
-	    "datatype": "integer", 
-	    "propertyUrl": "http://purl.org/dc/terms/identifier"
-	  },
-	  {
-	    "name": "Language_ID", 
-	    "datatype": "string", 
-	    "propertyUrl": "http://linguistics-ontology.org/gold/2010/Language",
-	    "valueUrl": "http://glottolog.org/resource/languoid/id/{Language_ID}"
-	  },
-	  {
-	    "name": "Language", 
-	    "datatype": "string",
-	    "propertyUrl": "http://linguistics-ontology.org/gold/2010/Language"
-	  },
-	  {
-	    "name": "Concept", 
-	    "datatype": "string",
-	    "propertyUrl": "http://linguistics-ontology.org/gold/2010/LexicalizedConcept"
-	  },
-	  {
-	    "name": "Parameter_ID", 
-	    "datatype": "string",
-	    "propertyUrl": "http://linguistics-ontology.org/gold/2010/LexicalizedConcept",
-	    "valueUrl": "http://concepticon.clld.org/parameters/{Parameter_ID}"
-	  },
-	  {
-	    "name": "Value", 
-	    "datatype": "string",
-	    "propertyUrl": "http://cldf.clld.org/cldf/LexicalUnit"
-	  },
-	  {
-	    "name": "Form", 
-	    "datatype": "string",
-	    "propertyUrl": "http://linguistics-ontology.org/gold/2010/FormUnit"
-	  },
-	  {
-	    "name": "Segments", 
-	    "datatype": "string", "separator" : " ",
-	    "propertyUrl": "http://cldf.clld.org/cldf/Segments",
-	    "valueUrl": "http://clpn.clld.org/paramters/{Segments}"
-	  },
-	  {
-	    "name": "Cognate_Set", 
-	    "datatype": "integer",
-	    "propertyUrl": "http://cldf.clld.org/cldf/Cognate_Set"
-	  },
-	  {
-	    "name": "Alignment", 
-	    "datatype": "string", 
-	    "separator": " ",
-	    "propertyUrl": "http://cldf.clld.org/cldf/Alignment"
-	  },
-	  {
-	    "name": "Cognate_Sets", 
-	    "datatype": "integer", "separator" : " ",
-	    "propertyUrl": "http://cldf.clld.org/cldf/Cognate_Sets"
-	  },
-	  {
-	    "name": "Alignments", 
-	    "datatype": "string", "separator" : " ",
-	    "propertyUrl": "http://cldf.clld.org/cldf/Alignments"
-	  },
-	  {
-	    "name": "Morphemes", 
-	    "datatype": "string", 
-	    "separator": " ",
-	    "propertyUrl": "http://cldf.clld.org/cldf/Morphemes"
-	  },
-	  {
-	    "name": "Prosodic_Structure",
-	    "datatype": "string",
-	    "separator": " ",
-	    "propertyUrl": "http://cldf.clld.org/cldf/Prosodic_Structure"
-	  },
-	  {"name": "Source", 
-	    "datatype": "string",
-	    "separator": ",",
-	    "propertyUrl": "http://purl.org/dc/terms/source",
-	    "valueUrl": "http://evobib.lingpy.org?key={Source}"
-	  },
-	  {
-	    "name": "Comment",
-	    "propertyUrl": "http://purl.org/dc/terms/description",
-	    "datatype": "string"
-	  }
-	]            
-      }
-    }
-  ]
+	"@context": ["http://www.w3.org/ns/csvw", {"@language": "en"}],
+	"dialect": {
+		"header": true,
+		"delimiter": "\t",
+		"encoding": "utf-8-sig"
+	},
+	"tables": [
+		{
+			"url": "example.tsv",
+			"tableSchema": {
+				"columns": [
+					{
+						"name": "ID", 
+						"datatype": "integer", 
+						"propertyUrl": "http://purl.org/dc/terms/identifier"
+					},
+					{
+						"name": "Language_ID", 
+						"datatype": "string", 
+						"propertyUrl": "http://linguistics-ontology.org/gold/2010/Language",
+						"valueUrl": "http://glottolog.org/resource/languoid/id/{Language_ID}"
+					},
+					{
+						"name": "Language_name", 
+						"datatype": "string",
+						"propertyUrl": "http://linguistics-ontology.org/gold/2010/Language"
+					},
+					{
+						"name": "Parameter_name", 
+						"datatype": "string",
+						"propertyUrl": "http://linguistics-ontology.org/gold/2010/LexicalizedConcept"
+					},
+					{
+						"name": "Parameter_ID", 
+						"datatype": "string",
+						"propertyUrl": "http://cldf.clld.org/cldf/ConceptSet",
+						"valueUrl": "http://concepticon.clld.org/parameters/{Parameter_ID}"
+					},
+					{
+						"name": "Value", 
+						"datatype": "string",
+						"propertyUrl": "http://cldf.clld.org/cldf/LexicalUnit"
+					},
+					{
+						"name": "Form", 
+						"datatype": "string",
+						"propertyUrl": "http://linguistics-ontology.org/gold/2010/FormUnit"
+					},
+					{
+						"name": "Segments", 
+						"datatype": "string", "separator" : " ",
+						"propertyUrl": "http://cldf.clld.org/cldf/SoundSequence",
+						"valueUrl": "http://clpn.clld.org/paramters/{Segments}"
+					},
+					{
+						"name": "Motivation_structure", 
+						"datatype": "string", 
+						"separator": " ",
+						"propertyUrl": "http://cldf.clld.org/cldf/MotivationStructure"
+					},
+					{
+						"name": "Prosodic_structure",
+						"datatype": "string",
+						"separator": " ",
+						"propertyUrl": "http://cldf.clld.org/cldf/ProsodicStructure"
+					},
+					{"name": "Source", 
+						"datatype": "string",
+						"separator": ",",
+						"propertyUrl": "http://purl.org/dc/terms/source",
+						"valueUrl": "http://evobib.lingpy.org?key={Source}"
+					},
+					{
+						"name": "Comment",
+						"propertyUrl": "http://purl.org/dc/terms/description",
+						"datatype": "string"
+					}
+				]            
+			}
+		},
+		{
+			"url": "example.tsv-cognates.tsv",
+			"tableSchema": {
+				"columns": [
+					{
+						"name": "Word_ID",
+						"datatype": "integer"
+					},
+					{
+						"name": "Form", 
+						"datatype": "string",
+						"propertyUrl": "http://linguistics-ontology.org/gold/2010/FormUnit"
+					},
+					{
+						"name": "Cognate_set_ID", 
+						"datatype": "integer",
+						"propertyUrl": "http://cldf.clld.org/cldf/Cognate_Set"
+					},
+					{
+						"name": "Alignment", 
+						"datatype": "string", 
+						"separator": " ",
+						"propertyUrl": "http://cldf.clld.org/cldf/Alignment"
+					},
+					{
+						"name": "Doubt",
+						"datatype": "string"
+					},
+					{
+						"name": "Cognate_detection_method",
+						"datatype": "string"
+					},
+					{
+						"name": "Cognate_source",
+						"datatype": "string"
+					},
+					{
+						"name": "Alignment_method",
+						"datatype": "string"
+					},
+					{
+						"name": "Alignment_source",
+						"datatype": "string"
+					}
+				]
+			}
+		},
+		{
+			"url": "example.tsv-partial.tsv",
+			"tableSchema": {
+				"columns": [
+					{
+						"name": "Word_ID",
+						"datatype": "integer"
+					},
+					{
+						"name": "Segments", 
+						"datatype": "string", "separator" : " ",
+						"propertyUrl": "http://cldf.clld.org/cldf/SoundSequence",
+						"valueUrl": "http://clpn.clld.org/paramters/{Segments}"
+					},					{
+						"name": "Cognate_set_ID", 
+						"datatype": "integer",
+						"propertyUrl": "http://cldf.clld.org/cldf/Cognate_Set"
+					},
+					{
+						"name": "Alignment", 
+						"datatype": "string", 
+						"separator": " ",
+						"propertyUrl": "http://cldf.clld.org/cldf/Alignment"
+					},
+					{
+						"name": "Segment_slice", 
+						"datatype": "integer", "separator" : " ",
+						"propertyUrl": "http://cldf.clld.org/cldf/SubSequence"
+					},
+					{
+						"name": "Doubt",
+						"datatype": "string"
+					},
+					{
+						"name": "Cognate_detection_method",
+						"datatype": "string"
+					},
+					{
+						"name": "Cognate_source",
+						"datatype": "string"
+					},
+					{
+						"name": "Alignment_method",
+						"datatype": "string"
+					},
+					{
+						"name": "Alignment_source",
+						"datatype": "string"
+					}
+				]
+			}
+		}
+	]
 } 
