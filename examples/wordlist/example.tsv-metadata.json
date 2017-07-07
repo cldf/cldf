@@ -98,6 +98,12 @@
 						"propertyUrl": "http://cldf.clld.org/cldf/Cognate_Set"
 					},
 					{
+						"name": "Segments", 
+						"datatype": "string", "separator" : " ",
+						"propertyUrl": "http://cldf.clld.org/cldf/SoundSequence",
+						"valueUrl": "http://clpn.clld.org/paramters/{Segments}"
+					},		
+					{
 						"name": "Alignment", 
 						"datatype": "string", 
 						"separator": " ",
@@ -152,7 +158,7 @@
 					},
 					{
 						"name": "Segment_slice", 
-						"datatype": "integer", "separator" : " ",
+						"datatype": "integer", "separator" : ",",
 						"propertyUrl": "http://cldf.clld.org/cldf/SubSequence"
 					},
 					{
