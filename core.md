@@ -97,14 +97,14 @@ Thus, an example for a CLDF dataset description could look as follows:
 {
   "@context": "http://www.w3.org/ns/csvw",
   "dc:format": "cldf:v1.0",
-  "dc:type": "cldf:structure-dataset",
+  "dc:type": "http://cldf.clld.org/terms.rdf#StructureDataset",
   "dc:title": "The Dataset",
   "dc:bibliographicCitation": "Cite me like this!",
   "dc:license": "http://creativecommons.org/licenses/by/4.0/",
   "tables": [
     {
       "url": "ds1.csv",
-      "dc:type": "cldf:values",
+      "dc:type": "http://cldf.clld.org/terms.rdf#ValueTable",
       "tableSchema": {
         "columns": [
           {

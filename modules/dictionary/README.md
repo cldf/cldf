@@ -5,7 +5,11 @@ A simple dictionary (e.g. for publication in [Dictionaria](http://dictionaria.cl
 ## Entries
 
 Dictionary entries must be stored as rows in a CSV file either named `entries.csv` or specified as table with 
-common property `"dc:type": "dictionaria:entries"` in the metadata file.
+common property 
+```
+"dc:type": "http://cldf.clld.org/terms.rdf#EntryTable"
+``` 
+in the metadata file.
 
 Each entry row must contain information in the following three columns:
 
@@ -52,6 +56,13 @@ dictionary. Each sense is linked to exactly one entry, but entries may
 have multiple senses linked to them (e.g. German /spinnen/ 1. ‘spin’ 2.
 ‘be crazy’). There is thus a many-to-one relationship between senses and
 entries.
+
+Senses must be stored as rows in a CSV file either named `senses.csv` or specified as table with 
+common property 
+```
+"dc:type": "http://cldf.clld.org/terms.rdf#SenseTable"
+``` 
+in the metadata file.
 
 Each sense must minimally contain information in the following
 three fields (again, the ID is a code that can be chosen arbitrarily):

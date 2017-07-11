@@ -8,7 +8,7 @@
     "tables": [
         {
             "url": "values.csv",
-            "dc:type": "cldf:values",
+            "dc:type": "http://cldf.clld.org/terms.rdf#ValueTable",
             "tableSchema": {
                 "columns": [
                     {
