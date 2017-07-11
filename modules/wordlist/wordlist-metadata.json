@@ -1,14 +1,14 @@
 {
     "@context": "http://www.w3.org/ns/csvw",
     "dc:format": "cldf:v1.0",
-    "dc:type": "cldf:wordlist",
+    "dc:type": "http://cldf.clld.org/terms.rdf#Wordlist",
     "dialect": {
         "commentPrefix": null
     },
     "tables": [
         {
             "url": "forms.csv",
-            "dc:type": "cldf:forms",
+            "dc:type": "http://cldf.clld.org/terms.rdf#FormTable",
             "tableSchema": {
                 "columns": [
                     {

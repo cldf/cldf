@@ -6,7 +6,7 @@
         }
     ],
     "dc:format": "cldf:v1.0",
-    "dc:type": "cldf:dictionary",
+    "dc:type": "http://cldf.clld.org/terms.rdf#Dictionary",
     "dialect": {
         "doubleQuote": false,
         "commentPrefix": null,
@@ -15,7 +15,7 @@
     "tables": [
         {
             "url": "entries.csv",
-            "dc:type": "cldf:entries",
+            "dc:type": "http://cldf.clld.org/terms.rdf#EntryTable",
             "tableSchema": {
                 "columns": [
                     {
@@ -40,7 +40,7 @@
         },
         {
             "url": "senses.csv",
-            "dc:type": "cldf:senses",
+            "dc:type": "http://cldf.clld.org/terms.rdf#SenseTable",
             "tableSchema": {
                 "columns": [
                     {

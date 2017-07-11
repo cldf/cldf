@@ -1,7 +1,7 @@
 {
     "@context": "http://www.w3.org/ns/csvw",
     "dc:format": "cldf:v1.0",
-    "dc:type": "cldf:structure-dataset",
+    "dc:type": "http://cldf.clld.org/terms.rdf#StructureDataset",
     "dialect": {
         "commentPrefix": null
     },
