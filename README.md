@@ -82,7 +82,7 @@ without, automatically; although this means added metadata will be lost.
 
 ## CLDF Ontology
 
-CLDF data uses terms from the [CLDF Ontology](http://cldf.clld.org/terms.rdf) to mark `TableGroup` or `Table` objects which have special meaning within the CLDF framework.
+CLDF data uses terms from the [CLDF Ontology](http://cldf.clld.org/terms.rdf) to mark [`TableGroup`](http://w3c.github.io/csvw/metadata/#table-groups) or [`Table`](http://w3c.github.io/csvw/metadata/#tables) objects which have special meaning within the CLDF framework.
 
 Columns in tabular data recognized by CLDF-aware applications typically contain
 linguistic data (apart from bookkeeping information like identifiers). For this
@@ -102,9 +102,9 @@ In the [CLDF Ontology](http://cldf.clld.org/terms.rdf) modules are modeled as su
 For each type of CLDF dataset there is a *CLDF module*, i.e. a default metadata profile describing the required tables, columns and datatypes.
 *metadata-free conformance* means data files will be read as if they were accompanied by the corresponding default metadata.
 
-- [Wordlist](modules/wordlist/)
-- [Structure dataset](modules/structure_dataset/)
-- [Dictionary](modules/dictionary/)
+- [Wordlist](modules/Wordlist/)
+- [Structure dataset](modules/StructureDataset/)
+- [Dictionary](modules/Dictionary/)
 
 
 ## CLDF Components

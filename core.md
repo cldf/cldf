@@ -9,8 +9,8 @@ The following list of column names (either specified in the CSV files or as `nam
 
 name | property | description
 --- | --- | ---
-`ID` | [`dc:identifier`](http://dublincore.org/documents/dcmi-terms/#terms-identifier) | identifies a row in the data file; either a local ID - preferably an [UUID](http://en.wikipedia.org/wiki/Universally_unique_identifier) - or an (equally universally unique) URL like http://wold.clld.org/word/7214142329897819 or http://wals.info/valuesets/1A-niv
-`Language_ID` | [`gold:Language`](http://linguistics-ontology.org/gold/2010/Language) | identifies the language or variety the data in the row is about. To mark the language identifier as Glottocode, the column specification should have a [`valueUrl`](http://w3c.github.io/csvw/metadata/#cell-valueUrl) property of `"http://glottolog.org/resource/languoid/id/{Language_ID}"`.
+`ID` | [`dc:identifier`](http://purl.org/dc/terms/identifier) | identifies a row in the data file; either a local ID - preferably an [UUID](http://en.wikipedia.org/wiki/Universally_unique_identifier) - or an (equally universally unique) URL like http://wold.clld.org/word/7214142329897819 or http://wals.info/valuesets/1A-niv
+`Language_ID` | <ul><li><a href="http://purl.org/dc/terms/identifier"><tt>dc:identifier</tt></a></li><li><a href="http://cldf.cld.org/terms.rdf#glottocode"><tt>cldf:glottocode</tt></a></li><li><a href="http://cldf.cld.org/terms.rdf#iso639P3code"><tt>cldf:iso639P3code</tt></a></li></ul> | identifies the language or variety the data in the row is about. If the language identifiers are Glottocodes, the column specification should have a [`valueUrl`](http://w3c.github.io/csvw/metadata/#cell-valueUrl) property of `"http://glottolog.org/resource/languoid/id/{Language_ID}"`.
 `Source` | [`dc:source`](http://dublincore.org/documents/dcmi-terms/#terms-source) | Semicolon-separated source specifications, of the form *<source_ID>[<source context>]*, e.g. *http://glottolog.org/resource/reference/id/318814[34]*, or *meier2015[3-12]* where *meier2015* is a citation key in the accompanying BibTeX file.
 `Example_ID` | | Semicolon-separated example IDs.
 `Comment` | [`dc:description`](http://dublincore.org/documents/dcmi-terms/#terms-description) | Free text comment.
@@ -78,10 +78,9 @@ In particular, to make tooling simpler, we restrict the metadata specification a
 - The common property `dc:format` of the `TableGroup` is used to indicate the
   minimal required CLDF version, e.g. `"dc:format": "cldf:v1.0"`
 - The common property `dc:type` of the `TableGroup` is used to indicate the
-  CLDF module, e.g. `"dc:format": "cldf:wordlist"`
+  CLDF module, e.g. `"dc:type": "http://cldf.clld.org/terms.rdf#Wordlist"`
 - The common property `dc:type` of a `Table` is used to associate tables with
-  a particular role in a CLDF module; i.e. it should be reserved for this use,
-  although recognized values for CLDF purposes will always be prefixed with `cldf:`.
+  a particular role in a CLDF module using appropriate classes from the [CLDF Ontology](http://cldf.clld.org/terms.rdf).
 - If each row in the data file corresponds to a resource on the web, the `tableSchema` property should provide an `aboutUrl` property.
 - If individual cells in a row correspond to resources on the web, the corresponding column specification should provide a `valueUrl` property.
 
