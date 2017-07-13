@@ -74,7 +74,8 @@ Thus, using extended conformance via metadata, a dataset may
 - use non-standard file names,
 - use non-standard column names,
 - add metadata describing attribution and provenance of the data,
-- specify [relations between multiple tables](http://w3c.github.io/csvw/metadata/#common-properties) in a dataset.
+- specify [relations between multiple tables](http://w3c.github.io/csvw/metadata/#common-properties) in a dataset,
+- supply default values for required columns like `Language_ID`, using virtual columns.
 
 Note that it is possible to convert a CLDF dataset with metadata into one
 without, automatically; although this means added metadata will be lost.
@@ -82,12 +83,12 @@ without, automatically; although this means added metadata will be lost.
 
 ## CLDF Ontology
 
-CLDF data uses terms from the [CLDF Ontology](http://cldf.clld.org/terms.rdf) to mark [`TableGroup`](http://w3c.github.io/csvw/metadata/#table-groups) or [`Table`](http://w3c.github.io/csvw/metadata/#tables) objects which have special meaning within the CLDF framework.
+CLDF data uses terms from the [CLDF Ontology](http://cldf.clld.org/v1.0/terms.rdf) to mark [`TableGroup`](http://w3c.github.io/csvw/metadata/#table-groups) or [`Table`](http://w3c.github.io/csvw/metadata/#tables) objects which have special meaning within the CLDF framework.
 
 Columns in tabular data recognized by CLDF-aware applications typically contain
 linguistic data (apart from bookkeeping information like identifiers). For this
 data we try to describe the specific data values using terms from the
-[General Ontology for Linguistic Description - GOLD](http://linguistics-ontology.org/) or - if no matching concepts are provided by GOLD - from the [CLDF Ontology](http://cldf.clld.org/terms.rdf).
+[General Ontology for Linguistic Description - GOLD](http://linguistics-ontology.org/) or - if no matching concepts are provided by GOLD - from the [CLDF Ontology](http://cldf.clld.org/v1.0/terms.rdf).
 
 
 <a id="modules"> </a>
@@ -97,7 +98,7 @@ data we try to describe the specific data values using terms from the
 Much like [Dublin Core Application Profiles](http://dublincore.org/documents/profile-guidelines/), CLDF Modules describe of linguistic 
 datatypes using terms of the CLDF Ontology grouped into tables.
 
-In the [CLDF Ontology](http://cldf.clld.org/terms.rdf) modules are modeled as subclasses of [`dcmitype:Dataset`](http://dublincore.org/documents/2012/06/14/dcmi-terms/?v=dcmitype#Dataset).
+In the [CLDF Ontology](http://cldf.clld.org/v1.0/terms.rdf) modules are modeled as subclasses of [`dcat:Distribution`](http://www.w3.org/ns/dcat#Distribution), thus additional metadata as recommended in the [DCAT specification](https://www.w3.org/TR/vocab-dcat/#class-distribution) should be provided.
 
 For each type of CLDF dataset there is a *CLDF module*, i.e. a default metadata profile describing the required tables, columns and datatypes.
 *metadata-free conformance* means data files will be read as if they were accompanied by the corresponding default metadata.

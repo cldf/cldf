@@ -1,12 +1,18 @@
 {
 	"url": "examples.csv",
-	"dc:type": "http://cldf.clld.org/terms.rdf#ExampleTable",
+	"dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#ExampleTable",
 	"dc:format": "http://purl.org/linguistics/gold/InterlinearGlossedText",
 	"tableSchema": {
 		"columns": [
 			{
 				"name": "ID",
 				"propertyUrl": "http://purl.org/dc/terms/identifier",
+				"datatype": "string"
+			},
+			{
+				"name": "Language_ID",
+				"propertyUrl": "http://linguistics-ontology.org/gold/2010/Language",
+				"required": true,
 				"datatype": "string"
 			},
 			{

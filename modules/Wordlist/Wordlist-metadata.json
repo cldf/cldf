@@ -1,35 +1,38 @@
 {
     "@context": "http://www.w3.org/ns/csvw",
-    "dc:format": "cldf:v1.0",
-    "dc:type": "http://cldf.clld.org/terms.rdf#Wordlist",
+    "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#Wordlist",
     "dialect": {
         "commentPrefix": null
     },
     "tables": [
         {
             "url": "forms.csv",
-            "dc:type": "http://cldf.clld.org/terms.rdf#FormTable",
+            "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#FormTable",
             "tableSchema": {
                 "columns": [
                     {
                         "name": "ID",
                         "propertyUrl": "http://purl.org/dc/terms/identifier",
+                        "required": true,
                         "datatype": "string"
                     },
                     {
                         "name": "Language_ID",
                         "propertyUrl": "http://linguistics-ontology.org/gold/2010/Language",
+                        "required": true,
                         "datatype": "string"
                     },
                     {
                         "name": "Parameter_ID",
                         "titles": "Concept_ID",
                         "propertyUrl": "http://www.w3.org/2004/02/skos/core#Concept",
+                        "required": true,
                         "datatype": "string"
                     },
                     {
                         "name": "Value",
                         "propertyUrl": "http://linguistics-ontology.org/gold/2010/FormUnit",
+                        "required": true,
                         "datatype": "string"
                     },
                     {
@@ -45,6 +48,7 @@
                     },
                     {
                         "name": "Source",
+                        "separator": ";",
                         "propertyUrl": "http://purl.org/dc/terms/source",
                         "datatype": "string"
                     }

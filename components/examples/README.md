@@ -13,7 +13,7 @@ Often examples are glossed using
 according to the [Leipzig Glossing Rules](http://www.eva.mpg.de/lingua/resources/glossing-rules.php). In this case, the example is extended
 with two properties: The aligned primary text and aligned glosses.
 
-Thus, an `examples.csv` file or a table ẁith `"dc:type": "http://cldf.clld.org/terms.rdf#ExampleTable"` has
+Thus, an `examples.csv` file or a table ẁith `"dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#ExampleTable"` has
 the following columns:
 - `Primary`: required
 - `Analyzed`: optional, words separated by tab `\t` (or a different separator if indicated by metadata)

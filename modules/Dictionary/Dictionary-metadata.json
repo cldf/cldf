@@ -5,8 +5,7 @@
             "@language": "en"
         }
     ],
-    "dc:format": "cldf:v1.0",
-    "dc:type": "http://cldf.clld.org/terms.rdf#Dictionary",
+    "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#Dictionary",
     "dialect": {
         "doubleQuote": false,
         "commentPrefix": null,
@@ -15,7 +14,7 @@
     "tables": [
         {
             "url": "entries.csv",
-            "dc:type": "http://cldf.clld.org/terms.rdf#EntryTable",
+            "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#EntryTable",
             "tableSchema": {
                 "columns": [
                     {
@@ -23,6 +22,12 @@
                         "propertyUrl": "http://purl.org/dc/terms/identifier",
                         "datatype": {"base": "string"},
                         "required": true
+                    },
+                    {
+                        "name": "Language_ID",
+                        "propertyUrl": "http://linguistics-ontology.org/gold/2010/Language",
+                        "required": true,
+                        "datatype": "string"
                     },
                     {
                         "name": "headword",
@@ -40,7 +45,7 @@
         },
         {
             "url": "senses.csv",
-            "dc:type": "http://cldf.clld.org/terms.rdf#SenseTable",
+            "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#SenseTable",
             "tableSchema": {
                 "columns": [
                     {
@@ -58,7 +63,8 @@
                     },
                     {
                         "name": "entry_ID",
-                        "datatype": "string"
+                        "datatype": "string",
+                        "required": true
                     }
                 ],
                "foreignKeys": [

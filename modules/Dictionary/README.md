@@ -7,7 +7,7 @@ A simple dictionary (e.g. for publication in [Dictionaria](http://dictionaria.cl
 Dictionary entries must be stored as rows in a CSV file either named `entries.csv` or specified as table with 
 common property 
 ```
-"dc:type": "http://cldf.clld.org/terms.rdf#EntryTable"
+"dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#EntryTable"
 ``` 
 in the metadata file.
 
@@ -60,7 +60,7 @@ entries.
 Senses must be stored as rows in a CSV file either named `senses.csv` or specified as table with 
 common property 
 ```
-"dc:type": "http://cldf.clld.org/terms.rdf#SenseTable"
+"dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#SenseTable"
 ``` 
 in the metadata file.
 

@@ -1,7 +1,7 @@
 # Wordlist Module
 
 A simple wordlist can be modeled in CLDF as a single file `forms.csv` or
-table of `"dc:type": "cldf:forms"`. This table has required columns
+table of `"dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#FormTable"`. This table has required columns
 - `ID`
 - `Language_ID`
 - `Parameter_ID`: An identifier of a concept the `Value` is a form for. `Concept_ID` can be used as an alias for `Parameter_ID`.

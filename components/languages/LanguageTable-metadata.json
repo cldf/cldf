@@ -1,6 +1,6 @@
 {
 	"url": "languages.csv",
-	"dc:type": "http://cldf.clld.org/terms.rdf#LanguageTable",
+	"dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#LanguageTable",
 	"tableSchema": {
 		"columns": [
 			{
