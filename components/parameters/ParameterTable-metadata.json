@@ -1,0 +1,18 @@
+{
+    "url": "parameters.csv",
+    "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#ParameterTable",
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "ID",
+                "propertyUrl": "http://purl.org/dc/terms/identifier",
+                "datatype": "string"
+            },
+            {
+                "name": "Name",
+                "datatype": "string"
+            }
+        ],
+        "primaryKey": "ID"
+    }
+}
