@@ -51,7 +51,7 @@
 						"name": "Segments", 
 						"datatype": "string", "separator" : " ",
 						"propertyUrl": "http://cldf.clld.org/cldf/SoundSequence",
-						"valueUrl": "http://clpn.clld.org/paramters/{Segments}"
+						"valueUrl": "http://clpn.clld.org/parameters/{Segments}"
 					},
 					{
 						"name": "Motivation_structure", 
