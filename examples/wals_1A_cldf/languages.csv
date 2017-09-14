@@ -1,0 +1,564 @@
+ID,Name,Latitude,Longitude,glottocode,iso639P3code,Genus,Family
+xoo,!Xóõ,-24.0,21.5,xooo1239,nmn,Tu,Tu
+ood,O'odham,32.0,-112.0,toho1245,ood,Tepiman,Uto-Aztecan
+aiz,Aizi,5.25,-4.5,apro1235,ahp,Kru,Niger-Congo
+akw,Akawaio,6.0,-59.5,akaw1239,ake,Cariban,Cariban
+alb,Albanian,41.0,20.0,,,Albanian,Indo-European
+amh,Amharic,10.0,38.0,amha1245,amh,Semitic,Afro-Asiatic
+amo,Amo,10.3333333333,8.66666666667,amoo1242,amo,Kainji,Niger-Congo
+adk,Andoke,-0.666666666667,-72.0,ando1256,ano,Andoke,Andoke
+ao,Ao,26.5833333333,94.6666666667,aona1235,njo,Kuki-Chin,Sino-Tibetan
+api,Apinayé,-5.5,-48.0,apin1244,apn,Ge-Kaingang,Macro-Ge
+apu,Apurinã,-9.0,-67.0,apur1254,apu,Purus,Arawakan
+ava,Avar,42.5,46.5,avar1256,ava,Avar-Andic-Tsezic,Nakh-Daghestanian
+awp,Awa Pit,1.5,-78.25,awac1239,kwi,Barbacoan,Barbacoan
+awn,Awngi,10.8333333333,36.6666666667,awng1244,awn,Central Cushitic,Afro-Asiatic
+aym,Aymara (Central),-17.0,-69.0,cent2142,ayc,Aymaran,Aymaran
+zan,Zande,4.0,26.0,zand1248,zne,Ubangi,Niger-Congo
+aze,Azerbaijani,40.5,48.5,,,Turkic,Altaic
+bag,Bagirmi,11.6666666667,16.0,bagi1246,bmi,Bongo-Bagirmi,Central Sudanic
+bai,Bai,26.0,100.0,cent2004,bca,Bai,Sino-Tibetan
+bng,Baining,-4.58333333333,152.0,qaqe1238,byx,Baining,Baining-Taulil
+bki,Bakairí,-14.0,-55.0,baka1277,bkq,Cariban,Cariban
+bam,Bambara,12.5,-7.5,bamb1269,bam,Western Mande,Mande
+byu,Bandjalang (Yugumbir),-27.9166666667,153.0,band1339,bdy,Southeastern Pama-Nyungan,Pama-Nyungan
+bno,Waimaha,0.333333333333,-70.25,waim1255,bao,Tucanoan,Tucanoan
+brd,Bardi,-16.5833333333,122.916666667,bard1255,bcj,Nyulnyulan,Nyulnyulan
+brb,Bariba,10.0,2.5,baat1238,bba,Gur,Niger-Congo
+bsk,Bashkir,53.0,58.0,bash1264,bak,Turkic,Altaic
+bsq,Basque,43.0,-3.0,basq1248,eus,Basque,Basque
+bkr,Batak (Karo),3.25,98.25,bata1293,btx,Northwest Sumatra-Barrier Islands,Austronesian
+bto,Batak (Toba),2.5,99.0,bata1289,bbc,Northwest Sumatra-Barrier Islands,Austronesian
+ttu,Tsova-Tush,42.5,45.5,bats1242,bbl,Nakh,Nakh-Daghestanian
+baw,Bawm,22.5,92.25,bawm1236,bgr,Kuki-Chin,Sino-Tibetan
+bee,Beembe,-3.91666666667,14.0833333333,beem1239,beq,Bantoid,Niger-Congo
+bej,Beja,18.0,36.0,beja1238,bej,Beja,Afro-Asiatic
+bco,Bella Coola,52.5,-126.666666667,bell1243,blc,Bella Coola,Salishan
+ben,Bengali,24.0,90.0,beng1280,ben,Indic,Indo-European
+ber,Berta,10.3333333333,34.6666666667,bert1248,wti,Berta,Berta
+bet,Bété,6.25,-6.25,dalo1238,bev,Kru,Niger-Congo
+bir,Birom,9.66666666667,8.83333333333,bero1242,bom,Platoid,Niger-Congo
+bis,Bisa,11.5,-0.5,biss1248,bib,Eastern Mande,Mande
+bbf,Bobo Madaré (Northern),12.4166666667,-4.33333333333,,bbo,Western Mande,Mande
+bod,Bodo,26.8333333333,92.0,bodo1269,brx,Bodo-Garo,Sino-Tibetan
+brr,Bororo,-16.0,-57.0,boro1282,bor,Bororoan,Bororoan
+brh,Brahui,28.5,67.0,brah1256,brh,Northern Dravidian,Dravidian
+bra,Brao,14.1666666667,107.5,lave1249,brb,Bahnaric,Austro-Asiatic
+bri,Bribri,9.41666666667,-83.0,brib1243,bzd,Talamanca,Chibchan
+brw,Bru (Western),16.75,104.75,west2397,brv,Katuic,Austro-Asiatic
+arp,Arapesh (Mountain),-3.46666666667,143.166666667,buki1249,ape,Kombio-Arapesh,Torricelli
+bua,Burarra,-12.25,134.583333333,bura1267,bvr,Burarran,Mangrida
+brm,Burmese,21.0,96.0,nucl1310,mya,Burmese-Lolo,Sino-Tibetan
+bur,Burushaski,36.5,74.5,buru1296,bsk,Burushaski,Burushaski
+cac,Cacua,1.08333333333,-70.0,cacu1241,cbv,Cacua-Nukak,Cacua-Nukak
+cad,Caddo,33.3333333333,-93.5,cadd1256,cad,Caddoan,Caddoan
+cah,Cahuilla,33.5,-116.25,cahu1264,chl,California Uto-Aztecan,Uto-Aztecan
+cax,Campa (Axininca),-12.0,-74.0,asha1243,,Pre-Andine Arawakan,Arawakan
+cam,Camsá,1.16666666667,-77.0,cams1241,kbh,Camsá,Camsá
+ckr,Canela-Krahô,-6.0,-46.0,,,Ge-Kaingang,Macro-Ge
+cnt,Cantonese,23.0,113.0,yuec1235,yue,Chinese,Sino-Tibetan
+car,Carib,5.5,-56.0,gali1262,car,Cariban,Cariban
+ctl,Catalan,41.75,2.0,stan1289,cat,Romance,Indo-European
+cay,Cayapa,0.666666666667,-79.0,chac1249,cbi,Barbacoan,Barbacoan
+cyv,Cayuvava,-13.5,-65.5,cayu1262,cyb,Cayuvava,Cayuvava
+chw,Cham (Western),12.0,105.5,west2650,cja,Malayo-Sumbawan,Austronesian
+cha,Chamorro,13.45,144.75,cham1312,cha,Chamorro,Austronesian
+cso,Chatino (Sierra Occidental),16.25,-97.3333333333,west2644,ctp,Zapotecan,Oto-Manguean
+chl,Chehalis (Upper),46.5833333333,-123.0,uppe1439,cjh,Tsamosan,Salishan
+che,Cherokee,35.5,-83.5,cher1273,chr,Southern Iroquoian,Iroquoian
+cck,Chickasaw,34.0,-88.0,chic1270,cic,Muskogean,Muskogean
+cti,Chin (Tiddim),23.3333333333,93.6666666667,tedi1235,ctd,Kuki-Chin,Sino-Tibetan
+chq,Chinantec (Quiotepec),17.5833333333,-96.6666666667,quio1240,chq,Chinantecan,Oto-Manguean
+cle,Chinantec (Lealao),17.3333333333,-95.9166666667,leal1235,cle,Chinantecan,Oto-Manguean
+chp,Chipewyan,59.0,-106.0,chip1261,chp,Athapaskan,Na-Dene
+cve,Chuave,-6.11666666667,145.116666667,chua1250,cjv,Chimbu,Trans-New Guinea
+chk,Chukchi,67.0,-173.0,chuk1273,ckt,Northern Chukotko-Kamchatkan,Chukotko-Kamchatkan
+chv,Chuvash,55.5,47.5,chuv1255,chv,Turkic,Altaic
+cil,CiLuba,-6.0,22.0,luba1249,lua,Bantoid,Niger-Congo
+cof,Cofán,0.166666666667,-77.1666666667,cofa1242,con,Cofán,Cofán
+cmn,Comanche,33.5,-101.5,coma1245,com,Numic,Uto-Aztecan
+coo,Coos (Hanis),43.5,-124.166666667,coos1249,csz,Coosan,Oregon Coast
+cre,Cree (Plains),54.0,-110.0,plai1258,crk,Algonquian,Algic
+cub,Cubeo,1.33333333333,-70.5,cube1242,cub,Tucanoan,Tucanoan
+kun,Kuna,8.0,-77.3333333333,bord1248,kvn,Kuna,Chibchan
+dad,Dadibi,-6.55,144.583333333,dadi1250,mps,Teberan,Teberan-Pawaian
+nis,Nyishi,27.5,93.5,nisi1239,dap,Tani,Sino-Tibetan
+dag,Daga,-10.0,149.333333333,daga1275,dgz,Dagan,Dagan
+dgb,Dagbani,9.58333333333,-0.5,dagb1246,dag,Gur,Niger-Congo
+dgr,Dagur,48.0,124.0,daur1238,dta,Mongolic,Altaic
+dah,Dahalo,-2.33333333333,40.5,daha1245,dal,Dahalo,Afro-Asiatic
+ddf,Daju (Dar Fur),12.25,25.25,darf1239,daj,Daju,Eastern Sudanic
+dan,Dan,7.5,-8.0,dann1241,daf,Eastern Mande,Mande
+dnw,Dangaléat (Western),12.1666666667,18.3333333333,dang1274,daa,East Chadic,Afro-Asiatic
+dni,Dani (Lower Grand Valley),-4.33333333333,138.833333333,lowe1415,dni,Dani,Trans-New Guinea
+dar,Darai,24.0,84.0,dara1250,dry,Indic,Indo-European
+der,Dla (Proper),-3.58333333333,141.0,dera1245,kbv,Senagi,Senagi
+det,Deti,-20.5,24.5,shua1254,shg,Khoe-Kwadi,Khoe-Kwadi
+din,Dinka,8.5,28.0,nort2815,dip,Nilotic,Eastern Sudanic
+dio,Diola-Fogny,13.0,-16.25,jola1263,dyo,Northern Atlantic,Niger-Congo
+diy,Diyari,-28.0,139.0,dier1241,dif,Central Pama-Nyungan,Pama-Nyungan
+diz,Dizi,6.16666666667,36.5,dizi1235,mdx,Dizoid,Afro-Asiatic
+doy,Doyayo,8.66666666667,13.0833333333,doya1240,dow,Adamawa,Niger-Congo
+dts,Toro So,14.4166666667,-3.25,toro1252,dts,Dogon,Dogon
+dre,Drehu,-21.0,167.25,dehu1237,dhv,Oceanic,Austronesian
+dyi,Dyirbal,-17.8333333333,145.583333333,dyir1250,dbl,Northern Pama-Nyungan,Pama-Nyungan
+efi,Efik,4.91666666667,8.5,efik1245,efi,Cross River,Niger-Congo
+eja,Ejagham,5.41666666667,8.66666666667,ejag1239,etu,Bantoid,Niger-Congo
+eka,Ekari,-3.83333333333,135.5,ekar1243,ekg,Wissel Lakes-Kemandoga,Trans-New Guinea
+eng,English,52.0,0.0,stan1293,eng,Germanic,Indo-European
+epe,Epena Pedee,3.0,-77.0,epen1239,sja,Choco,Choco
+evn,Even,68.0,130.0,even1260,eve,Tungusic,Altaic
+eve,Evenki,56.0,125.0,even1259,evn,Tungusic,Altaic
+ewe,Ewe,6.33333333333,0.416666666667,ewee1241,ewe,Kwa,Niger-Congo
+ewo,Ewondo,4.0,12.0,ewon1239,ewo,Bantoid,Niger-Congo
+eya,Eyak,60.5,-145.0,eyak1241,eya,Eyak,Na-Dene
+prs,Persian,32.0,54.0,west2369,pes,Iranian,Indo-European
+fas,Fasu,-6.58333333333,143.333333333,fasu1242,faa,Fasu,Trans-New Guinea
+fef,Fe'fe',5.25,10.1666666667,fefe1239,fmp,Bantoid,Niger-Congo
+fij,Fijian,-17.8333333333,178.0,fiji1243,fij,Oceanic,Austronesian
+fin,Finnish,62.0,25.0,finn1318,fin,Finnic,Uralic
+fre,French,48.0,2.0,stan1290,fra,Romance,Indo-European
+fur,Fur,13.5,25.0,furr1244,fvr,Fur,Fur
+fuz,Fuzhou,26.0,119.5,mind1253,cdo,Chinese,Sino-Tibetan
+fye,Fyem,9.58333333333,9.33333333333,fyam1238,pym,Platoid,Niger-Congo
+ga,Gã,5.66666666667,-0.166666666667,gaaa1244,gaa,Kwa,Niger-Congo
+gds,Gadsup,-6.25,146.0,gads1258,gaj,Eastern Highlands,Trans-New Guinea
+grr,Garrwa,-17.0833333333,137.166666667,gara1261,gbc,Garrwan,Garrwan
+gar,Garo,25.6666666667,90.5,garo1247,grt,Bodo-Garo,Sino-Tibetan
+gbb,Gbeya Bossangoa,6.66666666667,17.5,gbay1287,gbp,Gbaya-Manza-Ngbaka,Niger-Congo
+gla,Gelao,22.9166666667,105.5,gela1261,gio,Kadai,Tai-Kadai
+geo,Georgian,42.0,44.0,nucl1302,kat,Kartvelian,Kartvelian
+ger,German,52.0,10.0,stan1295,deu,Germanic,Indo-European
+goo,Gooniyandi,-18.3333333333,126.333333333,goon1238,gni,Bunuban,Bunuban
+grb,Grebo,5.0,-8.0,barc1235,grj,Kru,Niger-Congo
+grk,Greek (Modern),39.0,22.0,mode1248,ell,Greek,Indo-European
+ghb,Guahibo,5.0,-69.0,guah1255,guh,Guahiban,Guahiban
+goa,Goajiro,12.0,-72.0,wayu1243,guc,Caribbean Arawakan,Arawakan
+gmb,Guambiano,2.5,-76.6666666667,guam1248,gum,Barbacoan,Barbacoan
+kya,Kuku-Yalanji,-16.0,145.0,kuku1273,gvn,Northern Pama-Nyungan,Pama-Nyungan
+gwa,Gwari,9.5,7.0,,gbr,Nupoid,Niger-Congo
+had,Hadza,-3.75,35.1666666667,hadz1240,hts,Hadza,Hadza
+hai,Haida,53.0,-132.0,haid1248,,Haida,Haida
+hak,Hakka,25.0,116.0,hakk1236,hak,Chinese,Sino-Tibetan
+ham,Hamtai,-7.5,146.25,hamt1247,hmt,Angan,Trans-New Guinea
+hau,Hausa,12.0,7.0,haus1257,hau,West Chadic,Afro-Asiatic
+haw,Hawaiian,19.5833333333,-155.5,hawa1245,haw,Oceanic,Austronesian
+hba,Hebrew (Modern Ashkenazic),31.75,35.1666666667,hebr1245,heb,Semitic,Afro-Asiatic
+hin,Hindi,25.0,77.0,hind1269,hin,Indic,Indo-European
+hix,Hixkaryana,-1.0,-59.0,hixk1239,hix,Cariban,Cariban
+hmo,Hmong Njua,28.0,105.0,huam1250,,Hmong-Mien,Hmong-Mien
+hop,Hopi,36.0,-110.0,hopi1249,hop,Hopi,Uto-Aztecan
+aik,Aikaná,-12.6666666667,-60.6666666667,aika1237,tba,Aikaná,Aikaná
+htc,Huastec,22.0833333333,-99.3333333333,huas1256,hsf,Mayan,Mayan
+hve,Huave (San Mateo del Mar),16.2166666667,-95.0,sanm1287,huv,Huavean,Huavean
+hun,Hungarian,47.0,20.0,hung1274,hun,Ugric,Uralic
+hup,Hupa,41.0833333333,-123.666666667,hupa1239,hup,Athapaskan,Na-Dene
+iaa,Iaai,-20.4166666667,166.583333333,iaai1238,iai,Oceanic,Austronesian
+ful,Fulniô,-8.0,-37.5,fuln1247,fun,Yatê,Yatê
+iba,Iban,2.0,112.0,iban1264,iba,Malayo-Sumbawan,Austronesian
+ijo,Ijo (Kolokuma),4.91666666667,5.66666666667,izon1238,ijc,Ijoid,Ijoid
+ik,Ik,3.75,34.1666666667,ikkk1242,ikx,Kuliak,Eastern Sudanic
+ika,Ika,10.6666666667,-73.75,arhu1242,arh,Arhuacic,Chibchan
+imo,Imonda,-3.33333333333,141.166666667,imon1245,imn,Border,Border
+ind,Indonesian,0.0,106.0,indo1316,ind,Malayo-Sumbawan,Austronesian
+ing,Ingush,43.1666666667,45.0833333333,ingu1240,inh,Nakh,Nakh-Daghestanian
+grw,Greenlandic (West),64.0,-51.0,kala1399,kal,Eskimo,Eskimo-Aleut
+irx,Iranxe,-13.0,-58.0,iran1263,irn,Iranxe,Iranxe
+irq,Iraqw,-4.0,35.5,iraq1241,irk,Southern Cushitic,Afro-Asiatic
+irr,Irarutu,-3.0,133.5,irar1238,irh,South Halmahera - West New Guinea,Austronesian
+ird,Irish (Donegal),55.0,-8.0,iris1253,gle,Celtic,Indo-European
+zul,Zulu,-30.0,30.0,zulu1248,zul,Bantoid,Niger-Congo
+iso,Isoko,5.5,6.25,isok1239,iso,Edoid,Niger-Congo
+ite,Itelmen,57.0,157.5,itel1242,itl,Southern Chukotko-Kamchatkan,Chukotko-Kamchatkan
+ito,Itonama,-12.8333333333,-64.3333333333,iton1250,ito,Itonama,Itonama
+ivs,Ivatan (Southern),20.3333333333,121.833333333,ivat1242,ivv,Batanic,Austronesian
+iwm,Iwam,-4.33333333333,142.0,iwam1256,iwm,Upper Sepik,Sepik
+jak,Jakaltek,15.6666666667,-91.6666666667,,,Mayan,Mayan
+jpn,Japanese,37.0,140.0,nucl1643,jpn,Japanese,Japanese
+jpr,Japreria,10.5,-73.0,japr1238,jru,Cariban,Cariban
+jaq,Jaqaru,-13.0,-76.0,jaqa1244,jqr,Aymaran,Aymaran
+jav,Javanese,-7.0,111.0,java1254,jav,Javanese,Austronesian
+jeb,Jebero,-5.41666666667,-76.5,jebe1250,jeb,Cahuapanan,Cahuapanan
+jeh,Jeh,15.1666666667,107.833333333,jehh1245,jeh,Bahnaric,Austro-Asiatic
+jiv,Jivaro,-2.5,-78.0,shua1257,jiv,Jivaroan,Jivaroan
+jom,Jomang,10.5833333333,30.5,talo1250,tlo,Talodi,Kordofanian
+juh,Ju|'hoan,-19.0,21.0,juho1239,ktz,Ju-Kung,Kxa
+kek,K'ekchí,16.0,-89.8333333333,kekc1242,kek,Mayan,Mayan
+kab,Kabardian,43.5,43.5,kaba1278,kbd,Northwest Caucasian,Northwest Caucasian
+kad,Kadugli,11.0,29.6666666667,katc1249,xtc,Kadugli,Kadu
+kng,Kaingang,-26.0,-52.0,kain1272,kgp,Ge-Kaingang,Macro-Ge
+kly,Kala Lagaw Ya,-10.1166666667,142.116666667,kala1377,mwp,Northern Pama-Nyungan,Pama-Nyungan
+kgu,Kalkatungu,-21.0,139.5,kalk1246,ktg,Northern Pama-Nyungan,Pama-Nyungan
+kzh,Kam (Zhanglu),26.0,108.5,nort2735,doc,Kam-Tai,Tai-Kadai
+kas,Kashmiri,34.0,76.0,kash1277,kas,Indic,Indo-European
+kws,Kawaiisu,36.0,-117.5,kawa1283,xaw,Numic,Uto-Aztecan
+kay,Kayardild,-17.05,139.5,kaya1319,gyd,Tangkic,Tangkic
+kef,Kefa,7.25,36.25,kafa1242,kbr,South Omotic,Afro-Asiatic
+ket,Ket,64.0,87.0,kett1243,ket,Yeniseian,Yeniseian
+kty,Khanty,65.0,65.0,khan1273,kca,Ugric,Uralic
+khr,Kharia,22.5,84.3333333333,khar1287,khr,Munda,Austro-Asiatic
+khs,Khasi,25.5,92.0,khas1269,kha,Khasian,Austro-Asiatic
+khm,Khmer,12.5,105.0,cent1989,khm,Khmer,Austro-Asiatic
+kmu,Khmu',21.0,102.0,khmu1256,kjg,Palaung-Khmuic,Austro-Asiatic
+klv,Kilivila,-8.5,151.083333333,kili1267,kij,Oceanic,Austronesian
+kio,Kiowa,37.0,-99.0,kiow1266,kio,Kiowa-Tanoan,Kiowa-Tanoan
+kgz,Kirghiz,42.0,75.0,kirg1245,kir,Turkic,Altaic
+krb,Kiribati,1.33333333333,173.0,gilb1244,gil,Oceanic,Austronesian
+kss,Kisi (Southern),8.5,-10.25,sout2778,kss,Mel,Niger-Congo
+swa,Swahili,-6.5,39.0,swah1253,swh,Bantoid,Niger-Congo
+kiw,Kiwai,-8.0,143.5,,,Kiwaian,Kiwaian
+klm,Klamath,42.5,-121.5,klam1254,kla,Klamath-Modoc,Penutian
+kla,Klao,4.75,-8.75,klao1243,klu,Kru,Niger-Congo
+koa,Koasati,34.8333333333,-85.1666666667,koas1236,cku,Muskogean,Muskogean
+kob,Kobon,-5.16666666667,144.333333333,kobo1249,kpw,Madang,Trans-New Guinea
+koh,Kohumono,6.0,8.11666666667,kohu1244,bcs,Cross River,Niger-Congo
+koi,Koiari,-9.5,147.333333333,gras1249,kbk,Koiarian,Trans-New Guinea
+kom,Komo,8.75,33.75,komo1258,xom,Koman,Koman
+kzy,Komi-Zyrian,65.0,55.0,komi1268,kpv,Permic,Uralic
+kkn,Konkani,15.25,74.0,konk1267,knn,Indic,Indo-European
+kgi,Konyagi,12.5,-13.25,wame1240,cou,Northern Atlantic,Niger-Congo
+kor,Korean,37.5,128.0,kore1280,kor,Korean,Korean
+kfe,Koromfe,14.25,-0.916666666667,koro1298,kfz,Gur,Niger-Congo
+kry,Koryak,61.0,167.0,kory1246,kpy,Northern Chukotko-Kamchatkan,Chukotko-Kamchatkan
+kot,Kota,11.5,77.1666666667,kota1263,kfe,Southern Dravidian,Dravidian
+ktk,Kotoko,11.3333333333,15.3333333333,afad1236,aal,Biu-Mandara,Afro-Asiatic
+koy,Koya,17.5,81.3333333333,koya1251,kff,South-Central Dravidian,Dravidian
+kpa,Kpan,7.58333333333,10.1666666667,kpan1246,kpk,Platoid,Niger-Congo
+kpe,Kpelle,7.0,-10.0,libe1247,xpe,Western Mande,Mande
+kro,Krongo,10.5,30.0,kron1241,kgo,Kadugli,Kadu
+kul,Kullo,6.75,37.0833333333,gamo1244,gmo,North Omotic,Afro-Asiatic
+knm,Kunama,14.5,37.0,kuna1268,kun,Kunama,Kunama
+kmp,Kunimaipa,-8.0,146.833333333,kuni1267,kup,Goilalan,Trans-New Guinea
+krd,Kurdish (Central),36.0,44.0,nort2641,kmr,Iranian,Indo-European
+kur,Kurukh,22.8333333333,85.5,kuru1302,kru,Northern Dravidian,Dravidian
+kut,Kutenai,49.5,-116.0,kute1249,kut,Kutenai,Kutenai
+kwa,Kwaio,-8.95,161.0,kwai1243,kwd,Oceanic,Austronesian
+kwk,Kwakw'ala,51.0,-127.0,kwak1269,kwk,Northern Wakashan,Wakashan
+kwo,Kwoma,-4.16666666667,142.75,kwom1262,kmo,Middle Sepik,Sepik
+lad,Ladakhi,34.0,78.0,lada1244,lbj,Bodic,Sino-Tibetan
+lah,Lahu,20.0,98.1666666667,lahu1253,lhu,Burmese-Lolo,Sino-Tibetan
+lak,Lak,42.1666666667,47.1666666667,lakk1252,lbe,Lak-Dargwa,Nakh-Daghestanian
+lam,Lamé,9.0,14.5,peve1243,lme,Masa,Afro-Asiatic
+llm,Lelemi,7.33333333333,0.5,lele1264,lef,Kwa,Niger-Congo
+len,Lenakel,-19.45,169.25,lena1238,tnl,Oceanic,Austronesian
+lep,Lepcha,27.1666666667,88.5,lepc1244,lep,Lepcha,Sino-Tibetan
+lez,Lezgian,41.6666666667,47.8333333333,lezg1247,lez,Lezgic,Nakh-Daghestanian
+lit,Lithuanian,55.0,24.0,lith1251,lit,Baltic,Indo-European
+lua,Lua,9.75,17.75,niel1243,nie,Adamawa,Niger-Congo
+lu,Lü,22.0,100.666666667,luuu1242,khb,Kam-Tai,Tai-Kadai
+lug,Lugbara,3.08333333333,30.9166666667,lugb1240,lgg,Moru-Ma'di,Central Sudanic
+lui,Luiseño,33.3333333333,-117.166666667,luis1253,lui,California Uto-Aztecan,Uto-Aztecan
+nun,Nung (in Vietnam),21.9166666667,106.416666667,nung1283,nut,Kam-Tai,Tai-Kadai
+lus,Lushootseed,48.0,-122.0,lush1252,lut,Central Salish,Salishan
+luv,Luvale,-12.0,22.0,luva1239,lue,Bantoid,Niger-Congo
+maa,Maasai,-3.0,36.0,masa1300,mas,Nilotic,Eastern Sudanic
+mab,Maba,13.75,20.8333333333,maba1277,mde,Maban,Maban
+mne,Maidu (Northeast),40.0,-120.666666667,nort2952,nmu,Maiduan,Penutian
+mlk,Malakmalak,-13.4166666667,130.416666667,mull1237,mpb,Northern Daly,Northern Daly
+mla,Mambila,6.75,11.5,,,Bantoid,Niger-Congo
+mnc,Manchu,49.5,127.5,manc1252,mnc,Tungusic,Altaic
+myi,Mangarrayi,-14.6666666667,133.5,mang1381,mpc,Mangarrayi,Mangarrayi-Maran
+mao,Maori,-40.0,176.0,maor1246,mri,Oceanic,Austronesian
+map,Mapudungun,-38.0,-72.0,mapu1245,arn,Araucanian,Araucanian
+mrn,Maranao,7.83333333333,124.25,mara1404,mrw,Greater Central Philippine,Austronesian
+mku,Maranungku,-13.6666666667,130.0,mara1386,zmr,Wagaydy,Western Daly
+mrg,Margi,11.0,13.0,marg1265,mrt,Biu-Mandara,Afro-Asiatic
+mar,Maricopa,33.1666666667,-113.166666667,mari1440,mrc,Yuman,Hokan
+mrd,Marind,-7.83333333333,140.166666667,nucl1622,mrz,Marind Proper,Marind
+mrt,Martuthunira,-20.8333333333,116.5,mart1255,vma,Western Pama-Nyungan,Pama-Nyungan
+wch,Wichí,-22.5,-62.5833333333,wich1264,mzh,Matacoan,Matacoan
+mau,Maung,-11.9166666667,133.5,maun1240,mph,Iwaidjan,Iwaidjan
+max,Maxakalí,-18.0,-40.0,maxa1247,mbl,Maxakalí,Macro-Ge
+may,Maybrat,-1.33333333333,132.5,maib1239,ayz,North-Central Bird's Head,West Papuan
+maz,Mazahua,19.4166666667,-99.9166666667,maza1293,,Otomian,Oto-Manguean
+mzc,Mazatec (Chiquihuitlán),17.75,-96.9166666667,chiq1250,maq,Popolocan,Oto-Manguean
+mbb,Mbabaram,-17.1666666667,145.0,mbab1239,,Northern Pama-Nyungan,Pama-Nyungan
+mba,Mba,1.0,25.0,mbaa1245,mfc,Ubangi,Niger-Congo
+mbm,Mbum,7.75,13.1666666667,mbum1254,mdd,Adamawa,Niger-Congo
+mie,Mien,25.0,111.0,iumi1238,ium,Hmong-Mien,Hmong-Mien
+mtp,Mixe (Totontepec),17.25,-96.0,toto1305,mto,Mixe-Zoque,Mixe-Zoque
+mxc,Mixtec (Chalcatongo),17.05,-97.5833333333,sanm1295,mig,Mixtecan,Oto-Manguean
+mxm,Mixtec (Molinos),17.0,-97.5833333333,sanm1295,mig,Mixtecan,Oto-Manguean
+mog,Moghol,35.0,62.0,mogh1245,mhj,Mongolic,Altaic
+kha,Khalkha,47.0,105.0,halh1238,khk,Mongolic,Altaic
+mgg,Mangghuer,36.0,102.0,tuuu1240,mjg,Mongolic,Altaic
+mor,Mor,-2.95,135.75,morm1235,mhz,South Halmahera - West New Guinea,Austronesian
+mro,Moro,11.0,30.1666666667,moro1285,mor,Heiban,Kordofanian
+mov,Movima,-13.8333333333,-65.6666666667,movi1243,mzp,Movima,Movima
+ign,Ignaciano,-15.1666666667,-65.4166666667,igna1246,ign,Bolivia-Parana,Arawakan
+mui,Muinane,-1.0,-72.5,muin1242,bmr,Boran,Huitotoan
+mum,Mumuye,9.0,11.6666666667,nucl1240,mzm,Adamawa,Niger-Congo
+mun,Mundari,23.0,84.6666666667,mund1320,unr,Munda,Austro-Asiatic
+mpa,Murrinh-Patha,-14.6666666667,129.666666667,murr1258,mwf,Murrinh-Patha,Southern Daly
+mrl,Murle,6.5,33.5,murl1244,mur,Surmic,Eastern Sudanic
+nhn,Nahuatl (North Puebla),20.0,-98.25,nort2957,ncj,Aztecan,Uto-Aztecan
+nht,Nahuatl (Tetelcingo),19.6666666667,-99.0,tete1251,nhg,Aztecan,Uto-Aztecan
+kho,Khoekhoe,-25.5,18.0,nama1264,naq,Khoe-Kwadi,Khoe-Kwadi
+nbk,Natügu,-10.7833333333,165.866666667,natu1249,stc,Oceanic,Austronesian
+nai,Nanai,49.5,137.0,nana1257,gld,Tungusic,Altaic
+nan,Nandi,0.25,35.0,nand1266,kln,Nilotic,Eastern Sudanic
+nas,Nasioi,-6.33333333333,155.583333333,naas1242,nas,East Bougainville,East Bougainville
+nav,Navajo,36.1666666667,-108.0,nava1243,nav,Athapaskan,Na-Dene
+nax,Naxi,27.5,100.0,naxi1245,nbf,Naxi,Sino-Tibetan
+ndt,Ndut,14.9166666667,-16.9166666667,ndut1239,ndv,Northern Atlantic,Niger-Congo
+ndy,Ndyuka,4.5,-54.5,ndyu1242,djk,Creoles and Pidgins,other
+nen,Nenets,69.0,72.0,nene1249,yrk,Samoyedic,Uralic
+nap,Neo-Aramaic (Persian Azerbaijan),38.0,47.0,lish1246,trg,Semitic,Afro-Asiatic
+nep,Nepali,28.0,85.0,nepa1252,nep,Indic,Indo-European
+new,Newari (Kathmandu),27.6666666667,85.5,newa1246,new,Mahakiranti,Sino-Tibetan
+nez,Nez Perce,46.0,-116.0,nezp1238,nez,Sahaptian,Penutian
+nti,Ngiti,1.33333333333,30.25,ngit1239,niy,Lendu,Central Sudanic
+nnc,Nancowry,8.05,93.5,cent1990,ncb,Nicobarese,Austro-Asiatic
+nim,Nimboran,-2.5,140.166666667,nucl1633,nir,Nimboran,Nimboran
+chu,Chulupí,-23.5,-60.5,niva1238,cag,Matacoan,Matacoan
+niv,Nivkh,53.3333333333,142.0,gily1242,niv,Nivkh,Nivkh
+nko,Nkore-Kiga,-0.916666666667,29.8333333333,chig1238,cgg,Bantoid,Niger-Congo
+non,Noni,6.41666666667,10.5833333333,noon1243,nhu,Bantoid,Niger-Congo
+nor,Norwegian,61.0,8.0,norw1259,nob,Germanic,Indo-European
+nob,Nobiin,21.0,31.0,nobi1240,fia,Nubian,Eastern Sudanic
+nug,Nunggubuyu,-13.75,135.666666667,nung1290,nuy,Nunggubuyu,Gunwinyguan
+nuu,Nuuchahnulth,49.6666666667,-126.666666667,noot1239,noo,Southern Wakashan,Wakashan
+nkt,Nyah Kur (Tha Pong),15.6666666667,101.666666667,nyah1250,cbn,Monic,Austro-Asiatic
+nyg,Nyangi,3.41666666667,33.5833333333,nyan1313,nyp,Kuliak,Eastern Sudanic
+nyi,Nyimang,12.1666666667,29.3333333333,amas1236,nyi,Nyimang,Eastern Sudanic
+oca,Ocaina,-2.75,-71.75,ocai1244,oca,Huitoto,Huitotoan
+ogb,Ogbia,4.66666666667,6.25,ogbi1239,ogb,Cross River,Niger-Congo
+oji,Ojibwa (Eastern),46.0,-80.0,east2542,,Algonquian,Algic
+orh,Oromo (Harar),9.0,42.0,east2652,hae,Lowland East Cushitic,Afro-Asiatic
+otm,Otomí (Mezquital),20.1666666667,-99.1666666667,mezq1235,ote,Otomian,Oto-Manguean
+pms,Paamese,-16.5,168.25,paam1238,pma,Oceanic,Austronesian
+pae,Páez,2.66666666667,-76.0,paez1247,pbb,Páezan,Páezan
+pai,Paiwan,22.5,120.833333333,paiw1248,pwn,Paiwan,Austronesian
+pnr,Panare,6.5,-66.0,enap1235,pbh,Cariban,Cariban
+psh,Pashto,33.0,67.0,cent1973,pst,Iranian,Indo-European
+psm,Passamaquoddy-Maliseet,45.0,-67.0,male1292,pqm,Algonquian,Algic
+pau,Paumarí,-6.0,-64.0,paum1247,pad,Arauan,Arauan
+poh,Pohnpeian,6.88333333333,158.25,pohn1238,pon,Oceanic,Austronesian
+qco,Quechua (Cochabamba),-17.5,-66.0,sout2991,quh,Quechuan,Quechuan
+qui,Quileute,47.9166666667,-124.25,quil1240,qui,Chimakuan,Chimakuan
+ram,Rama,11.75,-83.75,rama1270,rma,Rama,Chibchan
+rap,Rapanui,-27.1166666667,-109.366666667,rapa1244,rap,Oceanic,Austronesian
+res,Resígaro,-2.41666666667,-71.5,resi1247,rgr,Inland Northern Arawakan,Arawakan
+rsc,Romansch (Scharans),46.75,9.5,roma1326,roh,Romance,Indo-European
+rom,Romanian,46.0,25.0,roma1327,ron,Romance,Indo-European
+ror,Roro,-8.75,146.583333333,waim1251,rro,Oceanic,Austronesian
+rtk,Rotokas,-6.0,155.166666667,roto1249,roo,West Bougainville,West Bougainville
+ruk,Rukai (Tanan),22.8333333333,120.833333333,ruka1240,dru,Rukai,Austronesian
+rus,Russian,56.0,38.0,russ1263,rus,Slavic,Indo-European
+rut,Rutul,41.5,47.4166666667,rutu1240,rut,Lezgic,Nakh-Daghestanian
+sab,Sa'ban,3.66666666667,115.666666667,saba1265,snv,North Borneo,Austronesian
+scs,Saami (Central-South),64.6666666667,16.75,sout2674,sma,Saami,Uralic
+sba,Sáliba (in Colombia),6.0,-70.0,sali1298,slc,Sáliba,Sáliban
+baj,Bajau (Sama),-4.33333333333,123.0,indo1317,bdl,Sama-Bajaw,Austronesian
+sdw,Sandawe,-5.0,35.0,sand1273,sad,Sandawe,Sandawe
+san,Sango,5.0,18.0,sang1328,sag,Ubangi,Niger-Congo
+snm,Sanuma,4.5,-64.6666666667,sanu1240,xsu,Yanomam,Yanomam
+svs,Savosavo,-9.13333333333,159.8,savo1255,svs,Savosavo,Solomons East Papuan
+seb,Sebei,1.33333333333,34.5833333333,kups1238,kpz,Nilotic,Eastern Sudanic
+sed,Sedang,14.8333333333,108.0,seda1262,sed,Bahnaric,Austro-Asiatic
+slp,Selepet,-6.16666666667,147.166666667,sele1250,spl,Finisterre-Huon,Trans-New Guinea
+sel,Selknam,-53.0,-70.0,onaa1245,ona,Chon Proper,Chon
+skp,Selkup,65.0,82.0,selk1253,sel,Samoyedic,Uralic
+sml,Semelai,3.0,103.0,seme1247,sza,Aslian,Austro-Asiatic
+snd,Senadi,9.5,-6.25,ceba1235,sef,Gur,Niger-Congo
+snc,Seneca,42.5,-77.5,sene1264,see,Northern Iroquoian,Iroquoian
+snt,Sentani,-2.58333333333,140.583333333,nucl1632,set,Sentani,Sentani
+shs,Shasta,41.8333333333,-122.666666667,shas1239,sht,Shasta,Hokan
+shk,Shipibo-Konibo,-7.5,-75.0,ship1254,shp,Panoan,Panoan
+shi,Shiriana,3.5,-62.8333333333,nina1238,shb,Yanomam,Yanomam
+shu,Shuswap,52.0,-120.0,shus1248,shs,Interior Salish,Salishan
+mss,Miwok (Southern Sierra),37.5,-120.0,sout2985,skd,Miwok,Penutian
+sdh,Sindhi,26.0,69.0,sind1272,snd,Indic,Indo-European
+snh,Sinhala,7.0,80.5,sinh1246,sin,Indic,Indo-European
+sin,Siona,0.333333333333,-76.25,sion1247,snn,Tucanoan,Tucanoan
+srn,Sirionó,-15.5833333333,-64.0,siri1273,srq,Tupi-Guaraní,Tupian
+sla,Slave,67.0,-125.0,slav1253,,Athapaskan,Na-Dene
+soq,Soqotri,12.5,54.0,soqo1240,sqt,Semitic,Afro-Asiatic
+som,Somali,3.0,45.0,soma1255,som,Lowland East Cushitic,Afro-Asiatic
+kse,Koyraboro Senni,16.0,0.0,koyr1242,ses,Songhay,Songhay
+kch,Koyra Chiini,17.0,-3.0,koyr1240,khq,Songhay,Songhay
+tac,Tacana,-13.5,-68.0,taca1256,tna,Tacanan,Tacanan
+sha,Shan,22.0,98.0,shan1277,shn,Kam-Tai,Tai-Kadai
+tma,Tama,14.5,22.0,tama1331,tma,Taman,Eastern Sudanic
+pur,Purépecha,19.5,-101.666666667,pure1242,tsz,Tarascan,Tarascan
+tok,Tarok,9.0,10.0833333333,taro1263,yer,Platoid,Niger-Congo
+teh,Tehuelche,-48.0,-68.0,tehu1242,teh,Chon Proper,Chon
+tks,Teke (Southern),-2.33333333333,14.5,teke1280,kkw,Bantoid,Niger-Congo
+tel,Telugu,16.0,79.0,telu1262,tel,South-Central Dravidian,Dravidian
+tmn,Temein,11.9166666667,29.4166666667,nucl1339,teq,Temein,Eastern Sudanic
+tne,Temne,8.66666666667,-13.0833333333,timn1235,tem,Mel,Niger-Congo
+ter,Tera,11.0,11.8333333333,tera1251,ttr,Biu-Mandara,Afro-Asiatic
+ttn,Tetun,-9.0,126.0,tetu1245,tet,Central Malayo-Polynesian,Austronesian
+tha,Thai,16.0,101.0,thai1261,tha,Kam-Tai,Tai-Kadai
+tib,Tibetan (Standard Spoken),30.0,91.0,tibe1272,bod,Bodic,Sino-Tibetan
+tic,Ticuna,-4.0,-70.5,ticu1245,tca,Ticuna,Ticuna
+tgk,Tigak,-2.71666666667,150.8,tiga1245,tgc,Oceanic,Austronesian
+tgr,Tigré,16.5,38.5,tigr1270,tig,Semitic,Afro-Asiatic
+try,Tiruray,6.75,124.166666667,tiru1241,tiy,Bilic,Austronesian
+twn,Tiwa (Northern),36.5,-105.5,nort1550,twf,Kiowa-Tanoan,Kiowa-Tanoan
+tiw,Tiwi,-11.5,131.0,tiwi1244,tiw,Tiwian,Tiwian
+tlp,Tlapanec,17.0833333333,-99.0,acat1239,tcf,Subtiaba-Tlapanec,Oto-Manguean
+tli,Tlingit,59.0,-135.0,tlin1245,tli,Tlingit,Na-Dene
+toa,Toaripi,-8.33333333333,146.25,toar1246,tqo,Eleman Proper,Eleman
+tol,Tol,14.6666666667,-87.0,toll1241,jic,Tol,Tol
+ton,Tonkawa,30.25,-96.75,tonk1249,tqw,Tonkawa,Tonkawa
+tpa,Totonac (Papantla),20.3333333333,-97.3333333333,papa1238,top,Totonacan,Totonacan
+tru,Trumai,-11.9166666667,-53.5833333333,trum1247,tpy,Trumai,Trumai
+tsi,Tsimshian (Coast),52.5,-129.0,nucl1649,tsi,Tsimshianic,Penutian
+tso,Tsou,23.5,120.75,tsou1248,tsu,Tsou,Austronesian
+tuk,Tukang Besi,-5.5,123.5,tuka1247,,Celebic,Austronesian
+tul,Tulu,12.75,75.3333333333,tulu1258,tcy,Southern Dravidian,Dravidian
+tun,Tunica,32.6666666667,-91.0,tuni1252,tun,Tunica,Tunica
+tur,Turkish,39.0,35.0,nucl1301,tur,Turkic,Altaic
+tuv,Tuvan,52.0,95.0,tuvi1240,tyv,Turkic,Altaic
+tza,Tzeltal (Aguacatenango),16.4166666667,-92.5,tzel1254,tzh,Mayan,Mayan
+umb,UMbundu,-12.5,15.0,umbu1257,umb,Bantoid,Niger-Congo
+una,Una,-4.66666666667,140.0,unaa1239,mtg,Mek,Trans-New Guinea
+urk,Urubú-Kaapor,-2.33333333333,-46.5,urub1250,urb,Tupi-Guaraní,Tupian
+usa,Usan,-4.83333333333,145.166666667,usan1239,wnu,Madang,Trans-New Guinea
+uzn,Uzbek (Northern),40.6666666667,66.5,nort2690,uzn,Turkic,Altaic
+dum,Dumo,-2.68333333333,141.3,vani1248,vam,Western Skou,Skou
+vie,Vietnamese,10.5,106.5,viet1252,vie,Viet-Muong,Austro-Asiatic
+wdo,Western Desert (Ooldea),-30.5,132.0,pitj1243,,Western Pama-Nyungan,Pama-Nyungan
+wma,West Makian,0.5,127.583333333,west2600,mqs,North Halmaheran,West Papuan
+wah,Wahgi,-5.83333333333,144.716666667,wahg1249,,Chimbu,Trans-New Guinea
+wam,Wambaya,-18.6666666667,135.75,wamb1258,wmb,Wambayan,Mirndi
+wps,Wapishana,2.66666666667,-60.0,wapi1253,wap,Wapishanan,Arawakan
+wap,Wappo,38.5,-122.5,wapp1239,wao,Wappo,Wappo-Yukian
+wra,Warao,9.33333333333,-61.6666666667,wara1303,wba,Warao,Warao
+wry,Waray (in Australia),-13.1666666667,131.25,wara1290,wrz,Warayic,Gunwinyguan
+wrd,Wardaman,-15.5,131.0,ward1246,wrr,Yangmanic,Yangmanic
+war,Wari',-11.3333333333,-65.0,wari1268,pav,Chapacura-Wanham,Chapacura-Wanham
+wrs,Waris,-3.16666666667,141.0,wari1266,wrs,Border,Border
+wic,Wichita,33.3333333333,-97.3333333333,wich1260,wic,Caddoan,Caddoan
+wmu,Wik Munkan,-13.9166666667,141.75,wikm1247,wim,Northern Pama-Nyungan,Pama-Nyungan
+win,Wintu,41.0,-122.5,wint1259,wit,Wintuan,Penutian
+hum,Huitoto (Murui),-1.0,-73.5,muru1274,huu,Huitoto,Huitotoan
+wiy,Wiyot,40.8333333333,-124.166666667,wiyo1248,wiy,Wiyot,Algic
+woi,Woisika,-8.25,124.833333333,kama1365,woi,Greater Alor,Timor-Alor-Pantar
+wlf,Wolof,15.25,-16.0,nucl1347,wol,Northern Atlantic,Niger-Congo
+xia,Xiamen,24.5,118.166666667,minn1241,nan,Chinese,Sino-Tibetan
+ygr,Yagaria,-6.33333333333,145.416666667,yaga1260,ygr,Eastern Highlands,Trans-New Guinea
+yag,Yagua,-3.5,-72.0,yagu1244,yad,Peba-Yaguan,Peba-Yaguan
+ykt,Yakut,62.0,130.0,yaku1245,sah,Turkic,Altaic
+yan,Yana,40.5,-122.0,yana1271,ynn,Yana,Hokan
+yny,Yanyuwa,-16.4166666667,137.166666667,yany1243,jao,Western Pama-Nyungan,Pama-Nyungan
+yap,Yapese,9.58333333333,138.166666667,yape1248,yap,Yapese,Austronesian
+yaq,Yaqui,27.5,-110.25,yaqu1251,yaq,Cahita,Uto-Aztecan
+yar,Yareba,-9.5,148.5,yare1248,yrb,Yareban,Yareban
+yaw,Yawa,-1.75,136.25,nucl1454,yva,Yawa,Yawa
+yay,Yay,22.4166666667,104.75,bouy1240,pcc,Kam-Tai,Tai-Kadai
+yel,Yelî Dnye,-11.3666666667,154.166666667,yele1255,yle,Yele,Yele
+yes,Yessan-Mayo,-4.16666666667,142.583333333,yess1239,yss,Tama Sepik,Sepik
+yey,Yeyi,-20.0,23.5,yeyi1239,yey,Bantoid,Niger-Congo
+yid,Yidiny,-17.0,145.75,yidi1250,yii,Northern Pama-Nyungan,Pama-Nyungan
+yim,Yimas,-4.66666666667,143.55,yima1243,yee,Lower Sepik,Lower Sepik-Ramu
+djp,Djapu,-12.6666666667,136.0,dhuw1249,duj,Western Pama-Nyungan,Pama-Nyungan
+yor,Yoruba,8.0,4.33333333333,yoru1245,yor,Defoid,Niger-Congo
+yct,Yucatec,20.0,-89.0,yuca1254,yua,Mayan,Mayan
+yuc,Yuchi,35.75,-86.75,yuch1247,yuc,Yuchi,Yuchi
+ycn,Yucuna,-0.75,-71.0,yucu1253,ycn,Inland Northern Arawakan,Arawakan
+yko,Yukaghir (Kolyma),65.75,150.833333333,sout2750,yux,Yukaghir,Yukaghir
+ytu,Yukaghir (Tundra),69.0,155.0,nort2745,ykg,Yukaghir,Yukaghir
+yul,Yulu,8.5,25.25,yulu1243,yul,Bongo-Bagirmi,Central Sudanic
+yus,Yupik (Siberian),65.0,-173.0,cent2128,ess,Eskimo,Eskimo-Aleut
+yur,Yurok,41.3333333333,-124.0,yuro1248,yur,Yurok,Algic
+zqc,Zoque (Copainalá),17.0,-93.25,copa1236,zoc,Mixe-Zoque,Mixe-Zoque
+zun,Zuni,35.0833333333,-108.833333333,zuni1245,zun,Zuni,Zuni
+poa,Po-Ai,-20.6666666667,164.833333333,fwai1237,fwa,Oceanic,Austronesian
+mya,Ma'ya,-1.25,130.916666667,maya1282,slz,South Halmahera - West New Guinea,Austronesian
+ccp,Cocopa,32.3333333333,-115.0,coco1261,coc,Yuman,Hokan
+abk,Abkhaz,43.0833333333,41.0,abkh1244,abk,Northwest Caucasian,Northwest Caucasian
+ani,//Ani,-18.9166666667,21.9166666667,anii1246,hnh,Khoe-Kwadi,Khoe-Kwadi
+abi,Abipón,-29.0,-61.0,abip1241,axb,South Guaicuruan,Guaicuruan
+ach,Aché,-25.25,-55.1666666667,ache1246,guq,Tupi-Guaraní,Tupian
+acm,Achumawi,41.5,-121.0,achu1247,acv,Palaihnihan,Hokan
+aco,Acoma,34.9166666667,-107.583333333,west2632,kjq,Keresan,Keresan
+adz,Adzera,-6.25,146.25,adze1240,adz,Oceanic,Austronesian
+agh,Aghem,6.66666666667,10.0,aghe1239,agq,Bantoid,Niger-Congo
+aht,Ahtna,62.0,-145.0,ahte1237,aht,Athapaskan,Na-Dene
+ain,Ainu,43.0,143.0,ainu1240,ain,Ainu,Ainu
+akn,Akan,6.5,-1.25,akan1250,aka,Kwa,Niger-Congo
+abm,Alabama,32.3333333333,-87.4166666667,alab1237,akz,Muskogean,Muskogean
+ala,Alamblak,-4.66666666667,143.333333333,alam1246,amp,Sepik Hill,Sepik
+alw,Alawa,-15.1666666667,134.25,alaw1244,alh,Alawa,Mangarrayi-Maran
+aea,Aleut (Eastern),54.75,-164.0,aleu1260,ale,Aleut,Eskimo-Aleut
+ald,Alladian,5.16666666667,-4.33333333333,alla1248,ald,Kwa,Niger-Congo
+amc,Amahuaca,-10.5,-72.5,amah1246,amc,Panoan,Panoan
+ame,Amele,-5.25,145.583333333,amel1241,aey,Madang,Trans-New Guinea
+amu,Yanesha',-10.5,-75.4166666667,yane1238,ame,Yanesha',Arawakan
+amz,Amuzgo,16.8333333333,-98.0,guer1243,amu,Amuzgoan,Oto-Manguean
+gan,Great Andamanese,12.0,92.6666666667,apuc1241,apq,Great Andamanese,Great Andamanese
+ant,Angaatiha,-7.21666666667,146.25,anga1290,agm,Angan,Trans-New Guinea
+anc,Angas,9.5,9.5,ngas1240,anc,West Chadic,Afro-Asiatic
+arb,Arabela,-2.0,-75.1666666667,arab1268,arl,Zaparoan,Zaparoan
+aeg,Arabic (Egyptian),30.0,31.0,egyp1253,arz,Semitic,Afro-Asiatic
+ana,Araona,-12.3333333333,-67.75,arao1248,aro,Tacanan,Tacanan
+arc,Archi,42.0,46.8333333333,arch1244,aqc,Lezgic,Nakh-Daghestanian
+arm,Armenian (Eastern),40.0,45.0,nucl1235,hye,Armenian,Indo-European
+asm,Asmat,-5.5,138.5,tamn1235,tml,Asmat-Kamoro,Trans-New Guinea
+ata,Atayal,24.5,121.333333333,atay1247,tay,Atayalic,Austronesian
+bre,Breton,48.0,-3.0,bret1244,bre,Celtic,Indo-European
+bul,Bulgarian,42.5,25.0,bulg1262,bul,Slavic,Indo-European
+wuc,Wu (Changzhou),31.6666666667,119.916666667,wuch1236,wuu,Chinese,Sino-Tibetan
+die,Diegueño (Mesa Grande),32.6666666667,-116.166666667,kumi1248,dih,Yuman,Hokan
+amp,Arrernte (Mparntwe),-24.0,136.0,east2379,aer,Central Pama-Nyungan,Pama-Nyungan
+gua,Guaraní,-26.0,-56.0,para1311,gug,Tupi-Guaraní,Tupian
+hmr,Hamer,5.0,36.5,hame1242,amf,South Omotic,Afro-Asiatic
+hzb,Hunzib,42.1666666667,46.25,hunz1247,huz,Avar-Andic-Tsezic,Nakh-Daghestanian
+igb,Igbo,6.0,7.33333333333,nucl1417,ibo,Igboid,Niger-Congo
+jng,Jingpho,25.4166666667,97.0,kach1280,kac,Jingpho,Sino-Tibetan
+kal,Kalami,35.5,72.5,kala1373,gwc,Indic,Indo-European
+kkv,Lusi,-5.58333333333,149.666666667,lusi1240,khl,Oceanic,Austronesian
+knk,Kanakuru,10.0,12.0,dera1248,kna,West Chadic,Afro-Asiatic
+knd,Kannada,14.0,76.0,nucl1305,kan,Southern Dravidian,Dravidian
+ksg,Karen (Sgaw),18.0,97.0,sgaw1245,ksw,Karen,Sino-Tibetan
+krk,Karok,41.6666666667,-123.0,karo1304,kyh,Karok,Karok
+kyl,Kayah Li (Eastern),19.0,97.5,east2342,eky,Karen,Sino-Tibetan
+ked,Kedang,-8.25,123.75,keda1252,ksx,Central Malayo-Polynesian,Austronesian
+ker,Kera,9.83333333333,15.0833333333,kera1255,ker,East Chadic,Afro-Asiatic
+kew,Kewa,-6.5,143.833333333,kewa1250,,Engan,Trans-New Guinea
+lkk,Lakkia,24.0833333333,110.166666667,lakk1238,lbc,Kadai,Tai-Kadai
+lkt,Lakhota,43.8333333333,-101.833333333,lako1247,lkt,Core Siouan,Siouan
+lan,Lango,2.16666666667,33.0,lang1324,laj,Nilotic,Eastern Sudanic
+lat,Latvian,57.0,24.0,latv1249,lav,Baltic,Indo-European
+lav,Lavukaleve,-9.08333333333,159.2,lavu1241,lvk,Lavukaleve,Solomons East Papuan
+luo,Luo,-0.5,34.75,luok1236,luo,Nilotic,Eastern Sudanic
+mal,Malagasy,-20.0,47.0,plat1254,plt,Barito,Austronesian
+mnd,Mandarin,34.0,110.0,mand1415,cmn,Chinese,Sino-Tibetan
+mme,Mari (Meadow),57.0,48.0,east2328,mhr,Mari,Uralic
+mei,Meithei,24.75,94.0,mani1292,mni,Kuki-Chin,Sino-Tibetan
+nar,Nara (in Ethiopia),15.0833333333,37.5833333333,nara1262,nrb,Nara,Eastern Sudanic
+nga,Nganasan,71.0,93.0,ngan1291,nio,Samoyedic,Uralic
+ung,Ungarinjin,-16.3333333333,126.0,ngar1284,ung,Worrorran,Worrorran
+ngz,Ngizim,12.0833333333,10.9166666667,ngiz1242,ngi,West Chadic,Afro-Asiatic
+ond,Oneida,43.0,-75.6666666667,onei1249,one,Northern Iroquoian,Iroquoian
+orm,Ormuri,32.5,69.75,ormu1247,oru,Iranian,Indo-European
+pac,Pacoh,16.4166666667,107.083333333,paco1243,pac,Katuic,Austro-Asiatic
+paw,Pawaian,-7.0,145.083333333,pawa1255,pwa,Pawaian,Teberan-Pawaian
+pec,Pech,15.0,-85.5,pech1241,pay,Paya,Chibchan
+prh,Pirahã,-7.0,-62.0,pira1253,myp,Mura,Mura
+pit,Pitjantjatjara,-26.0,130.0,pitj1243,pjt,Western Pama-Nyungan,Pama-Nyungan
+pol,Polish,52.0,20.0,poli1260,pol,Slavic,Indo-European
+pso,Pomo (Southeastern),39.0,-122.5,sout2982,pom,Pomoan,Hokan
+qaw,Qawasqar,-49.0,-75.0,qawa1238,alc,Alacalufan,Alacalufan
+nmb,Nambikuára (Southern),-14.0,-59.5,sout2994,nab,Nambikuaran,Nambikuaran
+sor,Sora,20.0,84.3333333333,sora1254,srb,Munda,Austro-Asiatic
+spa,Spanish,40.0,-4.0,stan1288,spa,Romance,Indo-European
+squ,Squamish,49.6666666667,-123.166666667,squa1248,squ,Central Salish,Salishan
+sre,Sre,11.5,108.0,koho1244,kpm,Bahnaric,Austro-Asiatic
+sue,Suena,-7.75,147.55,suen1241,sue,Binanderean,Trans-New Guinea
+sui,Sui,26.0,107.5,suii1243,swi,Kam-Tai,Tai-Kadai
+sup,Supyire,11.5,-5.58333333333,supy1237,spp,Gur,Niger-Congo
+tab,Taba,0.0,127.5,east2440,mky,South Halmahera - West New Guinea,Austronesian
+igs,Ingessana,11.5,34.0,gaam1241,tbi,Eastern Jebel,Eastern Sudanic
+tag,Tagalog,15.0,121.0,taga1270,tgl,Greater Central Philippine,Austronesian
+tam,Tamang (Eastern),27.5,85.6666666667,,,Bodic,Sino-Tibetan
+tug,Tuareg (Ahaggar),23.0,6.0,taha1241,thv,Berber,Afro-Asiatic
+bma,Berber (Middle Atlas),33.0,-5.0,cent2194,tzm,Berber,Afro-Asiatic
+tmp,Tampulma,10.4166666667,-0.583333333333,tamp1252,tpm,Gur,Niger-Congo
+tsg,Tausug,6.0,121.0,taus1251,tsg,Greater Central Philippine,Austronesian
+wnt,Wantoat,-6.16666666667,146.5,want1252,wnc,Finisterre-Huon,Trans-New Guinea
+knr,Kanuri,12.0,13.0,cent2050,knc,Western Saharan,Saharan
+puk,Parauk,23.25,99.5,para1301,prk,Palaung-Khmuic,Austro-Asiatic
+phl,Phlong,15.0,99.0,pwon1235,pww,Karen,Sino-Tibetan
