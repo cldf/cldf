@@ -13,3 +13,24 @@ the same `Language_ID` for all rows via metadata; append a [column description](
         "valueUrl": "abcd1234"
     }
 ```
+
+
+### How can I specify tertiary separators for CSV files?
+
+CSV files structure lines of data into tabular data by means of a separator between fields, typically 
+the comma (hence **C**SV). The [Metadata Vocabulary for Tabular Data](http://w3c.github.io/csvw/metadata/)
+(which CLDF follows for specification of tables) provides a way to specify secondary separators, i.e.
+[separators to be used within a cell](http://w3c.github.io/csvw/metadata/#cell-separator). A third level
+of structured content can be achieved for cells of datatype `string` by specifying a regular expression
+which the values of a cell must match. E.g. the following column specification
+```python
+{
+    "name": "segments",
+    "separator": "+",
+    "datatype": {
+        "base": "string",
+        "format": "([\\S]+)( [\\S]+)*"
+    }
+}
+```
+will make sure cell content of the form `abc def+geh` can be split into the nested lists `[['abc', 'def'], ['geh']]`.
