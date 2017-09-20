@@ -34,3 +34,22 @@ which the values of a cell must match. E.g. the following column specification
 }
 ```
 will make sure cell content of the form `abc def+geh` can be split into the nested lists `[['abc', 'def'], ['geh']]`.
+
+Tertiary separators may be useful when specifying definitions of categorical values in structure datasets: The
+WALS example slightly abuses the `Comment` field in the `ValueTable` to sneak in the human-readable definitions of
+the feature values (while giving the numeric values in the `Value` field). Alternatively, one could add a `Domain`
+field to the `ParameterTable`, specified as
+```python
+{
+    "name": "Domain",
+    "separator": ";",
+    "datatype": {
+        "base": "string",
+        "format": "([1-9]:([\\S]+)+"
+    }
+}
+```
+and formatting the value definitions as
+```
+1:Small;2:Moderately small;3:Average;4:Moderately large;5:Large
+```
