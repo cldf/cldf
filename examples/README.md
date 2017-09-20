@@ -29,6 +29,26 @@ acm	Achumawi	2	Moderately small	41.5	-121.0	Palaihnihan	Hokan	Phonology
 
 ## A Wordlist with cognate judgements
 
+The directory [`wordlist`](wordlist) contains an example of a CLDF Wordlist,
+including cognates and partial cognates.
+
+A first inspection with the `cldf stats` command from the `pycldf` package reveals:
+
+```bash
+$ cldf stats Wordlist-metadata.json 
+<cldf:v1.0:Wordlist at .>
+
+Path                 Type                     Rows
+-------------------  ---------------------  ------
+forms.csv            Form Table               1825
+cognates.csv         Cognate Table            1825
+partialcognates.csv  Partial Cognate Table    2531
+sources.bib          Sources                     2
+```
+
+Again, we can use the tools from the `csvkit` package, e.g. to show the
+alignments for all cognate sets for a particular concept:
+
 ```bash
 $ csvjoin -c Word_ID,ID cognates.csv forms.csv \
 | csvsort -c Concept,Cognate_set_ID,Language - \

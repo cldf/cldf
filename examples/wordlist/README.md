@@ -6,6 +6,3 @@ The example datasets I will use for this is the file `example.tsv`, and the meta
   
 Running the file `test_data.py`, you will see that the file currently contains a number of errors, including bad partial alignments.
 
-TODO: Show
-- csvsort: sorting cognates by Cognate_set_ID,
-- csvcut: then show alignments

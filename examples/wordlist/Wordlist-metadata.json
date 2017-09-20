@@ -1,117 +1,123 @@
 {
-	"@context": ["http://www.w3.org/ns/csvw", {"@language": "en"}],
+    "@context": [
+        "http://www.w3.org/ns/csvw",
+        {
+            "@language": "en"
+        }
+    ],
     "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#Wordlist",
-	"tables": [
-		{
-			"url": "forms.csv",
-			"dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#FormTable",
-			"tableSchema": {
-				"columns": [
-					{
-						"name": "ID", 
-						"datatype": "integer", 
-						"propertyUrl": "http://purl.org/dc/terms/identifier"
-					},
-					{
-						"name": "Language_ID", 
-						"datatype": "string", 
-						"propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#glottocode"
-					},
-					{
-						"name": "Language",
-						"datatype": "string",
-						"propertyUrl": "http://linguistics-ontology.org/gold/2010/Language"
-					},
-					{
-						"name": "Concept",
-						"datatype": "string",
-						"propertyUrl": "http://linguistics-ontology.org/gold/2010/LexicalizedConcept"
-					},
-					{
-						"name": "Parameter_ID", 
-						"datatype": "string",
-						"propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#conceptSet",
-						"valueUrl": "http://concepticon.clld.org/parameters/{Parameter_ID}"
-					},
-					{
-						"name": "Value", 
-						"datatype": "string",
-						"propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#lexicalUnit"
-					},
-					{
-						"name": "Form", 
-						"datatype": "string",
-						"propertyUrl": "http://linguistics-ontology.org/gold/2010/FormUnit"
-					},
-					{
-						"name": "Segments", 
-						"datatype": "string",
-						"separator" : " ",
-						"propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#soundSequence",
-						"valueUrl": "http://clpn.clld.org/paramters/{Segments}"
-					},
-					{
-						"name": "Prosodic_Structure",
-						"datatype": "string",
-						"separator": " ",
-						"propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#prosodicStructure"
-					},
-					{"name": "Source", 
-						"datatype": "string",
-						"separator": ",",
-						"propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#source",
-						"valueUrl": "http://evobib.lingpy.org?key={Source}"
-					}
-				]
-			}
-		},
-		{
-			"url": "cognates.csv",
+    "tables": [
+        {
+            "url": "forms.csv",
+            "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#FormTable",
+            "tableSchema": {
+                "columns": [
+                    {
+                        "name": "ID",
+                        "datatype": "integer",
+                        "propertyUrl": "http://purl.org/dc/terms/identifier"
+                    },
+                    {
+                        "name": "Language_ID",
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#glottocode"
+                    },
+                    {
+                        "name": "Language",
+                        "datatype": "string",
+                        "propertyUrl": "http://linguistics-ontology.org/gold/2010/Language"
+                    },
+                    {
+                        "name": "Concept",
+                        "datatype": "string",
+                        "propertyUrl": "http://linguistics-ontology.org/gold/2010/LexicalizedConcept"
+                    },
+                    {
+                        "name": "Parameter_ID",
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#conceptSet",
+                        "valueUrl": "http://concepticon.clld.org/parameters/{Parameter_ID}"
+                    },
+                    {
+                        "name": "Value",
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#lexicalUnit"
+                    },
+                    {
+                        "name": "Form",
+                        "datatype": "string",
+                        "propertyUrl": "http://linguistics-ontology.org/gold/2010/FormUnit"
+                    },
+                    {
+                        "name": "Segments",
+                        "datatype": "string",
+                        "separator": " ",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#soundSequence",
+                        "valueUrl": "http://clpn.clld.org/paramters/{Segments}"
+                    },
+                    {
+                        "name": "Prosodic_Structure",
+                        "datatype": "string",
+                        "separator": " ",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#prosodicStructure"
+                    },
+                    {
+                        "name": "Source",
+                        "datatype": "string",
+                        "separator": ",",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#source",
+                        "valueUrl": "http://evobib.lingpy.org?key={Source}"
+                    }
+                ]
+            }
+        },
+        {
+            "url": "cognates.csv",
             "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#CognateTable",
-			"tableSchema": {
-				"columns": [
+            "tableSchema": {
+                "columns": [
                     {
                         "name": "Word_ID",
                         "datatype": "integer"
                     },
-					{
-						"name": "Form", 
-						"datatype": "string",
-						"propertyUrl": "http://linguistics-ontology.org/gold/2010/FormUnit"
-					},
-					{
-						"name": "Cognate_set_ID", 
-						"datatype": "integer",
-						"propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#cognateSet"
-					},
-					{
-						"name": "Alignment", 
-						"datatype": "string", 
-						"separator": " ",
-						"propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#alignment"
-					},
-					{
-						"name": "Doubt",
-						"datatype": "string"
-					},
-					{
-						"name": "Cognate_detection_method",
-						"datatype": "string"
-					},
-					{
-						"name": "Cognate_source",
-                                                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#source",
-						"datatype": "string"
-					},
-					{
-						"name": "Alignment_method",
-						"datatype": "string"
-					},
-					{
-						"name": "Alignment_source",
-						"datatype": "string"
-					}
-				],
+                    {
+                        "name": "Form",
+                        "datatype": "string",
+                        "propertyUrl": "http://linguistics-ontology.org/gold/2010/FormUnit"
+                    },
+                    {
+                        "name": "Cognate_set_ID",
+                        "datatype": "integer",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#cognateSet"
+                    },
+                    {
+                        "name": "Alignment",
+                        "datatype": "string",
+                        "separator": " ",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#alignment"
+                    },
+                    {
+                        "name": "Doubt",
+                        "datatype": "string"
+                    },
+                    {
+                        "name": "Cognate_detection_method",
+                        "datatype": "string"
+                    },
+                    {
+                        "name": "Cognate_source",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#source",
+                        "datatype": "string"
+                    },
+                    {
+                        "name": "Alignment_method",
+                        "datatype": "string"
+                    },
+                    {
+                        "name": "Alignment_source",
+                        "datatype": "string"
+                    }
+                ],
                 "foreignKeys": [
                     {
                         "columnReference": "Word_ID",
@@ -121,59 +127,62 @@
                         }
                     }
                 ]
-			}
-		},
-		{
-			"url": "partialcognates.csv",
+            }
+        },
+        {
+            "url": "partialcognates.csv",
             "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#PartialCognateTable",
             "tableSchema": {
-				"columns": [
-					{
-						"name": "Word_ID",
-						"datatype": "integer"
-					},
-					{
-						"name": "Segments", 
-						"datatype": "string", "separator" : " ",
-						"propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#soundSequence",
-						"valueUrl": "http://clpn.clld.org/paramters/{Segments}"
-					},					{
-						"name": "Cognate_set_ID", 
-						"datatype": "integer",
-						"propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#cognateSet"
-					},
-					{
-						"name": "Alignment", 
-						"datatype": "string", 
-						"separator": " ",
-						"propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#alignment"
-					},
-					{
-						"name": "Segment_slice", 
-						"datatype": "integer", "separator" : " ",
-						"propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#slices"
-					},
-					{
-						"name": "Doubt",
-						"datatype": "string"
-					},
-					{
-						"name": "Cognate_detection_method",
-						"datatype": "string"
-					},
-					{
-						"name": "Cognate_source",
-						"datatype": "string"
-					},
-					{
-						"name": "Alignment_method",
-						"datatype": "string"
-					},
-					{
-						"name": "Alignment_source",
-						"datatype": "string"
-					}
-				],
+                "columns": [
+                    {
+                        "name": "Word_ID",
+                        "datatype": "integer"
+                    },
+                    {
+                        "name": "Segments",
+                        "datatype": "string",
+                        "separator": " ",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#soundSequence",
+                        "valueUrl": "http://clpn.clld.org/paramters/{Segments}"
+                    },
+                    {
+                        "name": "Cognate_set_ID",
+                        "datatype": "integer",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#cognateSet"
+                    },
+                    {
+                        "name": "Alignment",
+                        "datatype": "string",
+                        "separator": " ",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#alignment"
+                    },
+                    {
+                        "name": "Segment_slice",
+                        "datatype": "integer",
+                        "separator": " ",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#slices"
+                    },
+                    {
+                        "name": "Doubt",
+                        "datatype": "string"
+                    },
+                    {
+                        "name": "Cognate_detection_method",
+                        "datatype": "string"
+                    },
+                    {
+                        "name": "Cognate_source",
+                        "datatype": "string"
+                    },
+                    {
+                        "name": "Alignment_method",
+                        "datatype": "string"
+                    },
+                    {
+                        "name": "Alignment_source",
+                        "datatype": "string"
+                    }
+                ],
                 "foreignKeys": [
                     {
                         "columnReference": "Word_ID",
@@ -183,7 +192,7 @@
                         }
                     }
                 ]
-			}
-		}
-	]
+            }
+        }
+    ]
 } 
