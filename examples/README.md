@@ -10,18 +10,22 @@ dataset to the legacy custom tab-delimited export of WALS features (e.g.
 http://wals.info/feature/1A.tab), using tools from the [`csvkit` package](https://csvkit.readthedocs.io/):
 - We use `csvjoin` twice, to augment the `ValueTable` with metadata about languages and parameters.
 - The we use `csvcut` to prune the excess columns and re-order the remaining ones.
+- Using `sed` we replace the first line, thereby renaming the columns.
 - Finally we use `csvformat` to switch to tab-delimited values.
 
 ```bash
-$ csvjoin -c Language_ID,ID values.csv languages.csv | csvjoin -c Parameter_ID,ID - parameters.csv | csvcut -c 2,8,4,5,9,10,13,14,19 | csvformat -T | head -n 5
-Language_ID	Name	Value	Comment	Latitude	Longitude	Genus	Family	Area
-xoo	!Xóõ	5	Large	-24.0	21.5	Tu	Tu	Phonology
-ood	O'odham	3	Average	32.0	-112.0	Tepiman	Uto-Aztecan	Phonology
-aiz	Aizi	3	Average	5.25	-4.5	Kru	Niger-Congo	Phonology
-akw	Akawaio	1	Small	6.0	-59.5	Cariban	Cariban	Phonology
+$ csvjoin -c Language_ID,ID values.csv languages.csv \
+| csvjoin -c Parameter_ID,ID - parameters.csv \
+| csvcut -c 2,8,4,5,9,10,13,14,19 \
+| sed "1s/.*/wals code,name,value,description,latitude,longitude,genus,family,area/" \
+| csvformat -T \
+| head -n 5
+wals code	name	value	description	latitude	longitude	genus	family	area
+abi	Abipón	2	Moderately small	-29.0	-61.0	South Guaicuruan	Guaicuruan	Phonology
+abk	Abkhaz	5	Large	43.0833333333	41.0	Northwest Caucasian	Northwest Caucasian	Phonology
+ach	Aché	1	Small	-25.25	-55.1666666667	Tupi-Guaraní	Tupian	Phonology
+acm	Achumawi	2	Moderately small	41.5	-121.0	Palaihnihan	Hokan	Phonology
 ```
-
-Renaming the columns is left as exercise for the reader :)
 
 
 ## Examples "in the wild"
