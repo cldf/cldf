@@ -1,0 +1,49 @@
+{
+    "url": "partialcognates.csv",
+    "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#PartialCognateTable",
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "Word_ID",
+                "datatype": "integer"
+            },
+            {
+                "name": "Cognate_set_ID",
+                "datatype": "integer",
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#cognateSet"
+            },
+            {
+                "name": "Alignment",
+                "datatype": "string",
+                "separator": " ",
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#alignment"
+            },
+            {
+                "name": "Segment_slices",
+                "datatype": {
+                    "base": "string",
+                    "format": "\\d+(:\\d+)?"
+                },
+                "separator": " ",
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#slices"
+            },
+            {
+                "name": "Cognate_source",
+                "datatype": "string"
+            },
+            {
+                "name": "Alignment_source",
+                "datatype": "string"
+            }
+        ],
+        "foreignKeys": [
+            {
+                "columnReference": "Word_ID",
+                "reference": {
+                    "resource": "forms.csv",
+                    "columnReference": "ID"
+                }
+            }
+        ]
+    }
+}

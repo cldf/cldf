@@ -1,0 +1,42 @@
+{
+	"url": "cognates.csv",
+	"dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#CognateTable",
+	"tableSchema": {
+		"columns": [
+            {
+                "name": "Word_ID",
+                "datatype": "integer"
+            },
+            {
+                "name": "Cognate_set_ID",
+                "datatype": "integer",
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#cognateSet"
+            },
+            {
+                "name": "Alignment",
+                "datatype": "string",
+                "separator": " ",
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#alignment"
+            },
+            {
+                "name": "Cognate_source",
+                "datatype": "string",
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#source"
+            },
+            {
+                "name": "Alignment_source",
+                "datatype": "string",
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#source"
+            }
+		],
+        "foreignKeys": [
+            {
+                "columnReference": "Word_ID",
+                "reference": {
+                    "resource": "forms.csv",
+                    "columnReference": "ID"
+                }
+            }
+        ]
+	}
+}

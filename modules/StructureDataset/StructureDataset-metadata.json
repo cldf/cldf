@@ -43,7 +43,7 @@
                     {
                         "name": "Source",
                         "separator": ";",
-                        "propertyUrl": "http://purl.org/dc/terms/source",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#source",
                         "datatype": "string"
                     }
                 ],

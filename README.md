@@ -116,28 +116,13 @@ types are specified as *components* in a way that can be re-used across modules 
 - [Language metadata](components/languages/)
 - [Parameter metadata](components/parameters/)
 - [Examples](components/examples/)
-
-
-## CLDF data on the Web
-
-The core format specification is already following the guidelines of the [Model for Tabular Data and Metadata on the Web](http://www.w3.org/TR/tabular-data-model/), thus makes sure our formats follow best practices for Web publishing.
-
-Additionally CLDF data providers may serve their datasets as [JSONP](http://en.wikipedia.org/wiki/JSONP) to make it possible to retrieve data from a browser-based application. For CLDF data served as JSONP we specify the name of the callback function as `cldf_data` to make it possible to serve static files.
+- [Cognates](components/cognates/)
+- [Partial cognates](components/partialcognates/)
 
 
 ## Examples
 
-To stipulate further discussion and help experiments with tools, some variant of CLDF data may be obtained here:
-
-- [A WALS chapter as CLDF](examples/wals)
-
-These downloads have been created using the [pycldf package](https://github.com/glottobank/pycldf).
-
-
-## Open questions
-
-- Should language IDs follow the [BCP 47](https://tools.ietf.org/html/bcp47) standard?
-- Some data structures often encountered in historical linguistics cannot readily be represented by simple csv files, e.g. alignments (in particular multiple alignments), phylogenetic trees, and to a lesser degree distance matrices.
+To stipulate further discussion and help experiments with tools, some examples of CLDF datasets are available in the [examples directory](examples/).
 
 
 ## History

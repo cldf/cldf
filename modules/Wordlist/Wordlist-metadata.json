@@ -37,7 +37,7 @@
                     },
                     {
                         "name": "Segments",
-                        "propertyUrl": "http://linguistics-ontology.org/gold/2010/Segment",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#soundSequence",
                         "datatype": "string",
                         "separator": " "
                     },
@@ -49,7 +49,7 @@
                     {
                         "name": "Source",
                         "separator": ";",
-                        "propertyUrl": "http://purl.org/dc/terms/source",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#source",
                         "datatype": "string"
                     }
                 ],

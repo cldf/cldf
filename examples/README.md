@@ -27,6 +27,25 @@ ach	Aché	1	Small	-25.25	-55.1666666667	Tupi-Guaraní	Tupian	Phonology
 acm	Achumawi	2	Moderately small	41.5	-121.0	Palaihnihan	Hokan	Phonology
 ```
 
+## A Wordlist with cognate judgements
+
+```bash
+$ csvjoin -c Word_ID,ID cognates.csv forms.csv \
+| csvsort -c Concept,Cognate_set_ID,Language - \
+| csvcut -c Concept,Cognate_set_ID,Alignment,Language - \
+| csvgrep -c Concept -m "the skin" \
+| csvformat -T
+Concept	Cognate_set_ID	Alignment	Language
+the skin	2	ʃ ɔ̆ ³⁵ + j a m ⁵⁵	Maru
+the skin	3	a ³¹ - + ʐ ɿ - ⁵⁵	Achang_Longchuan
+the skin	3	- - a + r i j -	Old_Burmese
+the skin	3	a ³¹ - + ʐ ɿ - ⁵⁵	Xiandao
+the skin	204	ʃ ŏ ²¹ + k ṵ - ʔ ⁵⁵	Atsi
+the skin	204	ʃ ă ³⁵ + k a̰ u ʔ ⁵⁵	Bola
+the skin	204	ʃ ŏ ⁵⁵ + k ṵ - k ⁵⁵	Lashi
+the skin	343	ɑ ⁵³ + tθ ɑ ⁵⁵ + ɑ ⁵³ + j e ²²	Rangoon
+```
+
 
 ## Examples "in the wild"
 
