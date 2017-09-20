@@ -82,13 +82,13 @@
 					{
 						"name": "Cognate_set_ID", 
 						"datatype": "integer",
-						"propertyUrl": "http://cldf.clld.org/cldf/v1.0/terms.rdf#cognateSet"
+						"propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#cognateSet"
 					},
 					{
 						"name": "Alignment", 
 						"datatype": "string", 
 						"separator": " ",
-						"propertyUrl": "http://cldf.clld.org/cldf/v1.0/terms.rdf#alignment"
+						"propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#alignment"
 					},
 					{
 						"name": "Doubt",
@@ -100,6 +100,7 @@
 					},
 					{
 						"name": "Cognate_source",
+                                                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#source",
 						"datatype": "string"
 					},
 					{
