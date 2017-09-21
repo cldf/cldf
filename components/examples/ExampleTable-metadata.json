@@ -1,7 +1,7 @@
 {
 	"url": "examples.csv",
 	"dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#ExampleTable",
-	"dc:format": "http://linguistics-ontology.org/gold/InterlinearGlossedText",
+	"dc:format": "http://purl.org/linguistics/gold/InterlinearGlossedText",
 	"tableSchema": {
 		"columns": [
 			{
