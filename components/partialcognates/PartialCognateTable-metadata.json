@@ -25,7 +25,7 @@
                     "format": "\\d+(:\\d+)?"
                 },
                 "separator": " ",
-                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#slices"
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#slice"
             },
             {
                 "name": "Cognate_source",

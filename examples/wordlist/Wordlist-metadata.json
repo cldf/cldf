@@ -159,7 +159,7 @@
                         "name": "Segment_slice",
                         "datatype": {"base": "string", "format": "\\d(:\\d(:\\d)?)?"},
                         "separator": " ",
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#slices"
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#slice"
                     },
                     {
                         "name": "Doubt",
