@@ -5,11 +5,11 @@
 		"columns": [
             {
                 "name": "Form_ID",
-                "datatype": "integer"
+                "datatype": "string"
             },
             {
                 "name": "Cognate_set_ID",
-                "datatype": "integer",
+                "datatype": "string",
                 "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#cognateSet"
             },
             {
