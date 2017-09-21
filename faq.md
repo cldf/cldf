@@ -46,7 +46,8 @@ field to the `ParameterTable`, specified as
     "datatype": {
         "base": "string",
         "format": "([1-9]:([\\S]+)+"
-    }
+    },
+    "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#category"
 }
 ```
 and formatting the value definitions as
