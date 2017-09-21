@@ -1,7 +1,7 @@
 {
 	"url": "examples.csv",
 	"dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#ExampleTable",
-	"dc:format": "http://purl.org/linguistics/gold/InterlinearGlossedText",
+	"dc:format": "http://linguistics-ontology.org/gold/InterlinearGlossedText",
 	"tableSchema": {
 		"columns": [
 			{
@@ -11,7 +11,7 @@
 			},
 			{
 				"name": "Language_ID",
-				"propertyUrl": "http://linguistics-ontology.org/gold/2010/Language",
+				"propertyUrl": "http://purl.org/linguistics/gold/Language",
 				"required": true,
 				"datatype": "string"
 			},
@@ -23,7 +23,7 @@
 			{
 				"name": "Analyzed",
 				"datatype": "string",
-				"propertyUrl": "http://purl.org/linguistics/gold/Morpheme",
+				"propertyUrl": "http://purl.org/linguistics/gold/GrammarUnit",
 				"separator": "\t"
 			},
 			{
@@ -39,7 +39,7 @@
 			},
 			{
 				"name": "Translation_language_ID",
-				"propertyUrl": "http://linguistics-ontology.org/gold/2010/Language",
+				"propertyUrl": "http://purl.org/linguistics/gold/Language",
 				"datatype": "string"
 			}
 		],

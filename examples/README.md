@@ -50,7 +50,7 @@ Again, we can use the tools from the `csvkit` package, e.g. to show the
 alignments for all cognate sets for a particular concept:
 
 ```bash
-$ csvjoin -c Word_ID,ID cognates.csv forms.csv \
+$ csvjoin -c Form_ID,ID cognates.csv forms.csv \
 | csvsort -c Concept,Cognate_set_ID,Language - \
 | csvcut -c Concept,Cognate_set_ID,Alignment,Language - \
 | csvgrep -c Concept -m "the skin" \

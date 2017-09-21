@@ -18,7 +18,7 @@
                     },
                     {
                         "name": "Language_ID",
-                        "propertyUrl": "http://linguistics-ontology.org/gold/2010/Language",
+                        "propertyUrl": "http://purl.org/linguistics/gold/Language",
                         "required": true,
                         "datatype": "string"
                     },
@@ -31,7 +31,7 @@
                     },
                     {
                         "name": "Value",
-                        "propertyUrl": "http://linguistics-ontology.org/gold/2010/FormUnit",
+                        "propertyUrl": "http://purl.org/linguistics/gold/FormUnit",
                         "required": true,
                         "datatype": "string"
                     },

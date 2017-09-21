@@ -4,7 +4,7 @@
     "tableSchema": {
         "columns": [
             {
-                "name": "Word_ID",
+                "name": "Form_ID",
                 "datatype": "integer"
             },
             {
@@ -38,7 +38,7 @@
         ],
         "foreignKeys": [
             {
-                "columnReference": "Word_ID",
+                "columnReference": "Form_ID",
                 "reference": {
                     "resource": "forms.csv",
                     "columnReference": "ID"

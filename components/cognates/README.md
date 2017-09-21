@@ -10,7 +10,7 @@ is important, and therefore covered by CLDF.
 
 A cognate table, i.e. a table ẁhich `dc:conformsTo` `http://cldf.clld.org/v1.0/terms.rdf#CognateTable` has
 the following columns:
-- `Word_ID`: required; a foreign key to the `FormTable` of the wordlist
+- `Form_ID`: required; a foreign key to the `FormTable` of the wordlist
 - `Cognate_set_ID`: required; an identifier of the cognate set a form is judged to belong to
 - `Alignment`: optional; an [alignment](http://cldf.clld.org/v1.0/terms.rdf#alignment) of the segments of the form within its cognate set. Since alignments can make cognacy judgements more transparent and because they typically are somewhat expensive to compute, they should be stored and provided with a `CognateTable`
 - `Cognate_source`: [source specification](http://cldf.clld.org/v1.0/terms.rdf#source) listing sources of the cognacy judgement

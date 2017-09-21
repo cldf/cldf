@@ -25,12 +25,12 @@
                     {
                         "name": "Language",
                         "datatype": "string",
-                        "propertyUrl": "http://linguistics-ontology.org/gold/2010/Language"
+                        "propertyUrl": "http://purl.org/linguistics/gold/Language"
                     },
                     {
                         "name": "Concept",
                         "datatype": "string",
-                        "propertyUrl": "http://linguistics-ontology.org/gold/2010/LexicalizedConcept"
+                        "propertyUrl": "http://purl.org/linguistics/gold/LexicalizedConcept"
                     },
                     {
                         "name": "Parameter_ID",
@@ -46,14 +46,13 @@
                     {
                         "name": "Form",
                         "datatype": "string",
-                        "propertyUrl": "http://linguistics-ontology.org/gold/2010/FormUnit"
+                        "propertyUrl": "http://purl.org/linguistics/gold/FormUnit"
                     },
                     {
                         "name": "Segments",
                         "datatype": "string",
-                        "separator": " ",
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#soundSequence",
-                        "valueUrl": "http://clpn.clld.org/paramters/{Segments}"
+                        "separator": " + ",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#soundSequence"
                     },
                     {
                         "name": "Prosodic_Structure",
@@ -77,13 +76,13 @@
             "tableSchema": {
                 "columns": [
                     {
-                        "name": "Word_ID",
+                        "name": "Form_ID",
                         "datatype": "integer"
                     },
                     {
                         "name": "Form",
                         "datatype": "string",
-                        "propertyUrl": "http://linguistics-ontology.org/gold/2010/FormUnit"
+                        "propertyUrl": "http://purl.org/linguistics/gold/FormUnit"
                     },
                     {
                         "name": "Cognate_set_ID",
@@ -120,7 +119,7 @@
                 ],
                 "foreignKeys": [
                     {
-                        "columnReference": "Word_ID",
+                        "columnReference": "Form_ID",
                         "reference": {
                             "resource": "forms.csv",
                             "columnReference": "ID"
@@ -135,7 +134,7 @@
             "tableSchema": {
                 "columns": [
                     {
-                        "name": "Word_ID",
+                        "name": "Form_ID",
                         "datatype": "integer"
                     },
                     {
@@ -158,7 +157,7 @@
                     },
                     {
                         "name": "Segment_slice",
-                        "datatype": "integer",
+                        "datatype": {"base": "string", "format": "\\d(:\\d(:\\d)?)?"},
                         "separator": " ",
                         "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#slices"
                     },
@@ -185,7 +184,7 @@
                 ],
                 "foreignKeys": [
                     {
-                        "columnReference": "Word_ID",
+                        "columnReference": "Form_ID",
                         "reference": {
                             "resource": "forms.csv",
                             "columnReference": "ID"

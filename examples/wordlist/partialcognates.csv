@@ -1,4 +1,4 @@
-Word_ID,Form,Cognate_set_ID,Alignment,Doubt,Cognate_detection_method,Cognate_source,Alignment_method,Alignment_source,SegmentSlice
+Form_ID,Form,Cognate_set_ID,Alignment,Doubt,Cognate_detection_method,Cognate_source,Alignment_method,Alignment_source,Segment_slice
 6187,ŋ ɑ ²²,91,ŋ ɑ ²²,,expert,Hill2017,LingPy:SCA,,0:1
 6259,ŋ o ⁵¹,91,ŋ o ⁵¹,,expert,Hill2017,LingPy:SCA,,0:1
 6348,ŋ ɔ ³¹,91,ŋ ɔ ³¹,,expert,Hill2017,LingPy:SCA,,0:1
