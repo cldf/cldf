@@ -1,34 +1,5 @@
 # Cross-linguistic Data Formats
 
-## Why?
-
-To allow exchange of cross-linguistic data and [decouple development of tools and methods from that of databases](bigger_picture.md), standardized data formats are necessary.
-
-Once established, these dataformats could become a foundation not only for tools but also for instruction material in the spirit of [Data Carpentry](http://datacarpentry.org/) for historical linguistics and linguistic typology.
-
-
-## What?
-
-The main types of cross-linguistic data we are concerned with here are any tabular data which is typically
-analysed using quantitative (automated) methods or made accessible using software tools like the `clld` framework, such as
-- wordlists (or more complex lexical data including e.g. cognate judgements),
-- structure datasets (e.g. [WALS features](http://wals.info/feature)),
-- simple dictionaries.
-
-
-## Design principles
-
-- Data should be both editable "by hand" and amenable to reading and writing by software (preferably software the typical linguist can be expected to use correctly).
-- Data should be encoded as UTF-8 text files.
-- If entities can be referenced, e.g. languages through their Glottocode, 
-  this should be done rather than duplicating information like language names.
-- Identifier should be resolvable HTTP URLs if possible. If not, they should be documented in the metadata.
-- Compatibility with existing tools, standards and practice should always be kept in mind.
-
-Since we are concerned with tabular data here, CLDF is built on W3C's 
-[Model for Tabular Data and Metadata on the Web](http://www.w3.org/TR/tabular-data-model/#standard-file-metadata) and 
-[Metadata Vocabulary for Tabular Data](https://www.w3.org/TR/tabular-metadata/).
-
 The CLDF specification is split into a [core specification](core.md), applying to
 all kinds of CLDF data and [modules](#modules), describing the data model for a particular kind of cross-linguistic data.
 
