@@ -1,4 +1,4 @@
-# Cross-linguistic Data Formats
+# CLDF: Cross-linguistic Data Formats
 
 The CLDF specification is split into a [core specification](core.md), applying to
 all kinds of CLDF data and [modules](#modules), describing the data model for a particular kind of cross-linguistic data.
@@ -94,6 +94,17 @@ types are specified as *components* in a way that can be re-used across modules 
 ## Examples
 
 To stipulate further discussion and help experiments with tools, some examples of CLDF datasets are available in the [examples directory](examples/).
+
+
+## Versioning
+
+Changes to the CLDF specification will be released as new versions, using
+a [Semantic Versioning](http://semver.org/) number scheme. While older versions
+can be accessed via [releases of this repository](releases) or from 
+[ZENODO](https://zenodo.org), where releases will be archived, the latest
+released version is also reflected in the `master` branch of this repository,
+i.e. whatever you see navigating the directory tree at [https://github.com/glottobank/cldf](https://github.com/glottobank/cldf/tree/master)
+reflects the latest released version of the specification.
 
 
 ## History
