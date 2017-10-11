@@ -1,0 +1,602 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="rdfs-xhtml.xsl"?>
+<rdf:RDF xmlns="http://www.w3.org/1999/xhtml"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:dc="http://purl.org/dc/terms/"
+         xmlns:dctype="http://purl.org/dc/dcmitype/"
+         xmlns:dcat="http://www.w3.org/ns/dcat#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://cldf.clld.org/v1.0/terms.rdf">
+        <rdfs:label xml:lang="en">The CLDF Ontology</rdfs:label>
+        <dc:title xml:lang="en">The CLDF Ontology</dc:title>
+        <rdfs:comment xml:lang="en">
+            The CLDF Ontology is an RDF vocabulary describing the dataset types, tables
+            and columns specified in the CLDF standard.
+        </rdfs:comment>
+        <owl:versionInfo xml:lang="en">Version 1.0 (2017-10-12)</owl:versionInfo>
+        <foaf:homepage rdf:resource="http://cldf.clld.org/" />
+    </owl:Ontology>
+
+    <!-- 
+        Generic properties 
+    -->
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#id" dc:type="generic-property">
+        <rdfs:label xml:lang="en">ID</rdfs:label>
+        <rdfs:comment rdf:parseType="Literal">
+            <p>A unique identifier for a row in a table.</p>
+            <p>
+                To allow usage of identifiers as path components of URLs
+                IDs must only contain alphanumeric characters, underscore and hyphen.
+            </p>
+        </rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier" />
+        <rdfs:seeAlso rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-identifier" />
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#name" dc:type="generic-property">
+        <rdfs:label xml:lang="en">Name</rdfs:label>
+        <rdfs:comment rdf:parseType="Literal">
+            <p>A title, name or label for an entity.</p>
+        </rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/title" />
+        <rdfs:seeAlso rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-title" />
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#description" dc:type="generic-property">
+        <rdfs:label xml:lang="en">Description</rdfs:label>
+        <rdfs:comment rdf:parseType="Literal">
+            <p>A description for an entity.</p>
+        </rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description" />
+        <rdfs:seeAlso rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-description" />
+    </rdf:Property>
+    
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#slice" dc:type="generic-property">
+        <rdfs:label xml:lang="en">Slice</rdfs:label>
+        <rdfs:comment rdf:parseType="Literal">
+            <p>Slice specification following Python's slice notation</p>
+        </rdfs:comment>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#source" dc:type="generic-property">
+        <rdfs:label xml:lang="en">Source</rdfs:label>
+        <rdfs:comment rdf:parseType="Literal">
+            <p>Semicolon-separated source specifications, of the form &lt;source_ID&gt;[], 
+            e.g. http://glottolog.org/resource/reference/id/318814[34], or meier2015[3-12]
+            where meier2015 is a citation key in the accompanying BibTeX file.</p>
+        </rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/source" />
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#comment" dc:type="generic-property">
+        <rdfs:label xml:lang="en">Comment</rdfs:label>
+        <rdfs:comment rdf:parseType="Literal">
+            <p>
+                A human-readable comment on a resource, providing additional context.
+            </p>
+        </rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment" />
+    </rdf:Property>
+
+    <!--
+        Reference properties (aka foreign keys)
+    -->
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#languageReference" dc:type="reference-property">
+        <rdfs:label xml:lang="en">Language Reference</rdfs:label>
+        <rdfs:comment rdf:parseType="Literal">
+            <p>
+                An identifier referencing a language either
+            </p>
+            <ul>
+                <li>by providing a foreign key into the LanguageTable or</li>
+                <li>by using a known encoding scheme.</li>
+            </ul>
+        </rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/references" />
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Foreign_key" />
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#parameterReference" dc:type="reference-property">
+        <rdfs:label xml:lang="en">Parameter Reference</rdfs:label>
+        <rdfs:comment rdf:parseType="Literal">
+            <p>
+                An identifier referencing a parameter either
+            </p>
+            <ul>
+                <li>by providing a foreign key into the ParameterTable or</li>
+                <li>by using a known encoding scheme.</li>
+            </ul>
+        </rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/references" />
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Foreign_key" />
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#exampleReference" dc:type="reference-property">
+        <rdfs:label xml:lang="en">Example Reference</rdfs:label>
+        <rdfs:comment rdf:parseType="Literal">
+            <p>
+                An identifier referencing an example by providing a foreign key into the
+                ExampleTable.
+            </p>
+        </rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/references" />
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Foreign_key" />
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#entryReference" dc:type="reference-property">
+        <rdfs:label xml:lang="en">Entry Reference</rdfs:label>
+        <rdfs:comment rdf:parseType="Literal">
+            <p>
+                An identifier referencing a dictionary entry
+                by providing a foreign key into the EntryTable.
+            </p>
+        </rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/references" />
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Foreign_key" />
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#formReference" dc:type="reference-property">
+        <rdfs:label xml:lang="en">Form Reference</rdfs:label>
+        <rdfs:comment rdf:parseType="Literal">
+            <p>
+                An identifier referencing a form
+                by providing a foreign key into the FormTable.
+            </p>
+        </rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/references" />
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Foreign_key" />
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#sourceFormReference" dc:type="reference-property">
+        <rdfs:label xml:lang="en">Source Form Reference</rdfs:label>
+        <rdfs:comment rdf:parseType="Literal">
+            <p>
+                An identifier referencing the source form of a loanword
+                by providing a foreign key into the FormTable.
+            </p>
+        </rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/references" />
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Foreign_key" />
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#targetFormReference" dc:type="reference-property">
+        <rdfs:label xml:lang="en">Target Form Reference</rdfs:label>
+        <rdfs:comment rdf:parseType="Literal">
+            <p>
+                An identifier referencing a loanword
+                by providing a foreign key into the FormTable.
+            </p>
+        </rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/references" />
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Foreign_key" />
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#cognatesetReference" dc:type="reference-property">
+        <rdfs:label xml:lang="en">Cognateset Reference</rdfs:label>
+        <rdfs:comment rdf:parseType="Literal">
+            <p>
+                An identifier referencing a cognateset either
+            </p>
+            <ul>
+                <li>by providing a foreign key into the CognatesetTable or</li>
+                <li>by using a known encoding scheme.</li>
+            </ul>
+        </rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/references" />
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Foreign_key" />
+    </rdf:Property>
+
+    <!--
+        language properties 
+    -->
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#iso639P3code" dc:type="language-property">
+        <rdfs:label xml:lang="en">ISO 639-3 code</rdfs:label>
+        <owl:equivalentProperty rdf:resource="http://lexvo.org/ontology#iso639P3Code" />
+        <rdfs:seeAlso rdf:resource="http://www.sil.org/ISO639-3/" />
+        <rdfs:comment>
+            An ISO 639-3 language code, i.e. a three-letter code denoting a valid ISO 639-3
+            language or macrolanguage.
+        </rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier" />
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#glottocode" dc:type="language-property">
+        <rdfs:label xml:lang="en">Glottocode</rdfs:label>
+        <rdfs:comment rdf:parseType="Literal">
+            <p>A <a href="http://glottolog.org">Glottolog</a> code denoting a languoid.</p>
+        </rdfs:comment>
+        <rdfs:seeAlso rdf:resource="http://glottolog.org" />
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier" />
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#macroarea" dc:type="language-property">
+        <rdfs:label xml:lang="en">Macroarea</rdfs:label>
+        <rdfs:comment rdf:parseType="Literal">
+            <p>A macroarea as defined by <a href="http://glottolog.org">Glottolog</a>.</p>
+        </rdfs:comment>
+        <rdfs:seeAlso rdf:resource="http://glottolog.org/meta/glossary#macroarea" />
+    </rdf:Property>
+    
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#latitude" dc:type="language-property">
+        <rdfs:label xml:lang="en">Latitude</rdfs:label>
+        <rdfs:comment rdf:parseType="Literal">
+            <p>
+                A latitude in the
+                <a href="https://en.wikipedia.org/wiki/World_Geodetic_System">WGS 84</a>
+                standard coordinate system, specified as decimal number of degrees.
+            </p>
+        </rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#lat" />
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#longitude" dc:type="language-property">
+        <rdfs:label xml:lang="en">Longitude</rdfs:label>
+        <rdfs:comment rdf:parseType="Literal">
+            <p>
+                A longitude in the
+                <a href="https://en.wikipedia.org/wiki/World_Geodetic_System">WGS 84</a>
+                standard coordinate system, specified as decimal number of degrees.
+            </p>
+        </rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#long" />
+    </rdf:Property>
+
+    <!-- 
+        IGT example properties 
+    -->
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#primaryText" dc:type="example-property">
+        <rdfs:label xml:lang="en">Primary Text</rdfs:label>
+        <rdfs:comment rdf:parseType="Literal">
+            <p>
+                The primary text of an example.
+            </p>
+        </rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/hasSourceLine" />
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#analyzedWord" dc:type="example-property">
+        <rdfs:label xml:lang="en">Analyzed Word</rdfs:label>
+        <rdfs:comment rdf:parseType="Literal">
+            <p>
+                The morpheme-pattern analysis of a word in an example.
+            </p>
+        </rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/GrammarUnit" />
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#gloss" dc:type="example-property">
+        <rdfs:label xml:lang="en">Gloss</rdfs:label>
+        <rdfs:comment rdf:parseType="Literal">
+            <p>
+                A gloss corresponding to the morpheme-pattern analysis of a word in an example.
+            </p>
+        </rdfs:comment>
+        <rdfs:seeAlso rdf:resource="http://purl.org/linguistics/gold/hasGlosses" />
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#translatedText" dc:type="example-property">
+        <rdfs:label xml:lang="en">Translated Text</rdfs:label>
+        <rdfs:comment rdf:parseType="Literal">
+            <p>
+                The translated text of an example.
+            </p>
+        </rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/hasTranslationLine" />
+    </rdf:Property>
+
+    <!--
+        Dictionary entry properties
+    -->
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#headword" dc:type="entry-property">
+        <rdfs:label xml:lang="en">Headword</rdfs:label>
+        <rdfs:comment rdf:parseType="Literal">
+            <p>
+                The headword of a dictionary entry.
+            </p>
+        </rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/OrthographicWord" />
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#partOfSpeech" dc:type="entry-property">
+        <rdfs:label xml:lang="en">Part of speech</rdfs:label>
+        <rdfs:comment rdf:parseType="Literal">
+            <p>
+                The part-of-speech of dictionary entry.
+            </p>
+        </rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/PartOfSpeechProperty" />
+    </rdf:Property>
+    
+    <!--
+        Value properties
+    -->
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#value" dc:type="value-property">
+        <rdfs:label xml:lang="en">Value</rdfs:label>
+        <rdfs:comment rdf:parseType="Literal">
+            <p>
+                The value (a.k.a. datapoint or measurement) of a language for a structural
+                feature.
+            </p>
+            <p>
+                For features with a limited, discrete set of valid values (a.k.a. categorical variables)
+                it is recommended to relate items of a ValueTable to the respective code
+                in the CodeTable.
+            </p>
+        </rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/feature" />
+    </rdf:Property>
+
+    <!--
+        Cognate properties
+    -->
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#alignment" dc:type="cognate-property">
+        <rdfs:label xml:lang="en">Alignment</rdfs:label>
+        <rdfs:comment rdf:parseType="Literal">
+            <p>An alignment represents
+                <a href="http://linguistics-ontology.org/gold/2010/Segment">segments</a>
+                which are grouped
+                into a common <a href="#cognateSet">cognate set</a> as a matrix in which cognate
+                segments are placed in the same column while gap characters are introduced in
+                those sound sequences missing a certain counterpart.</p>
+        </rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:source rdf:resource="http://bibliography.lingpy.org/raw.php?key=List2014d"/>
+    </rdf:Property>
+
+    <!--
+        Form properties
+    -->
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#conceptSet" dc:type="form-property">
+        <rdfs:label xml:lang="en">Concept Set</rdfs:label>
+        <rdfs:comment>
+            A concept set groups a number of concept labels which are used in
+            different questionnaires and were judged to denote the same concept despite
+            potential differences among the concrete concept labels (be it their spelling,
+            or the language in which they were originally created).
+        </rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:source rdf:resource="http://bibliography.lingpy.org/raw.php?key=List2016a"/>
+        <rdfs:seeAlso rdf:resource="http://concepticon.clld.org" />
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#lexicalUnit" dc:type="form-property">
+        <rdfs:label xml:lang="en">Lexical Unit</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/hasLexicalUnit" />
+        <rdfs:comment rdf:parseType="Literal">
+            <p>A lexical unit is any collection of word forms corresponding to a
+                certain meaning which can be found in comparative datasets.</p>
+            <p>Ideally, a lexical
+                unit would just present itself as one single
+                <a href="http://linguistics-ontology.org/gold/2010/FormUnit">form</a>. However,
+                in practice, scholars often list speech variants and at times even non-cognate
+                alternatives for their preferred form.</p>
+        </rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#motivationStructure" dc:type="form-property">
+        <rdfs:label xml:lang="en">Motivation Structure</rdfs:label>
+        <rdfs:comment rdf:parseType="Literal">
+            <p>The motivation structure of a word form gives glosses for each of
+                its <a href="http://linguistics-ontology.org/gold/2010/Morpheme">morphemes</a>.
+                In this it is similar to an instance of
+                <a href="http://linguistics-ontology.org/gold/2010/InterlinearGlossedText">interlinear glossed text</a>
+                which describes the underlying semantic
+                motivation for a given word form.</p>
+            <p>As an example, consider Chinese <i>shùpí</i>
+                "bark (of a tree)" which is a compound consisting of <i>shù</i> "tree" and <i>pí</i>
+                "skin", and whose motivation structure could be rendered as <tt>tree bark</tt>.</p>
+        </rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#prosodicStructure" dc:type="form-property">
+        <rdfs:label xml:lang="en">Prosodic Structure</rdfs:label>
+        <rdfs:comment rdf:parseType="Literal">
+            <p>The prosodic structure of a
+                <a href="http://linguistics-ontology.org/gold/2010/Segment">word form</a>
+                labels similar prosodic contexts which may recur even within the same word. Prosodic
+                structures for a given language may have an underlying template that describes
+                which syllables are possible. In Chinese dialects, for example, one could
+                describe the basic template of most syllables as consisting of <em>initial</em>,
+                <em>medial</em>, <em>nucleus</em>, <em>coda</em>, and <em>tone</em>, of which the nucleus and the tone as
+                a suprasegmental element are usually the only required elements.</p>
+        </rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#root" dc:type="form-property">
+        <rdfs:label xml:lang="en">Root</rdfs:label>
+        <rdfs:comment rdf:parseType="Literal">
+            <p>The root of a <a href="#soundSequence">word form</a> is an abstract basic
+                unit from which several <a href="#stem">stems</a> can be derived.</p>
+        </rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#stem" dc:type="form-property">
+        <rdfs:label xml:lang="en">Stem</rdfs:label>
+        <rdfs:comment rdf:parseType="Literal">
+            <p>A stem is a concrete <a href="#soundSequence">word form</a> in a language
+            which has been derived as such from a given <a href="#root">root</a>.</p>
+        </rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#soundSequence" dc:type="form-property">
+        <rdfs:label xml:lang="en">Sound Sequence</rdfs:label>
+        <rdfs:comment rdf:parseType="Literal">
+            <p>A sound sequence is understood as the strict segmental representation of a
+                <a href="http://linguistics-ontology.org/gold/2010/FormUnit">form unit</a>
+                of a language, which is usually given in phonetic transcription.
+                <a href="http://linguistics-ontology.org/gold/2010/Suprasegmental">Suprasegmental elements</a>,
+                like tone or accent, of sound sequences are
+                usually represented in a sequential form, although they are usually
+                co-articulated along with the segmental elements of a sound sequence.
+                Alternatively, suprasegmental aspects could also be represented as part of the
+                <a href="#prosodicStructure">prosodic structure</a> of a word form.</p>
+        </rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#subSequence" dc:type="form-property">
+        <rdfs:label xml:lang="en">Subsequence</rdfs:label>
+        <rdfs:comment rdf:parseType="Literal">
+            <p><a href="#soundSequence">Word forms</a> can often be subdivided into
+                smaller functional units (usually corresponding to a
+                <a href="http://linguistics-ontology.org/gold/2010/Morpheme">morpheme</a>).
+                A subsequence of a sound sequence, however, does
+                not necessarily need to represent a true morpheme, but rather a unit that is
+                determined by scholars to serve as the basis for historical comparison.</p>
+        </rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+
+    <!--
+        CLDF modules
+    -->
+    <rdfs:Class rdf:about="http://cldf.clld.org/v1.0/terms.rdf#Generic" dc:type="module">
+        <rdfs:label xml:lang="en">Generic</rdfs:label>
+        <rdfs:comment rdf:parseType="Literal">
+            <p>
+                A generic CLDF dataset; i.e. a set of cross-linguistic data which does
+                not fit any of the established CLDF modules.
+            </p>
+        </rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://cldf.clld.org/v1.0/terms.rdf#Wordlist" dc:type="module">
+        <rdfs:label xml:lang="en">Wordlist</rdfs:label>
+        <rdfs:comment rdf:parseType="Literal">
+            <p>A dataset according to the
+                <a href="https://github.com/glottobank/cldf/tree/master/modules/wordlist">CLDF Wordlist</a>
+                specification</p>
+        </rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://cldf.clld.org/v1.0/terms.rdf#Dictionary" dc:type="module">
+        <rdfs:label xml:lang="en">Dictionary</rdfs:label>
+        <rdfs:comment rdf:parseType="Literal">
+            <p>A dataset according to the
+                <a href="https://github.com/glottobank/cldf/tree/master/modules/dictionary">CLDF Dictionary</a>
+                specification</p>
+        </rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://cldf.clld.org/v1.0/terms.rdf#StructureDataset" dc:type="module">
+        <rdfs:label xml:lang="en">Structure Dataset</rdfs:label>
+        <rdfs:comment rdf:parseType="Literal">
+            <p>A dataset according to the
+                <a href="https://github.com/glottobank/cldf/tree/master/modules/structure_dataset">CLDF Structure Dataset</a>
+                specification</p>
+        </rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    </rdfs:Class>
+
+    <!--
+        CLDF components
+    -->
+    <rdfs:Class rdf:about="http://cldf.clld.org/v1.0/terms.rdf#ValueTable" dc:type="table">
+        <rdfs:label xml:lang="en">Value Table</rdfs:label>
+        <rdfs:comment>
+            The table of value assignments of a CLDF Structure Dataset
+        </rdfs:comment>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://cldf.clld.org/v1.0/terms.rdf#CodeTable" dc:type="table">
+        <rdfs:label xml:lang="en">Code Table</rdfs:label>
+        <rdfs:comment>
+            The Code Table lists valid values for categorical parameters, thus
+            enabling validity checks and providing a place for additional information
+            about codes such as a source.
+        </rdfs:comment>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://cldf.clld.org/v1.0/terms.rdf#ExampleTable" dc:type="table">
+        <rdfs:label xml:lang="en">Example Table</rdfs:label>
+        <rdfs:comment>
+            The table of examples provided with a CLDF dataset
+        </rdfs:comment>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://cldf.clld.org/v1.0/terms.rdf#EntryTable" dc:type="table">
+        <rdfs:label xml:lang="en">Entry Table</rdfs:label>
+        <rdfs:comment>
+            The table of entries of a CLDF Dictionary
+        </rdfs:comment>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://cldf.clld.org/v1.0/terms.rdf#SenseTable" dc:type="table">
+        <rdfs:label xml:lang="en">Sense Table</rdfs:label>
+        <rdfs:comment>
+            The table of senses of a CLDF Dictionary
+        </rdfs:comment>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://cldf.clld.org/v1.0/terms.rdf#FormTable" dc:type="table">
+        <rdfs:label xml:lang="en">Form Table</rdfs:label>
+        <rdfs:comment>
+            The table of forms of a CLDF Wordlist
+        </rdfs:comment>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://cldf.clld.org/v1.0/terms.rdf#BorrowingTable" dc:type="table">
+        <rdfs:label xml:lang="en">Borrowing Table</rdfs:label>
+        <rdfs:comment rdf:parseType="Literal">
+            <p>
+                The Borrowing Table stores information about borrowings or loanwords by
+                linking two rows in the Form Table as
+                <a href="https://en.wikipedia.org/wiki/Associative_entity">associative entity</a>
+                where additional information about the particular case of borrowing can be provided.
+            </p>
+        </rdfs:comment>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://cldf.clld.org/v1.0/terms.rdf#CognateTable" dc:type="table">
+        <rdfs:label xml:lang="en">Cognate Table</rdfs:label>
+        <rdfs:comment rdf:parseType="Literal">
+            <p>
+                The table of cognate judgements accompanying a CLDF Wordlist.
+                If the only thing we know about cognate sets is the set of members, a Cognate
+                Table can be used without a corresponding
+                <a href="#CognatesetTable">Cognateset Table</a>, otherwise it will become the
+                <a href="https://en.wikipedia.org/wiki/Associative_entity">associative table</a>
+                between Form Table and Cognateset Table.
+            </p>
+        </rdfs:comment>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://cldf.clld.org/v1.0/terms.rdf#PartialCognateTable" dc:type="table">
+        <rdfs:label xml:lang="en">Partial Cognate Table</rdfs:label>
+        <rdfs:comment>
+            The table of partial cognate judgements of a CLDF Wordlist
+        </rdfs:comment>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://cldf.clld.org/v1.0/terms.rdf#CognatesetTable" dc:type="table">
+        <rdfs:label xml:lang="en">Cognateset Table</rdfs:label>
+        <rdfs:comment>
+            A table holding additional data about cognate sets.
+        </rdfs:comment>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://cldf.clld.org/v1.0/terms.rdf#LanguageTable" dc:type="table">
+        <rdfs:label xml:lang="en">Language Table</rdfs:label>
+        <rdfs:comment>
+            The table of languages provided with a CLDF dataset
+        </rdfs:comment>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://cldf.clld.org/v1.0/terms.rdf#ParameterTable" dc:type="table">
+        <rdfs:label xml:lang="en">Parameter Table</rdfs:label>
+        <rdfs:comment>
+            The table of parameters available in a CLDF dataset
+        </rdfs:comment>
+    </rdfs:Class>
+</rdf:RDF>

@@ -1,0 +1,24 @@
+{
+    "url": "cognatesets.csv",
+    "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#CognatesetTable",
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "ID",
+                "required": true,
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id"
+            },
+            {
+                "name": "Description",
+                "datatype": "string",
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#description"
+            },
+            {
+                "name": "Source",
+                "datatype": "string",
+                "separator": ";",
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#source"
+            }
+        ]
+    }
+}

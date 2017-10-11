@@ -16,3 +16,6 @@ is used to delimit morphemes, e.g.
 Then, the scope of a partial cognate judgement can be annotated using 
 [slice notation](https://stackoverflow.com/a/24713353), e.g. `0:3` to
 indicate the first three morphemes of a form are assigned to a cognate set.
+
+The default description of the partial cognate table is available in 
+[`PartialCognateTable-metadata.json`](PartialCognateTable-metadata.json).

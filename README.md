@@ -1,17 +1,25 @@
 # CLDF: Cross-linguistic Data Formats
 
-The CLDF specification is split into a [core specification](core.md), applying to
-all kinds of CLDF data and [modules](#modules), describing the data model for a particular kind of cross-linguistic data.
+A CLDF dataset is 
+- a set of UTF-8 encoded CSV files 
+- described by a 
+  [TableGroup](http://w3c.github.io/csvw/metadata/#table-groups)
+  serialized as JSON file
+- with a [common property](http://w3c.github.io/csvw/metadata/#dfn-common-property) 
+  `dc:conformsTo` having one of the [CLDF module](#modules) URIs as value.
 
 
 ## Conformance Levels
 
-While the [JSON-LD dialect](https://www.w3.org/TR/tabular-metadata/#json-ld-dialect) to be used for metadata according to the
+While the 
+[JSON-LD dialect](https://www.w3.org/TR/tabular-metadata/#json-ld-dialect) 
+to be used for metadata according to the
 [Metadata Vocabulary for Tabular Data](https://www.w3.org/TR/tabular-metadata/)
-can be edited by hand, this may be already be beyond what can be expected by
+can be edited by hand, this may already be beyond what can be expected by
 typical linguists.
 
 Thus, CLDF specifies two conformance levels for datasets:
+
 
 ### Metadata-free conformance
 
@@ -21,14 +29,48 @@ for the appropriate module regarding
 - CSV dialect
 - column names
 
-exactly.
+exactly. Thus, rather than not *having* any metadata, the dataset does not *specify*
+any; and instead falls back to using the defaults, i.e. "free" as in "beer" not
+as in "gluten-free".
+
+
+#### CSV dialect for metadata-free conformance
+
+In case of metadata-free conformance, these files must follow
+[RFC4180](http://tools.ietf.org/html/rfc4180) using the [UTF-8](http://en.wikipedia.org/wiki/UTF-8) character encoding,
+i.e. use the CSV dialect specified by
+```python
+{
+  "encoding": "utf-8",
+  "lineTerminators": ["\r\n", "\n"],
+  "quoteChar": "\"",
+  "doubleQuote": true,
+  "skipRows": 0,
+  "header": true,
+  "headerRowCount": 1,
+  "delimiter": ",",
+  "skipColumns": 0,
+  "skipBlankRows": false,
+  "skipInitialSpace": false,
+  "trim": false
+}
+```
+
+Notes:
+- The first line of each file must contain the comma-separated list of column
+  names.
+- No comment lines are allowed.
+
 
 
 ### Extended conformance
 
 A dataset is CLDF conformant if it uses a custom metadata file, derived from
 the default profile for the appropriate module, possibly overriding/customizing
-- the CSV [dialect description](http://w3c.github.io/csvw/metadata/#dialect-descriptions)
+- the CSV [dialect description](http://w3c.github.io/csvw/metadata/#dialect-descriptions) (possibly per table)
+  - to allow comment lines (if appropriately prefixed with 
+  [`commentPrefix`](http://w3c.github.io/csvw/metadata/#dialect-commentPrefix)) or
+  - to omit a header line (if appropriately indicated by `"header": false`)
 - the table property [url](http://w3c.github.io/csvw/metadata/#tables)
 - the column property [titles](http://w3c.github.io/csvw/metadata/#columns)
 - the inherited column properties
@@ -48,35 +90,250 @@ Thus, using extended conformance via metadata, a dataset may
 - specify [relations between multiple tables](http://w3c.github.io/csvw/metadata/#common-properties) in a dataset,
 - supply default values for required columns like `Language_ID`, using virtual columns.
 
-Note that it is possible to convert a CLDF dataset with metadata into one
-without, automatically; although this means added metadata will be lost.
+In particular, since the description resides in a separate file, it is often
+possible to retrofit existing CSV files into the CLDF framework by adding a description.
 
 
 ## CLDF Ontology
 
-CLDF data uses terms from the [CLDF Ontology](http://cldf.clld.org/v1.0/terms.rdf) to mark [`TableGroup`](http://w3c.github.io/csvw/metadata/#table-groups) or [`Table`](http://w3c.github.io/csvw/metadata/#tables) objects which have special meaning within the CLDF framework.
+CLDF data uses terms from the 
+[CLDF Ontology](http://cldf.clld.org/v1.0/terms.rdf) to mark 
+[`TableGroup`](http://w3c.github.io/csvw/metadata/#table-groups) or 
+[`Table`](http://w3c.github.io/csvw/metadata/#tables) objects which have special
+meaning within the CLDF framework.
 
-Columns in tabular data recognized by CLDF-aware applications typically contain
-linguistic data (apart from bookkeeping information like identifiers). For this
-data we try to describe the specific data values using terms from the
-[General Ontology for Linguistic Description - GOLD](http://linguistics-ontology.org/) or - if no matching concepts are provided by GOLD - from the [CLDF Ontology](http://cldf.clld.org/v1.0/terms.rdf).
+The CLDF Ontology also provides a set of 
+[properties](http://cldf.clld.org/v1.0/terms.rdf#properties) to attach semantics to
+individual columns. While many of these properties are similar (or identical) to 
+properties defined elsewhere - most notably in the 
+[General Ontology for Linguistic Description - GOLD](http://linguistics-ontology.org/) - 
+we opted for inclusion to avoid ambiguity, but made sure to reference the related
+related properties in the Ontology.
+
+
+## CLDF Dataset
+
+### Metadata file
+
+A CLDF dataset is described with metadata provided as JSON file following the [Metadata Vocabulary for Tabular Data](https://www.w3.org/TR/tabular-metadata/). 
+
+To make tooling simpler, we restrict the metadata specification as follows:
+- Metadata files must specify a `tables` property on top-level, i.e. must describe a 
+  [`TableGroup`](http://w3c.github.io/csvw/metadata/#table-groups). While this adds a 
+  bit of verbosity to the metadata description, it makes it possible to describe mutiple 
+  tables in one metadata file.
+- The common property `dc:conformsTo` of the `TableGroup` is used to indicate the
+  CLDF module, e.g. 
+  `"dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#Wordlist"`
+- The common property `dc:conformsTo` of a `Table` is used to associate tables with
+  a particular role in a CLDF module using appropriate classes from the 
+  [CLDF Ontology](http://cldf.clld.org/v1.0/terms.rdf).
+- If each row in the data file corresponds to a resource on the web (i.e. a resource
+  identified by a dereferenceable HTTP URI), the `tableSchema` property should provide an 
+  `aboutUrl` property.
+- If individual cells in a row correspond to resources on the web, the corresponding 
+  column specification should provide a `valueUrl` property.
+
+Each dataset should provide a dataset distribution description using the 
+[DCAT vocabulary](http://www.w3.org/TR/vocab-dcat/#class-distribution). This will make it easy to  
+[catalog](http://www.w3.org/TR/vocab-dcat/#class-catalog) cross-linguistic datasets.
+In particular, each dataset description should include properties
+- `dc:bibliographicCitation` and
+- `dc:license`.
+
+Thus, an example for a CLDF dataset description could look as follows:
+```python
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#StructureDataset",
+  "dc:title": "The Dataset",
+  "dc:bibliographicCitation": "Cite me like this!",
+  "dc:license": "http://creativecommons.org/licenses/by/4.0/",
+  "null": "?",
+  "tables": [
+    {
+      "url": "ds1.csv",
+      "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#ValueTable",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "ID",
+            "datatype": "string",
+            "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id"
+          },
+          {
+            "name": "Language_ID",
+            "datatype": "string",
+            "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#languageReference",
+            "valueUrl": "http://glottolog.org/resource/languoid/id/{Language_ID}"
+          },
+          {
+            "name": "Parameter_ID",
+            "datatype": "string",
+            "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#parameterReference"
+          },
+          {
+            "name": "Value",
+            "datatype": "string",
+            "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#value"
+          },
+          {
+            "name": "Comment",
+            "datatype": "string",
+            "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#comment"
+          },
+          {
+            "name": "Source",
+            "datatype": "string",
+            "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#source"
+          },
+          {
+            "name": "glottocode",
+            "virtual": true,
+            "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#glottocode",
+            "valueUrl": "{Language_ID}"
+          },
+        ],
+        "aboutUrl": "http://example.org/valuesets/{ID}",
+        "primaryKey": "ID"
+      }
+    }
+  ]
+}
+```
+
+
+### Data files
+
+While it is possible to add any number of CSV files to a CLDF dataset, the CLDF standard
+recognizes (and attaches specified semantics) to tables described with a common property `dc:conformsTo` with one of the table type URIs of the CLDF ontology as value.
+
+Additionally, CLDF semantics can be assigned to individual columns by 
+assigning one of the property URIs defined in the 
+[CLDF ontology](http://cldf.cld.org/v1.0/terms.rdf) as `propertyUrl`.
+
+Note: CLDF column properties are assumed to have a complete row (or rather the
+entity a row stores data about) as scope; e.g. a [source column](#column-source)
+is assumed to provide source information for any piece of data in the row.
+Thus, each property can be used only once per table, which makes processing simpler.
+
+
+#### Identifier
+
+Each CLDF data table should contain a column which uniquely identifies a row in 
+the table. This column must be marked using
+- a `propertyUrl` of `http://cldf.cld.org/v1.0/terms.rdf#id`
+- the column name `ID` in the case of metadata-free conformance.
+
+To allow usage of identifiers as path components of URIs and ensure they are
+portable across systems, identifiers must be composed of 
+[alphanumeric characters](https://en.wikipedia.org/wiki/Alphanumeric), 
+underscore `_` and hyphen `-` only, i.e. match the regular expression 
+`[a-zA-Z0-9\-_]+` (see [rfc3986](https://tools.ietf.org/html/rfc3986#section-2.3)).
+
+Following our design goal to reference rather than duplicate data, identifiers
+may be used to reference existing entities (e.g. Glottolog languages, WALS features,
+etc.). This can be done as follows:
+- If the identifier can be interpreted as links to other entities, e.g. 
+  using the WALS three-letted language codes to identify languages, this should be 
+  indicated by assigning the column an appropriate `valueUrl` property, e.g. 
+  `http://wals.info/languoid/lect/wals_code_{ID}`
+- If the identifier follows a specified identification scheme, e.g. ISO 639-3 for
+  languages, this can be indicated by adding [a virtual column](http://w3c.github.io/csvw/metadata/#x5-6-1-1-use-of-virtual-columns) with a suitable `propertyUrl`
+  to the table's list of columns.
+
+
+<a id="column-source"> </a>
+
+#### Source
+
+Considering that any single step in collecting (cross-)linguistic data involves some
+amount of analysis and judgement calls, it is essential to make it easy to trace
+assertions back to their source.
+
+Each CLDF data table may contain a column listing sources for the data asserted in the
+row. This column must be marked using
+- a `propertyUrl` of `http://cldf.cld.org/v1.0/terms.rdf#source`
+- the column name `Source` in the case of metadata-free conformance.
+
+Sources are specified as semicolon-separated source specifications, of the form
+*source_ID[source context]*, e.g. *meier2015[3-12]* where *meier2015* is a citation key in the accompanying [sources file](#sources).
+
+
+<a id="foreignKey"> </a>
+
+#### Foreign keys
+
+Often cross-linguistic data is
+[relational](https://en.wikipedia.org/wiki/Relational_model), e.g. *cognate judgements*
+group *forms* into *cognate sets*, creating a 
+[many-to-many relationship](https://en.wikipedia.org/wiki/Many-to-many_(data_model))
+between a `FormTable` and a `CognatesetTable`. 
+
+To make such relations explicit, the CLDF Ontology provides a set of
+[reference properties](http://cldf.cld.org/v1.0/terms.rdf#reference-properties).
+
+Reference properties are interpreted as *optional* foreign key. I.e. 
+- if the referenced table is part of the dataset, this is equivalent to a
+  [foreignKeys](http://w3c.github.io/csvw/metadata/#schema-foreignKeys) property
+  of
+```  
+       "foreignKeys": [
+            {
+                "columnReference": "...",
+                "reference": {
+                    "resource": "...",
+                    "columnReference": "ID"
+                }
+            }
+        ]
+```
+- otherwise values in the column are interpreted as identifiers of the referenced
+  entities (in which case the actual entities can only be resolved by context
+  or via additonal `valueUrl` properties on the column).
+
+
+<a id="sources"> </a>
+
+### Sources file
+
+Sources - if not referenced by Glottolog ID - can be supplied by a CLDF dataset  as 
+UTF-8 encoded BibTeX file (with the citation keys serving as local Source IDs).
+The filename of this BibTeX file must be 
+- `sources.bib` in case of metadata-free conformance
+- or specified as top-level common property `dc:source` in the dataset's metadata.
 
 
 <a id="modules"> </a>
 
 ## CLDF Modules
 
-Much like [Dublin Core Application Profiles](http://dublincore.org/documents/profile-guidelines/), CLDF Modules describe of linguistic 
-datatypes using terms of the CLDF Ontology grouped into tables.
-
-In the [CLDF Ontology](http://cldf.clld.org/v1.0/terms.rdf) modules are modeled as subclasses of [`dcat:Distribution`](http://www.w3.org/ns/dcat#Distribution), thus additional metadata as recommended in the [DCAT specification](https://www.w3.org/TR/vocab-dcat/#class-distribution) should be provided.
-
-For each type of CLDF dataset there is a *CLDF module*, i.e. a default metadata profile describing the required tables, columns and datatypes.
-*metadata-free conformance* means data files will be read as if they were accompanied by the corresponding default metadata.
+Much like 
+[Dublin Core Application Profiles](http://dublinco.org/documents/profile-guidelines/),
+CLDF Modules group terms of the CLDF Ontology into tables.
+Thus, CLDF module specifications are recommendations for groups
+of tables modeling typical cross-linguistic datatypes. Currently, the CLDF
+specification recognizes the following modules:
 
 - [Wordlist](modules/Wordlist/)
 - [Structure dataset](modules/StructureDataset/)
 - [Dictionary](modules/Dictionary/)
+
+In addition, a CLDF dataset can be specified as 
+[*Generic*](http://cldf.cld.org/v1.0/terms.rdf#Generic), imposing no requirements
+on tables or columns. Thus, *Generic* datasets are a way to evolve new data types 
+(to become recognized modules), while already providing (generic) tool support.
+
+In the CLDF Ontology [modules](http://cldf.clld.org/v1.0/terms.rdf#modules) are modeled 
+as subclasses of [`dcat:Distribution`](http://www.w3.org/ns/dcat#Distribution), thus 
+additional metadata as recommended in the 
+[DCAT specification](https://www.w3.org/TR/vocab-dcat/#class-distribution) should be 
+provided.
+
+For each type of CLDF dataset there is a *CLDF module*, i.e. a default metadata profile 
+describing the required tables, columns and datatypes.
+*metadata-free conformance* means data files will be read as if they were accompanied by 
+the corresponding default metadata.
 
 
 ## CLDF Components
@@ -86,9 +343,26 @@ types are specified as *components* in a way that can be re-used across modules 
 
 - [Language metadata](components/languages/)
 - [Parameter metadata](components/parameters/)
+- [Codes](components/codes/)
 - [Examples](components/examples/)
 - [Cognates](components/cognates/)
 - [Partial cognates](components/partialcognates/)
+- [Borrowings](components/borrowings/)
+- Values - as defined for a [`StructureDataset`](modules/StructureDataset/)
+- Forms - as defined for a [`Wordlist`](modules/Wordlist/)
+
+A component corresponds to a certain type of data. Thus, to make sure all instances of
+such a type have the same set of properties, we allow at most one component for each type
+in a CLDF dataset.
+
+
+## Compatibility
+
+- Using UTF-8 as character encoding means editing these files with MS Excel is not completely trivial, because Excel assumes cp1252 as default character encoding - Libre Office Calc on the other hand handles these files just fine.
+- The tool support for csv files is getting better and better due to the hype around "data science". Some particularly useful tools are
+  - [csvkit](https://csvkit.readthedocs.org/en/stable/)
+  - [q - Text as Data](http://harelba.github.io/q/)
+
 
 
 ## Examples
@@ -109,5 +383,5 @@ reflects the latest released version of the specification.
 
 ## History
 
-Work on this concrete proposal for a cross-linguistic data format was triggered by the [LANCLID 2 workshop](http://www.eva.mpg.de/linguistics/conferences/2014-ws-lanclid2/index.html) held in April 2015 in Leipzig -
+Work on this proposal for a cross-linguistic data format was triggered by the [LANCLID 2 workshop](http://www.eva.mpg.de/linguistics/conferences/2014-ws-lanclid2/index.html) held in April 2015 in Leipzig -
 in particular by Harald Hammarström's presentation [A Proposal for Data Interface Formats for Cross-Linguistic Data](https://github.com/clld/lanclid2/blob/master/presentations/hammarstrom.pdf).

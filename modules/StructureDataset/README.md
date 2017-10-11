@@ -1,7 +1,8 @@
 ## Structure Dataset
 
 Structure datasets are lists of values measured/coded/determined for a language and a (often typological) feature.
-Typical examples are WALS datasets, e.g. the [list of coded values for the language Abau](http://wals.info/languoid/lect/wals_code_aba).
+Typical examples are WALS datasets, e.g. the 
+[list of coded values for the language Abau](http://wals.info/languoid/lect/wals_code_aba).
 
 Structure datasets require only one data file `values.csv` or a table with
 `"dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#ValueTable"`. This table must contain columns
