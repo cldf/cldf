@@ -348,6 +348,12 @@ types are specified as *components* in a way that can be re-used across modules 
 - [Cognates](components/cognates/)
 - [Partial cognates](components/partialcognates/)
 - [Borrowings](components/borrowings/)
+- Values - as defined for a [`StructureDataset`](modules/StructureDataset/)
+- Forms - as defined for a [`Wordlist`](modules/Wordlist/)
+
+A component corresponds to a certain type of data. Thus, to make sure all instances of
+such a type have the same set of properties, we allow at most one component for each type
+in a CLDF dataset.
 
 
 ## Compatibility

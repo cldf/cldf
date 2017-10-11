@@ -10,5 +10,5 @@ is important, and therefore covered by CLDF. The default description of the cogn
 table is available in [`CognateTable-metadata.json`](CognateTable-metadata.json).
 
 It is recommended to add columns or other metadata describing the method used
-for the cognacy judgenments and the alignments, but no clear standard for these
+for the cognacy judgements and the alignments, but no clear standard for these
 has evolved yet.
