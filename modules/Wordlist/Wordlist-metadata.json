@@ -12,26 +12,26 @@
                 "columns": [
                     {
                         "name": "ID",
-                        "propertyUrl": "http://purl.org/dc/terms/identifier",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
                         "required": true,
                         "datatype": "string"
                     },
                     {
                         "name": "Language_ID",
-                        "propertyUrl": "http://purl.org/linguistics/gold/Language",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#languageReference",
                         "required": true,
                         "datatype": "string"
                     },
                     {
                         "name": "Parameter_ID",
                         "titles": "Concept_ID",
-                        "propertyUrl": "http://www.w3.org/2004/02/skos/core#Concept",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#parameterReference",
                         "required": true,
                         "datatype": "string"
                     },
                     {
-                        "name": "Value",
-                        "propertyUrl": "http://purl.org/linguistics/gold/FormUnit",
+                        "name": "Form",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#lexicalUnit",
                         "required": true,
                         "datatype": "string"
                     },
@@ -43,7 +43,7 @@
                     },
                     {
                         "name": "Comment",
-                        "propertyUrl": "http://purl.org/dc/terms/description",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#comment",
                         "datatype": "string"
                     },
                     {

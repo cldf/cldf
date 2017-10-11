@@ -5,12 +5,13 @@
         "columns": [
             {
                 "name": "Form_ID",
-                "datatype": "string"
+                "datatype": "string",
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#formReference"
             },
             {
-                "name": "Cognate_set_ID",
+                "name": "Cognateset_ID",
                 "datatype": "string",
-                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#cognateSet"
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#cognatesetReference"
             },
             {
                 "name": "Alignment",
@@ -28,21 +29,9 @@
                 "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#slice"
             },
             {
-                "name": "Cognate_source",
-                "datatype": "string"
-            },
-            {
-                "name": "Alignment_source",
-                "datatype": "string"
-            }
-        ],
-        "foreignKeys": [
-            {
-                "columnReference": "Form_ID",
-                "reference": {
-                    "resource": "forms.csv",
-                    "columnReference": "ID"
-                }
+                "name": "Source",
+                "datatype": "string",
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#source"
             }
         ]
     }

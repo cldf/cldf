@@ -19,26 +19,26 @@
                 "columns": [
                     {
                         "name": "ID",
-                        "propertyUrl": "http://purl.org/dc/terms/identifier",
-                        "datatype": {"base": "string"},
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
+                        "datatype": {"base": "string", "format": "[a-zA-Z0-9_\\-]+"},
                         "required": true
                     },
                     {
                         "name": "Language_ID",
-                        "propertyUrl": "http://purl.org/linguistics/gold/Language",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#languageReference",
                         "required": true,
                         "datatype": "string"
                     },
                     {
                         "name": "headword",
                         "datatype": "string",
-                        "propertyUrl": "http://purl.org/linguistics/gold/OrthographicWord",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#headword",
                         "required": true
                     },
                     {
                         "name": "part_of_speech",
                         "datatype": "string",
-                        "propertyUrl": "http://purl.org/linguistics/gold/PartOfSpeechProperty"
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#partOfSpeech"
                     }
                 ]
             }
@@ -50,32 +50,24 @@
                 "columns": [
                     {
                         "name": "ID",
-                        "propertyUrl": "http://purl.org/dc/terms/identifier",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
                         "datatype": {"base": "string"},
                         "required": true
                     },
                     {
                         "name": "description",
                         "datatype": "string",
-                        "propertyUrl": "http://purl.org/linguistics/gold/LexicalizedConcept",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#description",
                         "separator": ";",
                         "required": true
                     },
                     {
-                        "name": "entry_ID",
+                        "name": "Entry_ID",
                         "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#entryReference",
                         "required": true
                     }
-                ],
-               "foreignKeys": [
-                   {
-                        "columnReference": "entry_ID",
-                        "reference": {
-                            "resource": "entries.csv",
-                            "columnReference": "ID"
-                        }
-                    }
-               ]
+                ]
             }
         }
     ]

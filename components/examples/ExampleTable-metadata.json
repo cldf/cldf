@@ -6,40 +6,42 @@
 		"columns": [
 			{
 				"name": "ID",
-				"propertyUrl": "http://purl.org/dc/terms/identifier",
+				"propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
+				"required": true,
 				"datatype": "string"
 			},
 			{
 				"name": "Language_ID",
-				"propertyUrl": "http://purl.org/linguistics/gold/Language",
+				"propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#languageReference",
 				"required": true,
 				"datatype": "string"
 			},
 			{
 				"name": "Primary",
-				"propertyUrl": "http://purl.org/linguistics/gold/hasSourceLine",
+				"propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#primaryText",
 				"datatype": "string"
 			},
 			{
 				"name": "Analyzed",
 				"datatype": "string",
-				"propertyUrl": "http://purl.org/linguistics/gold/GrammarUnit",
+				"propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#analyzedWord",
 				"separator": "\t"
 			},
 			{
 				"name": "Gloss",
-				"propertyUrl": "http://purl.org/linguistics/gold/hasGlosses",
+				"propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#gloss",
 				"datatype": "string",
 				"separator": "\t"
 			},
 			{
 				"name": "Translation",
-				"propertyUrl": "http://purl.org/linguistics/gold/hasTranslationLine",
+				"propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#translatedText",
 				"datatype": "string"
 			},
 			{
-				"name": "Translation_language_ID",
-				"propertyUrl": "http://purl.org/linguistics/gold/Language",
+				"name": "Language_ID_translation",
+				"propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#languageReference",
+				"default": "en",
 				"datatype": "string"
 			}
 		],

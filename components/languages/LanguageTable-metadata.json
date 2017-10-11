@@ -5,16 +5,17 @@
 		"columns": [
 			{
 				"name": "ID",
-				"propertyUrl": "http://purl.org/dc/terms/identifier",
+				"propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
 				"datatype": "string"
 			},
 			{
 				"name": "Name",
+				"propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#name",
 				"datatype": "string"
 			},
 			{
 				"name": "Latitude",
-				"propertyUrl": "http://www.w3.org/2003/01/geo/wgs84_pos#lat",
+				"propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#latitude",
 				"datatype": {
 					"base": "decimal",
 					"minimum": -90,
@@ -23,7 +24,7 @@
 			},
 			{
 				"name": "Longitude",
-				"propertyUrl": "http://www.w3.org/2003/01/geo/wgs84_pos#long",
+				"propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#longitude",
 				"datatype": {
 					"base": "decimal",
 					"minimum": -180,

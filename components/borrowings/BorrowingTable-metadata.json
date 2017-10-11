@@ -1,0 +1,28 @@
+{
+    "url": "borrowings.csv",
+    "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#BorrowingTable",
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "Form_ID_target",
+                "required": true,
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#targetFormReference"
+            },
+            {
+                "name": "Form_ID_source",
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#sourceFormReference"
+            },
+            {
+                "name": "Comment",
+                "datatype": "string",
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#comment"
+            },
+            {
+                "name": "Source",
+                "datatype": "string",
+                "separator": ";",
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#source"
+            }
+        ]
+    }
+}

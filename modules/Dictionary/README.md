@@ -13,41 +13,10 @@ in the metadata file.
 
 Each entry row must contain information in the following three columns:
 
-* `ID`: a unique alphanumeric code, chosen arbitrarily
-* `headword`: lemma, or citation form
-* `part_of_speech`
+* [`ID`](http://cldf.clld.org/v1.0/terms.rdf#id): a unique alphanumeric code, chosen arbitrarily
+* [`headword`](http://cldf.clld.org/v1.0/terms.rdf#headword): lemma, or citation form
+* [`part_of_speech`](http://cldf.clld.org/v1.0/terms.rdf#partOfSpeech)
 
-In addition, some optional standard columns are recognized:
-
-* lemma in original script
-* pronunciation of lemma
-* variant form
-* general comments
-* bibliographical references (list of bibref IDs)
-* etymological origin
-* source language (for loanwords) 
-* source word (for loanwords)
-* sound file ID
-
-Entries may have additional language-specific fields, e.g.
-
-* gender
-* inflectional class
-* form in divergent dialect X
-* sociolinguistic information such as literary vs. colloquial, obsolete, taboo, etc.
-
-Finally, an entry can contain (standard or language-specific)
-*association fields*, i.e. fields that establish a relationship between
-the entry and some other entry. The content of an association field is a
-list of entry IDs. The name of an association field is relational, i.e.
-it is a transitive or copula verb or ends in a preposition, e.g.
-
-`FIXME`: Specify syntax for column names of association fields!
-
-* it contains*(list of entry IDs)
-* it is part of*(list of entry IDs)
-* its causative is*(list of entry IDs)
-* its numeral classifier is*(list of entry IDs)
 
 ## Senses
 
@@ -67,11 +36,11 @@ in the metadata file.
 Each sense must minimally contain information in the following
 three fields (again, the ID is a code that can be chosen arbitrarily):
 
-* `ID`
-* `description`: sense description (= list of semicolon-delimited sense descriptors)
-* `entry_ID`: ID of related entry
+* [`ID`](http://cldf.clld.org/v1.0/terms.rdf#id)
+* [`Description`](http://cldf.clld.org/v1.0/terms.rdf#description): sense description (= list of semicolon-delimited sense descriptors)
+* [`Entry_ID`](http://cldf.clld.org/v1.0/terms.rdf#entryReference): ID of related entry
 
-standard fields:
+Often, the sense table contains also
 
 * list of comma-delimited semantic domains*
 * scientific name (for plant and animal species)*
