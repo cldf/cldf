@@ -1,30 +1,36 @@
 {
-	"url": "cognates.csv",
-	"dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#CognateTable",
-	"tableSchema": {
-		"columns": [
+    "url": "cognates.csv", 
+    "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#CognateTable", 
+    "tableSchema": {
+        "columns": [
             {
-                "name": "Form_ID",
-                "required": true,
-                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#formReference"
-            },
+                "name": "Form_ID", 
+                "required": true, 
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#formReference", 
+                "datatype": "string"
+            }, 
             {
-                "name": "Cognateset_ID",
-                "required": true,
-                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#cognatesetReference"
-            },
+                "name": "Cognateset_ID", 
+                "required": true, 
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#cognatesetReference", 
+                "datatype": "string"
+            }, 
             {
-                "name": "Alignment",
-                "datatype": "string",
-                "separator": " ",
-                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#alignment"
-            },
+                "name": "Alignment", 
+                "required": false, 
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#alignment", 
+                "datatype": "string", 
+                "separator": " "
+            }, 
             {
-                "name": "Source",
-                "datatype": "string",
-                "separator": ";",
-                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#source"
+                "name": "Source", 
+                "required": false, 
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#source", 
+                "datatype": {
+                    "base": "string"
+                }, 
+                "separator": ";"
             }
-		]
-	}
+        ]
+    }
 }

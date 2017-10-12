@@ -1,6 +1,6 @@
 {
-    "url": "cognatesets.csv", 
-    "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#CognatesetTable", 
+    "url": "senses.csv", 
+    "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#SenseTable", 
     "tableSchema": {
         "columns": [
             {
@@ -14,18 +14,15 @@
             }, 
             {
                 "name": "Description", 
-                "required": false, 
+                "required": true, 
                 "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#description", 
                 "datatype": "string"
             }, 
             {
-                "name": "Source", 
-                "required": false, 
-                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#source", 
-                "datatype": {
-                    "base": "string"
-                }, 
-                "separator": ";"
+                "name": "Entry_ID", 
+                "required": true, 
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#entryReference", 
+                "datatype": "string"
             }
         ]
     }

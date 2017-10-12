@@ -1,50 +1,61 @@
 {
-	"url": "examples.csv",
-	"dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#ExampleTable",
-	"dc:format": "http://purl.org/linguistics/gold/InterlinearGlossedText",
-	"tableSchema": {
-		"columns": [
-			{
-				"name": "ID",
-				"propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
-				"required": true,
-				"datatype": "string"
-			},
-			{
-				"name": "Language_ID",
-				"propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#languageReference",
-				"required": true,
-				"datatype": "string"
-			},
-			{
-				"name": "Primary",
-				"propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#primaryText",
-				"datatype": "string"
-			},
-			{
-				"name": "Analyzed",
-				"datatype": "string",
-				"propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#analyzedWord",
-				"separator": "\t"
-			},
-			{
-				"name": "Gloss",
-				"propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#gloss",
-				"datatype": "string",
-				"separator": "\t"
-			},
-			{
-				"name": "Translation",
-				"propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#translatedText",
-				"datatype": "string"
-			},
-			{
-				"name": "Language_ID_translation",
-				"propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#languageReference",
-				"default": "en",
-				"datatype": "string"
-			}
-		],
-		"primaryKey": "ID"
-	}
+    "url": "examples.csv", 
+    "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#ExampleTable", 
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "ID", 
+                "required": true, 
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id", 
+                "datatype": {
+                    "base": "string", 
+                    "format": "[a-zA-Z0-9_\\-]"
+                }
+            }, 
+            {
+                "name": "Language_ID", 
+                "required": true, 
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#languageReference", 
+                "datatype": "string"
+            }, 
+            {
+                "name": "Primary", 
+                "required": true, 
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#primaryText", 
+                "datatype": "string"
+            }, 
+            {
+                "name": "Analyzed", 
+                "required": false, 
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#analyzedWord", 
+                "datatype": "string", 
+                "separator": "\\t"
+            }, 
+            {
+                "name": "Gloss", 
+                "required": false, 
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#gloss", 
+                "datatype": "string", 
+                "separator": "\\t"
+            }, 
+            {
+                "name": "Translation", 
+                "required": false, 
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#translatedText", 
+                "datatype": "string"
+            }, 
+            {
+                "name": "Language_ID_meta", 
+                "required": false, 
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#metaLanguageReference", 
+                "datatype": "string"
+            }, 
+            {
+                "name": "Comment", 
+                "required": false, 
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#comment", 
+                "datatype": "string"
+            }
+        ]
+    }
 }

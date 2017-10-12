@@ -1,71 +1,77 @@
 {
     "@context": [
-        "http://www.w3.org/ns/csvw",
+        "http://www.w3.org/ns/csvw", 
         {
             "@language": "en"
         }
-    ],
-    "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#Dictionary",
+    ], 
+    "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#Dictionary", 
     "dialect": {
-        "doubleQuote": false,
-        "commentPrefix": null,
-        "trim": true
-    },
+        "trim": true, 
+        "commentPrefix": null, 
+        "doubleQuote": false
+    }, 
     "tables": [
         {
-            "url": "entries.csv",
-            "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#EntryTable",
+            "url": "entries.csv", 
+            "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#EntryTable", 
             "tableSchema": {
                 "columns": [
                     {
-                        "name": "ID",
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
-                        "datatype": {"base": "string", "format": "[a-zA-Z0-9_\\-]+"},
-                        "required": true
-                    },
+                        "name": "ID", 
+                        "required": true, 
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id", 
+                        "datatype": {
+                            "base": "string", 
+                            "format": "[a-zA-Z0-9_\\-]"
+                        }
+                    }, 
                     {
-                        "name": "Language_ID",
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#languageReference",
-                        "required": true,
+                        "name": "Language_ID", 
+                        "required": true, 
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#languageReference", 
                         "datatype": "string"
-                    },
+                    }, 
                     {
-                        "name": "headword",
-                        "datatype": "string",
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#headword",
-                        "required": true
-                    },
+                        "name": "headword", 
+                        "required": true, 
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#headword", 
+                        "datatype": "string"
+                    }, 
                     {
-                        "name": "part_of_speech",
-                        "datatype": "string",
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#partOfSpeech"
+                        "name": "part_of_speech", 
+                        "required": false, 
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#partOfSpeech", 
+                        "datatype": "string"
                     }
                 ]
             }
-        },
+        }, 
         {
-            "url": "senses.csv",
-            "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#SenseTable",
+            "url": "senses.csv", 
+            "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#SenseTable", 
             "tableSchema": {
                 "columns": [
                     {
-                        "name": "ID",
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
-                        "datatype": {"base": "string"},
-                        "required": true
-                    },
+                        "name": "ID", 
+                        "required": true, 
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id", 
+                        "datatype": {
+                            "base": "string", 
+                            "format": "[a-zA-Z0-9_\\-]"
+                        }
+                    }, 
                     {
-                        "name": "description",
-                        "datatype": "string",
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#description",
-                        "separator": ";",
-                        "required": true
-                    },
+                        "name": "Description", 
+                        "required": true, 
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#description", 
+                        "datatype": "string"
+                    }, 
                     {
-                        "name": "Entry_ID",
-                        "datatype": "string",
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#entryReference",
-                        "required": true
+                        "name": "Entry_ID", 
+                        "required": true, 
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#entryReference", 
+                        "datatype": "string"
                     }
                 ]
             }
