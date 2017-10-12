@@ -117,7 +117,7 @@ COMPONENTS = {
             ('id', True),
             ('languageReference', True),
             ('parameterReference', True),
-            ('value', True),
+            ('value', False),
             ('codeReference', False),
             ('comment', False),
             ('source', False),
