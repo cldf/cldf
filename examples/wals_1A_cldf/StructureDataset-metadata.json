@@ -1,9 +1,16 @@
 {
-    "@context": "http://www.w3.org/ns/csvw", 
+    "@context": [
+        "http://www.w3.org/ns/csvw", 
+        {
+            "@language": "en"
+        }
+    ], 
     "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#StructureDataset", 
     "dc:source": "sources.bib", 
     "dialect": {
-        "commentPrefix": null
+        "doubleQuote": false, 
+        "commentPrefix": null, 
+        "trim": "true"
     }, 
     "tables": [
         {
@@ -11,38 +18,52 @@
             "tableSchema": {
                 "columns": [
                     {
-                        "datatype": "string", 
-                        "propertyUrl": "http://purl.org/dc/terms/identifier", 
+                        "datatype": {
+                            "base": "string", 
+                            "format": "[a-zA-Z0-9_\\-]+"
+                        }, 
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id", 
                         "required": true, 
                         "name": "ID"
                     }, 
                     {
                         "datatype": "string", 
-                        "propertyUrl": "http://purl.org/linguistics/gold/Language", 
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#languageReference", 
                         "required": true, 
                         "name": "Language_ID"
                     }, 
                     {
                         "datatype": "string", 
-                        "propertyUrl": "http://www.w3.org/2004/02/skos/core#Concept", 
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#parameterReference", 
                         "required": true, 
-                        "name": "Parameter_ID", 
-                        "titles": "Feature_ID"
+                        "name": "Parameter_ID"
                     }, 
                     {
                         "datatype": "string", 
-                        "propertyUrl": "http://purl.org/linguistics/gold/dataStructureRelation", 
-                        "required": true, 
+                        "null": [
+                            "?", 
+                            ""
+                        ], 
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#value", 
+                        "required": false, 
                         "name": "Value"
                     }, 
                     {
                         "datatype": "string", 
-                        "propertyUrl": "http://purl.org/dc/terms/description", 
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#codeReference", 
+                        "required": false, 
+                        "name": "Code_ID"
+                    }, 
+                    {
+                        "datatype": "string", 
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#comment", 
+                        "required": false, 
                         "name": "Comment"
                     }, 
                     {
                         "datatype": "string", 
-                        "propertyUrl": "http://purl.org/dc/terms/source", 
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#source", 
+                        "required": false, 
                         "separator": ";", 
                         "name": "Source"
                     }
@@ -69,6 +90,17 @@
                                 "ID"
                             ]
                         }
+                    }, 
+                    {
+                        "columnReference": [
+                            "Code_ID"
+                        ], 
+                        "reference": {
+                            "resource": "codes.csv", 
+                            "columnReference": [
+                                "ID"
+                            ]
+                        }
                     }
                 ], 
                 "primaryKey": [
@@ -82,13 +114,25 @@
             "tableSchema": {
                 "columns": [
                     {
-                        "datatype": "string", 
-                        "propertyUrl": "http://purl.org/dc/terms/identifier", 
+                        "datatype": {
+                            "base": "string", 
+                            "format": "[a-zA-Z0-9_\\-]+"
+                        }, 
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id", 
+                        "required": true, 
                         "name": "ID"
                     }, 
                     {
                         "datatype": "string", 
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#name", 
+                        "required": false, 
                         "name": "Name"
+                    }, 
+                    {
+                        "datatype": "string", 
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#macroarea", 
+                        "required": false, 
+                        "name": "Macroarea"
                     }, 
                     {
                         "datatype": {
@@ -96,7 +140,8 @@
                             "minimum": -90, 
                             "maximum": 90
                         }, 
-                        "propertyUrl": "http://www.w3.org/2003/01/geo/wgs84_pos#lat", 
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#latitude", 
+                        "required": false, 
                         "name": "Latitude"
                     }, 
                     {
@@ -105,18 +150,28 @@
                             "minimum": -180, 
                             "maximum": 180
                         }, 
-                        "propertyUrl": "http://www.w3.org/2003/01/geo/wgs84_pos#long", 
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#longitude", 
+                        "required": false, 
                         "name": "Longitude"
                     }, 
                     {
-                        "datatype": "string", 
+                        "datatype": {
+                            "base": "string", 
+                            "format": "[a-z0-9]{4}[1-9][0-9]{3}"
+                        }, 
                         "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#glottocode", 
+                        "required": false, 
+                        "valueUrl": "http://glottolog.org/resource/languoid/id/{glottocode}", 
                         "name": "glottocode"
                     }, 
                     {
-                        "datatype": "string", 
+                        "datatype": {
+                            "base": "string", 
+                            "format": "[a-z]{3}"
+                        }, 
                         "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#iso639P3code", 
-                        "name": "iso639P3code"
+                        "required": false, 
+                        "name": "iso"
                     }, 
                     {
                         "datatype": "string", 
@@ -138,13 +193,25 @@
             "tableSchema": {
                 "columns": [
                     {
-                        "datatype": "string", 
-                        "propertyUrl": "http://purl.org/dc/terms/identifier", 
+                        "datatype": {
+                            "base": "string", 
+                            "format": "[a-zA-Z0-9_\\-]+"
+                        }, 
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id", 
+                        "required": true, 
                         "name": "ID"
                     }, 
                     {
                         "datatype": "string", 
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#name", 
+                        "required": false, 
                         "name": "Name"
+                    }, 
+                    {
+                        "datatype": "string", 
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#description", 
+                        "required": false, 
+                        "name": "Description"
                     }, 
                     {
                         "datatype": "string", 
@@ -164,6 +231,44 @@
                 ]
             }, 
             "url": "parameters.csv"
+        }, 
+        {
+            "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#CodeTable", 
+            "tableSchema": {
+                "columns": [
+                    {
+                        "datatype": {
+                            "base": "string", 
+                            "format": "[a-zA-Z0-9_\\-]+"
+                        }, 
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id", 
+                        "required": true, 
+                        "name": "ID"
+                    }, 
+                    {
+                        "datatype": "string", 
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#parameterReference", 
+                        "required": true, 
+                        "name": "Parameter_ID"
+                    }, 
+                    {
+                        "datatype": "string", 
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#name", 
+                        "required": false, 
+                        "name": "Name"
+                    }, 
+                    {
+                        "datatype": "string", 
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#description", 
+                        "required": false, 
+                        "name": "Description"
+                    }
+                ], 
+                "primaryKey": [
+                    "ID"
+                ]
+            }, 
+            "url": "codes.csv"
         }
     ]
 }
