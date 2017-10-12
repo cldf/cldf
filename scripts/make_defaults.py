@@ -37,6 +37,7 @@ COMPONENTS = {
     'cognates': {
         'table': 'CognateTable',
         'columns': [
+            ('id', True),
             ('formReference', True),
             ('cognatesetReference', True),
             ('alignment', False),
@@ -87,6 +88,7 @@ COMPONENTS = {
     'partialcognates': {
         'table': 'PartialCognateTable',
         'columns': [
+            ('id', True),
             ('formReference', True),
             ('cognatesetReference', True),
             ('slice', True),
