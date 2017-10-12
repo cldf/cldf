@@ -15,12 +15,12 @@
                     {
                         "name": "ID",
                         "datatype": "integer",
-                        "propertyUrl": "http://purl.org/dc/terms/identifier"
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id"
                     },
                     {
                         "name": "Language_ID",
                         "datatype": "string",
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#glottocode"
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#languageReference"
                     },
                     {
                         "name": "Language",
@@ -35,18 +35,17 @@
                     {
                         "name": "Parameter_ID",
                         "datatype": "string",
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#conceptSet",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#parameterReference",
                         "valueUrl": "http://concepticon.clld.org/parameters/{Parameter_ID}"
                     },
                     {
                         "name": "Value",
-                        "datatype": "string",
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#lexicalUnit"
+                        "datatype": "string"
                     },
                     {
                         "name": "Form",
                         "datatype": "string",
-                        "propertyUrl": "http://purl.org/linguistics/gold/FormUnit"
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#lexicalUnit"
                     },
                     {
                         "name": "Segments",
@@ -77,17 +76,18 @@
                 "columns": [
                     {
                         "name": "Form_ID",
-                        "datatype": "integer"
+                        "datatype": "integer",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#formReference"
                     },
                     {
                         "name": "Form",
                         "datatype": "string",
-                        "propertyUrl": "http://purl.org/linguistics/gold/FormUnit"
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#lexicalUnit"
                     },
                     {
-                        "name": "Cognate_set_ID",
+                        "name": "Cognateset_ID",
                         "datatype": "integer",
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#cognateSet"
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#cognatesetReference"
                     },
                     {
                         "name": "Alignment",
@@ -105,6 +105,7 @@
                     },
                     {
                         "name": "Cognate_source",
+                        "separator": ",",
                         "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#source",
                         "datatype": "string"
                     },
@@ -135,7 +136,8 @@
                 "columns": [
                     {
                         "name": "Form_ID",
-                        "datatype": "integer"
+                        "datatype": "integer",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#formReference"
                     },
                     {
                         "name": "Segments",
@@ -145,9 +147,9 @@
                         "valueUrl": "http://clpn.clld.org/paramters/{Segments}"
                     },
                     {
-                        "name": "Cognate_set_ID",
+                        "name": "Cognateset_ID",
                         "datatype": "integer",
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#cognateSet"
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#cognatesetReference"
                     },
                     {
                         "name": "Alignment",

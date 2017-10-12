@@ -37,8 +37,11 @@ including cognates and partial cognates.
 A first inspection with the `cldf stats` command from the `pycldf` package reveals:
 
 ```bash
-$ cldf stats Wordlist-metadata.json 
-<cldf:v1.0:Wordlist at .>
+$ cldf stats Wordlist-metadata.json
+<cldf:v1.0:Wordlist at ../../glottobank/cldf/examples/wordlist>
+key            value
+-------------  --------------------------------------------
+dc:conformsTo  http://cldf.clld.org/v1.0/terms.rdf#Wordlist
 
 Path                 Type                     Rows
 -------------------  ---------------------  ------
@@ -53,8 +56,8 @@ alignments for all cognate sets for a particular concept:
 
 ```bash
 $ csvjoin -c Form_ID,ID cognates.csv forms.csv \
-| csvsort -c Concept,Cognate_set_ID,Language - \
-| csvcut -c Concept,Cognate_set_ID,Alignment,Language - \
+| csvsort -c Concept,Cognateset_ID,Language - \
+| csvcut -c Concept,Cognateset_ID,Alignment,Language - \
 | csvgrep -c Concept -m "the skin" \
 | csvformat -T
 Concept	Cognate_set_ID	Alignment	Language
