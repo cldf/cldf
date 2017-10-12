@@ -1,6 +1,6 @@
 {
-    "url": "borrowings.csv", 
-    "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#BorrowingTable", 
+    "url": "values.csv", 
+    "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#ValueTable", 
     "tableSchema": {
         "columns": [
             {
@@ -13,15 +13,31 @@
                 }
             }, 
             {
-                "name": "Form_ID_target", 
+                "name": "Language_ID", 
                 "required": true, 
-                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#targetFormReference", 
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#languageReference", 
                 "datatype": "string"
             }, 
             {
-                "name": "Form_ID_source", 
+                "name": "Parameter_ID", 
+                "required": true, 
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#parameterReference", 
+                "datatype": "string"
+            }, 
+            {
+                "name": "Value", 
+                "required": true, 
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#value", 
+                "datatype": "string", 
+                "null": [
+                    "?", 
+                    ""
+                ]
+            }, 
+            {
+                "name": "Code_ID", 
                 "required": false, 
-                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#sourceFormReference", 
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#codeReference", 
                 "datatype": "string"
             }, 
             {

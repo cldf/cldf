@@ -1,53 +1,75 @@
 {
-    "@context": "http://www.w3.org/ns/csvw",
-    "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#StructureDataset",
+    "@context": [
+        "http://www.w3.org/ns/csvw", 
+        {
+            "@language": "en"
+        }
+    ], 
+    "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#StructureDataset", 
     "dialect": {
-        "commentPrefix": null
-    },
+        "trim": true, 
+        "commentPrefix": null, 
+        "doubleQuote": false
+    }, 
     "tables": [
         {
-            "url": "values.csv",
-            "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#ValueTable",
+            "url": "values.csv", 
+            "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#ValueTable", 
             "tableSchema": {
                 "columns": [
                     {
-                        "name": "ID",
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
-                        "required": true,
-                        "datatype": "string"
-                    },
+                        "name": "ID", 
+                        "required": true, 
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id", 
+                        "datatype": {
+                            "base": "string", 
+                            "format": "[a-zA-Z0-9_\\-]"
+                        }
+                    }, 
                     {
-                        "name": "Language_ID",
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#languageReference",
-                        "required": true,
+                        "name": "Language_ID", 
+                        "required": true, 
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#languageReference", 
                         "datatype": "string"
-                    },
+                    }, 
                     {
-                        "name": "Parameter_ID",
-                        "titles": "Feature_ID",
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#parameterReference",
-                        "required": true,
+                        "name": "Parameter_ID", 
+                        "required": true, 
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#parameterReference", 
                         "datatype": "string"
-                    },
+                    }, 
                     {
-                        "name": "Value",
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#value",
-                        "required": true,
-                        "datatype": "string"
-                    },
+                        "name": "Value", 
+                        "required": true, 
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#value", 
+                        "datatype": "string", 
+                        "null": [
+                            "?", 
+                            ""
+                        ]
+                    }, 
                     {
-                        "name": "Comment",
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#comment",
+                        "name": "Code_ID", 
+                        "required": false, 
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#codeReference", 
                         "datatype": "string"
-                    },
+                    }, 
                     {
-                        "name": "Source",
-                        "separator": ";",
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#source",
+                        "name": "Comment", 
+                        "required": false, 
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#comment", 
                         "datatype": "string"
+                    }, 
+                    {
+                        "name": "Source", 
+                        "required": false, 
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#source", 
+                        "datatype": {
+                            "base": "string"
+                        }, 
+                        "separator": ";"
                     }
-                ],
-                "primaryKey": "ID"
+                ]
             }
         }
     ]

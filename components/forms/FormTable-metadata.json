@@ -1,6 +1,6 @@
 {
-    "url": "borrowings.csv", 
-    "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#BorrowingTable", 
+    "url": "forms.csv", 
+    "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#FormTable", 
     "tableSchema": {
         "columns": [
             {
@@ -13,16 +13,29 @@
                 }
             }, 
             {
-                "name": "Form_ID_target", 
+                "name": "Language_ID", 
                 "required": true, 
-                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#targetFormReference", 
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#languageReference", 
                 "datatype": "string"
             }, 
             {
-                "name": "Form_ID_source", 
-                "required": false, 
-                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#sourceFormReference", 
+                "name": "Parameter_ID", 
+                "required": true, 
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#parameterReference", 
                 "datatype": "string"
+            }, 
+            {
+                "name": "Form", 
+                "required": true, 
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#lexicalUnit", 
+                "datatype": "string"
+            }, 
+            {
+                "name": "Segments", 
+                "required": false, 
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#soundSequence", 
+                "datatype": "string", 
+                "separator": " "
             }, 
             {
                 "name": "Comment", 

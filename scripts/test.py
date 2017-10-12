@@ -1,11 +1,10 @@
 # coding: utf8
 from __future__ import unicode_literals, print_function, division
-from xml.etree import ElementTree
 
-from clldutils.path import walk, Path
+from clldutils.path import walk
 from clldutils.jsonlib import load
 
-REPO_DIR = Path(__file__).resolve().parent.parent
+from util import REPO_DIR, read_terms, ns
 
 
 def iterproperties(obj):
@@ -22,9 +21,9 @@ def iterproperties(obj):
 
 def run():
     terms = []
-    for e in ElementTree.parse(REPO_DIR.joinpath('terms.rdf').as_posix()).iter():
-        if '{http://www.w3.org/1999/02/22-rdf-syntax-ns#}about' in e.attrib:
-            terms.append(e.attrib['{http://www.w3.org/1999/02/22-rdf-syntax-ns#}about'])
+    for e in read_terms().iter():
+        if ns('rdf:about') in e.attrib:
+            terms.append(e.attrib[ns('rdf:about')])
 
     for d in ['components', 'modules']:
         for f in walk(REPO_DIR.joinpath(d)):

@@ -1,6 +1,6 @@
 {
-    "url": "codes.csv", 
-    "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#CodeTable", 
+    "url": "entries.csv", 
+    "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#EntryTable", 
     "tableSchema": {
         "columns": [
             {
@@ -13,21 +13,21 @@
                 }
             }, 
             {
-                "name": "Parameter_ID", 
+                "name": "Language_ID", 
                 "required": true, 
-                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#parameterReference", 
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#languageReference", 
                 "datatype": "string"
             }, 
             {
-                "name": "Name", 
-                "required": false, 
-                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#name", 
+                "name": "headword", 
+                "required": true, 
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#headword", 
                 "datatype": "string"
             }, 
             {
-                "name": "Description", 
+                "name": "part_of_speech", 
                 "required": false, 
-                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#description", 
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#partOfSpeech", 
                 "datatype": "string"
             }
         ]
