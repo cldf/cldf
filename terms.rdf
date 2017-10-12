@@ -63,6 +63,7 @@
             <p>Slice specification following Python's slice notation</p>
         </rdfs:comment>
         <csvw:datatype>{"base": "string", "format": "\\d+(:\\d+)?"}</csvw:datatype>
+        <csvw:separator>" "</csvw:separator>
     </rdf:Property>
 
     <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#source" dc:type="generic-property">

@@ -22,7 +22,8 @@
                 "datatype": {
                     "base": "string", 
                     "format": "\\d+(:\\d+)?"
-                }
+                }, 
+                "separator": " "
             }, 
             {
                 "name": "Alignment", 
