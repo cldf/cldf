@@ -34,7 +34,7 @@
             </p>
         </rdfs:comment>
         <csvw:name>"ID"</csvw:name>
-        <csvw:datatype>{"base": "string", "format": "[a-zA-Z0-9_\\-]"}</csvw:datatype>
+        <csvw:datatype>{"base": "string", "format": "[a-zA-Z0-9_\\-]+"}</csvw:datatype>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier" />
         <rdfs:seeAlso rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-identifier" />
     </rdf:Property>
