@@ -8,7 +8,7 @@ has been created using the code and instructions at https://github.com/glottoban
 One of the design goals of CLDF was to make re-use of existing tools for linguistic data possible. As an example, we can convert the CLDF
 dataset to the legacy custom tab-delimited export of WALS features (e.g.
 http://wals.info/feature/1A.tab), using tools from the [`csvkit` package](https://csvkit.readthedocs.io/):
-- We use `csvjoin` three, to augment the `ValueTable` with metadata about languages, 
+- We use `csvjoin` three times, to augment the `ValueTable` with metadata about languages, 
   parameters and feature values.
 - The we use `csvcut` to prune the excess columns and re-order the remaining ones.
 - Using `sed` we replace the first line, thereby renaming the columns.
