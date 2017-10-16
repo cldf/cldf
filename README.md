@@ -46,6 +46,7 @@ i.e. use the CSV dialect specified by
   "quoteChar": "\"",
   "doubleQuote": true,
   "skipRows": 0,
+  "commentPrefix": "#",
   "header": true,
   "headerRowCount": 1,
   "delimiter": ",",
@@ -60,7 +61,6 @@ Notes:
 - The first line of each file must contain the comma-separated list of column
   names.
 - No comment lines are allowed.
-
 
 
 ### Extended conformance
@@ -188,7 +188,7 @@ Thus, an example for a CLDF dataset description could look as follows:
             "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#source"
           },
           {
-            "name": "glottocode",
+            "name": "Glottocode",
             "virtual": true,
             "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#glottocode",
             "valueUrl": "{Language_ID}"

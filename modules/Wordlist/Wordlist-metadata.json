@@ -7,9 +7,7 @@
     ], 
     "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#Wordlist", 
     "dialect": {
-        "trim": true, 
-        "commentPrefix": null, 
-        "doubleQuote": false
+        "commentPrefix": null
     }, 
     "tables": [
         {

@@ -197,9 +197,7 @@ def make():
                 ("dc:conformsTo",
                  "http://cldf.clld.org/v1.0/terms.rdf#{0}".format(subdir)),
                 ("dialect", {
-                    "doubleQuote": False,
                     "commentPrefix": None,
-                    "trim": True,
                 }),
                 ("tables", [comps[ref] for ref in comprefs]),
             ]),
