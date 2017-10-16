@@ -44,6 +44,7 @@
         <rdfs:comment rdf:parseType="Literal">
             <p>A title, name or label for an entity.</p>
         </rdfs:comment>
+        <csvw:name>"Name"</csvw:name>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/title" />
         <rdfs:seeAlso rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-title" />
     </rdf:Property>
@@ -53,6 +54,7 @@
         <rdfs:comment rdf:parseType="Literal">
             <p>A description for an entity.</p>
         </rdfs:comment>
+        <csvw:name>"Description"</csvw:name>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description" />
         <rdfs:seeAlso rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-description" />
     </rdf:Property>
@@ -62,6 +64,7 @@
         <rdfs:comment rdf:parseType="Literal">
             <p>Slice specification following Python's slice notation</p>
         </rdfs:comment>
+        <csvw:name>"Slice"</csvw:name>
         <csvw:datatype>{"base": "string", "format": "\\d+(:\\d+)?"}</csvw:datatype>
         <csvw:separator>" "</csvw:separator>
     </rdf:Property>
@@ -73,6 +76,7 @@
             e.g. http://glottolog.org/resource/reference/id/318814[34], or meier2015[3-12]
             where meier2015 is a citation key in the accompanying BibTeX file.</p>
         </rdfs:comment>
+        <csvw:name>"Source"</csvw:name>
         <csvw:separator>";"</csvw:separator>
         <csvw:datatype>{"base": "string"}</csvw:datatype>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/source" />
@@ -85,6 +89,7 @@
                 A human-readable comment on a resource, providing additional context.
             </p>
         </rdfs:comment>
+        <csvw:name>"Comment"</csvw:name>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment" />
     </rdf:Property>
 
@@ -119,7 +124,7 @@
                 <li>by using a known encoding scheme.</li>
             </ul>
         </rdfs:comment>
-        <csvw:name>"Language_ID_meta"</csvw:name>
+        <csvw:name>"Language_ID_Meta"</csvw:name>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/references" />
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Foreign_key" />
     </rdf:Property>
@@ -201,7 +206,7 @@
                 by providing a foreign key into the FormTable.
             </p>
         </rdfs:comment>
-        <csvw:name>"Form_ID_source"</csvw:name>
+        <csvw:name>"Form_ID_Source"</csvw:name>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/references" />
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Foreign_key" />
     </rdf:Property>
@@ -214,7 +219,7 @@
                 by providing a foreign key into the FormTable.
             </p>
         </rdfs:comment>
-        <csvw:name>"Form_ID_target"</csvw:name>
+        <csvw:name>"Form_ID_Target"</csvw:name>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/references" />
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Foreign_key" />
     </rdf:Property>
@@ -246,7 +251,7 @@
             An ISO 639-3 language code, i.e. a three-letter code denoting a valid ISO 639-3
             language or macrolanguage.
         </rdfs:comment>
-        <csvw:name>"iso"</csvw:name>
+        <csvw:name>"Iso"</csvw:name>
         <csvw:datatype>{"base": "string", "format": "[a-z]{3}"}</csvw:datatype>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier" />
     </rdf:Property>
@@ -268,6 +273,7 @@
         <rdfs:comment rdf:parseType="Literal">
             <p>A macroarea as defined by <a href="http://glottolog.org">Glottolog</a>.</p>
         </rdfs:comment>
+        <csvw:name>"Macroarea"</csvw:name>
         <rdfs:seeAlso rdf:resource="http://glottolog.org/meta/glossary#macroarea" />
     </rdf:Property>
     
@@ -280,6 +286,7 @@
                 standard coordinate system, specified as decimal number of degrees.
             </p>
         </rdfs:comment>
+        <csvw:name>"Latitude"</csvw:name>
         <csvw:datatype>{"base": "decimal", "minimum": -90, "maximum": 90}</csvw:datatype>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#lat" />
     </rdf:Property>
@@ -293,6 +300,7 @@
                 standard coordinate system, specified as decimal number of degrees.
             </p>
         </rdfs:comment>
+        <csvw:name>"Longitude"</csvw:name>
         <csvw:datatype>{"base": "decimal", "minimum": -180, "maximum": 180}</csvw:datatype>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#long" />
     </rdf:Property>
@@ -356,7 +364,7 @@
                 The headword of a dictionary entry.
             </p>
         </rdfs:comment>
-        <csvw:name>"headword"</csvw:name>
+        <csvw:name>"Headword"</csvw:name>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/OrthographicWord" />
     </rdf:Property>
 
@@ -367,7 +375,7 @@
                 The part-of-speech of dictionary entry.
             </p>
         </rdfs:comment>
-        <csvw:name>"part_of_speech"</csvw:name>
+        <csvw:name>"Part_Of_Speech"</csvw:name>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/PartOfSpeechProperty" />
     </rdf:Property>
     
@@ -387,6 +395,7 @@
                 in the CodeTable.
             </p>
         </rdfs:comment>
+        <csvw:name>"Value"</csvw:name>
         <csvw:null>["?", ""]</csvw:null>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/feature" />
     </rdf:Property>
@@ -404,6 +413,7 @@
                 segments are placed in the same column while gap characters are introduced in
                 those sound sequences missing a certain counterpart.</p>
         </rdfs:comment>
+        <csvw:name>"Alignment"</csvw:name>
         <csvw:separator>" "</csvw:separator>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <dc:source rdf:resource="http://bibliography.lingpy.org/raw.php?key=List2014d"/>
@@ -483,6 +493,7 @@
             <p>The root of a <a href="#soundSequence">word form</a> is an abstract basic
                 unit from which several <a href="#stem">stems</a> can be derived.</p>
         </rdfs:comment>
+        <csvw:name>"Root"</csvw:name>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </rdf:Property>
 
@@ -492,6 +503,7 @@
             <p>A stem is a concrete <a href="#soundSequence">word form</a> in a language
             which has been derived as such from a given <a href="#root">root</a>.</p>
         </rdfs:comment>
+        <csvw:name>"Stem"</csvw:name>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </rdf:Property>
 

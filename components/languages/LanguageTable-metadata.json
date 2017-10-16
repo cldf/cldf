@@ -55,7 +55,7 @@
                 "valueUrl": "http://glottolog.org/resource/languoid/id/{glottocode}"
             }, 
             {
-                "name": "iso", 
+                "name": "Iso", 
                 "required": false, 
                 "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#iso639P3code", 
                 "datatype": {

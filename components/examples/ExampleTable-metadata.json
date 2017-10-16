@@ -45,7 +45,7 @@
                 "datatype": "string"
             }, 
             {
-                "name": "Language_ID_meta", 
+                "name": "Language_ID_Meta", 
                 "required": false, 
                 "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#metaLanguageReference", 
                 "datatype": "string"

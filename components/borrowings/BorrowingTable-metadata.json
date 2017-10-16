@@ -13,13 +13,13 @@
                 }
             }, 
             {
-                "name": "Form_ID_target", 
+                "name": "Form_ID_Target", 
                 "required": true, 
                 "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#targetFormReference", 
                 "datatype": "string"
             }, 
             {
-                "name": "Form_ID_source", 
+                "name": "Form_ID_Source", 
                 "required": false, 
                 "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#sourceFormReference", 
                 "datatype": "string"
