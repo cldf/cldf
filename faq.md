@@ -17,11 +17,11 @@ the same `Language_ID` for all rows via metadata; append a [column description](
 
 ### How can I specify tertiary separators for CSV files?
 
-Stricly speaking, CLDF does not allow for tertiary separator. Try to come up with a different encoding :-).
+Stricly speaking, CLDF does not have any provision for a tertiary separator. Try to come up with a different encoding :-). Please note that this is not an issue of the CLDF, but a general question about CSV data.
 
-That being said, there is a trick to get something alike to tertiary separators.
+That being said, there is a trick to get something alike to tertiary separators. In general, in CLDF 'extended conformance' you can pretty much do whatever you could do in "raw" [csvw](https://github.com/cldf/csvw), so hack away!
 
-CSV files structure lines of data into tabular data by means of a separator between fields, typically 
+To explain: CSV files structure lines of data into tabular data by means of a separator between fields, typically 
 the comma (hence **C**SV). The [Metadata Vocabulary for Tabular Data](http://w3c.github.io/csvw/metadata/)
 (which CLDF follows for specification of tables) provides a way to specify secondary separators, i.e.
 [separators to be used within a cell](http://w3c.github.io/csvw/metadata/#cell-separator). E.g. the following column specification:
