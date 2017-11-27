@@ -25,7 +25,7 @@
                 "datatype": "string"
             },
             {
-                "name": "segmentSlice",
+                "name": "Segment_Slice",
                 "required": false,
                 "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#segmentSlice",
                 "datatype": {
