@@ -102,6 +102,10 @@ Note that the column *names* in the default table descriptions (e.g. [`formTable
 
 An more easily readable list of all properties is available in the file [`properties.md`](properties.md). Please note that this file is just for easier reference, but is not normative: in case of discrepancy, the description in `terms.rdf` holds.
 
+Note: For better human readability the [CLDF Ontology](http://cldf.clld.org/v1.0/terms.rdf) should
+be visited with a browser capable of rendering XSLT - such as Firefox.
+
+
 ## CLDF Dataset
 
 ### CLDF Metadata file
