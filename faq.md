@@ -17,26 +17,28 @@ the same `Language_ID` for all rows via metadata; append a [column description](
 
 ### How can I specify tertiary separators for CSV files?
 
+Stricly speaking, CLDF does not allow for tertiary separator. Try to come up with a different encoding :-).
+
+That being said, there is a trick to get something alike to tertiary separators.
+
 CSV files structure lines of data into tabular data by means of a separator between fields, typically 
 the comma (hence **C**SV). The [Metadata Vocabulary for Tabular Data](http://w3c.github.io/csvw/metadata/)
 (which CLDF follows for specification of tables) provides a way to specify secondary separators, i.e.
-[separators to be used within a cell](http://w3c.github.io/csvw/metadata/#cell-separator). E.g. the following column specification
-```python
+[separators to be used within a cell](http://w3c.github.io/csvw/metadata/#cell-separator). E.g. the following column specification:
+
+```
 {
     "name": "segments",
     "separator": "+",
-    "datatype": {
-        "base": "string",
-        "format": "([\\S]+)( [\\S]+)*"
-    }
+    "datatype": "base": "string"
 }
 ```
+
 will make sure cell content of the form `abc def+geh` can be split into the list `['abc def', 'geh']`.
 
-A third level
-of structured content can be achieved for cells of datatype `string` by specifying a regular expression
-which the values of a cell must match. E.g. the following column specification
-```python
+An implicit third level of structured content can be achieved for cells of datatype `string` by specifying a regular expression which the values of a cell must match. E.g. the following column specification:
+
+```
 {
     "name": "segments",
     "separator": "+",
@@ -52,7 +54,8 @@ Tertiary separators may be useful when specifying definitions of categorical val
 WALS example slightly abuses the `Comment` field in the `ValueTable` to sneak in the human-readable definitions of
 the feature values (while giving the numeric values in the `Value` field). Alternatively, one could add a `Domain`
 field to the `ParameterTable`, specified as
-```python
+
+```
 {
     "name": "Domain",
     "separator": ";",
@@ -63,7 +66,9 @@ field to the `ParameterTable`, specified as
     "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#category"
 }
 ```
+
 and formatting the value definitions as
+
 ```
 1:Small;2:Moderately small;3:Average;4:Moderately large;5:Large
 ```
