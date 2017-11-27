@@ -1,42 +1,42 @@
 {
-    "url": "borrowings.csv", 
-    "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#BorrowingTable", 
+    "url": "borrowings.csv",
+    "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#BorrowingTable",
     "tableSchema": {
         "columns": [
             {
-                "name": "ID", 
-                "required": true, 
-                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id", 
+                "name": "ID",
+                "required": true,
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
                 "datatype": {
-                    "base": "string", 
+                    "base": "string",
                     "format": "[a-zA-Z0-9_\\-]+"
                 }
-            }, 
+            },
             {
-                "name": "Form_ID_Target", 
-                "required": true, 
-                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#targetFormReference", 
+                "name": "Target_Form_ID",
+                "required": true,
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#targetFormReference",
                 "datatype": "string"
-            }, 
+            },
             {
-                "name": "Form_ID_Source", 
-                "required": false, 
-                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#sourceFormReference", 
+                "name": "Source_Form_ID",
+                "required": false,
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#sourceFormReference",
                 "datatype": "string"
-            }, 
+            },
             {
-                "name": "Comment", 
-                "required": false, 
-                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#comment", 
+                "name": "Comment",
+                "required": false,
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#comment",
                 "datatype": "string"
-            }, 
+            },
             {
-                "name": "Source", 
-                "required": false, 
-                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#source", 
+                "name": "Source",
+                "required": false,
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#source",
                 "datatype": {
                     "base": "string"
-                }, 
+                },
                 "separator": ";"
             }
         ]

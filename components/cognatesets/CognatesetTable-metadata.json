@@ -1,30 +1,30 @@
 {
-    "url": "cognatesets.csv", 
-    "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#CognatesetTable", 
+    "url": "cognatesets.csv",
+    "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#CognatesetTable",
     "tableSchema": {
         "columns": [
             {
-                "name": "ID", 
-                "required": true, 
-                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id", 
+                "name": "ID",
+                "required": true,
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
                 "datatype": {
-                    "base": "string", 
+                    "base": "string",
                     "format": "[a-zA-Z0-9_\\-]+"
                 }
-            }, 
+            },
             {
-                "name": "Description", 
-                "required": false, 
-                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#description", 
+                "name": "Description",
+                "required": false,
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#description",
                 "datatype": "string"
-            }, 
+            },
             {
-                "name": "Source", 
-                "required": false, 
-                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#source", 
+                "name": "Source",
+                "required": false,
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#source",
                 "datatype": {
                     "base": "string"
-                }, 
+                },
                 "separator": ";"
             }
         ]
