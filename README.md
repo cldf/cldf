@@ -339,16 +339,15 @@ types are specified as *components* in a way that can be re-used across modules 
 
 - [Language metadata](components/languages/)
 - [Parameter metadata](components/parameters/)
+- [Values](components/values) - as defined for a [`StructureDataset`](modules/StructureDataset/)
 - [Codes](components/codes/)
 - [Entries](components/entries)
+- [Senses](components/senses)
 - [Examples](components/examples/)
+- [Forms](components/forms) - as defined for a [`Wordlist`](modules/Wordlist/)
 - [Cognates](components/cognates/)
 - [CognateSets](components/cognatesets)
-- [Partial cognates](components/partialcognates/)
 - [Borrowings](components/borrowings/)
-- [Senses](components/senses)
-- [Values](components/values) - as defined for a [`StructureDataset`](modules/StructureDataset/)
-- [Forms](components/forms) - as defined for a [`Wordlist`](modules/Wordlist/)
 
 A component corresponds to a certain type of data. Thus, to make sure all instances of
 such a type have the same set of properties, we allow at most one component for each type

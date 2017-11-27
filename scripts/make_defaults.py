@@ -40,6 +40,7 @@ COMPONENTS = {
             ('id', True),
             ('formReference', True),
             ('cognatesetReference', True),
+            ('segmentSlice', False),
             ('alignment', False),
             ('source', False),
         ]
@@ -85,17 +86,6 @@ COMPONENTS = {
             ('description', False),
         ]
     },
-    'partialcognates': {
-        'table': 'PartialCognateTable',
-        'columns': [
-            ('id', True),
-            ('formReference', True),
-            ('cognatesetReference', True),
-            ('slice', True),
-            ('alignment', False),
-            ('source', False),
-        ]
-    },
     'entries': {
         'table': 'EntryTable',
         'columns': [
@@ -131,8 +121,8 @@ COMPONENTS = {
             ('id', True),
             ('languageReference', True),
             ('parameterReference', True),
-            ('lexicalUnit', True),
-            ('soundSequence', False),
+            ('form', True),
+            ('segments', False),
             ('comment', False),
             ('source', False),
         ]
