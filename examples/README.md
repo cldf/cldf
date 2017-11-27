@@ -56,6 +56,7 @@ alignments for all cognate sets for a particular concept:
 
 ```bash
 $ csvjoin -c Form_ID,ID cognates.csv forms.csv \
+| csvgrep -c Segment_slice -r "." -i \
 | csvsort -c Concept,Cognateset_ID,Language - \
 | csvcut -c Concept,Cognateset_ID,Alignment,Language - \
 | csvgrep -c Concept -m "the skin" \
@@ -70,6 +71,8 @@ the skin	204	ʃ ă ³⁵ + k a̰ u ʔ ⁵⁵	Bola
 the skin	204	ʃ ŏ ⁵⁵ + k ṵ - k ⁵⁵	Lashi
 the skin	343	ɑ ⁵³ + tθ ɑ ⁵⁵ + ɑ ⁵³ + j e ²²	Rangoon
 ```
+
+Note that the first invocation of `csvgrep` is used to filter out partial cognates.
 
 
 ## Examples "in the wild"

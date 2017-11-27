@@ -45,13 +45,13 @@
                     {
                         "name": "Form",
                         "datatype": "string",
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#lexicalUnit"
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#form"
                     },
                     {
                         "name": "Segments",
                         "datatype": "string",
                         "separator": " + ",
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#soundSequence"
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#segments"
                     },
                     {
                         "name": "Prosodic_Structure",
@@ -82,7 +82,7 @@
                     {
                         "name": "Form",
                         "datatype": "string",
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#lexicalUnit"
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#form"
                     },
                     {
                         "name": "Cognateset_ID",
@@ -116,73 +116,13 @@
                     {
                         "name": "Alignment_source",
                         "datatype": "string"
-                    }
-                ],
-                "foreignKeys": [
-                    {
-                        "columnReference": "Form_ID",
-                        "reference": {
-                            "resource": "forms.csv",
-                            "columnReference": "ID"
-                        }
-                    }
-                ]
-            }
-        },
-        {
-            "url": "partialcognates.csv",
-            "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#PartialCognateTable",
-            "tableSchema": {
-                "columns": [
-                    {
-                        "name": "Form_ID",
-                        "datatype": "integer",
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#formReference"
-                    },
-                    {
-                        "name": "Segments",
-                        "datatype": "string",
-                        "separator": " ",
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#soundSequence",
-                        "valueUrl": "http://clpn.clld.org/paramters/{Segments}"
-                    },
-                    {
-                        "name": "Cognateset_ID",
-                        "datatype": "integer",
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#cognatesetReference"
-                    },
-                    {
-                        "name": "Alignment",
-                        "datatype": "string",
-                        "separator": " ",
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#alignment"
                     },
                     {
                         "name": "Segment_slice",
                         "datatype": {"base": "string", "format": "\\d(:\\d(:\\d)?)?"},
                         "separator": " ",
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#slice"
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#segmentSlice"
                     },
-                    {
-                        "name": "Doubt",
-                        "datatype": "string"
-                    },
-                    {
-                        "name": "Cognate_detection_method",
-                        "datatype": "string"
-                    },
-                    {
-                        "name": "Cognate_source",
-                        "datatype": "string"
-                    },
-                    {
-                        "name": "Alignment_method",
-                        "datatype": "string"
-                    },
-                    {
-                        "name": "Alignment_source",
-                        "datatype": "string"
-                    }
                 ],
                 "foreignKeys": [
                     {
