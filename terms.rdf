@@ -425,7 +425,7 @@
                 partial cognacy judgement.
             </p>
         </rdfs:comment>
-        <csvw:name>"segmentSlice"</csvw:name>
+        <csvw:name>"Segment_Slice"</csvw:name>
         <csvw:datatype>{"base": "string", "format": "\\d+(:\\d+)?"}</csvw:datatype>
         <csvw:separator>" "</csvw:separator>
     </rdf:Property>
