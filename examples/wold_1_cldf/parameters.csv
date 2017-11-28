@@ -1,0 +1,1415 @@
+ID,Name,Description,Category,SemanticField_ID,SemanticField
+1-1,the world,,Noun,1,The physical world
+1-21,the land,,Noun,1,The physical world
+1-212,the soil,,Noun,1,The physical world
+1-213,the dust,,Noun,1,The physical world
+1-214,the mud,,Noun,1,The physical world
+1-215,the sand,,Noun,1,The physical world
+1-22,the mountain or hill,,Noun,1,The physical world
+1-222,the cliff or precipice,,Noun,1,The physical world
+1-23,the plain,,Noun,1,The physical world
+1-24,the valley,,Noun,1,The physical world
+1-25,the island,,Noun,1,The physical world
+1-26,the mainland,,Noun,1,The physical world
+1-27,the shore,,Noun,1,The physical world
+1-28,the cave,,Noun,1,The physical world
+1-31,the water,,Noun,1,The physical world
+1-32,the sea,,Noun,1,The physical world
+1-322,calm,,Adjective,1,The physical world
+1-323,rough(2),,Adjective,1,The physical world
+1-324,the foam,,Noun,1,The physical world
+1-329,the ocean,,Noun,1,The physical world
+1-33,the lake,,Noun,1,The physical world
+1-34,the bay,,Noun,1,The physical world
+1-341,the lagoon,,Noun,1,The physical world
+1-342,the reef,,Noun,1,The physical world
+1-343,the cape,,Noun,1,The physical world
+1-35,the wave,,Noun,1,The physical world
+1-352,the tide,,Noun,1,The physical world
+1-353,the low tide,,Noun,1,The physical world
+1-354,the high tide,,Noun,1,The physical world
+1-36,the river or stream,,Noun,1,The physical world
+1-37,the spring or well,,Noun,1,The physical world
+1-38,the swamp,,Noun,1,The physical world
+1-39,the waterfall,,Noun,1,The physical world
+1-41,the woods or forest,,Noun,1,The physical world
+1-43,the wood,,Noun,1,The physical world
+1-44,the stone or rock,,Noun,1,The physical world
+1-45,the earthquake,,Noun,1,The physical world
+1-51,the sky,,Noun,1,The physical world
+1-52,the sun,,Noun,1,The physical world
+1-53,the moon,,Noun,1,The physical world
+1-54,the star,,Noun,1,The physical world
+1-55,the lightning,,Noun,1,The physical world
+1-56,the thunder,,Noun,1,The physical world
+1-57,the bolt of lightning,,Noun,1,The physical world
+1-58,the storm,,Noun,1,The physical world
+1-59,the rainbow,,Noun,1,The physical world
+1-61,the light,,Noun,1,The physical world
+1-62,the darkness,,Noun,1,The physical world
+1-63,the shade or shadow,,Noun,1,The physical world
+1-64,the dew,,Noun,1,The physical world
+1-71,the air,,Noun,1,The physical world
+1-72,the wind,,Noun,1,The physical world
+1-73,the cloud,,Noun,1,The physical world
+1-74,the fog,,Noun,1,The physical world
+1-75,the rain,,Noun,1,The physical world
+1-76,the snow,,Noun,1,The physical world
+1-77,the ice,,Noun,1,The physical world
+1-78,the weather,,Noun,1,The physical world
+1-81,the fire,,Noun,1,The physical world
+1-82,the flame,,Noun,1,The physical world
+1-83,the smoke,,Noun,1,The physical world
+1-84,the ash,,Noun,1,The physical world
+1-841,the embers,,Noun,1,The physical world
+1-851,to burn(1),,Verb,1,The physical world
+1-852,to burn(2),,Verb,1,The physical world
+1-86,to light,,Verb,1,The physical world
+1-861,to extinguish,,Verb,1,The physical world
+1-87,the match,,Noun,1,The physical world
+1-88,the firewood,,Noun,1,The physical world
+1-89,the charcoal,,Noun,1,The physical world
+2-1,the person,,Noun,2,Kinship
+2-21,the man,,Noun,2,Kinship
+2-22,the woman,,Noun,2,Kinship
+2-23,male(1),,Adjective,2,Kinship
+2-24,female(1),,Adjective,2,Kinship
+2-25,the boy,,Noun,2,Kinship
+2-251,the young man,,Noun,2,Kinship
+2-26,the girl,,Noun,2,Kinship
+2-261,the young woman,,Noun,2,Kinship
+2-27,the child(1),,Noun,2,Kinship
+2-28,the baby,,Noun,2,Kinship
+2-31,the husband,,Noun,2,Kinship
+2-32,the wife,,Noun,2,Kinship
+2-33,to marry,,Verb,2,Kinship
+2-34,the wedding,,Noun,2,Kinship
+2-341,the divorce,,Noun,2,Kinship
+2-35,the father,,Noun,2,Kinship
+2-36,the mother,,Noun,2,Kinship
+2-37,the parents,,Noun,2,Kinship
+2-41,the son,,Noun,2,Kinship
+2-42,the daughter,,Noun,2,Kinship
+3-662,the porpoise or dolphin,,Noun,3,Animals
+2-43,the child(2),,Noun,2,Kinship
+2-44,the brother,,Noun,2,Kinship
+2-444,the older brother,,Noun,2,Kinship
+2-445,the younger brother,,Noun,2,Kinship
+2-45,the sister,,Noun,2,Kinship
+2-454,the older sister,,Noun,2,Kinship
+2-455,the younger sister,,Noun,2,Kinship
+2-456,the sibling,,Noun,2,Kinship
+2-458,the twins,,Noun,2,Kinship
+2-46,the grandfather,,Noun,2,Kinship
+2-461,the old man,,Noun,2,Kinship
+2-47,the grandmother,,Noun,2,Kinship
+2-471,the old woman,,Noun,2,Kinship
+2-48,the grandson,,Noun,2,Kinship
+2-49,the granddaughter,,Noun,2,Kinship
+2-51,the uncle,,Noun,2,Kinship
+2-511,the mother's brother,,Noun,2,Kinship
+2-512,the father's brother,,Noun,2,Kinship
+2-52,the aunt,,Noun,2,Kinship
+2-521,the mother's sister,,Noun,2,Kinship
+2-522,the father's sister,,Noun,2,Kinship
+2-53,the nephew,,Noun,2,Kinship
+2-54,the niece,,Noun,2,Kinship
+2-55,the cousin,,Noun,2,Kinship
+2-56,the ancestors,,Noun,2,Kinship
+2-57,the descendants,,Noun,2,Kinship
+2-61,the father-in-law (of a man),,Noun,2,Kinship
+2-611,the father-in-law (of a woman),,Noun,2,Kinship
+2-62,the mother-in-law (of a man),,Noun,2,Kinship
+2-621,the mother-in-law (of a woman),,Noun,2,Kinship
+2-63,the son-in-law (of a man),,Noun,2,Kinship
+2-631,the son-in-law (of a woman),,Noun,2,Kinship
+2-64,the daughter-in-law (of a man),,Noun,2,Kinship
+2-641,the daughter-in-law (of a woman),,Noun,2,Kinship
+2-71,the stepfather,,Noun,2,Kinship
+2-72,the stepmother,,Noun,2,Kinship
+2-73,the stepson,,Noun,2,Kinship
+2-74,the stepdaughter,,Noun,2,Kinship
+2-75,the orphan,,Noun,2,Kinship
+2-76,the widow,,Noun,2,Kinship
+2-77,the widower,,Noun,2,Kinship
+2-81,the relatives,,Noun,2,Kinship
+2-82,the family,,Noun,2,Kinship
+2-91,I,,Function word,2,Kinship
+2-92,you (singular),,Function word,2,Kinship
+2-93,he/she/it,,Function word,2,Kinship
+2-94,we,,Function word,2,Kinship
+2-941,we (inclusive),,Function word,2,Kinship
+2-942,we (exclusive),,Function word,2,Kinship
+2-95,you (plural),,Function word,2,Kinship
+2-96,they,,Function word,2,Kinship
+3-11,the animal,,Noun,3,Animals
+3-12,male(2),,Adjective,3,Animals
+3-13,female(2),,Adjective,3,Animals
+3-15,the livestock,,Noun,3,Animals
+3-16,the pasture,,Noun,3,Animals
+3-18,the herdsman,,Noun,3,Animals
+3-19,the stable or stall,,Noun,3,Animals
+3-2,the cattle,,Noun,3,Animals
+3-21,the bull,,Noun,3,Animals
+3-23,the cow,,Noun,3,Animals
+3-24,the calf,,Noun,3,Animals
+3-25,the sheep,,Noun,3,Animals
+3-29,the lamb,,Noun,3,Animals
+3-32,the boar,,Noun,3,Animals
+3-35,the pig,,Noun,3,Animals
+3-36,the goat,,Noun,3,Animals
+3-37,the he-goat,,Noun,3,Animals
+3-38,the kid,,Noun,3,Animals
+3-41,the horse,,Noun,3,Animals
+3-45,the foal or colt,,Noun,3,Animals
+3-46,the donkey,,Noun,3,Animals
+3-47,the mule,,Noun,3,Animals
+3-52,the cock/rooster,,Noun,3,Animals
+3-54,the hen,,Noun,3,Animals
+3-55,the chicken,,Noun,3,Animals
+3-56,the goose,,Noun,3,Animals
+3-57,the duck,,Noun,3,Animals
+3-58,the nest,,Noun,3,Animals
+3-581,the bird,,Noun,3,Animals
+3-582,the seagull,,Noun,3,Animals
+3-583,the heron,,Noun,3,Animals
+3-584,the eagle,,Noun,3,Animals
+3-585,the hawk,,Noun,3,Animals
+3-586,the vulture,,Noun,3,Animals
+3-591,the bat,,Noun,3,Animals
+3-592,the parrot,,Noun,3,Animals
+3-593,the crow,,Noun,3,Animals
+3-594,the dove,,Noun,3,Animals
+3-596,the owl,,Noun,3,Animals
+3-61,the dog,,Noun,3,Animals
+3-614,the rabbit,,Noun,3,Animals
+3-62,the cat,,Noun,3,Animals
+3-63,the mouse or rat,,Noun,3,Animals
+3-65,the fish,,Noun,3,Animals
+3-652,the fin,,Noun,3,Animals
+3-653,the scale,,Noun,3,Animals
+3-654,the gill,,Noun,3,Animals
+3-655,the shell,,Noun,3,Animals
+3-661,the shark,,Noun,3,Animals
+3-663,the whale,,Noun,3,Animals
+3-664,the stingray,,Noun,3,Animals
+3-665,the freshwater eel,,Noun,3,Animals
+3-72,the lion,,Noun,3,Animals
+3-73,the bear,,Noun,3,Animals
+3-76,the monkey,,Noun,3,Animals
+3-77,the elephant,,Noun,3,Animals
+3-78,the camel,,Noun,3,Animals
+3-81,the insect,,Noun,3,Animals
+3-811,the head louse,,Noun,3,Animals
+3-813,the flea,,Noun,3,Animals
+3-814,the centipede,,Noun,3,Animals
+3-815,the scorpion,,Noun,3,Animals
+3-816,the cockroach,,Noun,3,Animals
+3-817,the ant,,Noun,3,Animals
+3-818,the spider,,Noun,3,Animals
+3-819,the spider web,,Noun,3,Animals
+3-82,the bee,,Noun,3,Animals
+3-821,the beeswax,,Noun,3,Animals
+3-822,the beehive,,Noun,3,Animals
+3-823,the wasp,,Noun,3,Animals
+3-83,the fly,,Noun,3,Animals
+3-831,the sandfly or midge or gnat,,Noun,3,Animals
+3-832,the mosquito,,Noun,3,Animals
+3-84,the worm,,Noun,3,Animals
+3-85,the snake,,Noun,3,Animals
+3-91,the firefly,,Noun,3,Animals
+3-92,the butterfly,,Noun,3,Animals
+3-93,the grasshopper,,Noun,3,Animals
+3-94,the snail,,Noun,3,Animals
+3-95,the frog,,Noun,3,Animals
+3-96,the lizard,,Noun,3,Animals
+3-97,the crocodile or alligator,,Noun,3,Animals
+3-98,the turtle,,Noun,3,Animals
+4-11,the body,,Noun,4,The body
+4-12,the skin or hide,,Noun,4,The body
+4-13,the flesh,,Noun,4,The body
+4-14,the hair,,Noun,4,The body
+4-142,the beard,,Noun,4,The body
+4-144,the body hair,,Noun,4,The body
+4-145,the pubic hair,,Noun,4,The body
+4-146,the dandruff,,Noun,4,The body
+4-15,the blood,,Noun,4,The body
+4-151,the vein or artery,,Noun,4,The body
+4-16,the bone,,Noun,4,The body
+4-162,the rib,,Noun,4,The body
+4-17,the horn,,Noun,4,The body
+4-18,the tail,,Noun,4,The body
+4-19,the back,,Noun,4,The body
+4-191,the spine,,Noun,4,The body
+4-2,the head,,Noun,4,The body
+4-201,the temples,,Noun,4,The body
+4-202,the skull,,Noun,4,The body
+4-203,the brain,,Noun,4,The body
+4-204,the face,,Noun,4,The body
+4-205,the forehead,,Noun,4,The body
+4-207,the jaw,,Noun,4,The body
+4-208,the cheek,,Noun,4,The body
+4-209,the chin,,Noun,4,The body
+4-21,the eye,,Noun,4,The body
+4-212,the eyebrow,,Noun,4,The body
+4-213,the eyelid,,Noun,4,The body
+4-214,the eyelash,,Noun,4,The body
+4-215,to blink,,Verb,4,The body
+4-22,the ear,,Noun,4,The body
+4-221,the earlobe,,Noun,4,The body
+4-222,the earwax,,Noun,4,The body
+4-23,the nose,,Noun,4,The body
+4-231,the nostril,,Noun,4,The body
+4-232,the nasal mucus,,Noun,4,The body
+4-24,the mouth,,Noun,4,The body
+4-241,the beak,,Noun,4,The body
+4-25,the lip,,Noun,4,The body
+4-26,the tongue,,Noun,4,The body
+4-27,the tooth,,Noun,4,The body
+4-271,the gums,,Noun,4,The body
+4-272,the molar tooth,,Noun,4,The body
+4-28,the neck,,Noun,4,The body
+4-281,the nape of the neck,,Noun,4,The body
+4-29,the throat,,Noun,4,The body
+4-3,the shoulder,,Noun,4,The body
+4-301,the shoulderblade,,Noun,4,The body
+4-302,the collarbone,,Noun,4,The body
+4-31,the arm,,Noun,4,The body
+4-312,the armpit,,Noun,4,The body
+4-32,the elbow,,Noun,4,The body
+4-321,the wrist,,Noun,4,The body
+4-33,the hand,,Noun,4,The body
+4-331,the palm of the hand,,Noun,4,The body
+4-34,the finger,,Noun,4,The body
+4-342,the thumb,,Noun,4,The body
+4-344,the fingernail,,Noun,4,The body
+4-345,the claw,,Noun,4,The body
+4-35,the leg,,Noun,4,The body
+4-351,the thigh,,Noun,4,The body
+4-352,the calf of the leg,,Noun,4,The body
+4-36,the knee,,Noun,4,The body
+4-37,the foot,,Noun,4,The body
+4-371,the ankle,,Noun,4,The body
+4-372,the heel,,Noun,4,The body
+4-374,the footprint,,Noun,4,The body
+4-38,the toe,,Noun,4,The body
+4-392,the wing,,Noun,4,The body
+4-393,the feather,,Noun,4,The body
+4-4,the chest,,Noun,4,The body
+4-41,the breast,,Noun,4,The body
+4-412,the nipple or teat,,Noun,4,The body
+4-42,the udder,,Noun,4,The body
+4-43,the navel,,Noun,4,The body
+4-44,the heart,,Noun,4,The body
+4-441,the lung,,Noun,4,The body
+4-45,the liver,,Noun,4,The body
+4-451,the kidney,,Noun,4,The body
+4-452,the spleen,,Noun,4,The body
+4-46,the stomach,,Noun,4,The body
+4-461,the intestines or guts,,Noun,4,The body
+4-462,the waist,,Noun,4,The body
+4-463,the hip,,Noun,4,The body
+4-464,the buttocks,,Noun,4,The body
+4-47,the womb,,Noun,4,The body
+4-49,the testicles,,Noun,4,The body
+4-492,the penis,,Noun,4,The body
+4-51,to breathe,,Verb,4,The body
+4-52,to yawn,,Verb,4,The body
+4-521,to hiccough,,Verb,4,The body
+4-53,to cough,,Verb,4,The body
+4-54,to sneeze,,Verb,4,The body
+4-55,to perspire,,Verb,4,The body
+4-56,to spit,,Verb,4,The body
+4-57,to vomit,,Verb,4,The body
+4-58,to bite,,Verb,4,The body
+4-59,to lick,,Verb,4,The body
+4-591,to dribble,,Verb,4,The body
+4-61,to sleep,,Verb,4,The body
+4-612,to snore,,Verb,4,The body
+4-62,to dream,,Verb,4,The body
+4-63,to wake up,,Verb,4,The body
+4-64,to fart,,Verb,4,The body
+4-65,to piss,,Verb,4,The body
+4-66,to shit,,Verb,4,The body
+4-67,to have sex,,Verb,4,The body
+4-68,to shiver,,Verb,4,The body
+4-69,to bathe,,Verb,4,The body
+4-71,to beget,,Verb,4,The body
+4-72,to be born,,Verb,4,The body
+4-73,pregnant,,Adjective,4,The body
+4-732,to conceive,,Verb,4,The body
+4-74,to be alive,,Verb,4,The body
+4-75,to die,,Verb,4,The body
+4-751,to drown,,Verb,4,The body
+4-76,to kill,,Verb,4,The body
+4-77,the corpse,,Noun,4,The body
+4-78,to bury,,Verb,4,The body
+4-79,the grave,,Noun,4,The body
+4-81,strong,,Adjective,4,The body
+4-82,weak,,Adjective,4,The body
+4-83,healthy,,Adjective,4,The body
+4-84,sick/ill,,Adjective,4,The body
+4-841,the fever,,Noun,4,The body
+4-842,the goitre/goiter,,Noun,4,The body
+4-843,the cold,,Noun,4,The body
+4-85,the wound or sore,,Noun,4,The body
+4-852,the bruise,,Noun,4,The body
+4-853,the swelling,,Noun,4,The body
+4-854,the itch,,Noun,4,The body
+4-855,the blister,,Noun,4,The body
+4-856,the boil,,Noun,4,The body
+4-857,the pus,,Noun,4,The body
+4-858,the scar,,Noun,4,The body
+4-86,to cure,,Verb,4,The body
+4-87,the physician,,Noun,4,The body
+4-88,the medicine,,Noun,4,The body
+4-89,the poison,,Noun,4,The body
+4-91,tired,,Adjective,4,The body
+4-912,to rest,,Verb,4,The body
+4-92,lazy,,Adjective,4,The body
+4-93,bald,,Adjective,4,The body
+4-94,lame,,Adjective,4,The body
+4-95,deaf,,Adjective,4,The body
+4-96,mute,,Adjective,4,The body
+4-97,blind,,Adjective,4,The body
+4-98,drunk,,Adjective,4,The body
+4-99,naked,,Adjective,4,The body
+5-11,to eat,,Verb,5,Food and drink
+5-12,the food,,Noun,5,Food and drink
+5-121,cooked,,Adjective,5,Food and drink
+5-122,raw,,Adjective,5,Food and drink
+5-123,ripe,,Adjective,5,Food and drink
+5-124,unripe,,Adjective,5,Food and drink
+5-125,rotten,,Adjective,5,Food and drink
+5-13,to drink,,Verb,5,Food and drink
+5-14,to be hungry,,Verb,5,Food and drink
+5-141,the famine,,Noun,5,Food and drink
+5-15,to be thirsty,,Verb,5,Food and drink
+5-16,to suck,,Verb,5,Food and drink
+5-18,to chew,,Verb,5,Food and drink
+5-181,to swallow,,Verb,5,Food and drink
+5-19,to choke,,Verb,5,Food and drink
+5-21,to cook,,Verb,5,Food and drink
+5-22,to boil,,Verb,5,Food and drink
+5-23,to roast or fry,,Verb,5,Food and drink
+5-24,to bake,,Verb,5,Food and drink
+5-25,the oven,,Noun,5,Food and drink
+5-26,the pot,,Noun,5,Food and drink
+5-27,the kettle,,Noun,5,Food and drink
+5-28,the pan,,Noun,5,Food and drink
+5-31,the dish,,Noun,5,Food and drink
+5-32,the plate,,Noun,5,Food and drink
+5-33,the bowl,,Noun,5,Food and drink
+5-34,the jug/pitcher,,Noun,5,Food and drink
+5-35,the cup,,Noun,5,Food and drink
+5-36,the saucer,,Noun,5,Food and drink
+5-37,the spoon,,Noun,5,Food and drink
+5-38,the knife(1),,Noun,5,Food and drink
+5-39,the fork,,Noun,5,Food and drink
+5-391,the tongs,,Noun,5,Food and drink
+5-41,the meal,,Noun,5,Food and drink
+5-42,the breakfast,,Noun,5,Food and drink
+5-43,the lunch,,Noun,5,Food and drink
+5-44,the dinner,,Noun,5,Food and drink
+5-45,the supper,,Noun,5,Food and drink
+5-46,to peel,,Verb,5,Food and drink
+5-47,to sieve or to strain,,Verb,5,Food and drink
+5-48,to scrape,,Verb,5,Food and drink
+5-49,to stir or to mix,,Verb,5,Food and drink
+5-51,the bread,,Noun,5,Food and drink
+5-53,the dough,,Noun,5,Food and drink
+5-54,to knead,,Verb,5,Food and drink
+5-55,the flour,,Noun,5,Food and drink
+5-56,to crush or to grind,,Verb,5,Food and drink
+5-57,the mill,,Noun,5,Food and drink
+5-58,the mortar(1),,Noun,5,Food and drink
+5-59,the pestle,,Noun,5,Food and drink
+5-61,the meat,,Noun,5,Food and drink
+5-63,the sausage,,Noun,5,Food and drink
+5-64,the soup,,Noun,5,Food and drink
+5-65,the vegetables,,Noun,5,Food and drink
+5-66,the bean,,Noun,5,Food and drink
+5-7,the potato,,Noun,5,Food and drink
+5-71,the fruit,,Noun,5,Food and drink
+5-712,the bunch,,Noun,5,Food and drink
+5-75,the fig,,Noun,5,Food and drink
+5-76,the grape,,Noun,5,Food and drink
+5-77,the nut,,Noun,5,Food and drink
+5-78,the olive,,Noun,5,Food and drink
+5-79,the oil,,Noun,5,Food and drink
+5-791,the grease or fat,,Noun,5,Food and drink
+5-81,the salt,,Noun,5,Food and drink
+5-82,the pepper,,Noun,5,Food and drink
+5-821,the chili pepper,,Noun,5,Food and drink
+5-84,the honey,,Noun,5,Food and drink
+5-85,the sugar,,Noun,5,Food and drink
+5-86,the milk,,Noun,5,Food and drink
+5-87,to milk,,Verb,5,Food and drink
+5-88,the cheese,,Noun,5,Food and drink
+5-89,the butter,,Noun,5,Food and drink
+5-9,the drink,,Noun,5,Food and drink
+5-91,the mead,,Noun,5,Food and drink
+5-92,the wine,,Noun,5,Food and drink
+5-93,the beer,,Noun,5,Food and drink
+5-94,the fermented drink,,Noun,5,Food and drink
+5-97,the egg,,Noun,5,Food and drink
+5-971,the yolk,,Noun,5,Food and drink
+6-11,to put on,,Verb,6,Clothing and grooming
+6-12,the clothing or clothes,,Noun,6,Clothing and grooming
+6-13,the tailor,,Noun,6,Clothing and grooming
+6-21,the cloth,,Noun,6,Clothing and grooming
+6-22,the wool,,Noun,6,Clothing and grooming
+6-23,the linen,,Noun,6,Clothing and grooming
+6-24,the cotton,,Noun,6,Clothing and grooming
+6-25,the silk,,Noun,6,Clothing and grooming
+6-27,the felt,,Noun,6,Clothing and grooming
+6-28,the fur,,Noun,6,Clothing and grooming
+6-29,the leather,,Noun,6,Clothing and grooming
+6-31,to spin,,Verb,6,Clothing and grooming
+6-32,the spindle,,Noun,6,Clothing and grooming
+6-33,to weave,,Verb,6,Clothing and grooming
+6-34,the loom,,Noun,6,Clothing and grooming
+6-35,to sew,,Verb,6,Clothing and grooming
+6-36,the needle(1),,Noun,6,Clothing and grooming
+6-37,the awl,,Noun,6,Clothing and grooming
+6-38,the thread,,Noun,6,Clothing and grooming
+6-39,to dye,,Verb,6,Clothing and grooming
+6-41,the cloak,,Noun,6,Clothing and grooming
+7-37,the ladder,,Noun,7,The house
+6-42,the (woman's) dress,,Noun,6,Clothing and grooming
+6-43,the coat,,Noun,6,Clothing and grooming
+6-44,the shirt,,Noun,6,Clothing and grooming
+6-45,the collar,,Noun,6,Clothing and grooming
+6-46,the skirt,,Noun,6,Clothing and grooming
+6-48,the trousers,,Noun,6,Clothing and grooming
+6-49,the sock or stocking,,Noun,6,Clothing and grooming
+6-51,the shoe,,Noun,6,Clothing and grooming
+6-52,the boot,,Noun,6,Clothing and grooming
+6-54,the shoemaker,,Noun,6,Clothing and grooming
+6-55,the hat or cap,,Noun,6,Clothing and grooming
+6-57,the belt,,Noun,6,Clothing and grooming
+6-58,the glove,,Noun,6,Clothing and grooming
+6-59,the veil,,Noun,6,Clothing and grooming
+6-61,the pocket,,Noun,6,Clothing and grooming
+6-62,the button,,Noun,6,Clothing and grooming
+6-63,the pin,,Noun,6,Clothing and grooming
+6-71,the ornament or adornment,,Noun,6,Clothing and grooming
+6-72,the jewel,,Noun,6,Clothing and grooming
+6-73,the ring,,Noun,6,Clothing and grooming
+6-74,the bracelet,,Noun,6,Clothing and grooming
+6-75,the necklace,,Noun,6,Clothing and grooming
+6-76,the bead,,Noun,6,Clothing and grooming
+6-77,the earring,,Noun,6,Clothing and grooming
+6-78,the headband or headdress,,Noun,6,Clothing and grooming
+6-79,the tattoo,,Noun,6,Clothing and grooming
+6-81,the handkerchief or rag,,Noun,6,Clothing and grooming
+6-82,the towel,,Noun,6,Clothing and grooming
+6-91,the comb,,Noun,6,Clothing and grooming
+6-92,the brush,,Noun,6,Clothing and grooming
+6-921,the plait/braid,,Noun,6,Clothing and grooming
+6-93,the razor,,Noun,6,Clothing and grooming
+6-94,the ointment,,Noun,6,Clothing and grooming
+6-95,the soap,,Noun,6,Clothing and grooming
+6-96,the mirror,,Noun,6,Clothing and grooming
+7-11,to live,,Verb,7,The house
+7-12,the house,,Noun,7,The house
+7-13,the hut,,Noun,7,The house
+7-14,the tent,,Noun,7,The house
+7-15,the yard or court,,Noun,7,The house
+7-17,the cookhouse,,Noun,7,The house
+7-21,the room,,Noun,7,The house
+7-22,the door or gate,,Noun,7,The house
+7-221,the doorpost,,Noun,7,The house
+7-23,the lock,,Noun,7,The house
+7-231,the latch or door-bolt,,Noun,7,The house
+7-24,the key,,Noun,7,The house
+7-25,the window,,Noun,7,The house
+7-26,the floor,,Noun,7,The house
+7-27,the wall,,Noun,7,The house
+7-31,the fireplace,,Noun,7,The house
+7-32,the stove,,Noun,7,The house
+7-33,the chimney,,Noun,7,The house
+7-42,the bed,,Noun,7,The house
+7-421,the pillow,,Noun,7,The house
+7-422,the blanket,,Noun,7,The house
+7-43,the chair,,Noun,7,The house
+7-44,the table,,Noun,7,The house
+7-45,the lamp or torch,,Noun,7,The house
+7-46,the candle,,Noun,7,The house
+7-47,the shelf,,Noun,7,The house
+7-48,the trough,,Noun,7,The house
+7-51,the roof,,Noun,7,The house
+7-52,the thatch,,Noun,7,The house
+7-53,the ridgepole,,Noun,7,The house
+7-54,the rafter,,Noun,7,The house
+7-55,the beam,,Noun,7,The house
+7-56,the post or pole,,Noun,7,The house
+7-57,the board,,Noun,7,The house
+7-58,the arch,,Noun,7,The house
+7-61,the mason,,Noun,7,The house
+7-62,the brick,,Noun,7,The house
+7-63,the mortar(2),,Noun,7,The house
+8-11,the farmer,,Noun,8,Agriculture and vegetation
+8-12,the field,,Noun,8,Agriculture and vegetation
+8-13,the garden,,Noun,8,Agriculture and vegetation
+8-15,to cultivate,,Verb,8,Agriculture and vegetation
+8-16,the fence,,Noun,8,Agriculture and vegetation
+8-17,the ditch,,Noun,8,Agriculture and vegetation
+8-21,to plough/plow,,Verb,8,Agriculture and vegetation
+8-212,the furrow,,Noun,8,Agriculture and vegetation
+8-22,to dig,,Verb,8,Agriculture and vegetation
+8-23,the spade,,Noun,8,Agriculture and vegetation
+8-24,the shovel,,Noun,8,Agriculture and vegetation
+8-25,the hoe,,Noun,8,Agriculture and vegetation
+8-26,the fork(2)/pitchfork,,Noun,8,Agriculture and vegetation
+8-27,the rake,,Noun,8,Agriculture and vegetation
+8-31,to sow,,Verb,8,Agriculture and vegetation
+8-311,the seed,,Noun,8,Agriculture and vegetation
+8-32,to mow,,Verb,8,Agriculture and vegetation
+8-33,the sickle or scythe,,Noun,8,Agriculture and vegetation
+8-34,to thresh,,Verb,8,Agriculture and vegetation
+8-35,the threshing-floor,,Noun,8,Agriculture and vegetation
+8-41,the harvest,,Noun,8,Agriculture and vegetation
+8-42,the grain,,Noun,8,Agriculture and vegetation
+8-43,the wheat,,Noun,8,Agriculture and vegetation
+8-44,the barley,,Noun,8,Agriculture and vegetation
+8-47,the maize/corn,,Noun,8,Agriculture and vegetation
+8-48,the rice,,Noun,8,Agriculture and vegetation
+8-51,the grass,,Noun,8,Agriculture and vegetation
+8-53,the plant,,Noun,8,Agriculture and vegetation
+8-531,to plant,,Verb,8,Agriculture and vegetation
+8-54,the root,,Noun,8,Agriculture and vegetation
+8-55,the branch,,Noun,8,Agriculture and vegetation
+8-56,the leaf,,Noun,8,Agriculture and vegetation
+8-57,the flower,,Noun,8,Agriculture and vegetation
+8-6,the tree,,Noun,8,Agriculture and vegetation
+8-61,the oak,,Noun,8,Agriculture and vegetation
+8-63,the birch,,Noun,8,Agriculture and vegetation
+8-64,the pine,,Noun,8,Agriculture and vegetation
+8-65,the fir,,Noun,8,Agriculture and vegetation
+8-67,the vine,,Noun,8,Agriculture and vegetation
+8-68,the tobacco,,Noun,8,Agriculture and vegetation
+8-69,to smoke,,Verb,8,Agriculture and vegetation
+8-691,the pipe,,Noun,8,Agriculture and vegetation
+8-72,the tree stump,,Noun,8,Agriculture and vegetation
+8-73,the tree trunk,,Noun,8,Agriculture and vegetation
+8-74,the forked branch,,Noun,8,Agriculture and vegetation
+8-75,the bark,,Noun,8,Agriculture and vegetation
+8-76,the sap,,Noun,8,Agriculture and vegetation
+8-81,the palm tree,,Noun,8,Agriculture and vegetation
+8-82,the coconut,,Noun,8,Agriculture and vegetation
+8-83,the citrus fruit,,Noun,8,Agriculture and vegetation
+8-84,the banana,,Noun,8,Agriculture and vegetation
+8-85,the banyan,,Noun,8,Agriculture and vegetation
+8-91,the sweet potato,,Noun,8,Agriculture and vegetation
+8-912,the yam,,Noun,8,Agriculture and vegetation
+8-92,the cassava/manioc,,Noun,8,Agriculture and vegetation
+8-93,the gourd,,Noun,8,Agriculture and vegetation
+8-931,the pumpkin or squash,,Noun,8,Agriculture and vegetation
+8-94,the bamboo,,Noun,8,Agriculture and vegetation
+8-941,the sugar cane,,Noun,8,Agriculture and vegetation
+8-96,the fish poison,,Noun,8,Agriculture and vegetation
+8-98,the mushroom,,Noun,8,Agriculture and vegetation
+9-11,to do,,Verb,9,Basic actions and technology
+9-12,the work,,Noun,9,Basic actions and technology
+9-14,to bend,,Verb,9,Basic actions and technology
+9-15,to fold,,Verb,9,Basic actions and technology
+9-16,to tie,,Verb,9,Basic actions and technology
+9-161,to untie,,Verb,9,Basic actions and technology
+9-18,the chain,,Noun,9,Basic actions and technology
+9-19,the rope,,Noun,9,Basic actions and technology
+9-192,the knot,,Noun,9,Basic actions and technology
+9-21,to strike or hit or beat,,Verb,9,Basic actions and technology
+9-211,to pound,,Verb,9,Basic actions and technology
+9-22,to cut,,Verb,9,Basic actions and technology
+9-221,to cut down,,Verb,9,Basic actions and technology
+9-222,to chop,,Verb,9,Basic actions and technology
+9-223,to stab,,Verb,9,Basic actions and technology
+9-23,the knife(2),,Noun,9,Basic actions and technology
+9-24,the scissors or shears,,Noun,9,Basic actions and technology
+9-25,the axe/ax,,Noun,9,Basic actions and technology
+9-251,the adze,,Noun,9,Basic actions and technology
+9-26,to break,,Verb,9,Basic actions and technology
+9-261,broken,,Adjective,9,Basic actions and technology
+9-27,to split,,Verb,9,Basic actions and technology
+9-28,to tear,,Verb,9,Basic actions and technology
+9-83,the statue,,Noun,9,Basic actions and technology
+9-29,to skin,,Verb,9,Basic actions and technology
+9-31,to rub,,Verb,9,Basic actions and technology
+9-32,to stretch,,Verb,9,Basic actions and technology
+9-33,to pull,,Verb,9,Basic actions and technology
+9-34,to spread out,,Verb,9,Basic actions and technology
+9-341,to hang up,,Verb,9,Basic actions and technology
+9-342,to press,,Verb,9,Basic actions and technology
+9-343,to squeeze,,Verb,9,Basic actions and technology
+9-35,to pour,,Verb,9,Basic actions and technology
+9-36,to wash,,Verb,9,Basic actions and technology
+9-37,to sweep,,Verb,9,Basic actions and technology
+9-38,the broom,,Noun,9,Basic actions and technology
+9-422,the tool,,Noun,9,Basic actions and technology
+9-43,the carpenter,,Noun,9,Basic actions and technology
+9-44,to build,,Verb,9,Basic actions and technology
+9-46,to bore,,Verb,9,Basic actions and technology
+9-461,to hollow out,,Verb,9,Basic actions and technology
+9-48,the saw,,Noun,9,Basic actions and technology
+9-49,the hammer,,Noun,9,Basic actions and technology
+9-5,the nail,,Noun,9,Basic actions and technology
+9-56,the glue,,Noun,9,Basic actions and technology
+9-6,the blacksmith,,Noun,9,Basic actions and technology
+9-61,to forge,,Verb,9,Basic actions and technology
+9-62,the anvil,,Noun,9,Basic actions and technology
+9-63,to cast,,Verb,9,Basic actions and technology
+9-64,the gold,,Noun,9,Basic actions and technology
+9-65,the silver,,Noun,9,Basic actions and technology
+9-66,the copper,,Noun,9,Basic actions and technology
+9-67,the iron,,Noun,9,Basic actions and technology
+9-68,the lead,,Noun,9,Basic actions and technology
+9-69,the tin or tinplate,,Noun,9,Basic actions and technology
+9-71,the potter,,Noun,9,Basic actions and technology
+9-72,to mould/mold,,Verb,9,Basic actions and technology
+9-73,the clay,,Noun,9,Basic actions and technology
+9-74,the glass,,Noun,9,Basic actions and technology
+9-75,to weave or plait/braid,,Verb,9,Basic actions and technology
+9-76,the basket,,Noun,9,Basic actions and technology
+9-77,the mat,,Noun,9,Basic actions and technology
+9-771,the rug,,Noun,9,Basic actions and technology
+9-79,the fan,,Noun,9,Basic actions and technology
+9-791,to fan,,Verb,9,Basic actions and technology
+9-81,to carve,,Verb,9,Basic actions and technology
+9-82,the sculptor,,Noun,9,Basic actions and technology
+9-84,the chisel,,Noun,9,Basic actions and technology
+9-88,the paint,,Noun,9,Basic actions and technology
+9-89,to paint,,Verb,9,Basic actions and technology
+10-11,to move,,Verb,10,Motion
+10-12,to turn,,Verb,10,Motion
+10-13,to turn around,,Verb,10,Motion
+10-14,to wrap,,Verb,10,Motion
+10-15,to roll,,Verb,10,Motion
+10-16,to drop,,Verb,10,Motion
+10-17,to twist,,Verb,10,Motion
+10-21,to rise,,Verb,10,Motion
+10-22,to raise or lift,,Verb,10,Motion
+10-23,to fall,,Verb,10,Motion
+10-24,to drip,,Verb,10,Motion
+10-25,to throw,,Verb,10,Motion
+10-252,to catch,,Verb,10,Motion
+10-26,to shake,,Verb,10,Motion
+10-32,to flow,,Verb,10,Motion
+10-33,to sink,,Verb,10,Motion
+10-34,to float,,Verb,10,Motion
+10-35,to swim,,Verb,10,Motion
+10-351,to dive,,Verb,10,Motion
+10-352,to splash,,Verb,10,Motion
+10-36,to sail,,Verb,10,Motion
+10-37,to fly,,Verb,10,Motion
+10-38,to blow,,Verb,10,Motion
+10-41,to crawl,,Verb,10,Motion
+10-412,to kneel,,Verb,10,Motion
+10-413,to crouch,,Verb,10,Motion
+10-42,to slide or slip,,Verb,10,Motion
+10-43,to jump,,Verb,10,Motion
+10-431,to kick,,Verb,10,Motion
+10-44,to dance,,Verb,10,Motion
+10-45,to walk,,Verb,10,Motion
+10-451,to limp,,Verb,10,Motion
+10-46,to run,,Verb,10,Motion
+10-47,to go,,Verb,10,Motion
+10-471,to go up,,Verb,10,Motion
+10-472,to climb,,Verb,10,Motion
+10-473,to go down,,Verb,10,Motion
+10-474,to go out,,Verb,10,Motion
+10-48,to come,,Verb,10,Motion
+10-481,to come back,,Verb,10,Motion
+10-49,to leave,,Verb,10,Motion
+10-491,to disappear,,Verb,10,Motion
+10-51,to flee,,Verb,10,Motion
+10-52,to follow,,Verb,10,Motion
+10-53,to pursue,,Verb,10,Motion
+10-55,to arrive,,Verb,10,Motion
+10-56,to approach,,Verb,10,Motion
+10-57,to enter,,Verb,10,Motion
+10-61,to carry,,Verb,10,Motion
+10-62,to bring,,Verb,10,Motion
+10-63,to send,,Verb,10,Motion
+10-64,to lead,,Verb,10,Motion
+10-65,to drive,,Verb,10,Motion
+10-66,to ride,,Verb,10,Motion
+10-67,to push,,Verb,10,Motion
+10-71,the road,,Noun,10,Motion
+10-72,the path,,Noun,10,Motion
+10-74,the bridge,,Noun,10,Motion
+10-75,the cart or wagon,,Noun,10,Motion
+10-76,the wheel,,Noun,10,Motion
+10-77,the axle,,Noun,10,Motion
+10-78,the yoke,,Noun,10,Motion
+10-81,the ship,,Noun,10,Motion
+10-83,the boat,,Noun,10,Motion
+10-831,the canoe,,Noun,10,Motion
+10-832,the outrigger,,Noun,10,Motion
+10-84,the raft,,Noun,10,Motion
+10-85,the oar,,Noun,10,Motion
+10-851,the paddle,,Noun,10,Motion
+10-852,to row,,Verb,10,Motion
+10-86,the rudder,,Noun,10,Motion
+10-87,the mast,,Noun,10,Motion
+10-88,the sail,,Noun,10,Motion
+10-89,the anchor,,Noun,10,Motion
+10-91,the port,,Noun,10,Motion
+10-92,to land,,Verb,10,Motion
+11-11,to have,,Verb,11,Possession
+11-12,to own,,Verb,11,Possession
+11-13,to take,,Verb,11,Possession
+11-14,to grasp,,Verb,11,Possession
+11-15,to hold,,Verb,11,Possession
+11-16,to get,,Verb,11,Possession
+11-17,to keep,,Verb,11,Possession
+11-18,the thing,,Noun,11,Possession
+11-21,to give,,Verb,11,Possession
+11-22,to give back,,Verb,11,Possession
+11-24,to preserve,,Verb,11,Possession
+11-25,to rescue,,Verb,11,Possession
+11-27,to destroy,,Verb,11,Possession
+11-28,to injure,,Verb,11,Possession
+11-31,to look for,,Verb,11,Possession
+11-32,to find,,Verb,11,Possession
+11-33,to lose,,Verb,11,Possession
+11-34,to let go,,Verb,11,Possession
+11-43,the money,,Noun,11,Possession
+11-44,the coin,,Noun,11,Possession
+11-51,rich,,Adjective,11,Possession
+11-52,poor,,Adjective,11,Possession
+11-53,the beggar,,Noun,11,Possession
+11-54,stingy,,Adjective,11,Possession
+11-61,to lend,,Verb,11,Possession
+11-62,to borrow,,Verb,11,Possession
+11-63,to owe,,Verb,11,Possession
+11-64,the debt,,Noun,11,Possession
+11-65,to pay,,Verb,11,Possession
+11-66,the bill,,Noun,11,Possession
+11-69,the tax,,Noun,11,Possession
+11-77,to hire,,Verb,11,Possession
+11-78,the wages,,Noun,11,Possession
+11-79,to earn,,Verb,11,Possession
+11-81,to buy,,Verb,11,Possession
+11-82,to sell,,Verb,11,Possession
+11-83,to trade or barter,,Verb,11,Possession
+11-84,the merchant,,Noun,11,Possession
+11-85,the market,,Noun,11,Possession
+11-86,the shop/store,,Noun,11,Possession
+11-87,the price,,Noun,11,Possession
+11-88,expensive,,Adjective,11,Possession
+11-89,cheap,,Adjective,11,Possession
+11-91,to share,,Verb,11,Possession
+11-92,to weigh,,Verb,11,Possession
+12-01,after,,Function word,12,Spatial relations
+12-011,behind,,Function word,12,Spatial relations
+12-02,beside,,Function word,12,Spatial relations
+12-03,down,,Function word,12,Spatial relations
+12-04,before,,Function word,12,Spatial relations
+12-041,in front of,,Function word,12,Spatial relations
+12-05,inside,,Function word,12,Spatial relations
+12-06,outside,,Function word,12,Spatial relations
+12-07,under,,Function word,12,Spatial relations
+12-08,up,,Function word,12,Spatial relations
+12-11,the place,,Noun,12,Spatial relations
+12-12,to put,,Verb,12,Spatial relations
+12-13,to sit,,Verb,12,Spatial relations
+12-14,to lie down,,Verb,12,Spatial relations
+12-15,to stand,,Verb,12,Spatial relations
+12-16,to remain,,Verb,12,Spatial relations
+12-17,the remains,,Noun,12,Spatial relations
+12-21,to gather,,Verb,12,Spatial relations
+12-212,to pick up,,Verb,12,Spatial relations
+12-213,to pile up,,Verb,12,Spatial relations
+12-22,to join,,Verb,12,Spatial relations
+12-23,to separate,,Verb,12,Spatial relations
+12-232,to divide,,Verb,12,Spatial relations
+12-24,to open,,Verb,12,Spatial relations
+12-25,to shut,,Verb,12,Spatial relations
+12-26,to cover,,Verb,12,Spatial relations
+12-27,to hide,,Verb,12,Spatial relations
+12-31,high,,Adjective,12,Spatial relations
+12-32,low,,Adjective,12,Spatial relations
+12-33,the top,,Noun,12,Spatial relations
+12-34,the bottom,,Noun,12,Spatial relations
+12-35,the end(1),,Noun,12,Spatial relations
+12-352,pointed,,Adjective,12,Spatial relations
+12-353,the edge,,Noun,12,Spatial relations
+12-36,the side,,Noun,12,Spatial relations
+12-37,the middle,,Noun,12,Spatial relations
+12-41,right(1),,Adjective,12,Spatial relations
+12-42,left,,Adjective,12,Spatial relations
+12-43,near,,Adverb,12,Spatial relations
+12-44,far,,Adverb,12,Spatial relations
+12-45,the east,,Noun,12,Spatial relations
+12-46,the west,,Noun,12,Spatial relations
+12-47,the north,,Noun,12,Spatial relations
+12-48,the south,,Noun,12,Spatial relations
+12-53,to grow,,Verb,12,Spatial relations
+12-54,to measure,,Verb,12,Spatial relations
+12-55,big,,Adjective,12,Spatial relations
+12-56,small,,Adjective,12,Spatial relations
+12-57,long,,Adjective,12,Spatial relations
+12-58,tall,,Adjective,12,Spatial relations
+12-59,short,,Adjective,12,Spatial relations
+12-61,wide,,Adjective,12,Spatial relations
+12-62,narrow,,Adjective,12,Spatial relations
+12-63,thick,,Adjective,12,Spatial relations
+12-65,thin,,Adjective,12,Spatial relations
+12-67,deep,,Adjective,12,Spatial relations
+12-68,shallow,,Adjective,12,Spatial relations
+12-71,flat,,Adjective,12,Spatial relations
+12-73,straight,,Adjective,12,Spatial relations
+12-74,crooked,,Adjective,12,Spatial relations
+12-75,the hook,,Noun,12,Spatial relations
+12-76,the corner,,Noun,12,Spatial relations
+12-77,the cross,,Noun,12,Spatial relations
+12-78,the square,,Noun,12,Spatial relations
+12-81,round,,Adjective,12,Spatial relations
+12-82,the circle,,Noun,12,Spatial relations
+12-83,the ball,,Noun,12,Spatial relations
+12-84,the line,,Noun,12,Spatial relations
+12-85,the hole,,Noun,12,Spatial relations
+12-92,similar,,Adjective,12,Spatial relations
+12-93,to change,,Verb,12,Spatial relations
+13,zero,,Function word,13,Quantity
+13-01,one,,Function word,13,Quantity
+13-02,two,,Function word,13,Quantity
+13-03,three,,Function word,13,Quantity
+13-04,four,,Function word,13,Quantity
+13-05,five,,Function word,13,Quantity
+13-06,six,,Function word,13,Quantity
+13-07,seven,,Function word,13,Quantity
+13-08,eight,,Function word,13,Quantity
+13-09,nine,,Function word,13,Quantity
+13-1,ten,,Function word,13,Quantity
+13-101,eleven,,Function word,13,Quantity
+13-102,twelve,,Function word,13,Quantity
+13-103,fifteen,,Function word,13,Quantity
+13-104,twenty,,Function word,13,Quantity
+13-105,a hundred,,Function word,13,Quantity
+13-106,a thousand,,Function word,13,Quantity
+13-107,to count,,Verb,13,Quantity
+13-14,all,,Function word,13,Quantity
+13-15,many,,Function word,13,Quantity
+13-16,more,,Function word,13,Quantity
+13-17,few,,Function word,13,Quantity
+13-18,enough,,Function word,13,Quantity
+13-19,the crowd,,Noun,13,Quantity
+13-21,full,,Adjective,13,Quantity
+13-22,empty,,Adjective,13,Quantity
+13-23,the part,,Noun,13,Quantity
+13-24,the half,,Noun,13,Quantity
+13-33,only,,Function word,13,Quantity
+13-34,first,,Function word,13,Quantity
+13-35,last,,Function word,13,Quantity
+13-36,second,,Function word,13,Quantity
+13-37,the pair,,Noun,13,Quantity
+13-38,twice/two times,,Function word,13,Quantity
+13-42,third,,Function word,13,Quantity
+13-44,three times,,Function word,13,Quantity
+14-11,the time,,Noun,14,Time
+14-12,the age,,Noun,14,Time
+14-13,new,,Adjective,14,Time
+14-14,young,,Adjective,14,Time
+14-15,old,,Adjective,14,Time
+14-16,early,,Function word,14,Time
+14-17,late,,Function word,14,Time
+14-18,now,,Function word,14,Time
+14-19,immediately,,Function word,14,Time
+14-21,fast,,Adverb,14,Time
+14-22,slow,,Adverb,14,Time
+14-23,to hurry,,Verb,14,Time
+14-24,to be late,,Verb,14,Time
+14-25,to begin,,Verb,14,Time
+14-252,to last,,Verb,14,Time
+14-26,the end(2),,Noun,14,Time
+14-27,to finish,,Verb,14,Time
+14-28,to cease,,Verb,14,Time
+14-29,ready,,Adjective,14,Time
+14-31,always,,Function word,14,Time
+14-32,often,,Function word,14,Time
+14-33,sometimes,,Function word,14,Time
+14-331,soon,,Function word,14,Time
+14-332,for a long time,,Function word,14,Time
+14-34,never,,Function word,14,Time
+14-35,again,,Function word,14,Time
+14-41,the day(1),,Noun,14,Time
+14-42,the night,,Noun,14,Time
+14-43,the dawn,,Noun,14,Time
+14-44,the morning,,Noun,14,Time
+14-45,the midday,,Noun,14,Time
+14-451,the afternoon,,Noun,14,Time
+14-46,the evening,,Noun,14,Time
+14-47,today,,Function word,14,Time
+14-48,tomorrow,,Function word,14,Time
+14-481,the day after tomorrow,,Function word,14,Time
+14-49,yesterday,,Function word,14,Time
+14-491,the day before yesterday,,Function word,14,Time
+14-51,the hour,,Noun,14,Time
+14-53,the clock,,Noun,14,Time
+14-61,the week,,Noun,14,Time
+14-62,Sunday,,Noun,14,Time
+14-63,Monday,,Noun,14,Time
+14-64,Tuesday,,Noun,14,Time
+14-65,Wednesday,,Noun,14,Time
+14-66,Thursday,,Noun,14,Time
+14-67,Friday,,Noun,14,Time
+14-68,Saturday,,Noun,14,Time
+14-71,the month,,Noun,14,Time
+14-73,the year,,Noun,14,Time
+14-74,the winter,,Noun,14,Time
+14-75,the spring(2),,Noun,14,Time
+14-76,the summer,,Noun,14,Time
+14-77,the autumn/fall,,Noun,14,Time
+14-78,the season,,Noun,14,Time
+15-21,to smell(1),,Verb,15,Sense perception
+15-89,wrinkled,,Adjective,15,Sense perception
+15-212,to sniff,,Verb,15,Sense perception
+15-22,to smell(2),,Verb,15,Sense perception
+15-25,fragrant,,Adjective,15,Sense perception
+15-26,stinking,,Adjective,15,Sense perception
+15-31,to taste,,Verb,15,Sense perception
+15-35,sweet,,Adjective,15,Sense perception
+15-36,salty,,Adjective,15,Sense perception
+15-37,bitter,,Adjective,15,Sense perception
+15-38,sour,,Adjective,15,Sense perception
+15-41,to hear,,Verb,15,Sense perception
+15-42,to listen,,Verb,15,Sense perception
+15-44,the sound or noise,,Noun,15,Sense perception
+15-45,loud,,Adjective,15,Sense perception
+15-46,quiet,,Adjective,15,Sense perception
+15-51,to see,,Verb,15,Sense perception
+15-52,to look,,Verb,15,Sense perception
+15-55,to show,,Verb,15,Sense perception
+15-56,to shine,,Verb,15,Sense perception
+15-57,bright,,Adjective,15,Sense perception
+15-61,the colour/color,,Noun,15,Sense perception
+15-62,light(2),,Adjective,15,Sense perception
+15-63,dark,,Adjective,15,Sense perception
+15-64,white,,Adjective,15,Sense perception
+15-65,black,,Adjective,15,Sense perception
+15-66,red,,Adjective,15,Sense perception
+15-67,blue,,Adjective,15,Sense perception
+15-68,green,,Adjective,15,Sense perception
+15-69,yellow,,Adjective,15,Sense perception
+15-71,to touch,,Verb,15,Sense perception
+15-712,to pinch,,Verb,15,Sense perception
+15-72,to feel,,Verb,15,Sense perception
+15-74,hard,,Adjective,15,Sense perception
+15-75,soft,,Adjective,15,Sense perception
+15-76,rough(1),,Adjective,15,Sense perception
+15-77,smooth,,Adjective,15,Sense perception
+15-78,sharp,,Adjective,15,Sense perception
+15-79,blunt,,Adjective,15,Sense perception
+15-81,heavy,,Adjective,15,Sense perception
+15-82,light(1),,Adjective,15,Sense perception
+15-83,wet,,Adjective,15,Sense perception
+15-84,dry,,Adjective,15,Sense perception
+15-85,hot,,Adjective,15,Sense perception
+15-851,warm,,Adjective,15,Sense perception
+15-86,cold,,Adjective,15,Sense perception
+15-87,clean,,Adjective,15,Sense perception
+15-88,dirty,,Adjective,15,Sense perception
+16-11,the soul or spirit,,Noun,16,Emotions and values
+16-15,surprised or astonished,,Adjective,16,Emotions and values
+16-18,the good luck,,Noun,16,Emotions and values
+16-19,the bad luck,,Noun,16,Emotions and values
+16-23,happy,,Adjective,16,Emotions and values
+16-25,to laugh,,Verb,16,Emotions and values
+16-251,to smile,,Verb,16,Emotions and values
+16-26,to play,,Verb,16,Emotions and values
+16-27,to love,,Verb,16,Emotions and values
+16-29,to kiss,,Verb,16,Emotions and values
+16-3,to embrace,,Verb,16,Emotions and values
+16-31,the pain,,Noun,16,Emotions and values
+16-32,the grief,,Noun,16,Emotions and values
+16-33,the anxiety,,Noun,16,Emotions and values
+16-34,to regret or be sorry,,Verb,16,Emotions and values
+16-35,the pity,,Noun,16,Emotions and values
+16-37,to cry,,Verb,16,Emotions and values
+16-38,the tear,,Noun,16,Emotions and values
+16-39,to groan,,Verb,16,Emotions and values
+16-41,to hate,,Verb,16,Emotions and values
+16-42,the anger,,Noun,16,Emotions and values
+16-44,the envy or jealousy,,Noun,16,Emotions and values
+16-45,the shame,,Noun,16,Emotions and values
+16-48,proud,,Adjective,16,Emotions and values
+16-51,to dare,,Verb,16,Emotions and values
+16-52,brave,,Adjective,16,Emotions and values
+16-53,the fear,,Noun,16,Emotions and values
+16-54,the danger,,Noun,16,Emotions and values
+16-62,to want,,Verb,16,Emotions and values
+16-622,to choose,,Verb,16,Emotions and values
+16-63,to hope,,Verb,16,Emotions and values
+16-65,faithful,,Adjective,16,Emotions and values
+16-66,true,,Adjective,16,Emotions and values
+16-67,to lie(2),,Verb,16,Emotions and values
+16-68,the deceit,,Noun,16,Emotions and values
+16-69,to forgive,,Verb,16,Emotions and values
+16-71,good,,Adjective,16,Emotions and values
+16-72,bad,,Adjective,16,Emotions and values
+16-73,right(2),,Adjective,16,Emotions and values
+16-74,wrong,,Adjective,16,Emotions and values
+16-76,the fault,,Noun,16,Emotions and values
+16-77,the mistake,,Noun,16,Emotions and values
+16-78,the blame,,Noun,16,Emotions and values
+16-79,the praise,,Noun,16,Emotions and values
+16-81,beautiful,,Adjective,16,Emotions and values
+16-82,ugly,,Adjective,16,Emotions and values
+16-83,greedy,,Adjective,16,Emotions and values
+16-84,clever,,Adjective,16,Emotions and values
+17-11,the mind,,Noun,17,Cognition
+17-13,to think(1),,Verb,17,Cognition
+17-14,to think(2),,Verb,17,Cognition
+17-15,to believe,,Verb,17,Cognition
+17-16,to understand,,Verb,17,Cognition
+17-17,to know,,Verb,17,Cognition
+17-171,to guess,,Verb,17,Cognition
+17-172,to imitate,,Verb,17,Cognition
+17-18,to seem,,Verb,17,Cognition
+17-19,the idea,,Noun,17,Cognition
+17-21,wise,,Adjective,17,Cognition
+17-22,stupid,,Adjective,17,Cognition
+17-23,mad,,Adjective,17,Cognition
+17-24,to learn,,Verb,17,Cognition
+17-242,to study,,Verb,17,Cognition
+17-25,to teach,,Verb,17,Cognition
+17-26,the pupil,,Noun,17,Cognition
+17-27,the teacher,,Noun,17,Cognition
+17-28,the school,,Noun,17,Cognition
+17-31,to remember,,Verb,17,Cognition
+17-32,to forget,,Verb,17,Cognition
+17-34,clear,,Adjective,17,Cognition
+17-36,secret,,Adjective,17,Cognition
+17-37,certain,,Adjective,17,Cognition
+17-38,to explain,,Verb,17,Cognition
+17-41,the intention,,Noun,17,Cognition
+17-42,the cause,,Noun,17,Cognition
+17-43,the doubt,,Noun,17,Cognition
+17-44,to suspect,,Verb,17,Cognition
+17-441,to betray,,Verb,17,Cognition
+17-45,the need or necessity,,Noun,17,Cognition
+17-46,easy,,Adjective,17,Cognition
+17-47,difficult,,Adjective,17,Cognition
+17-48,to try,,Verb,17,Cognition
+17-49,the manner,,Noun,17,Cognition
+17-51,and,,Function word,17,Cognition
+17-52,because,,Function word,17,Cognition
+17-53,if,,Function word,17,Cognition
+17-54,or,,Function word,17,Cognition
+17-55,yes,,Function word,17,Cognition
+17-56,no,,Function word,17,Cognition
+17-61,how?,,Function word,17,Cognition
+17-62,how many?,,Function word,17,Cognition
+17-63,how much?,,Function word,17,Cognition
+17-64,what?,,Function word,17,Cognition
+17-65,when?,,Function word,17,Cognition
+17-66,where?,,Function word,17,Cognition
+17-67,which?,,Function word,17,Cognition
+17-68,who?,,Function word,17,Cognition
+17-69,why?,,Function word,17,Cognition
+18-11,the voice,,Noun,18,Speech and language
+18-12,to sing,,Verb,18,Speech and language
+18-13,to shout,,Verb,18,Speech and language
+18-15,to whisper,,Verb,18,Speech and language
+18-16,to mumble,,Verb,18,Speech and language
+18-17,to whistle,,Verb,18,Speech and language
+18-18,to shriek,,Verb,18,Speech and language
+18-19,to howl,,Verb,18,Speech and language
+18-21,to speak or talk,,Verb,18,Speech and language
+18-211,to stutter or stammer,,Verb,18,Speech and language
+18-22,to say,,Verb,18,Speech and language
+18-221,to tell,,Verb,18,Speech and language
+18-222,the speech,,Noun,18,Speech and language
+18-23,to be silent,,Verb,18,Speech and language
+18-24,the language,,Noun,18,Speech and language
+18-26,the word,,Noun,18,Speech and language
+18-28,the name,,Noun,18,Speech and language
+18-31,to ask(1),,Verb,18,Speech and language
+18-32,to answer,,Verb,18,Speech and language
+18-33,to admit,,Verb,18,Speech and language
+18-34,to deny,,Verb,18,Speech and language
+18-35,to ask(2),,Verb,18,Speech and language
+18-36,to promise,,Verb,18,Speech and language
+18-37,to refuse,,Verb,18,Speech and language
+18-38,to forbid,,Verb,18,Speech and language
+18-39,to scold,,Verb,18,Speech and language
+18-41,to call(1),,Verb,18,Speech and language
+18-42,to call(2),,Verb,18,Speech and language
+18-43,to announce,,Verb,18,Speech and language
+18-44,to threaten,,Verb,18,Speech and language
+18-45,to boast,,Verb,18,Speech and language
+18-51,to write,,Verb,18,Speech and language
+18-52,to read,,Verb,18,Speech and language
+18-56,the paper,,Noun,18,Speech and language
+18-57,the pen,,Noun,18,Speech and language
+18-61,the book,,Noun,18,Speech and language
+18-67,the poet,,Noun,18,Speech and language
+18-71,the flute,,Noun,18,Speech and language
+18-72,the drum,,Noun,18,Speech and language
+18-73,the horn or trumpet,,Noun,18,Speech and language
+18-74,the rattle,,Noun,18,Speech and language
+19-11,the country,,Noun,19,Social and political relations
+19-15,the town,,Noun,19,Social and political relations
+19-16,the village,,Noun,19,Social and political relations
+19-17,the boundary,,Noun,19,Social and political relations
+19-21,the people,,Noun,19,Social and political relations
+19-23,the clan,,Noun,19,Social and political relations
+19-24,the chieftain,,Noun,19,Social and political relations
+19-25,the walking stick,,Noun,19,Social and political relations
+19-31,to rule or govern,,Verb,19,Social and political relations
+19-32,the king,,Noun,19,Social and political relations
+19-33,the queen,,Noun,19,Social and political relations
+19-36,the noble,,Noun,19,Social and political relations
+19-37,the citizen,,Noun,19,Social and political relations
+19-41,the master,,Noun,19,Social and political relations
+19-42,the slave,,Noun,19,Social and political relations
+19-43,the servant,,Noun,19,Social and political relations
+19-44,the freeman,,Noun,19,Social and political relations
+19-45,to command or order,,Verb,19,Social and political relations
+19-46,to obey,,Verb,19,Social and political relations
+19-47,to permit,,Verb,19,Social and political relations
+19-51,the friend,,Noun,19,Social and political relations
+19-52,the enemy,,Noun,19,Social and political relations
+19-54,the neighbour,,Noun,19,Social and political relations
+19-55,the stranger,,Noun,19,Social and political relations
+19-56,the guest,,Noun,19,Social and political relations
+19-57,the host,,Noun,19,Social and political relations
+19-58,to help,,Verb,19,Social and political relations
+19-59,to prevent,,Verb,19,Social and political relations
+19-61,the custom,,Noun,19,Social and political relations
+19-62,the quarrel,,Noun,19,Social and political relations
+19-63,the plot,,Noun,19,Social and political relations
+19-65,to meet,,Verb,19,Social and political relations
+19-72,the prostitute,,Noun,19,Social and political relations
+20-11,to fight,,Verb,20,Warfare and hunting
+20-13,the war or battle,,Noun,20,Warfare and hunting
+20-14,the peace,,Noun,20,Warfare and hunting
+20-15,the army,,Noun,20,Warfare and hunting
+20-17,the soldier,,Noun,20,Warfare and hunting
+20-21,the weapons,,Noun,20,Warfare and hunting
+20-22,the club,,Noun,20,Warfare and hunting
+20-23,the sling,,Noun,20,Warfare and hunting
+20-24,the bow,,Noun,20,Warfare and hunting
+20-25,the arrow,,Noun,20,Warfare and hunting
+20-26,the spear,,Noun,20,Warfare and hunting
+20-27,the sword,,Noun,20,Warfare and hunting
+20-28,the gun,,Noun,20,Warfare and hunting
+20-33,the helmet,,Noun,20,Warfare and hunting
+20-34,the shield,,Noun,20,Warfare and hunting
+20-35,the fortress,,Noun,20,Warfare and hunting
+20-36,the tower,,Noun,20,Warfare and hunting
+20-41,the victory,,Noun,20,Warfare and hunting
+20-42,the defeat,,Noun,20,Warfare and hunting
+20-43,the attack,,Noun,20,Warfare and hunting
+20-44,to defend,,Verb,20,Warfare and hunting
+20-45,to retreat,,Verb,20,Warfare and hunting
+20-46,to surrender,,Verb,20,Warfare and hunting
+20-47,the captive or prisoner,,Noun,20,Warfare and hunting
+20-471,the guard,,Noun,20,Warfare and hunting
+20-48,the booty,,Noun,20,Warfare and hunting
+20-49,the ambush,,Noun,20,Warfare and hunting
+20-51,the fisherman,,Noun,20,Warfare and hunting
+20-52,the fishhook,,Noun,20,Warfare and hunting
+20-53,the fishing line,,Noun,20,Warfare and hunting
+20-54,the fishnet,,Noun,20,Warfare and hunting
+20-55,the fish trap,,Noun,20,Warfare and hunting
+20-56,the bait,,Noun,20,Warfare and hunting
+20-61,to hunt,,Verb,20,Warfare and hunting
+20-62,to shoot,,Verb,20,Warfare and hunting
+20-63,to miss,,Verb,20,Warfare and hunting
+20-64,the trap,,Noun,20,Warfare and hunting
+20-65,to trap,,Verb,20,Warfare and hunting
+21-11,the law,,Noun,21,Law
+21-15,the court,,Noun,21,Law
+12-013,at,,Function word,12,Spatial relations
+21-16,to adjudicate,,Verb,21,Law
+21-17,the judgment,,Noun,21,Law
+21-18,the judge,,Noun,21,Law
+21-21,the plaintiff,,Noun,21,Law
+21-22,the defendant,,Noun,21,Law
+21-23,the witness,,Noun,21,Law
+21-24,to swear,,Verb,21,Law
+21-25,the oath,,Noun,21,Law
+21-31,to accuse,,Verb,21,Law
+21-32,to condemn,,Verb,21,Law
+21-33,to convict,,Verb,21,Law
+21-35,guilty,,Adjective,21,Law
+21-37,the penalty or punishment,,Noun,21,Law
+21-38,the fine,,Noun,21,Law
+21-39,the prison,,Noun,21,Law
+21-42,the murder,,Noun,21,Law
+21-43,the adultery,,Noun,21,Law
+21-44,the rape,,Noun,21,Law
+21-51,to steal,,Verb,21,Law
+21-52,the thief,,Noun,21,Law
+22-11,the religion,,Noun,22,Religion and belief
+22-12,the god,,Noun,22,Religion and belief
+22-13,the temple,,Noun,22,Religion and belief
+22-14,the altar,,Noun,22,Religion and belief
+22-15,the sacrifice,,Noun,22,Religion and belief
+22-16,to worship,,Verb,22,Religion and belief
+22-17,to pray,,Verb,22,Religion and belief
+22-18,the priest,,Noun,22,Religion and belief
+22-19,holy,,Adjective,22,Religion and belief
+22-22,to preach,,Verb,22,Religion and belief
+22-23,to bless,,Verb,22,Religion and belief
+22-24,to curse,,Verb,22,Religion and belief
+22-26,to fast,,Verb,22,Religion and belief
+22-31,the heaven,,Noun,22,Religion and belief
+22-32,the hell,,Noun,22,Religion and belief
+22-35,the demon,,Noun,22,Religion and belief
+22-37,the idol,,Noun,22,Religion and belief
+22-42,the magic,,Noun,22,Religion and belief
+22-43,the sorcerer or witch,,Noun,22,Religion and belief
+22-44,the fairy or elf,,Noun,22,Religion and belief
+22-45,the ghost,,Noun,22,Religion and belief
+22-47,the omen,,Noun,22,Religion and belief
+23-1,the radio,,Noun,23,Modern world
+23-11,the television,,Noun,23,Modern world
+23-12,the telephone,,Noun,23,Modern world
+23-135,the motorcycle,,Noun,23,Modern world
+23-14,the car,,Noun,23,Modern world
+23-15,the bus,,Noun,23,Modern world
+23-16,the airplane,,Noun,23,Modern world
+23-17,the electricity,,Noun,23,Modern world
+23-175,the battery,,Noun,23,Modern world
+23-2,the hospital,,Noun,23,Modern world
+23-21,the nurse,,Noun,23,Modern world
+23-22,the pill or tablet,,Noun,23,Modern world
+23-23,the injection,,Noun,23,Modern world
+23-5,the tap/faucet,,Noun,23,Modern world
+23-51,the sink,,Noun,23,Modern world
+23-52,the toilet,,Noun,23,Modern world
+23-53,the mattress,,Noun,23,Modern world
+23-3,the government,,Noun,23,Modern world
+23-31,the president,,Noun,23,Modern world
+23-32,the minister,,Noun,23,Modern world
+23-33,the police,,Noun,23,Modern world
+23-34,the driver's license,,Noun,23,Modern world
+23-37,the crime,,Noun,23,Modern world
+23-38,the election,,Noun,23,Modern world
+23-4,the post/mail,,Noun,23,Modern world
+23-41,the postage stamp,,Noun,23,Modern world
+23-42,the letter,,Noun,23,Modern world
+23-44,the bank,,Noun,23,Modern world
+23-54,the tin/can,,Noun,23,Modern world
+23-55,the screw,,Noun,23,Modern world
+23-555,the screwdriver,,Noun,23,Modern world
+23-56,the bottle,,Noun,23,Modern world
+23-565,the candy/sweets,,Noun,23,Modern world
+23-24,the spectacles/glasses,,Noun,23,Modern world
+23-57,the plastic,,Noun,23,Modern world
+23-575,the bomb,,Noun,23,Modern world
+23-58,the workshop,,Noun,23,Modern world
+23-59,the cigarette,,Noun,23,Modern world
+23-61,the calendar,,Noun,23,Modern world
+23-62,the film/movie,,Noun,23,Modern world
+23-63,the music,,Noun,23,Modern world
+23-64,the song,,Noun,23,Modern world
+23-6,the newspaper,,Noun,23,Modern world
+23-385,the address,,Noun,23,Modern world
+23-39,the number,,Noun,23,Modern world
+23-155,the train,,Noun,23,Modern world
+23-36,the birth certificate,,Noun,23,Modern world
+23-18,to brake,,Verb,23,Modern world
+23-195,the petroleum,,Noun,23,Modern world
+23-185,the motor,,Noun,23,Modern world
+23-19,the machine,,Noun,23,Modern world
+23-13,the bicycle,,Noun,23,Modern world
+23-395,the street,,Noun,23,Modern world
+19-445,to liberate,,Verb,19,Social and political relations
+19-565,to invite,,Verb,19,Social and political relations
+23-35,the license plate,,Noun,23,Modern world
+23-43,the postcard,,Noun,23,Modern world
+24-01,to be,,Verb,24,Miscellaneous function words
+24-02,to become,,Verb,24,Miscellaneous function words
+24-03,without,,Function word,24,Miscellaneous function words
+24-05,through,,Function word,24,Miscellaneous function words
+24-13,same,,Function word,24,Miscellaneous function words
+24-06,not,,Function word,24,Miscellaneous function words
+24-07,this,,Function word,24,Miscellaneous function words
+24-08,that,,Function word,24,Miscellaneous function words
+24-09,here,,Function word,24,Miscellaneous function words
+24-1,there,,Function word,24,Miscellaneous function words
+24-11,other,,Function word,24,Miscellaneous function words
+4-493,the vagina,,Noun,4,The body
+23-9,the tea,,Noun,23,Modern world
+23-91,the coffee,,Noun,23,Modern world
+24-12,next,,Function word,24,Miscellaneous function words
+3-863,the hare,,Noun,3,Animals
+3-865,the quail,,Noun,3,Animals
+3-869,the squirrel,,Noun,3,Animals
+10-79,the sledge/sled,,Noun,10,Motion
+8-993,the needle(2),,Noun,8,Agriculture and vegetation
+1-771,the arctic lights,,Noun,1,The physical world
+4-465,the sinew or tendon,,Noun,4,The body
+6-98,the snowshoe,,Noun,6,Clothing and grooming
+22-5,the circumcision,,Noun,22,Religion and belief
+22-51,the initiation ceremony,,Noun,22,Religion and belief
+8-996,the cone,,Noun,8,Agriculture and vegetation
+3-8112,the body louse,,Noun,3,Animals
+4-494,the vulva,,Noun,4,The body
+9-93,the whetstone,,Noun,9,Basic actions and technology
+7-65,the camp,,Noun,7,The house
+3-597,the cormorant,,Noun,3,Animals
+3-833,the prawns or shrimp,,Noun,3,Animals
+3-834,the termites,,Noun,3,Animals
+3-835,the tick,,Noun,3,Animals
+9-87,the boomerang,,Noun,9,Basic actions and technology
+3-88,the kangaroo,,Noun,3,Animals
+3-89,the anteater,,Noun,3,Animals
+7-66,the hammock,,Noun,7,The house
+8-911,the millet or sorghum,,Noun,8,Agriculture and vegetation
+3-913,the chameleon,,Noun,3,Animals
+9-9,to draw water,,Verb,9,Basic actions and technology
+9-91,the peg,,Noun,9,Basic actions and technology
+3-917,the buffalo,,Noun,3,Animals
+1-411,the savanna,,Noun,1,The physical world
+1-831,the steam,,Noun,1,The physical world
+2-4561,the older sibling,,Noun,2,Kinship
+2-4562,the younger sibling,,Noun,2,Kinship
+2-5,the grandchild,,Noun,2,Kinship
+2-541,the sibling’s child,,Noun,2,Kinship
+2-622,the parents-in-law,,Noun,2,Kinship
+2-6411,the child-in-law,,Noun,2,Kinship
+2-6412,the sibling-in-law,,Noun,2,Kinship
+2-931,he,,Function word,2,Kinship
+2-932,she,,Function word,2,Kinship
+2-933,it,,Function word,2,Kinship
+4-741,the life,,Noun,4,The body
+4-771,the carcass,,Noun,4,The body
+4-844,the disease,,Noun,4,The body
+7-232,the padlock,,Noun,7,The house
+11-29,to damage,,Verb,11,Possession
+12-081,above,,Function word,12,Spatial relations
+13-231,the piece,,Noun,13,Quantity
+13-331,alone,,Adjective,13,Quantity
+14-251,the beginning,,Noun,14,Time
+14-411,the day(2),,Noun,14,Time
+22-131,the church,,Noun,22,Religion and belief
+22-132,the mosque,,Noun,22,Religion and belief
+4-7501,dead,,Adjective,4,The body
+4-8541,to scratch,,Verb,4,The body
+9-111,to make,,Verb,9,Basic actions and technology
+4-431,the belly,,Noun,4,The body
+9-311,to wipe,,Verb,9,Basic actions and technology
+1-775,to freeze,,Verb,1,The physical world
+24-04,with,,Function word,24,Miscellaneous function words
+12-012,in,,Function word,12,Spatial relations
+9-99938,to support,,Verb,9,Basic actions and technology
+11-99902,the card,,Noun,11,Possession
+11-99904,the property,,Noun,11,Possession
+13-99903,each or every,,Function word,13,Quantity
+13-99908,to substitute,,Function word,13,Quantity
+14-99906,the time(2),,Noun,14,Time
+17-99905,the state,,Noun,17,Cognition
+18-99904,the poem,,Noun,18,Speech and language
+18-99909,to greet,,Verb,18,Speech and language
+19-99901,Arabia,,Noun,19,Social and political relations
+19-99907,India,,Noun,19,Social and political relations
+19-99908,Madagascar,,Noun,19,Social and political relations
+19-99914,the certificate,,Noun,19,Social and political relations
+19-99938,to commit a crime,,Verb,19,Social and political relations
+23-99901,the license,,Noun,23,Modern world

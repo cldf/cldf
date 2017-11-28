@@ -5,14 +5,14 @@
             "@language": "en"
         }
     ],
-    "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#StructureDataset",
+    "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#Wordlist",
     "dc:source": "sources.bib",
     "dialect": {
         "commentPrefix": null
     },
     "tables": [
         {
-            "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#ValueTable",
+            "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#FormTable",
             "tableSchema": {
                 "columns": [
                     {
@@ -38,19 +38,16 @@
                     },
                     {
                         "datatype": "string",
-                        "null": [
-                            "?",
-                            ""
-                        ],
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#value",
-                        "required": false,
-                        "name": "Value"
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#form",
+                        "required": true,
+                        "name": "Form"
                     },
                     {
                         "datatype": "string",
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#codeReference",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#segments",
                         "required": false,
-                        "name": "Code_ID"
+                        "separator": " ",
+                        "name": "Segments"
                     },
                     {
                         "datatype": "string",
@@ -88,24 +85,13 @@
                                 "ID"
                             ]
                         }
-                    },
-                    {
-                        "columnReference": [
-                            "Code_ID"
-                        ],
-                        "reference": {
-                            "resource": "codes.csv",
-                            "columnReference": [
-                                "ID"
-                            ]
-                        }
                     }
                 ],
                 "primaryKey": [
                     "ID"
                 ]
             },
-            "url": "values.csv"
+            "url": "forms.csv"
         },
         {
             "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#LanguageTable",
@@ -170,14 +156,6 @@
                         "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#iso639P3code",
                         "required": false,
                         "name": "ISO639P3code"
-                    },
-                    {
-                        "datatype": "string",
-                        "name": "Genus"
-                    },
-                    {
-                        "datatype": "string",
-                        "name": "Family"
                     }
                 ],
                 "primaryKey": [
@@ -213,15 +191,7 @@
                     },
                     {
                         "datatype": "string",
-                        "name": "Authors"
-                    },
-                    {
-                        "datatype": "string",
-                        "name": "Url"
-                    },
-                    {
-                        "datatype": "string",
-                        "name": "Area"
+                        "name": "Concepticon_ID"
                     }
                 ],
                 "primaryKey": [
@@ -231,7 +201,7 @@
             "url": "parameters.csv"
         },
         {
-            "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#CodeTable",
+            "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#CognateTable",
             "tableSchema": {
                 "columns": [
                     {
@@ -245,30 +215,48 @@
                     },
                     {
                         "datatype": "string",
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#parameterReference",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#formReference",
                         "required": true,
-                        "name": "Parameter_ID"
+                        "name": "Form_ID"
                     },
                     {
                         "datatype": "string",
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#name",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#cognatesetReference",
+                        "required": true,
+                        "name": "Cognateset_ID"
+                    },
+                    {
+                        "datatype": {
+                            "base": "string",
+                            "format": "\\d+(:\\d+)?"
+                        },
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#segmentSlice",
                         "required": false,
-                        "name": "Name"
+                        "separator": " ",
+                        "name": "Segment_Slice"
                     },
                     {
                         "datatype": "string",
-                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#description",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#alignment",
                         "required": false,
-                        "name": "Description"
+                        "separator": " ",
+                        "name": "Alignment"
+                    },
+                    {
+                        "datatype": "string",
+                        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#source",
+                        "required": false,
+                        "separator": ";",
+                        "name": "Source"
                     }
                 ],
                 "foreignKeys": [
                     {
                         "columnReference": [
-                            "Parameter_ID"
+                            "Form_ID"
                         ],
                         "reference": {
-                            "resource": "parameters.csv",
+                            "resource": "forms.csv",
                             "columnReference": [
                                 "ID"
                             ]
@@ -279,7 +267,7 @@
                     "ID"
                 ]
             },
-            "url": "codes.csv"
+            "url": "cognates.csv"
         }
     ]
 }

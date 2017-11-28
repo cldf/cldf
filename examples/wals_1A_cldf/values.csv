@@ -22,6 +22,7 @@ ID,Language_ID,Parameter_ID,Value,Code_ID,Comment,Source
 1A-ame,ame,1A,2,1A-2,,Roberts-1987
 1A-amh,amh,1A,4,1A-4,,Hayward-and-Hayward-1999
 1A-amo,amo,1A,3,1A-3,,Anderson-1980;Di-Luzio-1972
+1A-amu,amu,1A,3,1A-3,,Fast-1953;Wise-1958
 1A-amz,amz,1A,3,1A-3,,Bauernschmidt-1965;Longacre-1966
 1A-adk,adk,1A,1,1A-1,,Landaburu-1979
 1A-ant,ant,1A,1,1A-1,,Huisman-1973;Huisman-et-al-1981;Huisman-and-Lloyd-1981
@@ -46,7 +47,6 @@ ID,Language_ID,Parameter_ID,Value,Code_ID,Comment,Source
 1A-aze,aze,1A,3,1A-3,,Householder-and-Lofti-1965
 1A-bag,bag,1A,4,1A-4,,Stevenson-1969
 1A-bai,bai,1A,2,1A-2,,Dell-1981
-1A-bng,bng,1A,1,1A-1,,Parker-and-Parker-1974
 1A-baj,baj,1A,4,1A-4,,Verheijen-1986
 1A-bki,bki,1A,2,1A-2,,Wheatley-1969;Wheatley-1973
 1A-bam,bam,1A,3,1A-3,,Bird-et-al-1977
@@ -102,7 +102,6 @@ ID,Language_ID,Parameter_ID,Value,Code_ID,Comment,Source
 1A-chp,chp,1A,5,1A-5,,Li-1933;Li-1946;Li-1932
 1A-cve,cve,1A,1,1A-1,,Thurman-1970
 1A-chk,chk,1A,2,1A-2,,Krause-1980;Skorik-1968;Skorik-1961
-1A-chu,chu,1A,3,1A-3,,Stell-1972
 1A-chv,chv,1A,3,1A-3,,Krueger-1961;Andreev-1966
 1A-cil,cil,1A,3,1A-3,,de-Schryver-1999
 1A-ccp,ccp,1A,3,1A-3,,Crawford-1966[13]
@@ -373,6 +372,7 @@ ID,Language_ID,Parameter_ID,Value,Code_ID,Comment,Source
 1A-nti,nti,1A,5,1A-5,,Kutsch-Lojenga-1994
 1A-ngz,ngz,1A,5,1A-5,,Schuh-1981
 1A-nim,nim,1A,1,1A-1,,Anceaux-1965
+1A-chu,chu,1A,3,1A-3,,Stell-1972
 1A-niv,niv,1A,4,1A-4,,Gruzdeva-1998;Krejnovich-1937
 1A-nko,nko,1A,3,1A-3,,Taylor-1985
 1A-nob,nob,1A,2,1A-2,,Bell-1968;Werner-1987;Bell-1971
@@ -413,6 +413,7 @@ ID,Language_ID,Parameter_ID,Value,Code_ID,Comment,Source
 1A-pol,pol,1A,5,1A-5,,
 1A-pso,pso,1A,4,1A-4,,Moshinsky-1974
 1A-pur,pur,1A,4,1A-4,,Foster-1969;Chamereau-2000;de-Paul-1989
+1A-bng,bng,1A,1,1A-1,,Parker-and-Parker-1974
 1A-qaw,qaw,1A,3,1A-3,,Clairis-1977;Clairis-1985
 1A-qco,qco,1A,4,1A-4,,Lastra-1968
 1A-qui,qui,1A,4,1A-4,,Hoard-1993;Powell-1975
@@ -537,7 +538,6 @@ ID,Language_ID,Parameter_ID,Value,Code_ID,Comment,Source
 1A-yag,yag,1A,1,1A-1,,Payne-1985
 1A-ykt,ykt,1A,3,1A-3,,Ubrjatova-1966;Bohtlingk-1964;Krueger-1962
 1A-yan,yan,1A,3,1A-3,,Sapir-and-Swadesh-1960
-1A-amu,amu,1A,3,1A-3,,Fast-1953;Wise-1958
 1A-yny,yny,1A,4,1A-4,,Kirton-and-Charlie-1978;Kirton-1967;Huttar-and-Kirton-1981
 1A-yap,yap,1A,3,1A-3,,Jensen-et-al-1977a;Hsu-1969
 1A-yaq,yaq,1A,2,1A-2,,Dedrick-and-Casad-1999;Kurath-and-Spicer-1947
