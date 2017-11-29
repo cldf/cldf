@@ -1,6 +1,6 @@
 {
     "url": "alignmentAnnotation.csv",
-    "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#alignmentAnnotation",
+    "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#alignmentAnnotationTable",
     "tableSchema": {
         "columns": [
             {
@@ -13,15 +13,9 @@
                 }
             },
             {
-                "name": "Form_ID",
+                "name": "Alignment_ID",
                 "required": true,
-                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#formReference",
-                "datatype": "string"
-            },
-            {
-                "name": "Cognateset_ID",
-                "required": true,
-                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#cognatesetReference",
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#alignmentReference",
                 "datatype": "string"
             },
             {
@@ -35,20 +29,16 @@
                 "separator": " "
             },
             {
-                "name": "Alignment",
+                "name": "AnnotationKind",
                 "required": false,
-                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#alignment",
-                "datatype": "string",
-                "separator": " "
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#name",
+                "datatype": "string"
             },
             {
-                "name": "Source",
+                "name": "Annotation",
                 "required": false,
-                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#source",
-                "datatype": {
-                    "base": "string"
-                },
-                "separator": ";"
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#name",
+                "datatype": "string"
             }
         ]
     }
