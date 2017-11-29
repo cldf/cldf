@@ -29,7 +29,7 @@
                 "separator": " "
             },
             {
-                "name": "AnnotationKind",
+                "name": "AnnotationType",
                 "required": false,
                 "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#name",
                 "datatype": "string"
