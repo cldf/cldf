@@ -1,0 +1,3 @@
+# Parallel Text Dataset
+
+A parallel text typically consist of a set of meanings that are translated into different languages. The meanings are documented as [`Parameters`](../../components/parameters), or as links to other identifiers. The linguistic expressions of the meanings are collected in a [`FormTable`](../../components/forms). The encoding of the functional equivalent parts between the linguistic expressions is encoded in a [`FunctionalEquivalentsTable`](../../components/functionalequivalents), possibly using an [`AlignmentAnnotationTable`](../../components/alignmentannotation) to specifiy more information about the functional equivalents. The minimal specification of a Parallel Text consist of a `FormTable`.
