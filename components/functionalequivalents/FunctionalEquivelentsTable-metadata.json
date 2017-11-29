@@ -31,7 +31,7 @@
             {
                 "name": "FunctionalEquivalentsSet",
                 "required": false,
-                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#FunctionalEquivalentsSet",
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#functionalEquivalentsSet",
                 "datatype": "string",
                 "separator": " "
             },
