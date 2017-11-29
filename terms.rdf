@@ -522,7 +522,7 @@
     -->
     <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#functionalEquivalentsSet" dc:type="functional-property">
         <rdfs:comment rdf:parseType="Literal">
-            <p>A functional equivalents set if a group of strings from different languages that express similar function.
+            <p>A functional equivalents set is a group of strings from different languages that express similar function.
                 In practice this is an arbitrary name binding together a group of forms from different languages.
             </p>
         </rdfs:comment>
