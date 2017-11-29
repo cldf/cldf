@@ -6,7 +6,7 @@ Such alignments are actually secondary tables within the CSV structure of the CL
 
 Within such an alignment column we assume that the strings are aligned, so we can refer to a single column by a [`segmentSlice`](http://cldf.clld.org/v1.0/terms.rdf#segmentSlice") of an enumeration of the columns. For example, a reference to columns 3 and 4 of the alignments is simply `3:4` or `3 4`.
 
-Any annotation can be specified in the `Annotation` column. In some cases, it is practical to name what kind of annotation it is, which can be specified in the column `AnnotationType`. For example, to make an annotation with a standard orthography, the actual orthographic strings are the `Annotation`, but the `AnnotationType` could specify that all these annotations are of the type `standard orthography`.
+Any annotation can be specified in the `Annotation` column. In some cases, it is practical to name what type of annotation it is, which can be specified by using the secondary separator ":".
 
 # Example
 
@@ -22,11 +22,11 @@ s k u: l -
 We can now make annotation like
 
 ```
-Segment_Slice Annotation AnnotationType
-1 2           MERGE      
-5             IGNORE     
-1 2           sch        German orthography
-3             u          German orthography
-4             l          German orthography
-5             e          German orthography
+Segment_Slice Annotation
+1 2           MERGE
+5             IGNORE
+1 2           German orthography:sch
+3             German orthography:u
+4             German orthography:l
+5             German orthography:e
 ```
