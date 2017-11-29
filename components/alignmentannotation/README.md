@@ -16,7 +16,7 @@ Consider a `cognates.csv` with a column `Alignment` like this:
 Alignment
 s x o: l -
 s k u: l -
-ʃ  u: l ə
+ʃ - u: l ə
 ```
 
 We can now make annotation like
