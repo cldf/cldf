@@ -349,7 +349,8 @@ types are specified as *components* in a way that can be re-used across modules 
 - [Cognates](components/cognates/)
 - [CognateSets](components/cognatesets)
 - [Borrowings](components/borrowings/)
-- [FunctionalEquivalents](components/functionalequivalents)
+- [Functional Equivalents](components/functionalequivalents)
+- [Functional Equivalents Sets](components/functionalequivalentssets)
 
 A component corresponds to a certain type of data. Thus, to make sure all instances of
 such a type have the same set of properties, we allow at most one component for each type

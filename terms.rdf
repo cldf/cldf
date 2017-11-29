@@ -236,6 +236,23 @@
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Foreign_key" />
     </rdf:Property>
 
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#functionalEquivalentsSetReference"
+                  dc:type="reference-property">
+        <rdfs:comment rdf:parseType="Literal">
+            <p> A functional equivalents set is a group of strings from different languages that express similar function.
+                This is an identifier referencing a cognateset either
+                <ul>
+                    <li>by providing a foreign key into the FunctionalEquivalentsSetTable or</li>
+                    <li>by using a known encoding scheme.</li>
+                </ul>
+            </p>
+        </rdfs:comment>
+        <dc:references rdf:resource="#FunctionalEquivalentsSetTable"/>
+        <csvw:name>"FunctionalEquivalentsSets_ID"</csvw:name>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/references" />
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Foreign_key" />
+    </rdf:Property>
+
     <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#concepticonReference"
                   dc:type="reference-property">
         <rdfs:comment>
@@ -518,19 +535,6 @@
     </rdf:Property>
 
     <!--
-        Functional properties
-    -->
-    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#functionalEquivalentsSet" dc:type="functional-property">
-        <rdfs:comment rdf:parseType="Literal">
-            <p>A functional equivalents set is a group of strings from different languages that express similar function.
-                In practice this is an arbitrary name binding together a group of forms from different languages.
-            </p>
-        </rdfs:comment>
-        <csvw:name>"FunctionalEquivalentsSet"</csvw:name>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-    </rdf:Property>
-
-    <!--
         CLDF modules
     -->
     <rdfs:Class rdf:about="http://cldf.clld.org/v1.0/terms.rdf#Generic" dc:type="module">
@@ -699,4 +703,15 @@
         </rdfs:comment>
         <csvw:url>"functionEquivalents.csv"</csvw:url>
     </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://cldf.clld.org/v1.0/terms.rdf#FunctionalEquivalentsSetsTable" dc:type="table">
+        <csvw:name xml:lang="en">"FunctionalEquivalentsSetsTable"</csvw:name>
+        <rdfs:comment>
+            The table to list all sets of functional equivalents from a 
+            "http://cldf.clld.org/v1.0/terms.rdf#FunctionalEquivalentsTable" and adding descriptions for these 
+            sets
+        </rdfs:comment>
+        <csvw:url>"functionEquivalentsSets.csv"</csvw:url>
+    </rdfs:Class>
+    
 </rdf:RDF>

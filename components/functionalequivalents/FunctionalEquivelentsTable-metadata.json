@@ -29,9 +29,9 @@
                 "separator": " "
             },
             {
-                "name": "FunctionalEquivalentsSet",
+                "name": "FunctionalEquivalentsSet_ID",
                 "required": false,
-                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#functionalEquivalentsSet",
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#functionalEquivalentsSetReference",
                 "datatype": "string",
                 "separator": " "
             },
