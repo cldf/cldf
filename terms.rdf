@@ -236,19 +236,19 @@
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Foreign_key" />
     </rdf:Property>
 
-    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#functionalEquivalentsSetReference"
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#functionalEquivalentsetReference"
                   dc:type="reference-property">
         <rdfs:comment rdf:parseType="Literal">
-            <p> A functional equivalents set is a group of strings from different languages that express similar function.
+            <p> A functional equivalent set is a group of strings from different languages that express similar function.
                 This is an identifier referencing a cognateset either
                 <ul>
-                    <li>by providing a foreign key into the FunctionalEquivalentsSetTable or</li>
+                    <li>by providing a foreign key into the FunctionalEquivalentsetTable or</li>
                     <li>by using a known encoding scheme.</li>
                 </ul>
             </p>
         </rdfs:comment>
-        <dc:references rdf:resource="#FunctionalEquivalentsSetTable"/>
-        <csvw:name>"FunctionalEquivalentsSet_ID"</csvw:name>
+        <dc:references rdf:resource="#FunctionalEquivalentsetTable"/>
+        <csvw:name>"FunctionalEquivalentset_ID"</csvw:name>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/references" />
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Foreign_key" />
     </rdf:Property>
@@ -425,7 +425,7 @@
             <p>An alignment represents
                 <a href="http://linguistics-ontology.org/gold/2010/Segment">segments</a>
                 which are grouped
-                into a common <a href="#cognateSet">cognate set</a> as a matrix in which cognate
+                into a common <a href="#cognatesetReference">cognate set</a> as a matrix in which cognate
                 segments are placed in the same column while gap characters are introduced in
                 those sound sequences missing a certain counterpart.</p>
         </rdfs:comment>
@@ -693,8 +693,8 @@
         <csvw:url>"parameters.csv"</csvw:url>
     </rdfs:Class>
     
-    <rdfs:Class rdf:about="http://cldf.clld.org/v1.0/terms.rdf#FunctionalEquivalentsTable" dc:type="table">
-        <csvw:name xml:lang="en">"FunctionalEquivalentsTable"</csvw:name>
+    <rdfs:Class rdf:about="http://cldf.clld.org/v1.0/terms.rdf#FunctionalEquivalentTable" dc:type="table">
+        <csvw:name xml:lang="en">"FunctionalEquivalentTable"</csvw:name>
         <rdfs:comment>
             A table to specify which parts of strings are functionally equivalent.
             This is typically used to parallel texts (i.e. expressions of the same content in different languages)
@@ -704,14 +704,14 @@
         <csvw:url>"functionalEquivalents.csv"</csvw:url>
     </rdfs:Class>
     
-    <rdfs:Class rdf:about="http://cldf.clld.org/v1.0/terms.rdf#FunctionalEquivalentsSetTable" dc:type="table">
-        <csvw:name xml:lang="en">"FunctionalEquivalentsSetTable"</csvw:name>
+    <rdfs:Class rdf:about="http://cldf.clld.org/v1.0/terms.rdf#FunctionalEquivalentsetTable" dc:type="table">
+        <csvw:name xml:lang="en">"FunctionalEquivalentsetTable"</csvw:name>
         <rdfs:comment>
             The table to list all sets of functional equivalents from a 
-            "http://cldf.clld.org/v1.0/terms.rdf#FunctionalEquivalentsTable" and adding descriptions for these 
+            "http://cldf.clld.org/v1.0/terms.rdf#FunctionalEquivalentTable" and adding descriptions for these 
             sets
         </rdfs:comment>
-        <csvw:url>"functionalEquivalentsSets.csv"</csvw:url>
+        <csvw:url>"functionalEquivalentsets.csv"</csvw:url>
     </rdfs:Class>
     
 </rdf:RDF>

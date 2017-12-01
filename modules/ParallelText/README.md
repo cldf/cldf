@@ -4,8 +4,8 @@ A parallel text typically consist of a set of meanings that are translated into 
 
 - The meanings are documented as [`Parameters`](../../components/parameters), or as links to other identifiers.
 - The linguistic expressions of the meanings are collected in a [`FormTable`](../../components/forms).
-- The functional equivalent parts between the linguistic expressions are encoded in a [`FunctionalEquivalentsTable`](../../components/functionalequivalents), 
-- possibly using an [`FunctionalEquivalentsSetsTable`](../../components/functionalequivalentssets) to specifiy more information about the functional equivalents.
+- The functional equivalent parts between the linguistic expressions are encoded in a [`FunctionalEquivalentTable`](../../components/functionalequivalents), 
+- possibly using an [`FunctionalEquivalentsetTable`](../../components/functionalequivalentsets) to specifiy more information about the functional equivalents.
 
 The minimal specification of a Parallel Text Dataset consist of a `FormTable`.
 
@@ -44,7 +44,7 @@ As an example, take the following extract from the Parallel Bible Corpus:
 | fe_5 | aak_40001002 | 3 | fes_5263 |
 | fe_6 | aau_40001002 | 2 4:5 | fes_5263 |
 
-## functionalEquivalentsSets.csv
+## functionalEquivalentsets.csv
 
 | ID | Description |
 | --- | --- |

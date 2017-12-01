@@ -1,6 +1,6 @@
 {
     "url": "functionalEquivalents.csv",
-    "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#FunctionalEquivalentsTable",
+    "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#FunctionalEquivalentTable",
     "tableSchema": {
         "columns": [
             {
@@ -19,9 +19,9 @@
                 "datatype": "string"
             },
             {
-                "name": "FunctionalEquivalentsSet_ID",
+                "name": "FunctionalEquivalentset_ID",
                 "required": true,
-                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#functionalEquivalentsSetReference",
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#functionalEquivalentsetReference",
                 "datatype": "string"
             },
             {
