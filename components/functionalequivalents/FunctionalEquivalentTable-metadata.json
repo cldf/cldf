@@ -22,7 +22,8 @@
                 "name": "FunctionalEquivalentset_ID",
                 "required": true,
                 "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#functionalEquivalentsetReference",
-                "datatype": "string"
+                "datatype": "string",
+                "separator": " "
             },
             {
                 "name": "Segment_Slice",

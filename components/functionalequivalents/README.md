@@ -1,6 +1,6 @@
 # Functional Equivalents
 
-Given some linguistic strings in different languages, this component allows for the annotation of functional equivalents, i.e. parts between the two strings that have express a similar function. This can be used for all kinds of resources, but the typical use-case will be the annotation of parallel texts. Given a collections of strings (e.g. sentences) that express the same content in different languages, this component can be used to express the insight that a part of one string is functionally equivalent to a part of another string. 
+Given some linguistic strings in different languages, this component allows for the annotation of functional equivalents, i.e. parts between the two strings that have express a similar function. This can be used for all kinds of resources, but the typical use-case will be the annotation of parallel texts. Given a collections of strings (e.g. sentences) that express the same content in different languages, this component can be used to express the insight that a part of one string is functionally equivalent to a part of another string.
 
 Such a functional alignment is in principle similar to a cognacy alignment (see the component [cognates](../cognates)), but it is very often a many-to-many mapping, and the ordering is often very irregular. This component allows for two different ways to encode such functional equivalents:
 
@@ -9,7 +9,9 @@ Such a functional alignment is in principle similar to a cognacy alignment (see 
 
 ## Explicit stand-off reference
 
-In this method, the string ('sentence'), encoded as a link to a [`FormTable`](../forms) in the column `Form_ID`, is assumed to be separated by spaces. Using the column `Segment_Slice` any set of such elements ('words') can be specified by their order-count (i.e. elements "3:5 7", referring to the third to fifth and seventh 'word'). One line in the `FunctionalEquivalentTable` specifies such a group of words, and assigns it to a `FunctionalEquivalentsSet_ID`, i.e. a group of lines in the table that express a similar function. Further information about these sets can be specified in the [`functionalEquivalentsetTable`](../functionalequivalentsets).
+In this method, the string ('sentence'), encoded as a link to a [`FormTable`](../forms) in the column `Form_ID`, is assumed to be separated by spaces. Using the column `Segment_Slice` any set of such elements ('words') can be specified by their order-count (i.e. elements "3:5 7", referring to the third to fifth and seventh 'word'). One line in the `FunctionalEquivalentTable` specifies such a group of words, and assigns it to a `FunctionalEquivalentsSet_ID`, i.e. a group of lines in the table that express a similar function. To obtain full generality, it is possible to assign a list of IDs separated by spaces.
+
+Further information about these sets can be specified in the [`functionalEquivalentsetTable`](../functionalequivalentsets).
 
 Note that this approach cannot deal with subparts of words. If you want to refer to, say, the first two letters of a word, then this part has to be separated separately. This means that first a new [`FormTable`](../forms) has to be made with a new separation (e.g. a morpheme separation). This can of course also be done via the [examples component](../examples).
 
