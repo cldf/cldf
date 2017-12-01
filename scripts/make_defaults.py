@@ -12,6 +12,7 @@ MODULES = {
     'Wordlist': ['forms'],
     'StructureDataset': ['values'],
     'Dictionary': ['entries', 'senses'],
+    'ParallelText': ['forms'],
 }
 
 COMPONENTS = {
@@ -124,6 +125,25 @@ COMPONENTS = {
             ('form', True),
             ('segments', False),
             ('comment', False),
+            ('source', False),
+        ]
+    },
+    'functionalequivalents': {
+        'table': 'FunctionalEquivalentsTable',
+        'columns': [
+            ('id', True),
+            ('formReference', True),
+            ('functionalEquivalentsSetReference', True),
+            ('segmentSlice', False),
+            ('alignment', False),
+            ('source', False),
+        ]
+    },
+    'functionalequivalentssets': {
+        'table': 'FunctionalEquivalentsSetTable',
+        'columns': [
+            ('id', True),
+            ('description', False),
             ('source', False),
         ]
     },

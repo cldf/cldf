@@ -248,7 +248,7 @@
             </p>
         </rdfs:comment>
         <dc:references rdf:resource="#FunctionalEquivalentsSetTable"/>
-        <csvw:name>"FunctionalEquivalentsSets_ID"</csvw:name>
+        <csvw:name>"FunctionalEquivalentsSet_ID"</csvw:name>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/references" />
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Foreign_key" />
     </rdf:Property>
@@ -701,17 +701,17 @@
             However, it can be used in general to annotated that two expression from different languages
             are functionally equivalent (but not necessarily cognate)
         </rdfs:comment>
-        <csvw:url>"functionEquivalents.csv"</csvw:url>
+        <csvw:url>"functionalEquivalents.csv"</csvw:url>
     </rdfs:Class>
     
-    <rdfs:Class rdf:about="http://cldf.clld.org/v1.0/terms.rdf#FunctionalEquivalentsSetsTable" dc:type="table">
-        <csvw:name xml:lang="en">"FunctionalEquivalentsSetsTable"</csvw:name>
+    <rdfs:Class rdf:about="http://cldf.clld.org/v1.0/terms.rdf#FunctionalEquivalentsSetTable" dc:type="table">
+        <csvw:name xml:lang="en">"FunctionalEquivalentsSetTable"</csvw:name>
         <rdfs:comment>
             The table to list all sets of functional equivalents from a 
             "http://cldf.clld.org/v1.0/terms.rdf#FunctionalEquivalentsTable" and adding descriptions for these 
             sets
         </rdfs:comment>
-        <csvw:url>"functionEquivalentsSets.csv"</csvw:url>
+        <csvw:url>"functionalEquivalentsSets.csv"</csvw:url>
     </rdfs:Class>
     
 </rdf:RDF>
