@@ -314,6 +314,7 @@ specification recognizes the following modules:
 - [Wordlist](modules/Wordlist/)
 - [Structure dataset](modules/StructureDataset/)
 - [Dictionary](modules/Dictionary/)
+- [Parallel text](modules/ParallelText)
 
 In addition, a CLDF dataset can be specified as 
 [*Generic*](http://cldf.cld.org/v1.0/terms.rdf#Generic), imposing no requirements
@@ -348,6 +349,8 @@ types are specified as *components* in a way that can be re-used across modules 
 - [Cognates](components/cognates/)
 - [CognateSets](components/cognatesets)
 - [Borrowings](components/borrowings/)
+- [Functional Equivalents](components/functionalequivalents)
+- [Functional Equivalents Sets](components/functionalequivalentssets)
 
 A component corresponds to a certain type of data. Thus, to make sure all instances of
 such a type have the same set of properties, we allow at most one component for each type

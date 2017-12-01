@@ -236,6 +236,23 @@
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Foreign_key" />
     </rdf:Property>
 
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#functionalEquivalentsSetReference"
+                  dc:type="reference-property">
+        <rdfs:comment rdf:parseType="Literal">
+            <p> A functional equivalents set is a group of strings from different languages that express similar function.
+                This is an identifier referencing a cognateset either
+                <ul>
+                    <li>by providing a foreign key into the FunctionalEquivalentsSetTable or</li>
+                    <li>by using a known encoding scheme.</li>
+                </ul>
+            </p>
+        </rdfs:comment>
+        <dc:references rdf:resource="#FunctionalEquivalentsSetTable"/>
+        <csvw:name>"FunctionalEquivalentsSets_ID"</csvw:name>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/references" />
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Foreign_key" />
+    </rdf:Property>
+
     <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#concepticonReference"
                   dc:type="reference-property">
         <rdfs:comment>
@@ -535,7 +552,7 @@
         <csvw:name xml:lang="en">"Wordlist"</csvw:name>
         <rdfs:comment rdf:parseType="Literal">
             <p>A dataset according to the
-                <a href="https://github.com/glottobank/cldf/tree/master/modules/wordlist">CLDF Wordlist</a>
+                <a href="https://github.com/glottobank/cldf/tree/master/modules/Wordlist">CLDF Wordlist</a>
                 specification</p>
         </rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
@@ -545,7 +562,7 @@
         <csvw:name xml:lang="en">"Dictionary"</csvw:name>
         <rdfs:comment rdf:parseType="Literal">
             <p>A dataset according to the
-                <a href="https://github.com/glottobank/cldf/tree/master/modules/dictionary">CLDF Dictionary</a>
+                <a href="https://github.com/glottobank/cldf/tree/master/modules/Dictionary">CLDF Dictionary</a>
                 specification</p>
         </rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
@@ -555,7 +572,17 @@
         <csvw:name xml:lang="en">"StructureDataset"</csvw:name>
         <rdfs:comment rdf:parseType="Literal">
             <p>A dataset according to the
-                <a href="https://github.com/glottobank/cldf/tree/master/modules/structure_dataset">CLDF Structure Dataset</a>
+                <a href="https://github.com/glottobank/cldf/tree/master/modules/StructureDataset">CLDF Structure Dataset</a>
+                specification</p>
+        </rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://cldf.clld.org/v1.0/terms.rdf#ParallelText" dc:type="module">
+        <csvw:name xml:lang="en">"ParallelText"</csvw:name>
+        <rdfs:comment rdf:parseType="Literal">
+            <p>A dataset according to the
+                <a href="https://github.com/glottobank/cldf/tree/master/modules/ParallelText">CLDF Parallel Text</a>
                 specification</p>
         </rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
@@ -665,4 +692,26 @@
         </rdfs:comment>
         <csvw:url>"parameters.csv"</csvw:url>
     </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://cldf.clld.org/v1.0/terms.rdf#FunctionalEquivalentsTable" dc:type="table">
+        <csvw:name xml:lang="en">"FunctionalEquivalentsTable"</csvw:name>
+        <rdfs:comment>
+            A table to specify which parts of strings are functionally equivalent.
+            This is typically used to parallel texts (i.e. expressions of the same content in different languages)
+            However, it can be used in general to annotated that two expression from different languages
+            are functionally equivalent (but not necessarily cognate)
+        </rdfs:comment>
+        <csvw:url>"functionEquivalents.csv"</csvw:url>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="http://cldf.clld.org/v1.0/terms.rdf#FunctionalEquivalentsSetsTable" dc:type="table">
+        <csvw:name xml:lang="en">"FunctionalEquivalentsSetsTable"</csvw:name>
+        <rdfs:comment>
+            The table to list all sets of functional equivalents from a 
+            "http://cldf.clld.org/v1.0/terms.rdf#FunctionalEquivalentsTable" and adding descriptions for these 
+            sets
+        </rdfs:comment>
+        <csvw:url>"functionEquivalentsSets.csv"</csvw:url>
+    </rdfs:Class>
+    
 </rdf:RDF>
