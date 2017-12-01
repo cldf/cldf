@@ -129,18 +129,18 @@ COMPONENTS = {
         ]
     },
     'functionalequivalents': {
-        'table': 'FunctionalEquivalentsTable',
+        'table': 'FunctionalEquivalentTable',
         'columns': [
             ('id', True),
             ('formReference', True),
-            ('functionalEquivalentsSetReference', True),
+            ('functionalEquivalentsetReference', True),
             ('segmentSlice', False),
             ('alignment', False),
             ('source', False),
         ]
     },
-    'functionalequivalentssets': {
-        'table': 'FunctionalEquivalentsSetTable',
+    'functionalequivalentsets': {
+        'table': 'FunctionalEquivalentsetTable',
         'columns': [
             ('id', True),
             ('description', False),
