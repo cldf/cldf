@@ -33,12 +33,13 @@ While the [JSON-LD dialect](https://www.w3.org/TR/tabular-metadata/#json-ld-dial
 A dataset can be CLDF conformant without providing a separate metadata description file. To do so, the dataset must *exactly* follow the default specification for the appropriate module regarding:
 
 - file names
-- column names
+- column names (for specified columns)
 - CSV dialect
 
 Thus, rather than not *having* any metadata, the dataset does not *specify*
 any; and instead it falls back to using the defaults, i.e. "free" as in "beer" not
-as in "gluten-free".
+as in "gluten-free". The CSV file may contain additional columns not specified in 
+the default module descriptions.
 
 The default file names and column names are described in [`components`](components). The default CSV dialect is [RFC4180](http://tools.ietf.org/html/rfc4180) using the [UTF-8](http://en.wikipedia.org/wiki/UTF-8) character encoding, i.e. use the CSV dialect specified by
 
