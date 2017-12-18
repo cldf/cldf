@@ -35,7 +35,7 @@ As an example, take the following extract from the Parallel Bible Corpus:
 
 ## functionalEquivalents.csv
 
-| ID | Form_ID | Segment_Slice | FunctionalEquivalentsSet_ID |
+| ID | Form_ID | Segment_Slice | FunctionalEquivalentset_ID |
 | --- | --- | --- | --- |
 | fe_1 | aai_40001001 | 3 | fes_678 |
 | fe_2 | aak_40001001 | 4:5 | fes_678 |
