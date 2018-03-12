@@ -9,7 +9,7 @@
 * [CLDF Dataset](#cldf-dataset)
    * [CLDF Metadata file](#cldf-metadata-file)
    * [CDLF Data files](#cldf-data-files)
-   * [Sources file](#sources-file)
+   * [Sources file](#source)
 * [CLDF Modules](#cldf-modules)
 * [CLDF Components](#cldf-components)
 * [Compatibility](#compatibility)
