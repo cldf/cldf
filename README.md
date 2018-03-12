@@ -349,7 +349,7 @@ types are specified as *components* in a way that can be re-used across modules 
 - [CognateSets](components/cognatesets)
 - [Borrowings](components/borrowings/)
 - [Functional Equivalents](components/functionalequivalents)
-- [Functional Equivalents Sets](components/functionalequivalentssets)
+- [Functional Equivalents Sets](components/functionalequivalentsets)
 
 A component corresponds to a certain type of data. Thus, to make sure all instances of
 such a type have the same set of properties, we allow at most one component for each type
@@ -371,10 +371,10 @@ To stipulate further discussion and help experiments with tools, some examples o
 
 Changes to the CLDF specification will be released as new versions, using
 a [Semantic Versioning](http://semver.org/) number scheme. While older versions
-can be accessed via [releases of this repository](releases) or from 
+can be accessed via [releases of this repository](https://github.com/cldf/cldf/releases) or from 
 [ZENODO](https://zenodo.org), where releases will be archived, the latest
 released version is also reflected in the `master` branch of this repository,
-i.e. whatever you see navigating the directory tree at [https://github.com/glottobank/cldf](https://github.com/glottobank/cldf/tree/master)
+i.e. whatever you see navigating the directory tree at [https://github.com/cldf/cldf](https://github.com/cldf/cldf/tree/master)
 reflects the latest released version of the specification.
 
 ## History
