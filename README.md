@@ -316,7 +316,7 @@ specification recognizes the following modules:
 - [Parallel text](modules/ParallelText)
 
 In addition, a CLDF dataset can be specified as 
-[*Generic*](http://cldf.cld.org/v1.0/terms.rdf#Generic), imposing no requirements
+[*Generic*](http://cldf.clld.org/v1.0/terms.rdf#Generic), imposing no requirements
 on tables or columns. Thus, *Generic* datasets are a way to evolve new data types 
 (to become recognized modules), while already providing (generic) tool support.
 
