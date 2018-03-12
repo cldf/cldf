@@ -88,7 +88,7 @@ Thus, using extended conformance via metadata, a dataset may
 - use non-standard file names,
 - use non-standard column names,
 - add metadata describing attribution and provenance of the data,
-- specify [relations between multiple tables](http://w3c.github.io/csvw/metadata/#common-properties) in a dataset,
+- specify [relations between multiple tables](http://w3c.github.io/csvw/metadata/#foreign-key-reference-between-tables) in a dataset,
 - supply default values for required columns like `Language_ID`, using [virtual columns](http://w3c.github.io/csvw/metadata/#use-of-virtual-columns).
 
 In particular, since the metadata description resides in a separate file, it is often possible to retrofit existing CSV files into the CLDF framework by adding a metadata description.
