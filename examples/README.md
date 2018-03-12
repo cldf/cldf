@@ -3,7 +3,7 @@
 ## A WALS feature as CLDF structure dataset
 
 [Feature 1A of WALS Online](http://wals.info/feature/1A), converted to a CLDF StructureDataset is available at [`wals_1A_cldf`](wals_1A_cldf). This dataset
-has been created using the code and instructions at https://github.com/glottobank/pycldf/tree/master/examples
+has been created using the code and instructions at https://github.com/cldf/pycldf/tree/master/examples
 
 One of the design goals of CLDF was to make re-use of existing tools for linguistic data possible. As an example, we can convert the CLDF
 dataset to the legacy custom tab-delimited export of WALS features (e.g.
