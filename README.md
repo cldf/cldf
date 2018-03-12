@@ -202,7 +202,7 @@ recognizes (and attaches specified semantics) to tables described with a common 
 
 Additionally, CLDF semantics can be assigned to individual columns by 
 assigning one of the property URIs defined in the 
-[CLDF ontology](http://cldf.cld.org/v1.0/terms.rdf) as `propertyUrl`.
+[CLDF ontology](http://cldf.clld.org/v1.0/terms.rdf) as `propertyUrl`.
 
 Note: CLDF column properties are assumed to have a complete row (or rather the
 entity a row stores data about) as scope; e.g. a [source column](#column-source)
