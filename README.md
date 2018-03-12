@@ -304,7 +304,7 @@ References to sources - if not referenced by Glottolog ID - can be supplied as p
 ## CLDF Modules
 
 Much like 
-[Dublin Core Application Profiles](http://dublinco.org/documents/profile-guidelines/),
+[Dublin Core Application Profiles](http://dublincore.org/documents/profile-guidelines/),
 CLDF Modules group terms of the CLDF Ontology into tables.
 Thus, CLDF module specifications are recommendations for groups
 of tables modeling typical cross-linguistic datatypes. Currently, the CLDF
