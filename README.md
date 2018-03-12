@@ -205,7 +205,7 @@ assigning one of the property URIs defined in the
 [CLDF ontology](http://cldf.clld.org/v1.0/terms.rdf) as `propertyUrl`.
 
 Note: CLDF column properties are assumed to have a complete row (or rather the
-entity a row stores data about) as scope; e.g. a [source column](#column-source)
+entity a row stores data about) as scope; e.g. a [source column](#source)
 is assumed to provide source information for any piece of data in the row.
 Thus, each property can be used only once per table, which makes processing simpler.
 
