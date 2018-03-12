@@ -7,9 +7,6 @@ on a `TableGroup`.
 In the simplest case, a wordlist is just a list of triples *(language, concept, word)*,
 thus in CLDF only a [`FormTable`](../../components/forms) is required.
 
-Note: If the lexemes in a wordlist are linked to [Concepticon concept sets](http://concepticon.clld.org/parameters),
-the `Parameter_ID` column should have numeric concept sets IDs as values and a `ValueUrl` property of `"http://concepticon.clld.org/parameters/{Parameter_ID}"`.
-
 
 ## Introduction
 
