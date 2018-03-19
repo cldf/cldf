@@ -1,15 +1,17 @@
 ## Cognates
 
-A major use case of wordlists in historical linguistics is as basis for the assembling of
+A major use case of wordlists in historical linguistics is for identifying and assembling
 cognate sets. Assigning forms to cognate sets is itself a (rather large) step
 in analyzing the wordlist data, but also serves as intermediate step before
 feeding the cognate sets into further analyses e.g. to determine language relatedness.
 Thus, being able to exchange data on cognate judgements related to wordlists
-is important, and therefore covered by CLDF. 
+is important, and covered by CLDF. 
 
-It is recommended to add columns or other metadata describing the method used
-for the cognacy judgements and the alignments, but no clear standard for these
-has evolved yet.
+It is recommended that columns or other metadata describing the method used
+for the cognacy judgements and the alignments are added, but as yet no clear standard
+for these has evolved.
+
+** Partial Cognates **
 
 Like cognates, partial cognates refer to a form in a wordlist. But to make it
 possible to annotate parts of a form, the segmentation of the form
