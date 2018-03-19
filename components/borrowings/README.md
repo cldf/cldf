@@ -2,8 +2,8 @@
 
 Lexical borrowings or loanwords provide an interesting object of study by themselves
 (see for example [The World Loanword Database](http://wold.clld.org/)), but they
-also play a role for cognate detection algorithms, where it is typically important
-to distinguish between cognates due to borrowing and cognates due to inheritance.
+are of great important for historical linguistics and computational approaches 
+where it is important to distinguish between cognates due to borrowing and cognates due to inheritance.
 
 Conceptually, borrowings are the 
 [associative entity](https://en.wikipedia.org/wiki/Associative_entity) 
