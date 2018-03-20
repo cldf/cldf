@@ -18,23 +18,15 @@ The framework for lexical specifications, appropriate for word list data, is rou
 
 It should be noted that both, Glottolog and Concepticon, offer ways to add new language varieties or concepts via contributions to the respective database. 
 
-Handling of the linguistic form is more complex and requires different layers of detail, starting from rough orthographic representations, up to sound sequence specifications which are cross-linguistically comparable. For the latter, we are developing standards within the Cross-Linguistic Transcription Systems (CLTS) initative which aims to offer a framework that translates between closed transcriptions systems that have been in wide use, ranging from the coarse phonetic notation system of the [ASJP](http://asjp.clld.org) project, up to a broad IPA alphabet which we currently try to develop. In contrast to pure phonetic transcriptions, the CLTS initiative tries to standardize additional information, including the morphological segmentation of sound sequences, and a proper handling of suprasegmental features.
+Handling of the linguistic form is more complex and requires different layers of detail, starting from rough orthographic representations, up to sound sequence specifications which are cross-linguistically comparable.
+While efforts to address this problem are under way (see for example the specification of orthography profiles in the [Unicode Cookbook for Linguists](https://github.com/unicode-cookbook/cookbook)), no commonly used standard has evolved so far.
 
 In addition to the trias of language, form, and meaning, the word list specification of CLDF also handles **relations** between the entities. Relations come in two general flavors: relations across languages, and relations within one language. The former are reflected in detailed specifications for the handling of different kinds of **cognacy** in a broader sense (akin to the concept of **homology** in biology, thus including borrowings, [List 2016](:bib:List2016i)). Language-internal relations point to language-internal cognacy, that is, form-associations within one language across different meanings, ranging from simple cases of **colexifications** up to fine-grained accounts on **internal reconstruction**. Language-internal relations require additional markup that indicates relations of forms within one language using different kinds of specification.  
 
 ## Forms in Word Lists
 
-The CLDF framework distinguishes different kinds of detail in the representation of forms. In principle, the amount of detail can be flexibly handled, depending on a given dataset, but so far, the following types of data, represented by different columns with a specified header, have been proven useful:
+See [FormTable](../../components/forms/).
 
-COLUMN | TYPE | NOTE
---- | --- | ---
-Value | string | The raw value as it can be found in the dataset. Metadata may specify what this value is in concrete, but in general we assume that the data may contain multiple **forms**, thus there may be two word forms expressing one concept, and they are given in comma-separated form in a given dataset.
-Form | string | The unique form after multiple forms in one and the same `Value` have been disseparated. Metadata could specify the type of transcription that was used (e.g., pure orthography, phonemic transcription, etc.).
-Segmented_Form | space-separated string | If the form is representing orthography rather phonetic transcription, this shows the intermediate step of segmentation that will then be represented as a pure sound sequence by converting to the cross-linguistic phonetic notation. **NOTE:** So far this is rarely used, but it is recommended to add this layer in order to make sure that steps of automatic conversion can be traced and debugged properly.
-Segments | space-separated string | A representation of a linguistic form that is supposed to be comparable across languages and datasets. The `cldf` framework offers ways to evaluate the content, distinguishing between different kinds of quality, including that a sound sequences is accepted by LingPy, or representable within the CLPA.
-Structure | space-segmented string | A phonotactic layer which is currently being tested and not yet standardized. It essentially requires a valid value in **Segments** and defines positions in this sound sequence as phonotactically different, by representing each phonotactically different aspect with a different structure segment. Currently, we test it on Sino-Tibetan language data, where the initial of a syllable is crucial and should be distinguished from the final consonants after the vowel nucleus in a syllable. By representing a fictive sequence like `[` t a t ⁵⁵ `]` as `[` i n c t `]`, for example, we indicate that the first consonant is an initial consonant, while the last consonant is a syllable final plosive. This allows us to compare frequencies and to draw statistics on phonotactics from lexical data.
-
-Specifics of how the **Segments** should be transcribed within `cldf` are provided as part of the CLPN initiative.
 
 ## Form Relations across Languages
 
