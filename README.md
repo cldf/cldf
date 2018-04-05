@@ -72,7 +72,7 @@ A dataset is CLDF conformant if it uses a custom metadata file, derived from the
 - the CSV [dialect description](http://w3c.github.io/csvw/metadata/#dialect-descriptions) (possibly per table), e.g. to:
   - allow comment lines (if appropriately prefixed with [`commentPrefix`](http://w3c.github.io/csvw/metadata/#dialect-commentPrefix))
   - omit a header line (if appropriately indicated by `"header": false`)
-  - use tab-separated data files (if appropriately indicated by `"delimiter": ","`)
+  - use tab-separated data files (if appropriately indicated by `"delimiter": "\t"`)
 - the table property [url](http://w3c.github.io/csvw/metadata/#tables)
 - the column property [titles](http://w3c.github.io/csvw/metadata/#columns)
 - the inherited column properties
@@ -198,7 +198,7 @@ Thus, an example for a CLDF dataset description could look as follows:
 ### CLDF Data files
 
 While it is possible to add any kind of CSV files to a CLDF dataset, the CLDF standard
-recognizes (and attaches specified semantics) to tables described with a common property `dc:conformsTo` with one of the [table type](#cldf-components) URIs of the [CLDF ontology](http://cldf.cld.org/v1.0/terms.rdf) as value.
+recognizes (and attaches specified semantics) to tables described with a common property `dc:conformsTo` with one of the [table type](#cldf-components) URIs of the [CLDF ontology](http://cldf.clld.org/v1.0/terms.rdf) as value.
 
 Additionally, CLDF semantics can be assigned to individual columns by 
 assigning one of the property URIs defined in the 
@@ -262,7 +262,7 @@ Sources are specified as semicolon-separated source specifications, of the form
 Often cross-linguistic data is [relational](https://en.wikipedia.org/wiki/Relational_model), e.g. *cognate judgements* group *forms* into *cognate sets*, creating a [many-to-many relationship](https://en.wikipedia.org/wiki/Many-to-many_(data_model)) between a `FormTable` and a `CognatesetTable`. 
 
 To make such relations explicit, the CLDF Ontology provides a set of
-[reference properties](http://cldf.cld.org/v1.0/terms.rdf#reference-properties).
+[reference properties](http://cldf.clld.org/v1.0/terms.rdf#reference-properties).
 
 Reference properties are interpreted as *optional* foreign key, i.e.
 
