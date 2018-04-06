@@ -26,7 +26,7 @@ A CLDF dataset is
 - described by a [TableGroup](http://w3c.github.io/csvw/metadata/#table-groups) serialized as JSON file
 - with a [common property](http://w3c.github.io/csvw/metadata/#dfn-common-property) `dc:conformsTo` having one of the [CLDF module](#modules) URIs as value.
 
-While the [JSON-LD dialect](https://www.w3.org/TR/tabular-metadata/#json-ld-dialect) to be used for metadata according to the [Metadata Vocabulary for Tabular Data](https://www.w3.org/TR/tabular-metadata/) can be edited by hand, this may already be beyond what can be expected by typical linguists. Thus, CLDF specifies two conformance levels for datasets: metadata-free or extended.
+While the [JSON-LD dialect](https://www.w3.org/TR/tabular-metadata/#json-ld-dialect) to be used for metadata according to the [Metadata Vocabulary for Tabular Data](https://www.w3.org/TR/tabular-metadata/) can be edited by hand, this may already be beyond what can be expected by regular users. Thus, CLDF specifies two conformance levels for datasets: metadata-free or extended.
 
 ### Metadata-free conformance
 
@@ -113,7 +113,7 @@ A CLDF dataset is described with metadata provided as JSON file following the [M
 
 - Metadata files must specify a `tables` property on top-level, i.e. must describe a 
   [`TableGroup`](http://w3c.github.io/csvw/metadata/#table-groups). While this adds a 
-  bit of verbosity to the metadata description, it makes it possible to describe mutiple 
+  bit of verbosity to the metadata description, it makes it possible to describe multiple 
   tables in one metadata file.
 - The common property `dc:conformsTo` of the `TableGroup` is used to indicate the
   CLDF module, e.g. 
@@ -222,17 +222,17 @@ To allow usage of identifiers as path components of URIs and ensure they are
 portable across systems, identifiers must be composed of 
 [alphanumeric characters](https://en.wikipedia.org/wiki/Alphanumeric), 
 underscore `_` and hyphen `-` only, i.e. match the regular expression 
-`[a-zA-Z0-9\-_]+` (see [rfc3986](https://tools.ietf.org/html/rfc3986#section-2.3)).
+`[a-zA-Z0-9\-_]+` (see [RFC 3986](https://tools.ietf.org/html/rfc3986#section-2.3)).
 
 Following our design goal to reference rather than duplicate data, identifiers
-may be used to reference existing entities (e.g. Glottolog languages, WALS features,
+may be used to reference existing entities (e.g. [Glottolog languages](http://glottolog.org/glottolog/language), [WALS features](http://wals.info/feature),
 etc.). This can be done as follows:
 
 - If the identifier can be interpreted as links to other entities, e.g. 
-  using the WALS three-letted language codes to identify languages, this should be 
+  using the WALS three-lettered language codes to identify languages, this should be 
   indicated by assigning the column an appropriate `valueUrl` property, e.g. 
   `http://wals.info/languoid/lect/wals_code_{ID}`
-- If the identifier follows a specified identification scheme, e.g. ISO 639-3 for
+- If the identifier follows a specified identification scheme, e.g. [ISO 639-3](http://www-01.sil.org/iso639-3/) for
   languages, this can be indicated by adding [a virtual column](http://w3c.github.io/csvw/metadata/#x5-6-1-1-use-of-virtual-columns) with a suitable `propertyUrl`
   to the table's list of columns.
 
@@ -363,7 +363,7 @@ To stipulate further discussion and help experiments with tools, some examples o
 ## Compatibility
 
 - Using UTF-8 as character encoding means editing these files with MS Excel is not completely trivial, because Excel assumes cp1252 as default character encoding - Libre Office Calc on the other hand handles these files just fine.
-- The tool support for csv files is getting better and better due to the hype around "data science". Some particularly useful tools are
+- The tool support for CSV files is getting better and better due to the hype around "data science". Some particularly useful tools are
   - [csvkit](https://csvkit.readthedocs.org/en/stable/)
   - [q - Text as Data](http://harelba.github.io/q/)
 
