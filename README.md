@@ -347,6 +347,7 @@ types are specified as *components* in a way that can be re-used across modules 
 - [Forms](components/forms) - as defined for a [`Wordlist`](modules/Wordlist/)
 - [Cognates](components/cognates/)
 - [CognateSets](components/cognatesets)
+- [Alignment annotation](components/alignmentannotation)
 - [Borrowings](components/borrowings/)
 - [Functional Equivalents](components/functionalequivalents)
 - [Functional Equivalents Sets](components/functionalequivalentsets)

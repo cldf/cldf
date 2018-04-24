@@ -1,0 +1,40 @@
+{
+    "url": "alignmentAnnotation.csv",
+    "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#alignmentAnnotationTable",
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "ID",
+                "required": true,
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
+                "datatype": {
+                    "base": "string",
+                    "format": "[a-zA-Z0-9_\\-]+"
+                }
+            },
+            {
+                "name": "Alignment_ID",
+                "required": true,
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#alignmentReference",
+                "datatype": "string"
+            },
+            {
+                "name": "Segment_Slice",
+                "required": false,
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#segmentSlice",
+                "datatype": {
+                    "base": "string",
+                    "format": "\\d+(:\\d+)?"
+                },
+                "separator": " "
+            },
+            {
+                "name": "Annotation",
+                "required": false,
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#name",
+                "datatype": "string",
+                "separator": ":"
+            }
+        ]
+    }
+}

@@ -269,6 +269,21 @@
         <rdfs:seeAlso rdf:resource="http://concepticon.clld.org" />
     </rdf:Property>
 
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#alignmentReference"
+                  dc:type="reference-property">
+        <rdfs:comment>
+            An identifier referencing a space-separated alignment
+            by providing a name of a table that includes an alignment (e.g. a CognateTable or
+            a FunctionalEquivalentsTable). Note that this reference is not to individual rows of
+            such a table, but to a column of the type "http://cldf.clld.org/v1.0/terms.rdf#alignment" 
+            that should exist in the referenced table.
+        </rdfs:comment>
+        <csvw:name>"Alignment_ID"</csvw:name>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/references" />
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Foreign_key" />
+    </rdf:Property>
+
+
     <!--
         language properties 
     -->
@@ -675,6 +690,14 @@
             A table holding additional data about cognate sets.
         </rdfs:comment>
         <csvw:url>"cognatesets.csv"</csvw:url>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://cldf.clld.org/v1.0/terms.rdf#alignmentAnnotationTable" dc:type="table">
+        <csvw:name xml:lang="en">"LanguageTable"</csvw:name>
+        <rdfs:comment>
+            A table with annotation to the columns of an alignment
+        </rdfs:comment>
+        <csvw:url>"alignmentAnnotation.csv"</csvw:url>
     </rdfs:Class>
 
     <rdfs:Class rdf:about="http://cldf.clld.org/v1.0/terms.rdf#LanguageTable" dc:type="table">
