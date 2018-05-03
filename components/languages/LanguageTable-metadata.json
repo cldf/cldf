@@ -1,0 +1,68 @@
+{
+    "url": "languages.csv",
+    "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#LanguageTable",
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "ID",
+                "required": true,
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
+                "datatype": {
+                    "base": "string",
+                    "format": "[a-zA-Z0-9_\\-]+"
+                }
+            },
+            {
+                "name": "Name",
+                "required": false,
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#name",
+                "datatype": "string"
+            },
+            {
+                "name": "Macroarea",
+                "required": false,
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#macroarea",
+                "datatype": "string"
+            },
+            {
+                "name": "Latitude",
+                "required": false,
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#latitude",
+                "datatype": {
+                    "base": "decimal",
+                    "minimum": -90,
+                    "maximum": 90
+                }
+            },
+            {
+                "name": "Longitude",
+                "required": false,
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#longitude",
+                "datatype": {
+                    "base": "decimal",
+                    "minimum": -180,
+                    "maximum": 180
+                }
+            },
+            {
+                "name": "Glottocode",
+                "required": false,
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#glottocode",
+                "datatype": {
+                    "base": "string",
+                    "format": "[a-z0-9]{4}[1-9][0-9]{3}"
+                },
+                "valueUrl": "http://glottolog.org/resource/languoid/id/{glottocode}"
+            },
+            {
+                "name": "ISO639P3code",
+                "required": false,
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#iso639P3code",
+                "datatype": {
+                    "base": "string",
+                    "format": "[a-z]{3}"
+                }
+            }
+        ]
+    }
+}

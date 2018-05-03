@@ -1,0 +1,55 @@
+{
+    "url": "cognates.csv",
+    "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#CognateTable",
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "ID",
+                "required": true,
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
+                "datatype": {
+                    "base": "string",
+                    "format": "[a-zA-Z0-9_\\-]+"
+                }
+            },
+            {
+                "name": "Form_ID",
+                "required": true,
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#formReference",
+                "datatype": "string"
+            },
+            {
+                "name": "Cognateset_ID",
+                "required": true,
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#cognatesetReference",
+                "datatype": "string"
+            },
+            {
+                "name": "Segment_Slice",
+                "required": false,
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#segmentSlice",
+                "datatype": {
+                    "base": "string",
+                    "format": "\\d+(:\\d+)?"
+                },
+                "separator": " "
+            },
+            {
+                "name": "Alignment",
+                "required": false,
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#alignment",
+                "datatype": "string",
+                "separator": " "
+            },
+            {
+                "name": "Source",
+                "required": false,
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#source",
+                "datatype": {
+                    "base": "string"
+                },
+                "separator": ";"
+            }
+        ]
+    }
+}

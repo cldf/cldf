@@ -1,0 +1,61 @@
+{
+    "url": "examples.csv",
+    "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#ExampleTable",
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "ID",
+                "required": true,
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
+                "datatype": {
+                    "base": "string",
+                    "format": "[a-zA-Z0-9_\\-]+"
+                }
+            },
+            {
+                "name": "Language_ID",
+                "required": true,
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#languageReference",
+                "datatype": "string"
+            },
+            {
+                "name": "Primary_Text",
+                "required": true,
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#primaryText",
+                "datatype": "string"
+            },
+            {
+                "name": "Analyzed_Word",
+                "required": false,
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#analyzedWord",
+                "datatype": "string",
+                "separator": "\\t"
+            },
+            {
+                "name": "Gloss",
+                "required": false,
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#gloss",
+                "datatype": "string",
+                "separator": "\\t"
+            },
+            {
+                "name": "Translated_Text",
+                "required": false,
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#translatedText",
+                "datatype": "string"
+            },
+            {
+                "name": "Meta_Language_ID",
+                "required": false,
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#metaLanguageReference",
+                "datatype": "string"
+            },
+            {
+                "name": "Comment",
+                "required": false,
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#comment",
+                "datatype": "string"
+            }
+        ]
+    }
+}

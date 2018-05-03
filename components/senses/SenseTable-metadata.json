@@ -1,0 +1,29 @@
+{
+    "url": "senses.csv",
+    "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#SenseTable",
+    "tableSchema": {
+        "columns": [
+            {
+                "name": "ID",
+                "required": true,
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
+                "datatype": {
+                    "base": "string",
+                    "format": "[a-zA-Z0-9_\\-]+"
+                }
+            },
+            {
+                "name": "Description",
+                "required": true,
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#description",
+                "datatype": "string"
+            },
+            {
+                "name": "Entry_ID",
+                "required": true,
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#entryReference",
+                "datatype": "string"
+            }
+        ]
+    }
+}

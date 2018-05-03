@@ -13,14 +13,11 @@ Often examples are glossed using
 according to the [Leipzig Glossing Rules](http://www.eva.mpg.de/lingua/resources/glossing-rules.php). In this case, the example is extended
 with two properties: The aligned primary text and aligned glosses.
 
-Thus, an `examples.csv` file or a table ẁith `"dc:type": "cldf:examples"` has
-the following columns:
-- `Primary`: required
-- `Analyzed`: optional, words separated by tab `\t` (or a different separator if indicated by metadata)
-- `Gloss`: optional, words separated by tab `\t` (or a different separator if indicated by metadata)
-- `Translation`: required
-- `Translation_language_ID`: optional. If missing, translations are interpreted as
-  English text.
+The default description of the example table is available in 
+[`ExampleTable-metadata.json`](ExampleTable-metadata.json).
+
+Rows in the example table can then be referenced from other tables using a
+[`exampleReference`](http://cldf.clld.org/v1.0/terms.rdf#exampleReference) property.
 
 Note that words in gloss and aligned text may be further split into morphemes and clitics using `-` and `=` as separators according to the 
 [Leipzig Glossing Rules](http://www.eva.mpg.de/lingua/resources/glossing-rules.php).
