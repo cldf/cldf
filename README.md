@@ -349,10 +349,6 @@ A component corresponds to a certain type of data. Thus, to make sure all instan
 such a type have the same set of properties, we allow at most one component for each type
 in a CLDF dataset.
 
-## Examples
-
-To stipulate further discussion and help experiments with tools, some examples of CLDF datasets are available in the [examples directory](examples).
-
 
 ## Compatibility
 
