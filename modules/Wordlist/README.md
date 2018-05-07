@@ -21,11 +21,11 @@ It should be noted that both, Glottolog and Concepticon, offer ways to add new l
 Handling of the linguistic form is more complex and requires different layers of detail, starting from rough orthographic representations, up to sound sequence specifications which are cross-linguistically comparable.
 While efforts to address this problem are under way (see for example the specification of orthography profiles in the [Unicode Cookbook for Linguists](https://github.com/unicode-cookbook/cookbook)), no commonly used standard has evolved so far.
 
-In addition to the trias of language, form, and meaning, the word list specification of CLDF also handles **relations** between the entities. Relations come in two general flavors: relations across languages, and relations within one language. The former are reflected in detailed specifications for the handling of different kinds of **cognacy** in a broader sense (akin to the concept of **homology** in biology, thus including borrowings, [List 2016](:bib:List2016i)). Language-internal relations point to language-internal cognacy, that is, form-associations within one language across different meanings, ranging from simple cases of **colexifications** up to fine-grained accounts on **internal reconstruction**. Language-internal relations require additional markup that indicates relations of forms within one language using different kinds of specification.  
+In addition to the trias of language, form, and meaning, the word list specification of CLDF also handles **relations** between the entities. Relations come in two general flavors: relations across languages, and relations within one language. The former are reflected in detailed specifications for the handling of different kinds of **cognacy** in a broader sense (akin to the concept of **homology** in biology, thus including borrowings, [List 2016](https://biologydirect.biomedcentral.com/track/pdf/10.1186/s13062-016-0145-2)). Language-internal relations point to language-internal cognacy, that is, form-associations within one language across different meanings, ranging from simple cases of **colexifications** up to fine-grained accounts on **internal reconstruction**. Language-internal relations require additional markup that indicates relations of forms within one language using different kinds of specification.  
 
 ## Forms in Word Lists
 
-See [FormTable](../../components/forms/).
+See [FormTable](../../components/forms).
 
 
 ## Form Relations across Languages

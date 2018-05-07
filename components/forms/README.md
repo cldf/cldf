@@ -30,8 +30,8 @@ As with any CLDF component,
 
 ### Example
 
-The [CLDF download](https://cdstar.shh.mpg.de/bitstreams/EAEA0-9C1A-66E2-D0B3-0/ids_dataset.cldf.zip) linked from
-the download page of [The Intercontinental Dictionary Series](http://ids.clld.org) contains a `FormTable` starting with
+The [CLDF download](https://cdstar.shh.mpg.de/bitstreams/EAEA0-5F01-8AAF-CDED-0/ids_dataset.cldf.zip) linked from
+the download page of [The Intercontinental Dictionary Series](http://ids.clld.org) contains a `FormTable` in `forms.csv` starting with
 
 ```
 ID,Language_ID,Parameter_ID,Form,Segments,Comment,Source,Contribution_ID
