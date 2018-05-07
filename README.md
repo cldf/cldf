@@ -9,7 +9,7 @@
 * [CLDF Dataset](#cldf-dataset)
    * [CLDF Metadata file](#cldf-metadata-file)
    * [CDLF Data files](#cldf-data-files)
-   * [Sources file](#source)
+   * [Sources file](#sources)
 * [CLDF Modules](#cldf-modules)
 * [CLDF Components](#cldf-components)
 * [Compatibility](#compatibility)
@@ -24,7 +24,7 @@ A CLDF dataset is
 
 - a set of UTF-8 encoded CSV files 
 - described by a [TableGroup](http://w3c.github.io/csvw/metadata/#table-groups) serialized as JSON file
-- with a [common property](http://w3c.github.io/csvw/metadata/#dfn-common-property) `dc:conformsTo` having one of the [CLDF module](#modules) URIs as value.
+- with a [common property](http://w3c.github.io/csvw/metadata/#dfn-common-property) `dc:conformsTo` having one of the [CLDF module](#cldf-modules) URIs as value.
 
 While the [JSON-LD dialect](https://www.w3.org/TR/tabular-metadata/#json-ld-dialect) to be used for metadata according to the [Metadata Vocabulary for Tabular Data](https://www.w3.org/TR/tabular-metadata/) can be edited by hand, this may already be beyond what can be expected by regular users. Thus, CLDF specifies two conformance levels for datasets: metadata-free or extended.
 
@@ -205,7 +205,7 @@ assigning one of the property URIs defined in the
 [CLDF ontology](http://cldf.clld.org/v1.0/terms.rdf) as `propertyUrl`.
 
 Note: CLDF column properties are assumed to have a complete row (or rather the
-entity a row stores data about) as scope; e.g. a [source column](#source)
+entity a row stores data about) as scope; e.g. a [source column](#sources)
 is assumed to provide source information for any piece of data in the row.
 Thus, each property can be used only once per table, which makes processing simpler.
 
@@ -237,8 +237,6 @@ etc.). This can be done as follows:
   to the table's list of columns.
 
 
-<a id="source"> </a>
-
 #### Sources
 
 Considering that any single step in collecting (cross-)linguistic data involves some
@@ -254,8 +252,6 @@ row. This column must be marked using
 Sources are specified as semicolon-separated source specifications, of the form
 *source_ID[source context]*, e.g. *meier2015[3-12]* where *meier2015* is a citation key in the accompanying [sources file](#sources).
 
-
-<a id="foreignKey"> </a>
 
 #### Foreign keys
 
@@ -299,8 +295,6 @@ References to sources - if not referenced by Glottolog ID - can be supplied as p
 - or specified as top-level common property `dc:source` in the dataset's metadata.
 
 
-<a id="modules"> </a>
-
 ## CLDF Modules
 
 Much like 
@@ -310,9 +304,9 @@ Thus, CLDF module specifications are recommendations for groups
 of tables modeling typical cross-linguistic datatypes. Currently, the CLDF
 specification recognizes the following modules:
 
-- [Wordlist](modules/Wordlist/)
-- [Structure dataset](modules/StructureDataset/)
-- [Dictionary](modules/Dictionary/)
+- [Wordlist](modules/Wordlist)
+- [Structure dataset](modules/StructureDataset)
+- [Dictionary](modules/Dictionary)
 - [Parallel text](modules/ParallelText)
 
 In addition, a CLDF dataset can be specified as 
@@ -337,17 +331,17 @@ the corresponding default metadata.
 Some types of cross-linguistic data may be part of different CLDF modules. These
 types are specified as *components* in a way that can be re-used across modules (typically as [table descriptions](http://w3c.github.io/csvw/metadata/#tables), which can be appended to the `tables` property of a module's metadata).
 
-- [Language metadata](components/languages/)
-- [Parameter metadata](components/parameters/)
-- [Values](components/values) - as defined for a [`StructureDataset`](modules/StructureDataset/)
-- [Codes](components/codes/)
+- [Language metadata](components/languages)
+- [Parameter metadata](components/parameters)
+- [Values](components/values) - as defined for a [`StructureDataset`](modules/StructureDataset)
+- [Codes](components/codes)
 - [Entries](components/entries)
 - [Senses](components/senses)
-- [Examples](components/examples/)
-- [Forms](components/forms) - as defined for a [`Wordlist`](modules/Wordlist/)
-- [Cognates](components/cognates/)
+- [Examples](components/examples)
+- [Forms](components/forms) - as defined for a [`Wordlist`](modules/Wordlist)
+- [Cognates](components/cognates)
 - [CognateSets](components/cognatesets)
-- [Borrowings](components/borrowings/)
+- [Borrowings](components/borrowings)
 - [Functional Equivalents](components/functionalequivalents)
 - [Functional Equivalents Sets](components/functionalequivalentsets)
 
@@ -357,7 +351,7 @@ in a CLDF dataset.
 
 ## Examples
 
-To stipulate further discussion and help experiments with tools, some examples of CLDF datasets are available in the [examples directory](examples/).
+To stipulate further discussion and help experiments with tools, some examples of CLDF datasets are available in the [examples directory](examples).
 
 
 ## Compatibility

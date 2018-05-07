@@ -32,7 +32,7 @@ Like entries, senses can contain fields for associated senses, e.g.
 * synonymous with (list of sense IDs)
 * antonymous with (list of sense IDs)
 
-A CLDF dictionary may have an [examples component](../../components/examples/),
+A CLDF dictionary may have an [examples component](../../components/examples),
 which contains all the examples which are represented in the
 dictionary. Each example is linked to one or more senses, and senses may
 have multiple examples linked to them. There is thus a many-to-many

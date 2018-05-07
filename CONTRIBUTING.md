@@ -9,7 +9,7 @@ of feedback, but encourage using the [issue tracker](https://github.com/glottoba
   make sure to
 always work in a different branch.
 - Issues to be addressed in a new version will be collected using a 
-  [milestone](https://github.com/glottobank/cldf/milestones).
+  [milestone](https://github.com/cldf/cldf/milestones).
 - At some point, an upcoming new version will result in a pull request targeted
   at the `develop` branch of `glottobank/cldf`, where the changes can be further
   discussed and refined.

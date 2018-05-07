@@ -1,4 +1,3 @@
-
 Releasing a new version of the CLDF spec
 ========================================
 
@@ -11,4 +10,3 @@ Releasing a new version of the CLDF spec
 - Copy the DOI from ZENODO and add it to the release notes
 - Copy terms.rdf to a new version directory in the gh-pages branch
 - Push the gh-pages branch
-

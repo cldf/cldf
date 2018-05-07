@@ -20,7 +20,7 @@ As with any CLDF component,
 ### Example
 
 The [CLDF download](https://cdstar.shh.mpg.de/bitstreams/EAEA0-7269-77E5-3E10-0/wals_dataset.cldf.zip) linked from
-the download page of [WALS Online](http://wals.info) contains a `ValueTable` starting with
+the download page of [WALS Online](http://wals.info) contains a `ValueTable` in `values.csv` starting with
 
 ```
 ID,Language_ID,Parameter_ID,Value,Code_ID,Comment,Source,Contribution_ID
