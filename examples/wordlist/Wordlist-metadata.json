@@ -86,7 +86,7 @@
                     },
                     {
                         "name": "Cognateset_ID",
-                        "datatype": "integer",
+                        "datatype": "string",
                         "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#cognatesetReference"
                     },
                     {

@@ -1,4 +1,4 @@
-from clldutils.csvw.metadata import TableGroup
+from csvw.metadata import TableGroup
 from tabulate import tabulate
 from collections import defaultdict
 
@@ -20,7 +20,7 @@ def split_segments(segments, sep="+"):
 
 def validate_morphemes(item):
     """Simple function illustrating validation of morphemes"""
-    morpheme_length = len(item['Motivation_structure'])
+    morpheme_length = 0
     if not morpheme_length <= len(split_segments(item['Segments'])):
         return False
     return True
@@ -35,13 +35,13 @@ def validate_alignments(item, base_chars='()-'):
     """
     for alm in ['Alignment']:
         derived_alignment = [x for x in item[alm] if x not in '()-']
-        if len(derived_alignment) != len(item['Segments']):
+        if len(derived_alignment) != len(item['Form']):
             return False
     return True
 
 
 def validate_structure(item):
-    if len(item['Prosodic_structure']) != len(item['Segments']):
+    if len(item['Prosodic_Structure']) != len(item['Segments']):
         return False
     return True
 
@@ -83,8 +83,7 @@ def validate_cognates_and_alignments(table):
 
 
 if __name__ == '__main__':
-
-    tg = TableGroup.from_file('example.tsv-metadata.json')
+    tg = TableGroup.from_file('Wordlist-metadata.json')
     problems = []
     count = 1
     wordlist = {}
@@ -96,22 +95,21 @@ if __name__ == '__main__':
             problems += [[
                 count,
                 'morphemes',
-                str(item['ID']), 
-                item['Language_name'], 
-                item['Parameter_name'], 
-                ' '.join(item['Segments']),
-                ' '.join(item['Motivation_structure'])
+                str(item['ID']),
+                item['Language_Name'],
+                item['Parameter_name'],
+                ' '.join(item['Segments'])
                 ]]
             count += 1
         if not struc:
             problems += [[
                 count,
                 'structure',
-                str(item['ID']), 
-                item['Language_name'], 
-                item['Parameter_name'], 
+                str(item['ID']),
+                item['Language'],
+                item['Concept'],
                 ' '.join(item['Segments']),
-                ' '.join(item['Prosodic_structure'])
+                ' '.join(item['Prosodic_Structure'])
                 ]]
             count += 1
     for item in tg.tables[1]:
@@ -120,22 +118,19 @@ if __name__ == '__main__':
             problems += [[
                 count,
                 'alignment',
-                str(item['Word_ID']), 
-                wordlist[item['Word_ID']]['Language_name'], 
-                wordlist[item['Word_ID']]['Parameter_name'], 
-                ' '.join(item['Segments']),
+                str(item['Form_ID']),
+                wordlist[item['Form_ID']]['Language'],
+                wordlist[item['Form_ID']]['Parameter_ID'],
+                ' '.join(item['Form']),
                 ' '.join(item['Alignment'])
                 ]]
             count += 1
-    
 
-    print(
-            tabulate(problems, ['NUMBER', 'ERROR', 'WORD_ID', 'LANGUAGE', 'CONCEPT',
-                'SEGMENTS', 'PROBLEM'], tablefmt='markdown')
-            )
+    print(tabulate(problems,
+                   ['NUMBER', 'ERROR', 'WORD_ID', 'LANGUAGE', 'CONCEPT',
+                    'SEGMENTS', 'PROBLEM'], tablefmt='markdown'))
 
-    #errors = validate_cognate_and_alignment(tg.tables[0])
-    #print(errors)
-    #perrors = validate_cognates_and_alignments(tg.tables[0])
-    #print(perrors)
-
+    # errors = validate_cognate_and_alignment(tg.tables[0])
+    # print(errors)
+    # perrors = validate_cognates_and_alignments(tg.tables[0])
+    # print(perrors)
