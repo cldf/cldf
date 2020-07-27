@@ -552,7 +552,7 @@
         <csvw:name xml:lang="en">"Wordlist"</csvw:name>
         <rdfs:comment rdf:parseType="Literal">
             <p>A dataset according to the
-                <a href="https://github.com/glottobank/cldf/tree/master/modules/Wordlist">CLDF Wordlist</a>
+                <a href="https://github.com/cldf/cldf/tree/master/modules/Wordlist">CLDF Wordlist</a>
                 specification</p>
         </rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
@@ -562,7 +562,7 @@
         <csvw:name xml:lang="en">"Dictionary"</csvw:name>
         <rdfs:comment rdf:parseType="Literal">
             <p>A dataset according to the
-                <a href="https://github.com/glottobank/cldf/tree/master/modules/Dictionary">CLDF Dictionary</a>
+                <a href="https://github.com/cldf/cldf/tree/master/modules/Dictionary">CLDF Dictionary</a>
                 specification</p>
         </rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
@@ -572,7 +572,7 @@
         <csvw:name xml:lang="en">"StructureDataset"</csvw:name>
         <rdfs:comment rdf:parseType="Literal">
             <p>A dataset according to the
-                <a href="https://github.com/glottobank/cldf/tree/master/modules/StructureDataset">CLDF Structure Dataset</a>
+                <a href="https://github.com/cldf/cldf/tree/master/modules/StructureDataset">CLDF Structure Dataset</a>
                 specification</p>
         </rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
@@ -582,7 +582,7 @@
         <csvw:name xml:lang="en">"ParallelText"</csvw:name>
         <rdfs:comment rdf:parseType="Literal">
             <p>A dataset according to the
-                <a href="https://github.com/glottobank/cldf/tree/master/modules/ParallelText">CLDF Parallel Text</a>
+                <a href="https://github.com/cldf/cldf/tree/master/modules/ParallelText">CLDF Parallel Text</a>
                 specification</p>
         </rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
@@ -708,7 +708,7 @@
         <csvw:name xml:lang="en">"FunctionalEquivalentsetTable"</csvw:name>
         <rdfs:comment>
             The table to list all sets of functional equivalents from a 
-            "http://cldf.clld.org/v1.0/terms.rdf#FunctionalEquivalentTable" and adding descriptions for these 
+            "http://cldf.clld.org/v1.0/terms.rdf#FunctionalEquivalentTable" and adding descriptions for these
             sets
         </rdfs:comment>
         <csvw:url>"functionalEquivalentsets.csv"</csvw:url>
