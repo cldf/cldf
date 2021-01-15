@@ -1,5 +1,11 @@
 # CLDF Examples
 
+## Examples for testing
+
+Small toy examples for testing implementations of the specification are available from the `pycldf` test suite at
+https://github.com/cldf/pycldf/tree/master/tests/data
+
+
 ## A WALS feature as CLDF structure dataset
 
 [Feature 1A of WALS Online](http://wals.info/feature/1A), converted to a CLDF StructureDataset is available at [`wals_1A_cldf`](wals_1A_cldf). This dataset
@@ -77,4 +83,7 @@ Note that the first invocation of `csvgrep` is used to filter out partial cognat
 
 ## Examples "in the wild"
 
-- [Challenges of annotation and analysis (Hill & List 2017)](http://doi.org/10.5281/zenodo.886179)
+- A *StructureDataset* with `CodeTable` and `ExampleTable`: [WALS Online v2020](https://github.com/cldf-datasets/wals/tree/v2020/cldf)
+- A *Dictionary* with `ExampleTable`: The [Palula dictionary](https://github.com/dictionaria/palula/tree/master/cldf)
+- A *Wordlist* with `CognateTable`: [ABVD](https://github.com/lexibank/abvd/tree/master/cldf)
+- A *Wordlist* published as supplementary material: [Challenges of annotation and analysis (Hill & List 2017)](http://doi.org/10.5281/zenodo.886179)
