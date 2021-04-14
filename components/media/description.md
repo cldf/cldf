@@ -1,7 +1,7 @@
 # Media resources
 
 Often, cross-linguistic data is created by analyzing primary data like audio recordings,
-or using media like elcitation stimuli. In such cases it is useful if to include this
+or using media like elcitation stimuli. In such cases it is useful to include this
 information in the CLDF dataset. Since actual media data is typically not suitable for
 inclusion in tabular data formats like CSV, CLDF specifies a scheme to reference media
 via URL and media type.

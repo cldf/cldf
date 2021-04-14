@@ -83,7 +83,7 @@ Note that the first invocation of `csvgrep` is used to filter out partial cognat
 
 ## Examples "in the wild"
 
-- A *StructureDataset* with `CodeTable` and `ExampleTable`: [WALS Online v2020](https://github.com/cldf-datasets/wals/tree/v2020/cldf)
-- A *Dictionary* with `ExampleTable`: The [Palula dictionary](https://github.com/dictionaria/palula/tree/master/cldf)
-- A *Wordlist* with `CognateTable`: [ABVD](https://github.com/lexibank/abvd/tree/master/cldf)
+- A *StructureDataset* with `CodeTable` and `ExampleTable`: [WALS Online v2020.1](https://doi.org/10.5281/zenodo.4683137)
+- A *Dictionary* with `ExampleTable`: The [Palula dictionary](https://doi.org/10.5281/zenodo.4675089)
+- A *Wordlist* with `CognateTable`: [TuLeD](https://doi.org/10.5281/zenodo.4629306)
 - A *Wordlist* published as supplementary material: [Challenges of annotation and analysis (Hill & List 2017)](http://doi.org/10.5281/zenodo.886179)
