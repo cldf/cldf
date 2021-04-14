@@ -384,7 +384,10 @@ the corresponding default metadata.
 ## CLDF Components
 
 Some types of cross-linguistic data may be part of different CLDF modules. These
-types are specified as *components* in a way that can be re-used across modules (typically as [table descriptions](http://w3c.github.io/csvw/metadata/#tables), which can be appended to the `tables` property of a module's metadata).
+types are specified as *components* in a way that can be re-used across modules 
+(typically as [table descriptions](http://w3c.github.io/csvw/metadata/#tables), which can be appended 
+to the `tables` property of a module's metadata). A *component* is a CSVW table description with a
+`dc:conformsTo` property having one of the component terms in the CLDF Ontology as value.
 
 - [Language metadata](components/languages)
 - [Parameter metadata](components/parameters)
