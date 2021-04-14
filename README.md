@@ -1,5 +1,10 @@
 # CLDF: Cross-linguistic Data Formats
 
+CLDF is a specification of data formats suitable to encode cross-linguistic data
+in a way that maximizes interoperability and reusability, thus contributing to
+FAIR Cross-Linguistic Data.
+
+
 **Table of Contents**
 
 * [Conformance Levels](#conformance-levels)
@@ -24,13 +29,19 @@ A CLDF dataset is
 
 - a set of UTF-8 encoded CSV files 
 - described by a [TableGroup](http://w3c.github.io/csvw/metadata/#table-groups) serialized as JSON file
-- with a [common property](http://w3c.github.io/csvw/metadata/#dfn-common-property) `dc:conformsTo` having one of the [CLDF module](#cldf-modules) URIs as value.
+- with a [common property](http://w3c.github.io/csvw/metadata/#dfn-common-property) `dc:conformsTo` having one of the
+  [CLDF module](#cldf-modules) URIs as value.
 
-While the [JSON-LD dialect](https://www.w3.org/TR/tabular-metadata/#json-ld-dialect) to be used for metadata according to the [Metadata Vocabulary for Tabular Data](https://www.w3.org/TR/tabular-metadata/) can be edited by hand, this may already be beyond what can be expected by regular users. Thus, CLDF specifies two conformance levels for datasets: metadata-free or extended.
+While the [JSON-LD dialect](https://www.w3.org/TR/tabular-metadata/#json-ld-dialect) to be used for metadata according 
+to the [Metadata Vocabulary for Tabular Data](https://www.w3.org/TR/tabular-metadata/) can be edited by hand, this may 
+already be beyond what can be expected by regular users. Thus, CLDF specifies two conformance levels for datasets: 
+metadata-free or extended.
+
 
 ### Metadata-free conformance
 
-A dataset can be CLDF conformant without providing a separate metadata description file. To do so, the dataset must *exactly* follow the default specification for the appropriate module regarding:
+A dataset can be CLDF conformant without providing a separate metadata description file. To do so, the dataset must 
+*exactly* follow the default specification for the appropriate module regarding:
 
 - file names
 - column names (for specified columns)
@@ -41,7 +52,9 @@ any; and instead it falls back to using the defaults, i.e. "free" as in "beer" n
 as in "gluten-free". The CSV file may contain additional columns not specified in 
 the default module descriptions.
 
-The default file names and column names are described in [`components`](components). The default CSV dialect is [RFC4180](http://tools.ietf.org/html/rfc4180) using the [UTF-8](http://en.wikipedia.org/wiki/UTF-8) character encoding, i.e. use the CSV dialect specified by
+The default file names and column names are described in [`components`](components). The default CSV dialect is 
+[RFC4180](http://tools.ietf.org/html/rfc4180) using the [UTF-8](http://en.wikipedia.org/wiki/UTF-8) character encoding, 
+i.e. use the CSV dialect specified by
 
 ```
 {
@@ -65,9 +78,11 @@ Some of the effects of this metadata-free conformance are:
 - The first line of each file must contain the comma-separated list of column names.
 - No comment lines are allowed.
 
+
 ### Extended conformance
 
-A dataset is CLDF conformant if it uses a custom metadata file, derived from the default profile for the appropriate module, possibly overriding/customizing:
+A dataset is CLDF conformant if it uses a custom metadata file, derived from the default profile for the appropriate 
+module, possibly overriding/customizing:
 
 - the CSV [dialect description](http://w3c.github.io/csvw/metadata/#dialect-descriptions) (possibly per table), e.g. to:
   - allow comment lines (if appropriately prefixed with [`commentPrefix`](http://w3c.github.io/csvw/metadata/#dialect-commentPrefix))
@@ -95,11 +110,18 @@ In particular, since the metadata description resides in a separate file, it is 
 
 ## CLDF Ontology
 
-CLDF data uses terms from the [CLDF Ontology](http://cldf.clld.org/v1.0/terms.rdf), as specified in the file `terms.rdf`, to mark [`TableGroup`](http://w3c.github.io/csvw/metadata/#table-groups) or [`Table`](http://w3c.github.io/csvw/metadata/#tables) objects which have special meaning within the CLDF framework.
+CLDF data uses terms from the [CLDF Ontology](http://cldf.clld.org/v1.0/terms.rdf), as specified in the file `terms.rdf`, 
+to mark [`TableGroup`](http://w3c.github.io/csvw/metadata/#table-groups) or [`Table`](http://w3c.github.io/csvw/metadata/#tables) 
+objects which have special meaning within the CLDF framework.
 
-The CLDF Ontology also provides a set of [properties](http://cldf.clld.org/v1.0/terms.rdf#properties) to attach semantics to individual columns. While many of these properties are similar (or identical) to properties defined elsewhere - most notably in the [General Ontology for Linguistic Description - GOLD](http://linguistics-ontology.org/) - we opted for inclusion to avoid ambiguity, but made sure to reference the related related properties in the Ontology.
+The CLDF Ontology also provides a set of [properties](http://cldf.clld.org/v1.0/terms.rdf#properties) to attach 
+semantics to individual columns. While many of these properties are similar (or identical) to properties defined 
+elsewhere - most notably in the [General Ontology for Linguistic Description - GOLD](http://linguistics-ontology.org/) - 
+we opted for inclusion to avoid ambiguity, but made sure to reference the related related properties in the Ontology.
 
-Note that the column *names* in the default table descriptions (e.g. [`formTable`](components/forms)) are not always the same as the column *properties*. Each column has both a `csvw:name` and a separate `propertyURL` linking the column to the ontology. Each property also has a `rdf:label` which might also be different.
+Note that the column *names* in the default table descriptions (e.g. [`formTable`](components/forms)) are not always 
+the same as the column *properties*. Each column has both a `csvw:name` and a separate `propertyURL` linking the column 
+to the ontology. Each property also has a `rdf:label` which might also be different.
 
 **Notes:**
 - In an ill-advised attempt to version the ontology, `v1.0` has been baked into the term
@@ -205,16 +227,24 @@ Thus, an example for a CLDF dataset description could look as follows:
 ### CLDF Data files
 
 While it is possible to add any kind of CSV files to a CLDF dataset, the CLDF standard
-recognizes (and attaches specified semantics) to tables described with a common property `dc:conformsTo` with one of the [table type](#cldf-components) URIs of the [CLDF ontology](http://cldf.clld.org/v1.0/terms.rdf) as value.
+recognizes (and attaches specified semantics) to tables described with a common property `dc:conformsTo` with one of 
+the [table type](#cldf-components) URIs of the [CLDF ontology](http://cldf.clld.org/v1.0/terms.rdf) as value.
 
 Additionally, CLDF semantics can be assigned to individual columns by 
 assigning one of the property URIs defined in the 
 [CLDF ontology](http://cldf.clld.org/v1.0/terms.rdf) as `propertyUrl`.
 
-Note: CLDF column properties are assumed to have a complete row (or rather the
-entity a row stores data about) as scope; e.g. a [source column](#sources)
-is assumed to provide source information for any piece of data in the row.
-Thus, each property can be used only once per table, which makes processing simpler.
+#### Column specifications
+
+- CLDF column properties are assumed to have a complete row (or rather the
+  entity a row stores data about) as scope; e.g. a [source column](#sources)
+  is assumed to provide source information for any piece of data in the row.
+  Thus, **each property can be used only once per table**, which makes processing simpler.
+- More generally, CLDF assumes **column names in a table to be unique**.
+- Since CLDF is designed to enable data reuse, data creators should assume that schema information
+  like table or column names ends up in all sorts of environments, e.g. as names in SQL databases or
+  as parts of URLs of a web application. Thus, it is recommended to stick to ASCII characters in such
+  names and avoid usage of punctuation other than `:._-`.
 
 
 #### Identifier
