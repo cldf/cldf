@@ -6,11 +6,18 @@ The CLDF specification adheres to [Semantic Versioning](http://semver.org/spec/v
 
 ## [Unreleased]
 
+
+## [v1.1] -
+
 ### Added
 
-New components
+New components:
 - `MediaTable`
 - `ContributionTable`
+
+New properties:
+- `mediaReference`
+- `contributionReference`
 
 
 ## [v1.0] - 2017-12-18

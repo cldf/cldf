@@ -17,7 +17,9 @@
             The CLDF Ontology is an RDF vocabulary describing the dataset types, tables
             and columns specified in the CLDF standard.
         </rdfs:comment>
-        <owl:versionInfo xml:lang="en">Version 1.0 (2017-10-12)</owl:versionInfo>
+        <owl:versionInfo  rdf:resource="http://cldf.clld.org/v1.1"/>
+        <owl:priorVersion  rdf:resource="http://cldf.clld.org/v1.0"/>
+        <owl:backwardCompatibleWith rdf:resource="http://cldf.clld.org/v1.0"/>
         <foaf:homepage rdf:resource="http://cldf.clld.org/" />
     </owl:Ontology>
 
@@ -234,6 +236,36 @@
         <csvw:name>"Cognateset_ID"</csvw:name>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/references" />
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Foreign_key" />
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#mediaReference"
+                  dc:type="reference-property">
+        <rdfs:comment rdf:parseType="Literal">
+            <p>
+                An identifier referencing a media resource
+                by providing a foreign key into the MediaTable
+            </p>
+        </rdfs:comment>
+        <dc:references rdf:resource="#MediaTable"/>
+        <csvw:name>"Media_ID"</csvw:name>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/references" />
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Foreign_key" />
+        <dc:hasVersion rdf:resource="http://cldf.clld.org/v1.1"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#contributionReference"
+                  dc:type="reference-property">
+        <rdfs:comment rdf:parseType="Literal">
+            <p>
+                An identifier referencing a contribution
+                by providing a foreign key into the ContributionTable
+            </p>
+        </rdfs:comment>
+        <dc:references rdf:resource="#ContributionTable"/>
+        <csvw:name>"Contribution_ID"</csvw:name>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/references" />
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Foreign_key" />
+        <dc:hasVersion rdf:resource="http://cldf.clld.org/v1.1"/>
     </rdf:Property>
 
     <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#functionalEquivalentsetReference"
@@ -692,7 +724,25 @@
         </rdfs:comment>
         <csvw:url>"parameters.csv"</csvw:url>
     </rdfs:Class>
-    
+
+    <rdfs:Class rdf:about="http://cldf.clld.org/v1.0/terms.rdf#MediaTable" dc:type="table">
+        <csvw:name xml:lang="en">"MediaTable"</csvw:name>
+        <rdfs:comment>
+            The table of media resources linked from objects in a CLDF dataset
+        </rdfs:comment>
+        <csvw:url>"media.csv"</csvw:url>
+        <dc:hasVersion rdf:resource="http://cldf.clld.org/v1.1"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://cldf.clld.org/v1.0/terms.rdf#ContributionTable" dc:type="table">
+        <csvw:name xml:lang="en">"ContributionTable"</csvw:name>
+        <rdfs:comment>
+            The table of contributions - i.e. citeable units - in a CLDF dataset
+        </rdfs:comment>
+        <csvw:url>"contributions.csv"</csvw:url>
+        <dc:hasVersion rdf:resource="http://cldf.clld.org/v1.1"/>
+    </rdfs:Class>
+
     <rdfs:Class rdf:about="http://cldf.clld.org/v1.0/terms.rdf#FunctionalEquivalentTable" dc:type="table">
         <csvw:name xml:lang="en">"FunctionalEquivalentTable"</csvw:name>
         <rdfs:comment>

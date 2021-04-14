@@ -7,5 +7,4 @@ Releasing a new version of the CLDF spec
 - Create a release of https://github.com/cldf/cldf
 - Make sure the release is picked up by ZENODO
 - Copy the DOI from ZENODO and add it to the release notes
-- Copy terms.rdf to a new version directory in the gh-pages branch
-- Push the gh-pages branch
+- Create cldf.github.io/<version>/index.html, with the selected content from `CHANGELOG.md`.
