@@ -18,14 +18,3 @@ Note that this approach cannot deal with subparts of words. If you want to refer
 In some cases the strings ('sentences') to be aligned are so similar that it is possible to make a more simple direct alignment by adding additional spaces into the string, similar to how alignments are encoded in [cognates](../cognates). Such an alignment (i.e. the original string with extra spaces added) can be specified in the column `Alignment`. Now there is no explicit encoding of a `FunctionalEquivalentsSet` because the functional equivalents are encoded by being in the same column of the Alignment.
 
 Note that there will be recurring cases of crossing alignments (i.e. the order of elements is reversed) in such alignments. This is similar to the problem of metathesis in sound alignment, and the same solution is proposed for both situations. If elements 'A B C D' from one language has to be aligned to elements 'A C B D' in another language, an extra 'virtual' column is added, leading to 'A  B C D' and 'A C B  D' To indicate that the columns 2 and 4 are actually the same element, an `AlignmentAnntoationTable` can be used.
-
-## [FunctionalEquivalentTable](http://cldf.clld.org/v1.0/terms.rdf#FunctionalEquivalentTable): `functionalEquivalents.csv`
-
-Name/Property | Datatype | Description
- --- | --- | --- 
-[ID](http://cldf.clld.org/v1.0/terms.rdf#id) | `string` | 
-[Form_ID](http://cldf.clld.org/v1.0/terms.rdf#formReference) | `string` | References FormTable
-[FunctionalEquivalentset_ID](http://cldf.clld.org/v1.0/terms.rdf#functionalEquivalentsetReference) | `string` | References FunctionalEquivalentsetTable
-[Segment_Slice](http://cldf.clld.org/v1.0/terms.rdf#segmentSlice) | list of `string` (separated by ` `) | 
-[Alignment](http://cldf.clld.org/v1.0/terms.rdf#alignment) | list of `string` (separated by ` `) | 
-[Source](http://cldf.clld.org/v1.0/terms.rdf#source) | list of `string` (separated by `;`) | 

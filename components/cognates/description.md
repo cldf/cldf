@@ -33,14 +33,3 @@ optionally using shortcut notation for ranges like `1:3`.
 
 The default description of the cognate
 table is available in [`CognateTable-metadata.json`](CognateTable-metadata.json).
-
-## [CognateTable](http://cldf.clld.org/v1.0/terms.rdf#CognateTable): `cognates.csv`
-
-Name/Property | Datatype | Description
- --- | --- | --- 
-[ID](http://cldf.clld.org/v1.0/terms.rdf#id) | `string` | 
-[Form_ID](http://cldf.clld.org/v1.0/terms.rdf#formReference) | `string` | References the form which is judged to belong to a cognate set.<br>References FormTable
-[Cognateset_ID](http://cldf.clld.org/v1.0/terms.rdf#cognatesetReference) | `string` | References the cognate set a form is judged to belong to.<br>References CognatesetTable
-[Segment_Slice](http://cldf.clld.org/v1.0/terms.rdf#segmentSlice) | list of `string` (separated by ` `) | Specifies the slice of morphemes of the form in case of partial cognacy.
-[Alignment](http://cldf.clld.org/v1.0/terms.rdf#alignment) | list of `string` (separated by ` `) | The segments of the form aligned with respect to all other forms in the cognate set
-[Source](http://cldf.clld.org/v1.0/terms.rdf#source) | list of `string` (separated by `;`) | 

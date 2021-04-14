@@ -17,12 +17,3 @@ This specification can be done by adding a codes table with the default descript
 
 In a structure dataset's `ValueTable` the codes can be referenced using a foreign
 key `Code_ID`.
-
-## [CodeTable](http://cldf.clld.org/v1.0/terms.rdf#CodeTable): `codes.csv`
-
-Name/Property | Datatype | Description
- --- | --- | --- 
-[ID](http://cldf.clld.org/v1.0/terms.rdf#id) | `string` | 
-[Parameter_ID](http://cldf.clld.org/v1.0/terms.rdf#parameterReference) | `string` | The parameter or variable the code belongs to.<br>References ParameterTable
-[Name](http://cldf.clld.org/v1.0/terms.rdf#name) | `string` | 
-[Description](http://cldf.clld.org/v1.0/terms.rdf#description) | `string` | 

@@ -18,13 +18,3 @@ knowledge.
 Often datasets will add a column specifying reliability levels of the loan assessment
 (e.g. WOLD's ["borrowed score"](http://wold.clld.org/terms#borrowed_score)),
 but no common encoding scheme for such levels has been conventionalized yet.
-
-## [BorrowingTable](http://cldf.clld.org/v1.0/terms.rdf#BorrowingTable): `borrowings.csv`
-
-Name/Property | Datatype | Description
- --- | --- | --- 
-[ID](http://cldf.clld.org/v1.0/terms.rdf#id) | `string` | 
-[Target_Form_ID](http://cldf.clld.org/v1.0/terms.rdf#targetFormReference) | `string` | References the loanword, i.e. the form as borrowed into the target language<br>References FormTable
-[Source_Form_ID](http://cldf.clld.org/v1.0/terms.rdf#sourceFormReference) | `string` | References the source word of a borrowing<br>References FormTable
-[Comment](http://cldf.clld.org/v1.0/terms.rdf#comment) | `string` | 
-[Source](http://cldf.clld.org/v1.0/terms.rdf#source) | list of `string` (separated by `;`) | 

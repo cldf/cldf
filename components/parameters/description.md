@@ -12,11 +12,3 @@ must be provided. This should be done in CLDF datasets by including a
 data file `parameters.csv` or a table with `"dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#ParameterTable"`, and pointing to rows in this table
 using the [`parameterReference`](http://cldf.clld.org/v1.0/terms.rdf#parameterReference)
 property.
-
-## [ParameterTable](http://cldf.clld.org/v1.0/terms.rdf#ParameterTable): `parameters.csv`
-
-Name/Property | Datatype | Description
- --- | --- | --- 
-[ID](http://cldf.clld.org/v1.0/terms.rdf#id) | `string` | 
-[Name](http://cldf.clld.org/v1.0/terms.rdf#name) | `string` | 
-[Description](http://cldf.clld.org/v1.0/terms.rdf#description) | `string` | 

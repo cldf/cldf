@@ -16,18 +16,21 @@
                 "name": "Language_ID",
                 "required": true,
                 "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#languageReference",
+                "dc:description": "A reference to a language (or variety) the form belongs to",
                 "datatype": "string"
             },
             {
                 "name": "Parameter_ID",
                 "required": true,
                 "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#parameterReference",
+                "dc:description": "A reference to the meaning denoted by the form",
                 "datatype": "string"
             },
             {
                 "name": "Form",
                 "required": true,
                 "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#form",
+                "dc:description": "The written expression of the form. If possible the transcription system used for the written form should be described in CLDF metadata (e.g. via adding a common property `dc:conformsTo` to the column description using concept URLs of the GOLD Ontology (such as [phonemicRep](http://linguistics-ontology.org/gold/2010/phonemicRep) or [phoneticRep](http://linguistics-ontology.org/gold/2010/phoneticRep)) as values).",
                 "datatype": "string"
             },
             {

@@ -39,15 +39,3 @@ I.e. a local feature ID for a multi-dimensional feature can be coded as
 Language_ID Feature_ID Value
 deu         Sg~1P     ich
 deu         Pl~1P     wir
-
-## [ValueTable](http://cldf.clld.org/v1.0/terms.rdf#ValueTable): `values.csv`
-
-Name/Property | Datatype | Description
- --- | --- | --- 
-[ID](http://cldf.clld.org/v1.0/terms.rdf#id) | `string` | 
-[Language_ID](http://cldf.clld.org/v1.0/terms.rdf#languageReference) | `string` | References LanguageTable
-[Parameter_ID](http://cldf.clld.org/v1.0/terms.rdf#parameterReference) | `string` | References ParameterTable
-[Value](http://cldf.clld.org/v1.0/terms.rdf#value) | `string` | 
-[Code_ID](http://cldf.clld.org/v1.0/terms.rdf#codeReference) | `string` | References CodeTable
-[Comment](http://cldf.clld.org/v1.0/terms.rdf#comment) | `string` | 
-[Source](http://cldf.clld.org/v1.0/terms.rdf#source) | list of `string` (separated by `;`) | 

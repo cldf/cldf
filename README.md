@@ -288,7 +288,8 @@ sources:
 
 The CSVW data model can be used to express this difference as follows:
 Case 1 can be modeled by not including the relevant data as row at all.
-Case 2 can be modeled using the `null` property of the relevant column specification as value in a data row.
+Case 2 can be modeled using the `null` property of the relevant column specification (defaulting to the empty
+string) as value in a data row.
 
 
 #### Sources

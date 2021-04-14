@@ -22,12 +22,14 @@
                 "name": "Primary_Text",
                 "required": true,
                 "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#primaryText",
+                "dc:description": "The example text in the source language.",
                 "datatype": "string"
             },
             {
                 "name": "Analyzed_Word",
                 "required": false,
                 "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#analyzedWord",
+                "dc:description": "The sequence of words of the primary text to be aligned with glosses",
                 "datatype": "string",
                 "separator": "\\t"
             },
@@ -35,6 +37,7 @@
                 "name": "Gloss",
                 "required": false,
                 "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#gloss",
+                "dc:description": "The sequence of glosses aligned with the words of the primary text",
                 "datatype": "string",
                 "separator": "\\t"
             },
@@ -42,12 +45,14 @@
                 "name": "Translated_Text",
                 "required": false,
                 "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#translatedText",
+                "dc:description": "The translation of the example text in a meta language",
                 "datatype": "string"
             },
             {
                 "name": "Meta_Language_ID",
                 "required": false,
                 "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#metaLanguageReference",
+                "dc:description": "References the language of the translated text",
                 "datatype": "string"
             },
             {
