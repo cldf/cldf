@@ -1,0 +1,41 @@
+{
+  "url": "media.csv",
+  "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#MediaTable",
+  "tableSchema": {
+    "columns": [
+      {
+        "name": "ID",
+        "required": true,
+        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
+        "datatype": {
+          "base": "string",
+          "format": "[a-zA-Z0-9_\\-]+"
+        }
+      },
+      {
+        "name": "Name",
+        "required": false,
+        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#name",
+        "datatype": "string"
+      },
+      {
+        "name": "Description",
+        "required": false,
+        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#description",
+        "datatype": "string"
+      },
+      {
+        "name": "Media_Type",
+        "required": true,
+        "propertyUrl": "http://www.w3.org/ns/dcat#mediaType",
+        "datatype": "string"
+      },
+      {
+        "name": "URL",
+        "required": false,
+        "propertyUrl": "http://www.w3.org/ns/dcat#downloadUrl",
+        "datatype": "anyURI"
+      }
+    ]
+  }
+}
