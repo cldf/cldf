@@ -6,6 +6,12 @@ The CLDF specification adheres to [Semantic Versioning](http://semver.org/spec/v
 
 ## [Unreleased]
 
+### Added
+
+New components
+- `MediaTable`
+- `ContributionTable`
+
 
 ## [v1.0] - 2017-12-18
 
