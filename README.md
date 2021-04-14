@@ -234,6 +234,7 @@ Additionally, CLDF semantics can be assigned to individual columns by
 assigning one of the property URIs defined in the 
 [CLDF ontology](http://cldf.clld.org/v1.0/terms.rdf) as `propertyUrl`.
 
+
 #### Column specifications
 
 - CLDF column properties are assumed to have a complete row (or rather the
@@ -245,6 +246,10 @@ assigning one of the property URIs defined in the
   like table or column names ends up in all sorts of environments, e.g. as names in SQL databases or
   as parts of URLs of a web application. Thus, it is recommended to stick to ASCII characters in such
   names and avoid usage of punctuation other than `:._-`.
+- CSVW allows specifying columns as "list-valued", i.e. as containing a list of values (of the same datatype),
+  using the `separator` property. Thus, CLDF consumers **must** consult a column's `separator` property,
+  to figure out whether the value must be interpreted as list or not. Note that this also applies to foreign keys.
+  (Some properties in the CLDF Ontology require the respective column to be list-valued, though.)
 
 
 #### Identifier
@@ -272,6 +277,18 @@ etc.). This can be done as follows:
 - If the identifier follows a specified identification scheme, e.g. [ISO 639-3](http://www-01.sil.org/iso639-3/) for
   languages, this can be indicated by adding [a virtual column](http://w3c.github.io/csvw/metadata/#x5-6-1-1-use-of-virtual-columns) with a suitable `propertyUrl`
   to the table's list of columns.
+
+
+#### Missing data
+
+Data creators often want to distinguish two kinds of missing data, in particular when the data is extracted from
+sources:
+1. data that is missing/unknown because it was never extracted from the source,
+2. data that is indicated in the source as unknown.
+
+The CSVW data model can be used to express this difference as follows:
+Case 1 can be modeled by not including the relevant data as row at all.
+Case 2 can be modeled using the `null` property of the relevant column specification as value in a data row.
 
 
 #### Sources
