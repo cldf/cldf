@@ -101,7 +101,14 @@ The CLDF Ontology also provides a set of [properties](http://cldf.clld.org/v1.0/
 
 Note that the column *names* in the default table descriptions (e.g. [`formTable`](components/forms)) are not always the same as the column *properties*. Each column has both a `csvw:name` and a separate `propertyURL` linking the column to the ontology. Each property also has a `rdf:label` which might also be different.
 
-Note: For better human readability the [CLDF Ontology](http://cldf.clld.org/v1.0/terms.rdf) should
+**Notes:**
+- In an ill-advised attempt to version the ontology, `v1.0` has been baked into the term
+  URIs. While this may be a good idea in case of incompatible changes (e.g. if the semantics
+  of a term changed), it presents an obstacle for initeroperability in case of backwards-compatible
+  changes. So starting with CLDF 1.1, we will keep `http://cldf.clld.org/v1.0/terms.rdf`
+  as namespace for **all** versions of the 1.x series, and specify the particular version
+  when a term was introduced using `dc:hasVersion` properties per term.
+- For better human readability the [CLDF Ontology](http://cldf.clld.org/v1.0/terms.rdf) should
 be visited with a browser capable of rendering XSLT - such as Firefox.
 
 
