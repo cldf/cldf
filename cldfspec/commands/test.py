@@ -1,10 +1,10 @@
-# coding: utf8
-from __future__ import unicode_literals, print_function, division
-
+"""
+Check the spec for consistency
+"""
 from clldutils.path import walk
 from clldutils.jsonlib import load
 
-from util import REPO_DIR, read_terms, ns
+from cldfspec.util import REPO_DIR, read_terms, ns
 
 
 def iterproperties(obj):
@@ -19,12 +19,13 @@ def iterproperties(obj):
                 yield prop
 
 
-def run():
+def run(args):
     terms = []
     for e in read_terms().iter():
         if ns('rdf:about') in e.attrib:
             terms.append(e.attrib[ns('rdf:about')])
 
+    # Make sure all term URIs in default metadata are defined in the Ontology:
     for d in ['components', 'modules']:
         for f in walk(REPO_DIR.joinpath(d)):
             if f.suffix == '.json':
@@ -33,7 +34,3 @@ def run():
                     if k in ['propertyUrl', 'dc:conformsTo'] and v not in terms:
                         print(f)
                         print(v)
-
-
-if __name__ == '__main__':
-    run()

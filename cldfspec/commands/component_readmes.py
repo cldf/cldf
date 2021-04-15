@@ -1,13 +1,27 @@
+"""
+Create the component-specific README files by concatenating `description.md` and
+a generated description of the metadata.
+"""
 import re
 import json
-import pathlib
 from xml.etree import ElementTree
 
-from pycldf.terms import TERMS
+from pycldf.terms import Terms
 from csvw.metadata import Table
+from cldfspec.util import REPO_DIR
+
+
+def run(args):
+    for p in REPO_DIR.joinpath('components').glob('*/*.json'):
+        readme = p.parent.joinpath('description.md').read_text(encoding='utf8')
+        cols = table2markdown(Table.fromvalue(json.loads(p.read_text(encoding='utf8'))))
+        p.parent.joinpath('README.md').write_text(readme + '\n' + cols, encoding='utf8')
 
 
 def get_comment(t):
+    #
+    # FIXME: move to pycldf
+    #
     c = t.element.find("{http://www.w3.org/2000/01/rdf-schema#}comment")
     try:
         xml = ElementTree.tostring(c, default_namespace='http://www.w3.org/1999/xhtml')
@@ -23,6 +37,9 @@ def get_comment(t):
 
 
 def cardinality(col, term):
+    #
+    # FIXME: move to pycldf
+    #
     res = None
     if term:
         # Make sure, cardinality is consistent with the ontology:
@@ -44,7 +61,7 @@ def cardinality(col, term):
     return res or card or 'unspecified'
 
 
-def colrow(col, pk):
+def colrow(col, pk, TERMS):
     dt = '`{}`'.format(col.datatype.base if col.datatype else 'string')
     if col.separator:
         dt = 'list of {} (separated by `{}`)'.format(dt, col.separator)
@@ -85,13 +102,7 @@ def table2markdown(table):
         res.append(table.common_props['dc:description'] + '\n')
     res.append('Name/Property | Datatype | Cardinality | Description')
     res.append(' --- | --- | --- | --- ')
+    TERMS = Terms(REPO_DIR / 'terms.rdf')
     for col in table.tableSchema.columns:
-        res.append(colrow(col, table.tableSchema.primaryKey))
+        res.append(colrow(col, table.tableSchema.primaryKey, TERMS))
     return '\n'.join(res)
-
-
-if __name__ == '__main__':
-    for p in pathlib.Path(__file__).parent.parent.resolve().joinpath('components').glob('*/*.json'):
-        readme = p.parent.joinpath('description.md').read_text(encoding='utf8')
-        cols = table2markdown(Table.fromvalue(json.loads(p.read_text(encoding='utf8'))))
-        p.parent.joinpath('README.md').write_text(readme + '\n' + cols, encoding='utf8')

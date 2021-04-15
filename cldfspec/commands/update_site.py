@@ -2,9 +2,14 @@
 Update the CLDF website
 """
 import re
+import shutil
 import pathlib
+import subprocess
 
+from clldutils.clilib import PathType
 from markdown import markdown
+
+from cldfspec.util import REPO_DIR
 
 INDEX_TEMPLATE = """\
 <html>
@@ -49,20 +54,25 @@ def iter_changes():
     yield version, '\n'.join(agg)
 
 
-def main(p):
-    assert p.exists() and p.is_dir() and p.joinpath('v1.0').exists()
+def register(parser):
+    parser.add_argument(
+        '--site-repos',
+        type=PathType(type='dir'),
+        default=REPO_DIR.parent / 'cldf.github.io')
+
+
+def run(args):
+    v1 = args.site_repos.joinpath('v1.0')
+    assert v1.exists()
+    shutil.copy(REPO_DIR / 'terms.rdf', v1 / 'terms.rdf')
+    subprocess.check_call(['xsltproc', '-o', 'terms.html', 'terms.xsl', 'terms.rdf'], cwd=v1)
 
     for v, text in iter_changes():
         if v != 'Unreleased':
-            d = p.joinpath(v)
+            d = args.site_repos.joinpath(v)
             assert not d.exists(), 'Directory {}/ exists already!'.format(d)
             d.mkdir()
             d.joinpath('index.html').write_text(
                 INDEX_TEMPLATE.format(v, markdown(text)),
                 encoding='utf8')
             break
-
-
-if __name__ == '__main__':
-    import sys
-    main(pathlib.Path(sys.argv[1]))
