@@ -25,15 +25,15 @@
         "datatype": "string"
       },
       {
-        "name": "Contributors",
+        "name": "Contributor",
         "required": false,
-        "propertyUrl": "http://purl.org/dc/terms/creator",
+        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#contributor",
         "datatype": "string"
       },
       {
         "name": "Citation",
         "required": false,
-        "propertyUrl": "http://purl.org/dc/terms/bibliographicCitation",
+        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#citation",
         "datatype": "string"
       }
     ]

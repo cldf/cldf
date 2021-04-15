@@ -16,6 +16,7 @@
                 "name": "Form_ID",
                 "required": true,
                 "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#formReference",
+                "dc:extent": "singlevalued",
                 "dc:description": "References the form which is judged to belong to a cognate set.",
                 "datatype": "string"
             },
@@ -23,6 +24,7 @@
                 "name": "Cognateset_ID",
                 "required": true,
                 "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#cognatesetReference",
+                "dc:extent": "singlevalued",
                 "dc:description": "References the cognate set a form is judged to belong to.",
                 "datatype": "string"
             },

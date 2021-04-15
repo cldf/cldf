@@ -25,10 +25,12 @@ FAIR Cross-Linguistic Data.
 
 ## Conformance Levels
 
+CLDF is based on W3C's suite of specifications for [CSV on the Web](https://www.w3.org/TR/tabular-data-primer/), 
+or short CSVW.
 A CLDF dataset is
 
 - a set of UTF-8 encoded CSV files 
-- described by a [TableGroup](http://w3c.github.io/csvw/metadata/#table-groups) serialized as JSON file
+- described by a [CSVW TableGroup](http://w3c.github.io/csvw/metadata/#table-groups) serialized as JSON file
 - with a [common property](http://w3c.github.io/csvw/metadata/#dfn-common-property) `dc:conformsTo` having one of the
   [CLDF module](#cldf-modules) URIs as value.
 
@@ -246,10 +248,15 @@ assigning one of the property URIs defined in the
   like table or column names ends up in all sorts of environments, e.g. as names in SQL databases or
   as parts of URLs of a web application. Thus, it is recommended to stick to ASCII characters in such
   names and avoid usage of punctuation other than `:._-`.
-- CSVW allows specifying columns as "list-valued", i.e. as containing a list of values (of the same datatype),
+- **Cardinality:** CSVW allows specifying columns as "multivalued", i.e. as containing a list of values (of the same datatype),
   using the `separator` property. Thus, CLDF consumers **must** consult a column's `separator` property,
   to figure out whether the value must be interpreted as list or not. Note that this also applies to foreign keys.
-  (Some properties in the CLDF Ontology require the respective column to be list-valued, though.)
+  However, CLDF may restrict the cardinality as follows:
+  - The specification of a property in the ontology may contain a `dc:extent` property
+    with value `singlevalued` or `multivalued`, fixing cardinality of any instance of
+    such a column in any table.
+  - The specification of a column in the default metadata of a *component* may contain
+    a `dc:extent` property with value `singlevalued` or `multivalued`, fixing cardinality.
 
 
 #### Identifier
@@ -388,6 +395,8 @@ types are specified as *components* in a way that can be re-used across modules
 (typically as [table descriptions](http://w3c.github.io/csvw/metadata/#tables), which can be appended 
 to the `tables` property of a module's metadata). A *component* is a CSVW table description with a
 `dc:conformsTo` property having one of the component terms in the CLDF Ontology as value.
+Each component listed below is described in a README and specified by the default
+metadata file in the respective directory.
 
 - [Language metadata](components/languages)
 - [Parameter metadata](components/parameters)

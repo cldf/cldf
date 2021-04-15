@@ -17,6 +17,7 @@
                 "required": true,
                 "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#parameterReference",
                 "dc:description": "The parameter or variable the code belongs to.",
+                "dc:extent": "singlevalued",
                 "datatype": "string"
             },
             {

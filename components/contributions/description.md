@@ -15,8 +15,19 @@ https://github.com/lexibank/wold/blob/master/cldf/vocabularies.csv
 
 ## Linking to contributions
 
-Which objects in a CLDF dataset are linked to contributions can vary. Whereas in WALS Online
-chapters (i.e. sets of features or parameters) are regarded as citeable units, contributions
-to the World Loanword Database are aligned with languages. Thus, for WALS Online one
-would add a column with `propertyURL` http://cldf.clld.org/v1.0/terms.rdf#contributionReference
+The specific objects in a CLDF dataset that link to contributions can vary according to the needs
+of the dataset. For example, the [WALS Online](https://wals.info/) database is comprised of chapters
+which contain sets of features or parameters. Each chapter is regarded as a citeable unit, e.g.
+
+> It is important to cite the specific chapter that you are taking your information from, not just the
+general work "The World Atlas of Language Structures Online" (Dryer, Matthew S. & Haspelmath, Martin
+2013), unless you are citing data from more than 25 chapters simultaneously.
+
+...therefore, in the CLDF dataset each chapter is linked to a specific contribution.
+
+In contrast, the [World Loanword Database](https://wold.clld.org/) contains vocabularies
+contributed by an expert on each language and its history. In this case, therefore,
+the contributions are linked to each language.
+
+Thus, for WALS Online one would add a column with `propertyURL` http://cldf.clld.org/v1.0/terms.rdf#contributionReference
 to the ParameterTable, for WOLD it would be added to the LanguageTable.

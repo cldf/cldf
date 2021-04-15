@@ -27,13 +27,13 @@
       {
         "name": "Media_Type",
         "required": true,
-        "propertyUrl": "http://www.w3.org/ns/dcat#mediaType",
+        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#mediaType",
         "datatype": "string"
       },
       {
-        "name": "URL",
+        "name": "Download_URL",
         "required": false,
-        "propertyUrl": "http://www.w3.org/ns/dcat#downloadUrl",
+        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#downloadUrl",
         "datatype": "anyURI"
       }
     ]

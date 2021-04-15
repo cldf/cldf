@@ -39,15 +39,15 @@ I.e. a local feature ID for a multi-dimensional feature can be coded as
 Language_ID Feature_ID Value
 deu         Sg~1P     ich
 deu         Pl~1P     wir
-
+```
 ## [ValueTable](http://cldf.clld.org/v1.0/terms.rdf#ValueTable): `values.csv`
 
-Name/Property | Datatype | Description
- --- | --- | --- 
-[ID](http://cldf.clld.org/v1.0/terms.rdf#id) | `string` | 
-[Language_ID](http://cldf.clld.org/v1.0/terms.rdf#languageReference) | `string` | References LanguageTable
-[Parameter_ID](http://cldf.clld.org/v1.0/terms.rdf#parameterReference) | `string` | References ParameterTable
-[Value](http://cldf.clld.org/v1.0/terms.rdf#value) | `string` | 
-[Code_ID](http://cldf.clld.org/v1.0/terms.rdf#codeReference) | `string` | References CodeTable
-[Comment](http://cldf.clld.org/v1.0/terms.rdf#comment) | `string` | 
-[Source](http://cldf.clld.org/v1.0/terms.rdf#source) | list of `string` (separated by `;`) | 
+Name/Property | Datatype | Cardinality | Description
+ --- | --- | --- | --- 
+[ID](http://cldf.clld.org/v1.0/terms.rdf#id) | `string` | singlevalued | <div> <p>A unique identifier for a row in a table.</p> <p> To allow usage of identifiers as path components of URLs IDs must only contain alphanumeric characters, underscore and hyphen. </p> </div> 
+[Language_ID](http://cldf.clld.org/v1.0/terms.rdf#languageReference) | `string` | singlevalued | <div> <p> An identifier referencing a language either </p> <ul> <li>by providing a foreign key into the LanguageTable or</li> <li>by using a known encoding scheme.</li> </ul> </div> <br>References LanguageTable
+[Parameter_ID](http://cldf.clld.org/v1.0/terms.rdf#parameterReference) | `string` | singlevalued | <div> <p> An identifier referencing a parameter either </p> <ul> <li>by providing a foreign key into the ParameterTable or</li> <li>by using a known encoding scheme.</li> </ul> </div> <br>References ParameterTable
+[Value](http://cldf.clld.org/v1.0/terms.rdf#value) | `string` | singlevalued | <div> <p> The value (a.k.a. datapoint or measurement) of a language for a structural feature. </p> <p> For features with a limited, discrete set of valid values (a.k.a. categorical variables) it is recommended to relate items of a ValueTable to the respective code in the CodeTable. </p> </div> 
+[Code_ID](http://cldf.clld.org/v1.0/terms.rdf#codeReference) | `string` | singlevalued | <div> <p> An identifier referencing a code (aka category) description by providing a foreign key into the CodeTable. </p> </div> <br>References CodeTable
+[Comment](http://cldf.clld.org/v1.0/terms.rdf#comment) | `string` | unspecified | <div> <p> A human-readable comment on a resource, providing additional context. </p> </div> 
+[Source](http://cldf.clld.org/v1.0/terms.rdf#source) | list of `string` (separated by `;`) | multivalued | <div> <p>List of source specifications, of the form &lt;source_ID&gt;[], e.g. http://glottolog.org/resource/reference/id/318814[34], or meier2015[3-12] where meier2015 is a citation key in the accompanying BibTeX file.</p> </div> 
