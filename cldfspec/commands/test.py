@@ -6,6 +6,9 @@ from clldutils.jsonlib import load
 
 from cldfspec.util import REPO_DIR, read_terms, ns
 
+#
+# FIXME: check cols in metadata for consistency with ontology!
+#
 
 def iterproperties(obj):
     if isinstance(obj, dict):

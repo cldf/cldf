@@ -18,24 +18,6 @@ def run(args):
         p.parent.joinpath('README.md').write_text(readme + '\n' + cols, encoding='utf8')
 
 
-def get_comment(t):
-    #
-    # FIXME: move to pycldf
-    #
-    c = t.element.find("{http://www.w3.org/2000/01/rdf-schema#}comment")
-    try:
-        xml = ElementTree.tostring(c, default_namespace='http://www.w3.org/1999/xhtml')
-    except ValueError:
-        xml = ElementTree.tostring(c)
-
-    res = re.sub(
-        r'ns[0-9]+:comment(\s[^>]+)?',
-        'div',
-        xml.decode('utf8')
-    ).replace('\n', ' ').replace('<html:', '<').replace('</html:', '</')
-    return re.sub('\s+', ' ', res)
-
-
 def cardinality(col, term):
     #
     # FIXME: move to pycldf
@@ -44,10 +26,7 @@ def cardinality(col, term):
     if term:
         # Make sure, cardinality is consistent with the ontology:
         tcol = term.to_column()
-        try:
-            res = term.element.find("{http://purl.org/dc/terms/}extent").text
-        except:
-            res = None
+        res = term.cardinality
         assert (res == 'multivalued' and tcol.separator) or \
                (res == 'singlevalued' and not tcol.separator) or \
                (res is None), 'y'
@@ -71,7 +50,7 @@ def colrow(col, pk, TERMS):
         term = TERMS.by_uri.get(col.propertyUrl.uri)
     card = cardinality(col, term)
     if (not desc) and term:
-        desc = get_comment(term)
+        desc = term.comment(one_line=True)
 
     pk = pk or []
     if col.name in pk:
