@@ -25,16 +25,16 @@ As with any CLDF component,
 
 ## Example
 
-The [CLDF download](https://cdstar.shh.mpg.de/bitstreams/EAEA0-5F01-8AAF-CDED-0/ids_dataset.cldf.zip) linked from
-the download page of [The Intercontinental Dictionary Series](http://ids.clld.org) contains a `FormTable` in `forms.csv` starting with
+See https://github.com/intercontinental-dictionary-series/lindseyende/blob/master/cldf/forms.csv
 
+```csv
+ID,Local_ID,Language_ID,Parameter_ID,Value,Form,Segments,Comment,Source,Cognacy,Loan,Graphemes,Profile,Transcriptions,AlternativeValues
+ende1235-1-100-1,,ende1235,1-100,ekaklle ulle,ekaklle ulle,e k a k ɽ e + u ɽ e,,lindsey2019,,,^ e k a k ll e + u ll e $,default,StandardOrth;Phonetic,ekakɽe uɽe
+ende1235-1-210-1,,ende1235,1-210,ekaklle,ekaklle,e k a k ɽ e,,lindsey2019,,,^ e k a k ll e $,default,StandardOrth;Phonetic,ekakɽe
+ende1235-1-212-1,,ende1235,1-212,ekaklle,ekaklle,e k a k ɽ e,"also: täpe, matu",lindsey2019,,,^ e k a k ll e $,default,StandardOrth;Phonetic,ekakɽe
+ende1235-1-213-1,,ende1235,1-213,pänpän,pänpän,p ə n p ə n,,lindsey2019,,,^ p ä n p ä n $,default,StandardOrth;Phonetic,pənpən
+...
 ```
-ID,Language_ID,Parameter_ID,Form,Segments,Comment,Source,Contribution_ID
-14-320-325-1,325,14-320,гьарза,,,,325
-```
-
-`Language_ID` and `Parameter_ID` provide references to rows in the `LanguageTable` and `ParameterTable`, respectively, in the same CLDF dataset.
-The form is given in cyrillic transcription.
 
 ## [FormTable](http://cldf.clld.org/v1.0/terms.rdf#FormTable): `forms.csv`
 

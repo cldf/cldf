@@ -25,11 +25,13 @@ Specification of URLs to access the media files is quite flexible:
 
 ## Linking media items
 
-Which objects in a CLDF dataset are linked to media resources can vary. E.g. in APiCS
+Which objects in a CLDF dataset are linked to media resources can vary. E.g. in 
+[APiCS Online](https://apics-online.info/)
 each language contribution provides a PDF version and an audio recording of a glossed
-text; in the Vanuatu Voices dataset, each form is linked to an audio recording.
+text; in the [Vanuatu Voices](https://vanuatuvoices.clld.org/) dataset, each form is linked to an audio recording.
 Thus, for APiCS one would add a column with `propertyURL` 
-http://cldf.clld.org/v1.0/terms.rdf#mediaReference
-to the ContributionTable, for VanuatuVoices it would be added to the FormTable. Also,
+`http://cldf.clld.org/v1.0/terms.rdf#mediaReference`
+to the `ContributionTable`, for Vanuatu Voices it would be added to the `FormTable`. Also,
 since audio recordings in Vanuatu Voices are provided in multiple media types, this
 reference could be made list-valued, thus short cutting the need for an association table.
+

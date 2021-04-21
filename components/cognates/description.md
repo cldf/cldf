@@ -11,7 +11,7 @@ It is recommended that columns or other metadata describing the method used
 for the cognacy judgements and the alignments are added, but as yet no clear standard
 for these has evolved.
 
-** Partial Cognates **
+## Partial Cognates
 
 Like cognates, partial cognates refer to a form in a wordlist. But to make it
 possible to annotate parts of a form, the segmentation of the form
@@ -19,7 +19,7 @@ possible to annotate parts of a form, the segmentation of the form
 i.e. the `FormTable` must contain a column with `propertyUrl`
 `http://cldf.clld.org/v1.0/terms.rdf#segments` where the secondary separator
 is used to delimit morphemes, e.g.
-```
+```json
 {
     "name": "Segments",
     "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#segments",

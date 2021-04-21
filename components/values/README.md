@@ -8,24 +8,32 @@ Each value is stored as a separate row in the `Vauetable`, providing, at the lea
 - [Parameter_ID](http://cldf.clld.org/v1.0/terms.rdf#parameterReference): A reference to the meaning denoted by the form.
 - [Value](http://cldf.clld.org/v1.0/terms.rdf#value): The measurement.
 
-For categorical variables, it is often useful to supply the list of valid values using a `CodeTable`. In this case, a [Code_ID](http://cldf.clld.org/v1.0/terms.rdf#codeReference) column in the `ValueTable` should be used to
+For categorical variables, it is often useful to supply the list of valid values using a `CodeTable`. In this case, a [codeReference](http://cldf.clld.org/v1.0/terms.rdf#codeReference) column in the `ValueTable` should be used to
 link value to code.
 
 As with any CLDF component, 
 - comments and references to sources can be added via
-[Comment](http://cldf.clld.org/v1.0/terms.rdf#comment) and [Source](http://cldf.clld.org/v1.0/terms.rdf#source) columns respectively,
+[comment](http://cldf.clld.org/v1.0/terms.rdf#comment) and [source](http://cldf.clld.org/v1.0/terms.rdf#source) columns respectively,
 - additional data can be supplied in additional columns.
 
 
 ## Example
 
-The [CLDF download](https://cdstar.shh.mpg.de/bitstreams/EAEA0-7269-77E5-3E10-0/wals_dataset.cldf.zip) linked from
-the download page of [WALS Online](http://wals.info) contains a `ValueTable` in `values.csv` starting with
+See https://github.com/cldf-datasets/wals/blob/master/cldf/values.csv
 
-```
-ID,Language_ID,Parameter_ID,Value,Code_ID,Comment,Source,Contribution_ID
-1A-kgi,kgi,1A,Large,1A-5,,Santos-1977,1
-1A-cve,cve,1A,Small,1A-1,,Thurman-1970,1
+```csv
+ID,Language_ID,Parameter_ID,Value,Code_ID,Comment,Source,Example_ID
+81A-aab,aab,81A,2,81A-2,,Nekitel-1985[94],
+82A-aab,aab,82A,1,82A-1,,Nekitel-1985[94],
+83A-aab,aab,83A,2,83A-2,,Nekitel-1985[94],
+87A-aab,aab,87A,2,87A-2,,Nekitel-1985[95],
+88A-aab,aab,88A,2,88A-2,,Nekitel-1985[95],
+89A-aab,aab,89A,2,89A-2,,Nekitel-1985[95],
+92A-aab,aab,92A,2,92A-2,,Nekitel-1985[99],
+93A-aab,aab,93A,2,93A-2,,Nekitel-1985[100],
+97A-aab,aab,97A,4,97A-4,,,
+112A-aab,aab,112A,2,112A-2,,Nekitel-1985[passim],
+...
 ```
 
 
