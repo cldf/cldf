@@ -119,11 +119,11 @@ objects which have special meaning within the CLDF framework.
 The CLDF Ontology also provides a set of [properties](http://cldf.clld.org/v1.0/terms.rdf#properties) to attach 
 semantics to individual columns. While many of these properties are similar (or identical) to properties defined 
 elsewhere - most notably in the [General Ontology for Linguistic Description - GOLD](http://linguistics-ontology.org/) - 
-we opted for inclusion to avoid ambiguity, but made sure to reference the related related properties in the Ontology.
+we opted for inclusion to avoid ambiguity, but made sure to reference the related properties in the ontology.
 
 Note that the column *names* in the default table descriptions (e.g. [`formTable`](components/forms)) are not always 
 the same as the column *properties*. Each column has both a `csvw:name` and a separate `propertyURL` linking the column 
-to the ontology. Each property also has a `rdf:label` which might also be different.
+to the CLDF Ontology. Each property also has a `rdf:label` which might also be different.
 
 **Notes:**
 - In an ill-advised attempt to version the ontology, `v1.0` has been baked into the term
@@ -230,11 +230,11 @@ Thus, an example for a CLDF dataset description could look as follows:
 
 While it is possible to add any kind of CSV files to a CLDF dataset, the CLDF standard
 recognizes (and attaches specified semantics) to tables described with a common property `dc:conformsTo` with one of 
-the [table type](#cldf-components) URIs of the [CLDF ontology](http://cldf.clld.org/v1.0/terms.rdf) as value.
+the [table type](#cldf-components) URIs of the [CLDF Ontology](http://cldf.clld.org/v1.0/terms.rdf) as value.
 
 Additionally, CLDF semantics can be assigned to individual columns by 
 assigning one of the property URIs defined in the 
-[CLDF ontology](http://cldf.clld.org/v1.0/terms.rdf) as `propertyUrl`.
+[CLDF Ontology](http://cldf.clld.org/v1.0/terms.rdf) as `propertyUrl`.
 
 
 #### Column specifications
