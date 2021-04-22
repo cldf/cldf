@@ -6,6 +6,7 @@
         }
     ],
     "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#StructureDataset",
+    "dc:bibliographicCitation": "Ian Maddieson. 2013. Consonant Inventories.\nIn: Dryer, Matthew S. & Haspelmath, Martin (eds.)\nThe World Atlas of Language Structures Online.\nLeipzig: Max Planck Institute for Evolutionary Anthropology.\n(Available online at http://wals.info/chapter/1 )",
     "dc:source": "sources.bib",
     "dialect": {
         "commentPrefix": null

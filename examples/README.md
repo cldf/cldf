@@ -20,11 +20,12 @@ http://wals.info/feature/1A.tab), using tools from the [`csvkit` package](https:
 - Using `sed` we replace the first line, thereby renaming the columns.
 - Finally we use `csvformat` to switch to tab-delimited values.
 
-```bash
-$ csvjoin -c Language_ID,ID values.csv languages.csv \
-| csvjoin -c Parameter_ID,ID - parameters.csv \
-| csvjoin -c Code_ID,ID - codes.csv \
-| csvcut -c 2,9,4,25,11,12,15,16,22 \
+```shell
+$ csvjoin -c Language_ID,ID wals_1A_cldf/values.csv wals_1A_cldf/languages.csv \
+| csvjoin -c Parameter_ID,ID - wals_1A_cldf/parameters.csv \
+| csvcut -C Name2 \
+| csvjoin -c Code_ID,ID - wals_1A_cldf/codes.csv \
+| csvcut -c Language_ID,Name,Value,Name2,Latitude,Longitude,Genus,Family,Area \
 | sed "1s/.*/wals code,name,value,description,latitude,longitude,genus,family,area/" \
 | csvformat -T \
 | head -n 5
@@ -34,6 +35,33 @@ abk	Abkhaz	5	Large	43.0833333333	41.0	Northwest Caucasian	Northwest Caucasian	Ph
 ach	Aché	1	Small	-25.25	-55.1666666667	Tupi-Guaraní	Tupian	Phonology
 acm	Achumawi	2	Moderately small	41.5	-121.0	Palaihnihan	Hokan	Phonology
 ```
+
+If we wanted to be fancy, we could even add the citation information, using [jq](https://stedolan.github.io/jq/)
+to read the CLDF metadata:
+```shell
+$ cat wals_1A_cldf/StructureDataset-metadata.json | jq '."dc:bibliographicCitation"'
+"Ian Maddieson. 2013. Consonant Inventories.\nIn: Dryer, Matthew S. & Haspelmath, Martin (eds.)\nThe World Atlas of Language Structures Online.\nLeipzig: Max Planck Institute for Evolutionary Anthropology.\n(Available online at http://wals.info/chapter/1 )"
+```
+and putting it all together:
+```shell
+$ ( cat wals_1A_cldf/StructureDataset-metadata.json | jq '."dc:bibliographicCitation"' | sed 's/"//g' | sed "s/ )/, Accessed on $(date -I).)/g" | sed 's/\\n/\
+/g' ; echo ""; csvjoin -c Language_ID,ID wals_1A_cldf/values.csv wals_1A_cldf/languages.csv | csvjoin -c Parameter_ID,ID - wals_1A_cldf/parameters.csv | csvcut -C Name2 | csvjoin -c Code_ID,ID - wals_1A_cldf/codes.csv | csvcut -c Language_ID,Name,Value,Name2,Latitude,Longitude,Genus,Family,Area | sed "1s/.*/wals code,name,value,description,latitude,longitude,genus,family,area/" | csvformat -T | head -n 5 ) | cat
+```
+will yield
+```csv
+Ian Maddieson. 2013. Consonant Inventories.
+In: Dryer, Matthew S. & Haspelmath, Martin (eds.)
+The World Atlas of Language Structures Online.
+Leipzig: Max Planck Institute for Evolutionary Anthropology.
+(Available online at http://wals.info/chapter/1, Accessed on 2021-04-22.)
+
+wals code	name	value	description	latitude	longitude	genus	family	area
+abi	Abipón	2	Moderately small	-29.0	-61.0	South Guaicuruan	Guaicuruan	Phonology
+abk	Abkhaz	5	Large	43.0833333333	41.0	Northwest Caucasian	Northwest Caucasian	Phonology
+ach	Aché	1	Small	-25.25	-55.1666666667	Tupi-Guaraní	Tupian	Phonology
+acm	Achumawi	2	Moderately small	41.5	-121.0	Palaihnihan	Hokan	Phonology
+```
+
 
 ## A Wordlist with cognate judgements
 

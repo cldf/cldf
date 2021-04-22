@@ -2,9 +2,7 @@
 Create the component-specific README files by concatenating `description.md` and
 a generated description of the metadata.
 """
-import re
 import json
-from xml.etree import ElementTree
 
 from pycldf.terms import Terms
 from csvw.metadata import Table
