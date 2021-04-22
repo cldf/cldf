@@ -39,13 +39,28 @@ acm	Achumawi	2	Moderately small	41.5	-121.0	Palaihnihan	Hokan	Phonology
 If we wanted to be fancy, we could even add the citation information, using [jq](https://stedolan.github.io/jq/)
 to read the CLDF metadata:
 ```shell
-$ cat wals_1A_cldf/StructureDataset-metadata.json | jq '."dc:bibliographicCitation"'
-"Ian Maddieson. 2013. Consonant Inventories.\nIn: Dryer, Matthew S. & Haspelmath, Martin (eds.)\nThe World Atlas of Language Structures Online.\nLeipzig: Max Planck Institute for Evolutionary Anthropology.\n(Available online at http://wals.info/chapter/1 )"
+$ cat wals_1A_cldf/StructureDataset-metadata.json | jq -r '."dc:bibliographicCitation"'
+Ian Maddieson. 2013. Consonant Inventories.
+In: Dryer, Matthew S. & Haspelmath, Martin (eds.)
+The World Atlas of Language Structures Online.
+Leipzig: Max Planck Institute for Evolutionary Anthropology.
+(Available online at http://wals.info/chapter/1 )
 ```
-and putting it all together:
+and adding in the date:
 ```shell
-$ ( cat wals_1A_cldf/StructureDataset-metadata.json | jq '."dc:bibliographicCitation"' | sed 's/"//g' | sed "s/ )/, Accessed on $(date -I).)/g" | sed 's/\\n/\
-/g' ; echo ""; csvjoin -c Language_ID,ID wals_1A_cldf/values.csv wals_1A_cldf/languages.csv | csvjoin -c Parameter_ID,ID - wals_1A_cldf/parameters.csv | csvcut -C Name2 | csvjoin -c Code_ID,ID - wals_1A_cldf/codes.csv | csvcut -c Language_ID,Name,Value,Name2,Latitude,Longitude,Genus,Family,Area | sed "1s/.*/wals code,name,value,description,latitude,longitude,genus,family,area/" | csvformat -T | head -n 5 ) | cat
+$ cat wals_1A_cldf/StructureDataset-metadata.json \
+| jq -r '."dc:bibliographicCitation"' \
+| sed "s/ )/, Accessed on $(date -I).)/g"
+Ian Maddieson. 2013. Consonant Inventories.
+In: Dryer, Matthew S. & Haspelmath, Martin (eds.)
+The World Atlas of Language Structures Online.
+Leipzig: Max Planck Institute for Evolutionary Anthropology.
+(Available online at http://wals.info/chapter/1, Accessed on 2021-04-22.)
+```
+
+Putting it all together:
+```shell
+$ ( cat wals_1A_cldf/StructureDataset-metadata.json | jq -r '."dc:bibliographicCitation"' | sed "s/ )/, Accessed on $(date -I).)/g" ; echo ""; csvjoin -c Language_ID,ID wals_1A_cldf/values.csv wals_1A_cldf/languages.csv | csvjoin -c Parameter_ID,ID - wals_1A_cldf/parameters.csv | csvcut -C Name2 | csvjoin -c Code_ID,ID - wals_1A_cldf/codes.csv | csvcut -c Language_ID,Name,Value,Name2,Latitude,Longitude,Genus,Family,Area | sed "1s/.*/wals code,name,value,description,latitude,longitude,genus,family,area/" | csvformat -T | head -n 5 ) | cat
 ```
 will yield
 ```csv
