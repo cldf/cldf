@@ -342,31 +342,29 @@ between a `FormTable` and a `CognatesetTable`.
 To make such relations explicit, the CLDF Ontology provides a set of
 [reference properties](http://cldf.clld.org/v1.0/terms.rdf#reference-properties).
 
-Reference properties are interpreted as *optional* foreign key, i.e.
-
-- if a `table1.csv` makes reference to a `table2.csv`, and both are part of the dataset, then mentioning the `ID` 
-  from table2 in a column of table1 (typically using the column-name `table2_ID`) is sufficient as a reference, and 
-  this is implicitly equivalent to a [foreignKeys](http://w3c.github.io/csvw/metadata/#schema-foreignKeys) property of `table1.csv`:
-
+Reference properties MUST be interpreted as foreign keys, e.g. a 
+`propertyUrl` `http://cldf.clld.org/v1.0/terms.rdf#languageReference`
+specified for column `Col1` of a table with `url` `table1.csv` is equivalent to a 
+[CSVW foreign key constraint](http://w3c.github.io/csvw/metadata/#schema-foreignKeys)
 ```
-  "columns": [
-      "name": "table2_ID",
-      ...
-      ]
   "foreignKeys": [
        {
-           "columnReference": "table2_ID",
+           "columnReference": "Col1",
            "reference": {
-               "resource": "table2.csv",
+               "resource": "languages.csv",
                "columnReference": "ID"
            }
        }
    ]
 ```
+assuming that the `LanguageTable` component has `url` `languages.csv` and a column `ID` with `propertyUrl` `http://cldf.clld.org/v1.0/terms.rdf#id`.
 
-- otherwise values in the column are interpreted as identifiers of the referenced
-  entities (in which case the actual entities can only be resolved by context
-  or via additonal `valueUrl` properties on the column).
+While spelling out foreign key constraints may feel cumbersome, it is still RECOMMENDED that metadata creators
+do so, to make the data compatible with CSVW tools. The foreign key constraints MUST be specified explicitly 
+if the referenced column does not have a `propertyUrl` `http://cldf.clld.org/v1.0/terms.rdf#id`.
+
+Note that columns for reference properties may still be "nullable", i.e. contain `NULL` values, to allow
+for rows where no reference can be specified.
 
 
 <a id="sources"> </a>
