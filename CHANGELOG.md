@@ -7,7 +7,7 @@ The CLDF specification adheres to [Semantic Versioning](http://semver.org/spec/v
 ## [Unreleased]
 
 
-## [v1.1] -
+## [v1.1] - 2021-04-28
 
 ### Added
 
