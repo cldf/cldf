@@ -25,6 +25,10 @@ and new properties
 - `contributor`
 - `citation`
 
+Two new properties to reference catalogs:
+- `gbifReference`
+- `cltsReference`
+
 
 ### Backward Incompatibilities
 

@@ -42,7 +42,7 @@ def iter_changes():
     section_pattern = re.compile(r'## \[(?P<version>[^]]+)]')
     agg, version = [], None
     print(pathlib.Path(__file__).parent.parent.resolve())
-    for line in pathlib.Path(__file__).parent.parent.resolve().joinpath('CHANGELOG.md').read_text(
+    for line in REPO_DIR.joinpath('CHANGELOG.md').read_text(
             encoding='utf8').splitlines():
         m = section_pattern.match(line)
         if m:
