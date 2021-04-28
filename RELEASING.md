@@ -9,7 +9,7 @@ Releasing a new version of the CLDF spec
 - Create the component READMEs
   ```shell
   cldfspec component_readmes
-  ```  
+  ```
 - Create the module defaults
   ```shell
   cldfspec make_module_defaults

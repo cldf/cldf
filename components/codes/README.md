@@ -15,7 +15,7 @@ all possibilities, then this provides a way to document the full range of possib
 This specification can be done by adding a codes table with the default description
 [`CodeTable-metadata.json`](CodeTable-metadata.json).
 
-In a structure dataset's `ValueTable` the codes can be referenced using a foreign
+In a `StructureDataset`'s `ValueTable` the codes can be referenced using a foreign
 key with `propertyUrl` `http://cldf.clld.org/v1.0/terms.rdf#codeReference`.
 
 
