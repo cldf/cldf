@@ -2,11 +2,35 @@ Releasing a new version of the CLDF spec
 ========================================
 
 - Update CHANGELOG.md
-- Update all ontology URIs to the new version number
-- Recreate default descriptions of components and modules via `scripts/make_defaults.py`
-- Run the tests `scripts/test.py`
-- Create a release of https://github.com/glottobank/cldf
+- Run the tests
+  ```shell
+  cldfspec test
+  ```  
+- Create the component READMEs
+  ```shell
+  cldfspec component_readmes
+  ```
+- Create the module defaults
+  ```shell
+  cldfspec make_module_defaults
+  ```
+- Create a release of https://github.com/cldf/cldf
 - Make sure the release is picked up by ZENODO
 - Copy the DOI from ZENODO and add it to the release notes
-- Copy terms.rdf to a new version directory in the gh-pages branch
-- Push the gh-pages branch
+- Create cldf.github.io/<version>/index.html, with the selected content from `CHANGELOG.md`:
+  ```shell
+  cldfspec update_site
+  cd ../cldf.github.io
+  git add ...
+  ```
+- Adapt landing page, then  
+  ```shell
+  git commit -a -m"release v..."
+  git push origin
+  ```
+- Update `pycldf`:
+  ```shell
+  cldfspec update_pycldf
+  cd ../pycldf
+  git status
+  ```

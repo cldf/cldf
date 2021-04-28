@@ -1,0 +1,41 @@
+{
+  "url": "contributions.csv",
+  "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#ContributionTable",
+  "tableSchema": {
+    "columns": [
+      {
+        "name": "ID",
+        "required": true,
+        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
+        "datatype": {
+          "base": "string",
+          "format": "[a-zA-Z0-9_\\-]+"
+        }
+      },
+      {
+        "name": "Name",
+        "required": false,
+        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#name",
+        "datatype": "string"
+      },
+      {
+        "name": "Description",
+        "required": false,
+        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#description",
+        "datatype": "string"
+      },
+      {
+        "name": "Contributor",
+        "required": false,
+        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#contributor",
+        "datatype": "string"
+      },
+      {
+        "name": "Citation",
+        "required": false,
+        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#citation",
+        "datatype": "string"
+      }
+    ]
+  }
+}

@@ -17,7 +17,9 @@
             The CLDF Ontology is an RDF vocabulary describing the dataset types, tables
             and columns specified in the CLDF standard.
         </rdfs:comment>
-        <owl:versionInfo xml:lang="en">Version 1.0 (2017-10-12)</owl:versionInfo>
+        <owl:versionInfo  rdf:resource="http://cldf.clld.org/v1.1"/>
+        <owl:priorVersion  rdf:resource="http://cldf.clld.org/v1.0"/>
+        <owl:backwardCompatibleWith rdf:resource="http://cldf.clld.org/v1.0"/>
         <foaf:homepage rdf:resource="http://cldf.clld.org/" />
     </owl:Ontology>
 
@@ -32,10 +34,11 @@
                 IDs must only contain alphanumeric characters, underscore and hyphen.
             </p>
         </rdfs:comment>
+        <dc:extent>singlevalued</dc:extent>
         <csvw:name>"ID"</csvw:name>
         <csvw:datatype>{"base": "string", "format": "[a-zA-Z0-9_\\-]+"}</csvw:datatype>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier" />
-        <rdfs:seeAlso rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-identifier" />
+        <rdfs:seeAlso rdf:resource="http://dublincore.org/documents/dcmi-terms/#http://purl.org/dc/elements/1.1/identifier" />
     </rdf:Property>
 
     <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#name" dc:type="generic-property">
@@ -44,7 +47,7 @@
         </rdfs:comment>
         <csvw:name>"Name"</csvw:name>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/title" />
-        <rdfs:seeAlso rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-title" />
+        <rdfs:seeAlso rdf:resource="http://dublincore.org/documents/dcmi-terms/#http://purl.org/dc/elements/1.1/title" />
     </rdf:Property>
 
     <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#description" dc:type="generic-property">
@@ -53,18 +56,19 @@
         </rdfs:comment>
         <csvw:name>"Description"</csvw:name>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description" />
-        <rdfs:seeAlso rdf:resource="http://dublincore.org/documents/dcmi-terms/#terms-description" />
+        <rdfs:seeAlso rdf:resource="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/elements/1.1/description" />
     </rdf:Property>
-    
+
     <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#source" dc:type="generic-property">
         <rdfs:comment rdf:parseType="Literal">
-            <p>Semicolon-separated source specifications, of the form &lt;source_ID&gt;[], 
-            e.g. http://glottolog.org/resource/reference/id/318814[34], or meier2015[3-12]
+            <p>List of source specifications, of the form &lt;source_ID&gt;[],
+                e.g. http://glottolog.org/resource/reference/id/318814[34], or meier2015[3-12]
             where meier2015 is a citation key in the accompanying BibTeX file.</p>
         </rdfs:comment>
         <csvw:name>"Source"</csvw:name>
         <csvw:separator>";"</csvw:separator>
         <csvw:datatype>{"base": "string"}</csvw:datatype>
+        <dc:extent>multivalued</dc:extent>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/source" />
     </rdf:Property>
 
@@ -236,6 +240,36 @@
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Foreign_key" />
     </rdf:Property>
 
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#mediaReference"
+                  dc:type="reference-property">
+        <rdfs:comment rdf:parseType="Literal">
+            <p>
+                An identifier referencing a media resource
+                by providing a foreign key into the MediaTable
+            </p>
+        </rdfs:comment>
+        <dc:references rdf:resource="#MediaTable"/>
+        <csvw:name>"Media_ID"</csvw:name>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/references" />
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Foreign_key" />
+        <dc:hasVersion rdf:resource="http://cldf.clld.org/v1.1"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#contributionReference"
+                  dc:type="reference-property">
+        <rdfs:comment rdf:parseType="Literal">
+            <p>
+                An identifier referencing a contribution
+                by providing a foreign key into the ContributionTable
+            </p>
+        </rdfs:comment>
+        <dc:references rdf:resource="#ContributionTable"/>
+        <csvw:name>"Contribution_ID"</csvw:name>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/references" />
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Foreign_key" />
+        <dc:hasVersion rdf:resource="http://cldf.clld.org/v1.1"/>
+    </rdf:Property>
+
     <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#functionalEquivalentsetReference"
                   dc:type="reference-property">
         <rdfs:comment rdf:parseType="Literal">
@@ -269,6 +303,42 @@
         <rdfs:seeAlso rdf:resource="http://concepticon.clld.org" />
     </rdf:Property>
 
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#cltsReference"
+                  dc:type="reference-property">
+        <rdfs:comment rdf:parseType="Literal">
+            <p>
+                References a sound in the Cross-Linguistic Transcription Systems database. Suitable to
+                mark parameters as phonemes, and consequently values as elements of phoneme inventories.
+                E.g. <a href="https://clts.clld.org/parameters/voiced_bilabial_nasal_consonant">voiced_bilabial_nasal_consonant</a>.
+            </p>
+            <p>
+                To mark sounds that can not be mapped to any sound defined in the
+                current CLTS version, the ID "NA", corresponding to the "unknown"
+                sound https://clts.clld.org/parameters/NA can be used.
+            </p>
+        </rdfs:comment>
+        <csvw:name>"CLTS_ID"</csvw:name>
+        <csvw:datatype>{"base": "string", "format": "[a-z_-]+"}</csvw:datatype>
+        <csvw:valueUrl>"https://clts.clld.org/parameters/{CLTS_ID}"</csvw:valueUrl>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:seeAlso rdf:resource="https://clts.clld.org" />
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#gbifReference"
+                  dc:type="reference-property">
+        <rdfs:comment rdf:parseType="Literal">
+            <p>
+                References a taxonomic unit in GBIF's Backbone Taxonomy. Can be used in for example in a
+                ParameterTable to mark a lexical concept as biological species. E.g.
+                <a href="https://www.gbif.org/species/5219404">5219404</a>.
+            </p>
+        </rdfs:comment>
+        <csvw:name>"GBIF_ID"</csvw:name>
+        <csvw:datatype>{"base": "string", "format": "[0-9]+"}</csvw:datatype>
+        <csvw:valueUrl>"https://www.gbif.org/species/{GBIF_ID}"</csvw:valueUrl>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:seeAlso rdf:resource="https://www.gbif.org/dataset/d7dddbf4-2cf0-4f39-9b2a-bb099caae36c#description" />
+    </rdf:Property>
     <!--
         language properties 
     -->
@@ -329,6 +399,61 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#long" />
     </rdf:Property>
 
+    <!--
+        Contribution properties
+    -->
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#contributor" dc:type="contribution-property">
+        <rdfs:comment rdf:parseType="Literal">
+            <p>Contributor(s) to a citeable unit of a dataset.</p>
+        </rdfs:comment>
+        <csvw:name>"Contributor"</csvw:name>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/creator" />
+        <rdfs:seeAlso rdf:resource="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/elements/1.1/creator" />
+        <dc:hasVersion rdf:resource="http://cldf.clld.org/v1.1"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#citation" dc:type="contribution-property">
+        <rdfs:comment rdf:parseType="Literal">
+            <p>A full citation for a citeable unit of a dataset, preferably following the rules of the
+                <a href="https://www.linguisticsociety.org/resource/unified-style-sheet">Unified Style Sheet for Linguistics Journals</a>
+                or the best practices for <a href="https://site.uit.no/linguisticsdatacitation/">Linguistics Data Citation</a>.
+            </p>
+        </rdfs:comment>
+        <csvw:name>"Citation"</csvw:name>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/bibliographicCitation" />
+        <rdfs:seeAlso rdf:resource="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/bibliographicCitation" />
+        <dc:hasVersion rdf:resource="http://cldf.clld.org/v1.1"/>
+    </rdf:Property>
+
+    <!--
+        Media properties
+    -->
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#mediaType" dc:type="media-property">
+        <rdfs:comment rdf:parseType="Literal">
+            <p>A media type (also known as a Multipurpose Internet Mail Extensions or MIME type) as defined by
+                <a href="https://tools.ietf.org/html/rfc6838">IETF's RFC 6838</a>.</p>
+        </rdfs:comment>
+        <csvw:name>"Media_Type"</csvw:name>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/dcat#mediaType" />
+        <csvw:datatype>{"base": "string", "format": "[^/]+/.+"}</csvw:datatype>
+        <rdfs:seeAlso rdf:resource="" />
+        <dc:hasVersion rdf:resource="http://cldf.clld.org/v1.1"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#downloadUrl" dc:type="media-property">
+        <rdfs:comment rdf:parseType="Literal">
+            <p>URL where a media resource is available directly, typically through HTTP, but other schemes
+                such as <a href="https://en.wikipedia.org/wiki/File_URI_scheme">file:</a> (interpreted relative
+                to the metadata location) or <a href="https://en.wikipedia.org/wiki/Data_URI_scheme">data:</a>
+                are permissible as well.
+            </p>
+        </rdfs:comment>
+        <csvw:name>"Download_URL"</csvw:name>
+        <csvw:datatype>{"base": "anyURI"}</csvw:datatype>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/dcat#downloadUrl" />
+        <dc:hasVersion rdf:resource="http://cldf.clld.org/v1.1"/>
+    </rdf:Property>
+
     <!-- 
         IGT example properties 
     -->
@@ -350,6 +475,7 @@
         </rdfs:comment>
         <csvw:name>"Analyzed_Word"</csvw:name>
         <csvw:separator>"\\t"</csvw:separator>
+        <dc:extent>multivalued</dc:extent>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/GrammarUnit" />
     </rdf:Property>
 
@@ -361,6 +487,7 @@
         </rdfs:comment>
         <csvw:name>"Gloss"</csvw:name>
         <csvw:separator>"\\t"</csvw:separator>
+        <dc:extent>multivalued</dc:extent>
         <rdfs:seeAlso rdf:resource="http://purl.org/linguistics/gold/hasGlosses" />
     </rdf:Property>
 
@@ -429,6 +556,7 @@
                 segments are placed in the same column while gap characters are introduced in
                 those sound sequences missing a certain counterpart.</p>
         </rdfs:comment>
+        <dc:extent>multivalued</dc:extent>
         <csvw:name>"Alignment"</csvw:name>
         <csvw:separator>" "</csvw:separator>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
@@ -442,6 +570,7 @@
                 partial cognacy judgement.
             </p>
         </rdfs:comment>
+        <dc:extent>multivalued</dc:extent>
         <csvw:name>"Segment_Slice"</csvw:name>
         <csvw:datatype>{"base": "string", "format": "\\d+(:\\d+)?"}</csvw:datatype>
         <csvw:separator>" "</csvw:separator>
@@ -531,6 +660,7 @@
         </rdfs:comment>
         <csvw:name>"Segments"</csvw:name>
         <csvw:separator>" "</csvw:separator>
+        <dc:extent>multivalued</dc:extent>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </rdf:Property>
 
@@ -692,7 +822,25 @@
         </rdfs:comment>
         <csvw:url>"parameters.csv"</csvw:url>
     </rdfs:Class>
-    
+
+    <rdfs:Class rdf:about="http://cldf.clld.org/v1.0/terms.rdf#MediaTable" dc:type="table">
+        <csvw:name xml:lang="en">"MediaTable"</csvw:name>
+        <rdfs:comment>
+            The table of media resources linked from objects in a CLDF dataset
+        </rdfs:comment>
+        <csvw:url>"media.csv"</csvw:url>
+        <dc:hasVersion rdf:resource="http://cldf.clld.org/v1.1"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://cldf.clld.org/v1.0/terms.rdf#ContributionTable" dc:type="table">
+        <csvw:name xml:lang="en">"ContributionTable"</csvw:name>
+        <rdfs:comment>
+            The table of contributions - i.e. citeable units - in a CLDF dataset
+        </rdfs:comment>
+        <csvw:url>"contributions.csv"</csvw:url>
+        <dc:hasVersion rdf:resource="http://cldf.clld.org/v1.1"/>
+    </rdfs:Class>
+
     <rdfs:Class rdf:about="http://cldf.clld.org/v1.0/terms.rdf#FunctionalEquivalentTable" dc:type="table">
         <csvw:name xml:lang="en">"FunctionalEquivalentTable"</csvw:name>
         <rdfs:comment>

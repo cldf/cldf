@@ -16,12 +16,14 @@
                 "name": "Language_ID",
                 "required": true,
                 "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#languageReference",
+                "dc:extent": "singlevalued",
                 "datatype": "string"
             },
             {
                 "name": "Headword",
                 "required": true,
                 "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#headword",
+                "dc:extent": "singlevalued",
                 "datatype": "string"
             },
             {

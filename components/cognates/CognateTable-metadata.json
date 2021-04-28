@@ -16,18 +16,23 @@
                 "name": "Form_ID",
                 "required": true,
                 "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#formReference",
+                "dc:extent": "singlevalued",
+                "dc:description": "References the form which is judged to belong to a cognate set.",
                 "datatype": "string"
             },
             {
                 "name": "Cognateset_ID",
                 "required": true,
                 "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#cognatesetReference",
+                "dc:extent": "singlevalued",
+                "dc:description": "References the cognate set a form is judged to belong to.",
                 "datatype": "string"
             },
             {
                 "name": "Segment_Slice",
                 "required": false,
                 "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#segmentSlice",
+                "dc:description": "Specifies the slice of morphemes of the form in case of partial cognacy.",
                 "datatype": {
                     "base": "string",
                     "format": "\\d+(:\\d+)?"
@@ -38,6 +43,7 @@
                 "name": "Alignment",
                 "required": false,
                 "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#alignment",
+                "dc:description": "The segments of the form aligned with respect to all other forms in the cognate set",
                 "datatype": "string",
                 "separator": " "
             },

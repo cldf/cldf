@@ -2,7 +2,7 @@
 
 A big user base contributing feedback and keeping the specification alive and
 relevant is essential for a standardization effort like CLDF. We welcome any kind
-of feedback, but encourage using the [issue tracker](https://github.com/glottobank/cldf/issues), or submit [pull requests](https://github.com/glottobank/cldf/pulls). Some things to keep in mind when working on the spec:
+of feedback, but encourage using the [issue tracker](https://github.com/cldf/cldf/issues), or submit [pull requests](https://github.com/cldf/cldf/pulls). Some things to keep in mind when working on the spec:
 
 - The `master` branch of `glottobank/cldf` always reflects the latest released 
   version of the specification. So if you have commit access to this repository,
