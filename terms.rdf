@@ -314,11 +314,11 @@
             <p>
                 To mark sounds that can not be mapped to any sound defined in the
                 current CLTS version, the ID "NA", corresponding to the "unknown"
-                sound https://clts.clld.org/parameters/NA can be used.
+                sound https://clts.clld.org/parameters/NA should be used.
             </p>
         </rdfs:comment>
         <csvw:name>"CLTS_ID"</csvw:name>
-        <csvw:datatype>{"base": "string", "format": "[a-z_-]+"}</csvw:datatype>
+        <csvw:datatype>{"base": "string", "format": "[a-z_-]+|NA"}</csvw:datatype>
         <csvw:valueUrl>"https://clts.clld.org/parameters/{CLTS_ID}"</csvw:valueUrl>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:seeAlso rdf:resource="https://clts.clld.org" />

@@ -6,6 +6,10 @@ The CLDF specification adheres to [Semantic Versioning](http://semver.org/spec/v
 
 ## [Unreleased]
 
+## [v1.1.1] - 2021-04-30
+
+Fixed regular expression pattern for `cltsReference` property, to include the "unknown"
+sound.
 
 ## [v1.1] - 2021-04-28
 
