@@ -1,7 +1,9 @@
 Releasing a new version of the CLDF spec
 ========================================
 
-- Update CHANGELOG.md
+- Update 
+  - `CHANGELOG.md`
+  - version info in `terms.rdf`
 - Run the tests
   ```shell
   cldfspec test
