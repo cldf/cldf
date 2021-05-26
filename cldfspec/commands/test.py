@@ -4,16 +4,17 @@ Check the spec for consistency
 from clldutils.path import walk
 from clldutils.jsonlib import load
 
-from cldfspec.util import REPO_DIR, read_terms, ns
+from cldfspec.util import REPO_DIR
+from pycldf.terms import Terms
 
-#
-# FIXME: check cols in metadata for consistency with ontology!
-#
 
 def iterproperties(obj):
     if isinstance(obj, dict):
-        for k, v in obj.items():
-            yield k, v
+        if 'propertyUrl' in obj:
+            yield 'propertyUrl', obj['propertyUrl'], obj.get('dc:extent'), obj.get('separator')
+        elif 'dc:conformsTo' in obj:
+            yield 'dc:conformsTo', obj['dc:conformsTo'], None, None
+        for v in obj.values():
             for prop in iterproperties(v):
                 yield prop
     elif isinstance(obj, list):
@@ -23,17 +24,29 @@ def iterproperties(obj):
 
 
 def run(args):
-    terms = []
-    for e in read_terms().iter():
-        if ns('rdf:about') in e.attrib:
-            terms.append(e.attrib[ns('rdf:about')])
+    ontology = Terms(REPO_DIR / 'terms.rdf')
 
     # Make sure all term URIs in default metadata are defined in the Ontology:
     for d in ['components', 'modules']:
         for f in walk(REPO_DIR.joinpath(d)):
             if f.suffix == '.json':
                 md = load(f)
-                for k, v in iterproperties(md):
-                    if k in ['propertyUrl', 'dc:conformsTo'] and v not in terms:
-                        print(f)
-                        print(v)
+                for k, v, extent, separator in iterproperties(md):
+                    if v not in ontology.by_uri:
+                        args.log.warning('{}:{}:{}'.format(f, k, v))
+                    else:
+                        t = ontology.by_uri[v]
+                        try:
+                            if extent:  # Cardinality specified via column descriptor's dc:extent.
+                                if extent == 'multivalued':
+                                    assert separator
+                                else:  # singlevalued
+                                    assert not separator
+
+                            if t.cardinality:  # Cardinality specified in the ontology.
+                                if t.cardinality == 'multivalued':
+                                    assert separator and extent != 'singlevalued'
+                                else:  # singlevalued
+                                    assert (not separator) and extent != 'multivalued'
+                        except AssertionError:
+                            args.log.error('{}:{}:{}: cardinality mismatch'.format(f, k, v))

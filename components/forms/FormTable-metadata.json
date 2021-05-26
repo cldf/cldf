@@ -24,7 +24,6 @@
                 "name": "Parameter_ID",
                 "required": true,
                 "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#parameterReference",
-                "dc:extent": "singlevalued",
                 "dc:description": "A reference to the meaning denoted by the form",
                 "datatype": "string"
             },
