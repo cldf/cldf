@@ -37,11 +37,13 @@ def run(args):
                     else:
                         t = ontology.by_uri[v]
                         try:
-                            if extent:
+                            if extent:  # Cardinality specified via column descriptor's dc:extent.
                                 if extent == 'multivalued':
                                     assert separator
+                                else:  # singlevalued
+                                    assert not separator
 
-                            if t.cardinality:
+                            if t.cardinality:  # Cardinality specified in the ontology.
                                 if t.cardinality == 'multivalued':
                                     assert separator and extent != 'singlevalued'
                                 else:  # singlevalued
