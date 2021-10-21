@@ -32,7 +32,7 @@ interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119).
 
 CLDF is based on W3C's suite of specifications for [CSV on the Web](https://www.w3.org/TR/tabular-data-primer/), 
 or short CSVW.
-A CLDF dataset is
+A CLDF dataset is:
 
 - a set of UTF-8 encoded CSV files 
 - described by a [CSVW TableGroup](http://w3c.github.io/csvw/metadata/#table-groups) serialized as JSON file
@@ -61,7 +61,7 @@ the default module descriptions.
 
 The default file names and column names are described in [`components`](components). The default CSV dialect is 
 [RFC4180](http://tools.ietf.org/html/rfc4180) using the [UTF-8](http://en.wikipedia.org/wiki/UTF-8) character encoding, 
-i.e. the CSV dialect specified as
+i.e. the CSV dialect specified as:
 
 ```
 {
@@ -106,7 +106,7 @@ aspects can be customized (within the boundaries of the CSVW specification):
 - adding common properties,
 - adding [foreign keys](#foreign-keys), to specify relations between tables of the dataset.
 
-Thus, using extended conformance via metadata, a dataset may
+Thus, using extended conformance via metadata, a dataset may:
 
 - use tab-separated data files,
 - use non-default file names,
@@ -174,7 +174,7 @@ To make tooling simpler, we restrict the metadata specification as follows:
 Each dataset SHOULD provide a dataset distribution description using the 
 [DCAT vocabulary](http://www.w3.org/TR/vocab-dcat/#class-distribution). This will make it easy to  
 [catalog](http://www.w3.org/TR/vocab-dcat/#class-catalog) cross-linguistic datasets. 
-In particular, each dataset description SHOULD include properties
+In particular, each dataset description SHOULD include these properties:
 
 - [dc:bibliographicCitation](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/bibliographicCitation) and
 - [dc:license](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/license).
@@ -280,7 +280,7 @@ and NOT by matching column name to default column names recommended in the ontol
 #### Identifier
 
 Each CLDF data table SHOULD contain a column which uniquely identifies a row in 
-the table. This column SHOULD be marked using
+the table. This column SHOULD be marked using:
 
 - a `propertyUrl` of `http://cldf.cld.org/v1.0/terms.rdf#id`
 - the column name `ID` in the case of metadata-free conformance.
@@ -312,8 +312,9 @@ sources:
 2. data that is indicated in the source as unknown.
 
 The CSVW data model can be used to express this difference as follows:
-Case 1 can be modeled by not including the relevant data as row at all.
-Case 2 can be modeled using the `null` property of the relevant column specification (defaulting to the empty
+
+- Case 1 can be modeled by not including the relevant data as row at all.
+- Case 2 can be modeled using the `null` property of the relevant column specification (defaulting to the empty
 string) as value in a data row.
 
 
@@ -324,7 +325,7 @@ amount of analysis and judgement calls, it is essential to make it easy to trace
 assertions back to their source.
 
 Each CLDF data table may contain a column listing sources for the data asserted in the
-row. This column MUST be marked using
+row. This column MUST be marked using:
 
 - a `propertyUrl` of `http://cldf.cld.org/v1.0/terms.rdf#source`
 - the column name `Source` in the case of metadata-free conformance.
@@ -443,7 +444,7 @@ in a CLDF dataset.
 - Using UTF-8 as character encoding means editing these files with MS Excel is not completely trivial, because Excel 
   assumes cp1252 as default character encoding - Libre Office Calc on the other hand handles these files just fine.
 - The tool support for CSV files is getting better and better due to increasing interest in [data science](https://en.wikipedia.org/wiki/Data_science). Some particularly useful tools are:
-  - [csvkit](https://csvkit.readthedocs.org/en/stable/)
+  - [csvkit](https://csvkit.readthedocs.io/en/latest/)
   - [q - Text as Data](http://harelba.github.io/q/)
 
 
