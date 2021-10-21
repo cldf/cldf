@@ -442,7 +442,7 @@ in a CLDF dataset.
 
 - Using UTF-8 as character encoding means editing these files with MS Excel is not completely trivial, because Excel 
   assumes cp1252 as default character encoding - Libre Office Calc on the other hand handles these files just fine.
-- The tool support for CSV files is getting better and better due to the hype around "data science". Some particularly useful tools are
+- The tool support for CSV files is getting better and better due to increasing interest in [data science](https://en.wikipedia.org/wiki/Data_science). Some particularly useful tools are:
   - [csvkit](https://csvkit.readthedocs.org/en/stable/)
   - [q - Text as Data](http://harelba.github.io/q/)
 
