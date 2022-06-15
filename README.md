@@ -19,7 +19,7 @@ interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119).
 * [CLDF Dataset](#cldf-dataset)
    * [CLDF Metadata file](#cldf-metadata-file)
    * [CDLF Data files](#cldf-data-files)
-   * [Sources file](#sources)
+   * [Sources reference file](#sources-reference-file)
 * [CLDF Modules](#cldf-modules)
 * [CLDF Components](#cldf-components)
 * [Compatibility](#compatibility)
@@ -331,7 +331,7 @@ row. This column MUST be marked using:
 - the column name `Source` in the case of metadata-free conformance.
 
 Sources are specified as semicolon-separated (unless the metadata specifies a different `separator`) source specifications, of the form
-*source_ID[source context]*, e.g. *meier2015[3-12]* where *meier2015* is a citation key in the accompanying [sources file](#sources).
+*source_ID[source context]*, e.g. *meier2015[3-12]* where *meier2015* is a citation key in the accompanying [sources file](#sources-reference-file).
 
 
 #### Foreign keys
@@ -367,8 +367,6 @@ if the referenced column does not have a `propertyUrl` `http://cldf.clld.org/v1.
 Note that columns for reference properties may still be "nullable", i.e. contain `NULL` values, to allow
 for rows where no reference can be specified.
 
-
-<a id="sources"> </a>
 
 ### Sources reference file
 
