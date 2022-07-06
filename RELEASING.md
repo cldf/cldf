@@ -16,6 +16,12 @@ Releasing a new version of the CLDF spec
   ```shell
   cldfspec make_module_defaults
   ```
+- Commit and tag the repos
+  ```shell
+  git commit -a -m"v<version>"
+  git tag -a v<version> -m"v<version>"
+  git push origin --tags
+  ```
 - Create a release of https://github.com/cldf/cldf
 - Make sure the release is picked up by ZENODO
 - Copy the DOI from ZENODO and add it to the release notes
