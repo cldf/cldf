@@ -52,7 +52,7 @@
                     "base": "string",
                     "format": "[a-z0-9]{4}[1-9][0-9]{3}"
                 },
-                "valueUrl": "http://glottolog.org/resource/languoid/id/{glottocode}"
+                "valueUrl": "http://glottolog.org/resource/languoid/id/{Glottocode}"
             },
             {
                 "name": "ISO639P3code",

@@ -17,7 +17,7 @@
             The CLDF Ontology is an RDF vocabulary describing the dataset types, tables
             and columns specified in the CLDF standard.
         </rdfs:comment>
-        <owl:versionInfo  rdf:resource="http://cldf.clld.org/v1.1.1"/>
+        <owl:versionInfo  rdf:resource="http://cldf.clld.org/v1.1.2"/>
         <owl:priorVersion  rdf:resource="http://cldf.clld.org/v1.1"/>
         <owl:backwardCompatibleWith rdf:resource="http://cldf.clld.org/v1.0"/>
         <foaf:homepage rdf:resource="http://cldf.clld.org/" />
@@ -360,7 +360,7 @@
         </rdfs:comment>
         <csvw:name>"Glottocode"</csvw:name>
         <csvw:datatype>{"base": "string", "format": "[a-z0-9]{4}[1-9][0-9]{3}"}</csvw:datatype>
-        <csvw:valueUrl>"http://glottolog.org/resource/languoid/id/{glottocode}"</csvw:valueUrl>
+        <csvw:valueUrl>"http://glottolog.org/resource/languoid/id/{Glottocode}"</csvw:valueUrl>
         <rdfs:seeAlso rdf:resource="http://glottolog.org" />
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier" />
     </rdf:Property>
