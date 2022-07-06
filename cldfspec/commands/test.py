@@ -8,18 +8,22 @@ from cldfspec.util import REPO_DIR
 from pycldf.terms import Terms
 
 
-def iterproperties(obj):
+def iterproperties(obj, valueUrl=False):
     if isinstance(obj, dict):
-        if 'propertyUrl' in obj:
-            yield 'propertyUrl', obj['propertyUrl'], obj.get('dc:extent'), obj.get('separator')
-        elif 'dc:conformsTo' in obj:
-            yield 'dc:conformsTo', obj['dc:conformsTo'], None, None
+        if valueUrl:
+            if 'valueUrl' in obj:
+                yield obj
+        else:
+            if 'propertyUrl' in obj:
+                yield 'propertyUrl', obj['propertyUrl'], obj.get('dc:extent'), obj.get('separator')
+            elif 'dc:conformsTo' in obj:
+                yield 'dc:conformsTo', obj['dc:conformsTo'], None, None
         for v in obj.values():
-            for prop in iterproperties(v):
+            for prop in iterproperties(v, valueUrl=valueUrl):
                 yield prop
     elif isinstance(obj, list):
         for v in obj:
-            for prop in iterproperties(v):
+            for prop in iterproperties(v, valueUrl=valueUrl):
                 yield prop
 
 
@@ -31,6 +35,10 @@ def run(args):
         for f in walk(REPO_DIR.joinpath(d)):
             if f.suffix == '.json':
                 md = load(f)
+                for col in iterproperties(md, valueUrl=True):
+                    if col['name'] not in col['valueUrl']:
+                        args.log.error('{}:{}:{}: invalid valueUrl'.format(
+                            f, col['name'], col['valueUrl']))
                 for k, v, extent, separator in iterproperties(md):
                     if v not in ontology.by_uri:
                         args.log.warning('{}:{}:{}'.format(f, k, v))
