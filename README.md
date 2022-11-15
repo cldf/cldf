@@ -63,7 +63,7 @@ The default file names and column names are described in [`components`](componen
 [RFC4180](http://tools.ietf.org/html/rfc4180) using the [UTF-8](http://en.wikipedia.org/wiki/UTF-8) character encoding, 
 i.e. the CSV dialect specified as:
 
-```
+```json
 {
   "encoding": "utf-8",
   "lineTerminators": ["\r\n", "\n"],
@@ -181,7 +181,7 @@ In particular, each dataset description SHOULD include these properties:
 
 Thus, an example for a CLDF dataset description could look as follows:
 
-```
+```json
 {
   "@context": "http://www.w3.org/ns/csvw",
   "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#StructureDataset",
@@ -347,7 +347,7 @@ Reference properties MUST be interpreted as foreign keys, e.g. a
 `propertyUrl` `http://cldf.clld.org/v1.0/terms.rdf#languageReference`
 specified for column `Col1` of a table with `url` `table1.csv` is equivalent to a 
 [CSVW foreign key constraint](http://w3c.github.io/csvw/metadata/#schema-foreignKeys)
-```
+```json
   "foreignKeys": [
        {
            "columnReference": "Col1",
@@ -465,7 +465,7 @@ of CLDF data.
 
 - [Dataset discovery](extensions/discovery.md)
 - [CLDF Markdown](extensions/markdown.md)
-- [CLDF SQL]
+- [CLDF SQL](extensions/sql.md)
 
 
 ## History
