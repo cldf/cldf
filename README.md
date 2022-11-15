@@ -459,9 +459,9 @@ reflects the latest released version of the specification.
 
 ## Extensions
 
-In addition to the formal specification of the CLDF data model and its representation on disk, we list (non-normative)
-best practices and recommendations for common usage patterns of CLDF data - and call these "extensions" of CLDF,
-because they extend the scope of the specification.
+In addition to the specification of the CLDF data model and its representation on disk, several "mini-specifications"
+extend the scope of the CLDF specification, by describing best practices and recommendations for common usage patterns 
+of CLDF data.
 
 - [Dataset discovery](extensions/discovery.md)
 - [CLDF Markdown](extensions/markdown.md)

@@ -30,3 +30,15 @@ The dataset specification `https://doi.org/10.5281/zenodo.7322688#rdf:ID=wacl` c
     ...
   }
   ```
+
+
+## Notes for implementors
+
+Implementations must provide a function or service which accepts a URL including an optional fragment identifier
+as specified above, and returns
+- a local path to the metadata file of the requested dataset
+- or a platform-specific object representing the dataset (such as a `pycldf.Dataset` instance for a Python implementation).
+
+Implementations of the Dataset discovery specification may support just a subset of possible URLs, e.g. for
+a particular archiving provider. If a URL is not supported, this MUST be signaled with an appropriate error
+code.
