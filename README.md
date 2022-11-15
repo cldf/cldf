@@ -457,6 +457,17 @@ i.e. whatever you see navigating the directory tree at [https://github.com/cldf/
 reflects the latest released version of the specification.
 
 
+## Extensions
+
+In addition to the formal specification of the CLDF data model and its representation on disk, we list (non-normative)
+best practices and recommendations for common usage patterns of CLDF data - and call these "extensions" of CLDF,
+because they extend the scope of the specification.
+
+- [Dataset discovery](extensions/discovery.md)
+- [CLDF Markdown](extensions/markdown.md)
+- [CLDF SQL]
+
+
 ## History
 
 Work on this proposal for a cross-linguistic data format was triggered by the [LANCLID 2 workshop](http://www.eva.mpg.de/linguistics/conferences/2014-ws-lanclid2/index.html) held in April 2015 in Leipzig -
