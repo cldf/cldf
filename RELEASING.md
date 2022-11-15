@@ -38,6 +38,7 @@ Releasing a new version of the CLDF spec
   ```
 - Update `pycldf`:
   ```shell
+  cd ../cldf
   cldfspec update_pycldf
   cd ../pycldf
   git status
