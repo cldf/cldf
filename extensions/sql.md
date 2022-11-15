@@ -8,6 +8,9 @@ To make SQL queries acting on CLDF data reusable (modulo well-known [incompatibi
 CLDF SQL specifies [database schema](https://en.wikipedia.org/wiki/Database_schema) conventions to apply when loading 
 CLDF datasets into SQL databases.
 
+CLDF SQL implementations MUST provide a function or service that accepts a CLDF dataset locator and creates an SQL database
+loaded with the data from the dataset at a specified loaction.
+
 
 ## Table and column names
 
