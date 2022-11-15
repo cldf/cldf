@@ -12,10 +12,12 @@ CLDF datasets into SQL databases.
 ## Table and column names
 
 To make the resulting SQLite database useful without access to the datasets metadata, terms of the CLDF ontology
-must be used for database objects as much as possible, i.e.
-- table names are component names (e.g. `ValueTable` for a table with `propertyUrl` http://cldf.clld.org/v1.0/terms.rdf#ValueTable)
+MUST be used for database objects, i.e.
+- table names are component names (e.g. `ValueTable` for a table with `propertyUrl` http://cldf.clld.org/v1.0/terms.rdf#ValueTable),
 - column names are property names, prefixed with `cldf_` (e.g. a column with `propertyUrl` http://cldf.clld.org/v1.0/terms.rdf#id 
-  will have the name `cldf_id` in the database)
+  will have the name `cldf_id` in the database),
+- non-component tables must have the last path component of their `url` property as table name,
+- non-CLDF columns keep their name.
 
 
 ## Association tables
@@ -76,6 +78,12 @@ CREATE TABLE `SourceTable` (
 The list-valued pseudo-foreign keys specified by columns with `propertyUrl` http://cldf.clld.org/v1.0/terms.rdf#source
 must - as above - result in an association table `<component>_SourceTable`. In the case of association tables with
 `SourceTable`, the `context` column stores the citation context.
+
+
+## Constraints
+
+CLDF to SQL converters SHOULD add `PRIMARY KEY`, `FOREIGN KEY`, `CHECK`, `UNIQUE`, `NOT NULL` constraints as
+appropriate for the database, to make as much CLDF metadata as possible inferrable from the database schema.
 
 
 ## Example
