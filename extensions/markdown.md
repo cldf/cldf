@@ -100,6 +100,27 @@ cldf-datasets: {
 ```
 
 
+## CLDF Markdown in CLDF datasets
+
+A typical use case for CLDF Markdown are short descriptions of the contents of a database, for example the feature
+descriptions of the WALS database (e.g. [feature 28A](https://wals.info/chapter/28)). Ideally, these descriptions
+would be included in the CLDF dataset, too. This could be done in two ways:
+
+1. Include CLDF Markdown text as content of a column in a CLDF table. In this case, the respective column SHOULD be
+   marked adding the following properties to its column description:
+   ```json
+   "dc:format": "text/markdown",
+   "dc:conformsTo": "CLDF Markdown",
+   ```
+2. Reference CLDF Markdown documents using items in a [CLDF MediaTable](../components/media/). In this case, these items
+   SHOULD have the value `text/markdown` in the [Media_Type](http://cldf.clld.org/v1.0/terms.rdf#mediaType) column,
+   and the value `CLDF Markdown` in an additional column of the MediaTable with `propertyUrl`
+   [http://purl.org/dc/terms/conformsTo](http://purl.org/dc/terms/conformsTo).
+
+If no explicit dataset mapping via [YAML frontmatter](#dataset-mappings-in-yaml-frontmatter) is given in such CLDF
+Markdown text, it MUST be rendered by CLDF Markdown renderers with the containing dataset as single data source.
+
+
 ## References
 
 - [Presentation introducing CLDF markdown](https://pad.gwdg.de/kRxjETnhQqqQ0LESDyTlOg)
