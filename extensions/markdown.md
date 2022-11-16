@@ -82,13 +82,13 @@ to select the filename used for the `LanguageTable` component of the dataset.
 
 ## Dataset mappings in YAML frontmatter
 
-In addition to the CLDF Markdown link syntax, a text document may provide a mapping of prefixes to dataset specifications
+In addition to the CLDF Markdown link syntax, a text document may provide a mapping of prefixes to dataset locators
 (see [dataset discovery](discovery.md)) - in analogy to [XML namespaces](https://en.wikipedia.org/wiki/XML_namespace#Namespace_declaration) - as 
 `cldf-datasets` key of a [YAML frontmatter](https://jekyllrb.com/docs/front-matter/) block. The value of this key may
-be a single string in case a single dataset is referenced, or a [YAML mapping](https://yaml.org/spec/1.2.2/#21-collections) of 
-prefixes to dataset specifications.
+be a single locator string in case a single dataset is referenced, or a [YAML mapping](https://yaml.org/spec/1.2.2/#21-collections) of 
+prefixes to dataset locators.
 
-So a CLDF Markdown document referencing data from [WALS](https://wals.info) as well [APiCS](https://apics-online.info)
+So a CLDF Markdown document referencing data from [WALS](https://wals.info) as well as [APiCS](https://apics-online.info)
 could declare this in frontmatter as follows:
 ```yaml
 ---
