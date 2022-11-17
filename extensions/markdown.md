@@ -52,10 +52,17 @@ the respective filenames of the "data on disk" is up to the author of a CLDF Mar
 
 To reference objects in multiple datasets, the fragment identifier MUST start with `cldf-dsid:`, where `dsid` is
 an identifier that can be mapped to a dataset by the processing application. To avoid ambiguities due to the dataset
-identifier being used as part of a URL, it is limited to contain only ASCII alphanumerical characters and `_`.
+identifier being used as part of a URL, it is limited to contain only ASCII alphanumerical characters and `_`, i.e.
+must match the regular expression `[a-zA-Z0-9_]+`.
+
+For example CLDF Markdown referencing data from [WALS](https://doi.org/10.5281/zenodo.6806407) as well as 
+[APiCS](https://doi.org/10.5281/zenodo.3823888) could use dataset identifiers `wals` and `apics` respectively:
+```markdown
+See [Voorhoeve](Source#cldf-apics:1559) and [Abbott](Source#cldf-wals:Abbott-2000)
+```
 
 The mapping of dataset identifiers to dataset locators (see [dataset discovery](discovery.md)) must be passed into
-the processing application, or provided by the CLDF Markdown via [YAML frontmatter](#dataset-mappings-in-yaml-frontmatter).
+the processing application, or provided in the CLDF Markdown via [YAML frontmatter](#dataset-mappings-in-yaml-frontmatter).
 
 
 ### Passing additional info to processors
@@ -64,6 +71,23 @@ CLDF Markdown processors MAY accept input to customize rendering of CLDF objects
 be passed in the [query string](https://en.wikipedia.org/wiki/Query_string) of the URL. CLDF Markdown processors MUST ignore
 unknown parameters (to make CLDF Markdown documents renderable with multiple processors) - but MAY issue a warning about this
 (to give the user feedback about accepted parameters).
+
+For example a CLDF Markdown formatter may offer different ways to render an example, e.g. including the
+[Primary_Text](http://cldf.clld.org/v1.0/terms.html#primaryText) or not. Such a switch could be controlled with a
+query parameter as follows:
+```markdown
+[Example 1](ExampleTable?with_primaryText#cldf:ex1)
+```
+
+Options requiring a value, can be passed using the `key=value` notation, e.g.
+```markdown
+[Example 1](ExampleTable?with=primaryText#cldf:ex1)
+```
+
+And multiple parameters can be passed using `&` as separator, e.g.
+```markdown
+[Example 1](ExampleTable?with=primaryText&showReferences#cldf:ex1)
+```
 
 
 ### Metadata
@@ -86,7 +110,7 @@ In addition to the CLDF Markdown link syntax, a text document may provide a mapp
 (see [dataset discovery](discovery.md)) - in analogy to [XML namespaces](https://en.wikipedia.org/wiki/XML_namespace#Namespace_declaration) - as 
 `cldf-datasets` key of a [YAML frontmatter](https://jekyllrb.com/docs/front-matter/) block. The value of this key may
 be a single locator string in case a single dataset is referenced, or a [YAML mapping](https://yaml.org/spec/1.2.2/#21-collections) of 
-prefixes to dataset locators.
+prefixes to dataset locators if [multiple datasets are referenced](#referencing-data-from-multiple-datasets).
 
 So a CLDF Markdown document referencing data from [WALS](https://wals.info) as well as [APiCS](https://apics-online.info)
 could declare this in frontmatter as follows:
@@ -98,6 +122,9 @@ cldf-datasets: {
 }
 ---
 ```
+
+CLDF Markdown processors SHOULD allow to override dataset mappings from YAML frontmatter in order to make processing
+possible with local data rather than fetching remote data each time.
 
 
 ## CLDF Markdown in CLDF datasets
