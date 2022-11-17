@@ -23,6 +23,12 @@
                 "required": false,
                 "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#description",
                 "datatype": "string"
+            },
+            {
+                "name": "ColumnSpec",
+                "required": false,
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#columnSpec",
+                "datatype": "json"
             }
         ]
     }

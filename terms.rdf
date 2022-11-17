@@ -72,6 +72,20 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/source" />
     </rdf:Property>
 
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#columnSpec" dc:type="generic-property">
+        <rdfs:comment rdf:parseType="Literal">
+            <p>A column specification given as JSON representation of a
+            <a href="https://www.w3.org/TR/tabular-metadata/#columns">CSVW column description</a>.
+            This column specification may be used by CLDF consumers to read a parameter's value as typed data.</p>
+            <p>Note that a CSVW datatye description is not sufficient, because parsing a string value
+            must also be informed by the column properties "null" and "separator".</p>
+        </rdfs:comment>
+        <csvw:name>"ColumnSpec"</csvw:name>
+        <csvw:datatype>{"base": "json"}</csvw:datatype>
+        <dc:extent>singlevalued</dc:extent>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/type" />
+    </rdf:Property>
+
     <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#comment" dc:type="generic-property">
         <rdfs:comment rdf:parseType="Literal">
             <p>

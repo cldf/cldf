@@ -23,7 +23,6 @@ Note that words in gloss and aligned text may be further split into morphemes an
 [Leipzig Glossing Rules](http://www.eva.mpg.de/lingua/resources/glossing-rules.php).
 Thus, `-` and `=` must not be used for the separator property of the corresponding column.
 
-
 Often, examples are glossed incompletely, e.g. leaving out person or place names or unparsable words.
 In such cases it is recommended to consistently use U+2026 - i.e. `…`, the [Unicode character "ellipsis"](https://en.wikipedia.org/wiki/Ellipsis) -
 in `Analyzed_Word` and `Gloss`.
