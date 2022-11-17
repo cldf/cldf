@@ -11,16 +11,22 @@ via URL and media type.
 
 Specification of URLs to access the media files is quite flexible:
 - Small amounts of media data may be included in a
-  MediaTable using the [data URI scheme](https://en.wikipedia.org/wiki/Data_URI_scheme).
+  MediaTable directly storing a [data URI](https://en.wikipedia.org/wiki/Data_URI_scheme) as value
+  of [Download_URL](http://cldf.clld.org/v1.0/terms.rdf#downloadUrl).
 - It is also possible to package media files with the CLDF data and reference the files
-  using relative [file URIs](https://en.wikipedia.org/wiki/File_URI_scheme).
+  using relative [file URIs](https://en.wikipedia.org/wiki/File_URI_scheme) as value of
+  [Download_URL](http://cldf.clld.org/v1.0/terms.rdf#downloadUrl).
 - If all media files are available from the same location, e.g. a file server, specifying
   the full URL for each item may unneccesarily inflate the dataset size. In this case,
   a `valueUrl` property on the MediaTable's `id` column can be used that specifies the
-  URL template. I.e. CLDF consumers
-  **must** determine a media item's URL by looking for a column with `propertyUrl` 
-  http://www.w3.org/ns/dcat#downloadUrl first, and if none is found, expand the
-  URI template given as `valueUrl` for the `id` column for the item.
+  URL template.
+
+Thus, CLDF consumers MUST determine a media item's URL as follows:
+1. If MediaTable contains a column with `propertyUrl` http://www.w3.org/ns/dcat#downloadUrl its value is the URL.
+2. Otherwise, expand the URI template given as `valueUrl` for the `id` column for the item.
+
+Note that dereferencing (aka downloading) a representation of the URL (i.e. the file content) MUST be done in a way
+that can handle HTTP URL **as well as** `file://` and `data://` URLs.
 
 
 ## Linking media items
