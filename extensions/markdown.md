@@ -27,7 +27,7 @@ e.g.
 ```
 
 All rows in a table can be referenced using the special `__all__` identifier.
-```
+```markdown
 [An arbitrary label](some/path/<component-name-or-csv-filename>#cldf:__all__)
 ```
 
@@ -99,7 +99,7 @@ file) may be used in the URL of a CLDF Markdown link. The particular piece of me
 
 So in the simplest case this could be `[](Metadata#cldf:"dc:license")`. A more complex example would be
 ```markdown
-[](Metadata#cldf:tables[?"dc:conformsTo"=='http://cldf.clld.org/v1.0/terms.rdf#LanguageTable'].url | [0])
+[LaguageTable](Metadata#cldf:tables[?"dc:conformsTo"=='http://cldf.clld.org/v1.0/terms.rdf#LanguageTable'].url | [0])
 ```
 to select the filename used for the `LanguageTable` component of the dataset.
 
