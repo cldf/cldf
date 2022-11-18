@@ -72,3 +72,7 @@ and formatting the value definitions as
 ```
 1:Small;2:Moderately small;3:Average;4:Moderately large;5:Large
 ```
+
+## How to convey the version info for a CLDF dataset?
+
+See #136
