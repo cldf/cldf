@@ -11,7 +11,52 @@ in a [Structure Dataset](../../modules/StructureDataset), often additional metad
 must be provided. This should be done in CLDF datasets by including a
 `ParameterTable`, i.e. a table with `"dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#ParameterTable"`, and pointing to rows in this table
 using the [`parameterReference`](http://cldf.clld.org/v1.0/terms.rdf#parameterReference)
-property.
+property in the `ValueTable`.
+
+
+## Typed parameter values
+
+Often, values for parameters are just text, e.g. word forms in the case of [CLDF Wordlists](../../modules/Wordlist).
+In this case, the text string representing the value in the CSV table can simply be interpreted "as is"
+by CLDF consumers.
+
+
+### Categorical or ordinal parameters
+
+If a parameter represents a [categorical (or ordinal) variable](https://en.wikipedia.org/wiki/Categorical_variable),
+It is recommended to provide the list of possible values in a [CodeTable](../codes) (possibly extended with a column
+indicating the ordering of these values in the case of ordinal variables).
+The [ValueTable](../values) should then include a [`codeReference`](http://cldf.clld.org/v1.0/terms.rdf#codeReference)
+column, but **also** list the string value in the [`value`](http://cldf.clld.org/v1.0/terms.rdf#value) column. 
+While this introduces some redundancy, it ensures compatibility with somewhat simplistic data access methods which may be
+employed e.g. for data visualization.
+
+
+### Numeric parameter values (or values of other types)
+
+Sometimes typological surveys use [data binning](https://en.wikipedia.org/wiki/Data_binning) to transform values of
+varying data types (often numeric) into categorical data. Ideally, though, this step should be left to data analysis,
+unless the "bins" have some theoretical foundation. To make it possible to store string representations of typed data
+in CSV while still specifying how this data should be interpreted, a
+[`columnSpec`](http://cldf.clld.org/v1.0/terms.rdf#columnSpec) column can be added to the `ParameterTable`. CLDF
+consumers should then consult the value of this column when reading values associated with the parameter.
+
+As an example, we use the Pyhon package [csvw](https://pypi.org/project/csvw) to obtain a reader for typed data as
+specified by a [`columnSpec`](http://cldf.clld.org/v1.0/terms.rdf#columnSpec) value:
+```python
+>>> import json
+>>> from csvw import Column
+>>> # Read the datatype description from a string value of the columnSpec column:
+>>> reader = Column.fromvalue(json.loads('{"datatype": {"base": "decimal", "minimum": "1", "maximum": "11"}}'))
+>>> # Use this reader to interpret string values from the value column as appropriate Python objects:
+>>> reader.read('3.4')
+Decimal('3.4')
+>>> reader.read('30')
+...
+ValueError: value must be <= 11
+```
+
+See also the related discussion at https://github.com/cldf/cldf/issues/109
 
 
 ## Example
