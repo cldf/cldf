@@ -6,6 +6,12 @@ The CLDF specification adheres to [Semantic Versioning](http://semver.org/spec/v
 
 ## [Unreleased]
 
+New properties
+- added columnSpec property
+- added pathInZip property
+
+Added three CLDF extension specifications.
+
 ## [v1.1.3] - 2022-07-06
 
 Fixed valueUrl property for Glottocode column, making sure the default name is used as variable.

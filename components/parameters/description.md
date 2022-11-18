@@ -61,7 +61,7 @@ See also the related discussion at https://github.com/cldf/cldf/issues/109
 
 ## Example
 
-See https://github.com/intercontinental-dictionary-series/lindseyende/blob/master/cldf/parameters.csv
+See https://github.com/intercontinental-dictionary-series/lindseyende/blob/v2.0/cldf/parameters.csv
 for an example of a `ParameterTable` in a `Wordlist`.
 
 ```csv
