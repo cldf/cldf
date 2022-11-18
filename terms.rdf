@@ -444,6 +444,40 @@
     </rdf:Property>
 
     <!--
+        Tree properties
+    -->
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#treeType" dc:type="tree-property">
+        <rdfs:comment rdf:parseType="Literal">
+            <p>The type of a tree ("summary" or "sample") describes how the tree can be used.
+                Summary (or consensus) trees can be analysed in isolation and should have type "summary".
+                Trees resulting from a method that creates multiple trees, and thus should be analysed as a whole
+                (or sampled appropriately) should have type "sample".</p>
+        </rdfs:comment>
+        <csvw:name>"Tree_Type"</csvw:name>
+        <csvw:datatype>{"base": "string", "format": "summary|sample"}</csvw:datatype>
+        <dc:hasVersion rdf:resource="http://cldf.clld.org/v1.2"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#treeIsRooted" dc:type="tree-property">
+        <rdfs:comment rdf:parseType="Literal">
+            <p>Whether a tree is rooted or not.</p>
+        </rdfs:comment>
+        <csvw:name>"Tree_Is_Rooted"</csvw:name>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Tree_(graph_theory)#Rooted_tree" />
+        <csvw:datatype>{"base": "boolean", "format": "Yes|No"}</csvw:datatype>
+        <dc:hasVersion rdf:resource="http://cldf.clld.org/v1.2"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#treeBranchLengthUnit" dc:type="tree-property">
+        <rdfs:comment rdf:parseType="Literal">
+            <p>The unit used to measure evolutionary time in phylogenetic trees.</p>
+        </rdfs:comment>
+        <csvw:name>"Tree_Branch_Length_Unit"</csvw:name>
+        <csvw:datatype>{"base": "string", "format": "change|substitutions|years|centuries|millennia"}</csvw:datatype>
+        <dc:hasVersion rdf:resource="http://cldf.clld.org/v1.2"/>
+    </rdf:Property>
+
+    <!--
         Media properties
     -->
     <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#mediaType" dc:type="media-property">
@@ -889,5 +923,14 @@
         </rdfs:comment>
         <csvw:url>"functionalEquivalentsets.csv"</csvw:url>
     </rdfs:Class>
-    
+
+    <rdfs:Class rdf:about="http://cldf.clld.org/v1.0/terms.rdf#TreeTable" dc:type="table">
+        <csvw:name xml:lang="en">"TreeTable"</csvw:name>
+        <rdfs:comment>
+            A table listing language trees, i.e. phylogenetic trees or classifiations of languages conveyed
+            as tree structure with items of the LanguageTable as leaf nodes.
+        </rdfs:comment>
+        <csvw:url>"trees.csv"</csvw:url>
+    </rdfs:Class>
+
 </rdf:RDF>

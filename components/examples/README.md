@@ -54,7 +54,7 @@ a Toolbox example like
 
 ## Example
 
-See https://github.com/dictionaria/daakaka/blob/master/cldf/examples.csv
+See https://github.com/dictionaria/daakaka/blob/v1.3/cldf/examples.csv
 
 ```csv
 ID,Language_ID,Primary_Text,Analyzed_Word,Gloss,Translated_Text,Meta_Language_ID,Comment,Corpus_Reference,Sense_IDs,alt_translation1

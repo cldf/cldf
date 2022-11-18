@@ -6,9 +6,11 @@ The CLDF specification adheres to [Semantic Versioning](http://semver.org/spec/v
 
 ## [Unreleased]
 
+New component `TreeTable` and associated properties.
+
 New properties
-- added columnSpec property
-- added pathInZip property
+- parameter property `columnSpec`
+- media property `pathInZip`
 
 Added three CLDF extension specifications.
 
