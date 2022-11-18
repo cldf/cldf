@@ -75,4 +75,4 @@ and formatting the value definitions as
 
 ## How to convey the version info for a CLDF dataset?
 
-See #136
+See https://github.com/cldf/cldf/issues/136
