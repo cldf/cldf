@@ -422,15 +422,17 @@ metadata file in the respective directory.
 - [Parameter metadata](components/parameters)
 - [Values](components/values) - as defined for a [`StructureDataset`](modules/StructureDataset)
 - [Codes](components/codes)
-- [Entries](components/entries)
-- [Senses](components/senses)
-- [Examples](components/examples)
+- [Dictionary Entries](components/entries)
+- [Dictionary Senses](components/senses)
+- [(Glossed) Examples](components/examples)
 - [Forms](components/forms) - as defined for a [`Wordlist`](modules/Wordlist)
 - [Cognates](components/cognates)
 - [CognateSets](components/cognatesets)
 - [Borrowings](components/borrowings)
 - [Functional Equivalents](components/functionalequivalents)
 - [Functional Equivalents Sets](components/functionalequivalentsets)
+- [(Classification) tree](components/trees)
+- [Media files](components/media)
 
 A component corresponds to a certain type of data. Thus, to make sure all instances of
 such a type have the same set of properties, we allow at most one component for each type
