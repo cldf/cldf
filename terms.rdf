@@ -536,7 +536,7 @@
             </p>
         </rdfs:comment>
         <csvw:name>"Analyzed_Word"</csvw:name>
-        <csvw:separator>"\\t"</csvw:separator>
+        <csvw:separator>"\t"</csvw:separator>
         <dc:extent>multivalued</dc:extent>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/GrammarUnit" />
     </rdf:Property>
@@ -548,7 +548,7 @@
             </p>
         </rdfs:comment>
         <csvw:name>"Gloss"</csvw:name>
-        <csvw:separator>"\\t"</csvw:separator>
+        <csvw:separator>"\t"</csvw:separator>
         <dc:extent>multivalued</dc:extent>
         <rdfs:seeAlso rdf:resource="http://purl.org/linguistics/gold/hasGlosses" />
     </rdf:Property>
