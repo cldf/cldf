@@ -16,10 +16,12 @@ As with any CLDF component,
 [comment](http://cldf.clld.org/v1.0/terms.rdf#comment) and [source](http://cldf.clld.org/v1.0/terms.rdf#source) columns respectively,
 - additional data can be supplied in additional columns.
 
+For a way to store typed data as values, see the description of [parameters](../parameters).
+
 
 ## Example
 
-See https://github.com/cldf-datasets/wals/blob/master/cldf/values.csv
+See https://github.com/cldf-datasets/wals/blob/v2020.2/cldf/values.csv
 
 ```csv
 ID,Language_ID,Parameter_ID,Value,Code_ID,Comment,Source,Example_ID
@@ -34,17 +36,4 @@ ID,Language_ID,Parameter_ID,Value,Code_ID,Comment,Source,Example_ID
 97A-aab,aab,97A,4,97A-4,,,
 112A-aab,aab,112A,2,112A-2,,Nekitel-1985[passim],
 ...
-```
-
-
-## Multi-dimensional features
-
-Multi-dimensional features are useful to model data like paradigms. 
-To support multi-dimensional features, we specify a standard separator for 
-`Parameter_ID` components: `~`. 
-I.e. a local feature ID for a multi-dimensional feature can be coded as
-```
-Language_ID Feature_ID Value
-deu         Sg~1P     ich
-deu         Pl~1P     wir
 ```

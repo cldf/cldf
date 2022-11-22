@@ -4,14 +4,13 @@ Often, CLDF datasets are aggregations of data similar to [edited volumes](https:
 In this case, individual "chapters" should be citeable; thus, the CLDF dataset should provide
 sufficient information to determine these citeable units and construct proper citations.
 
-This information should be supplied in the ContributionTable, making use of suitable
+This information should be supplied in the `ContributionTable`, making use of suitable
 properties of the [DCMI Metadata Terms vocabulary](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/).
 
 
 ## Example
 
-See
-https://github.com/lexibank/wold/blob/master/cldf/vocabularies.csv
+See https://github.com/lexibank/wold/blob/v4.0/cldf/contributions.csv
 
 
 ## Linking to contributions

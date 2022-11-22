@@ -1,0 +1,67 @@
+{
+  "url": "trees.csv",
+  "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#TreeTable",
+  "tableSchema": {
+    "columns": [
+      {
+        "name": "ID",
+        "datatype": {"base": "string", "format": "[a-zA-Z0-9_\\-]+"},
+        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id"
+      },
+      {
+        "name": "Name",
+        "datatype": "string",
+        "dc:description": "Name of tree as used in the tree file, i.e. the tree label in a Nexus file or the 1-based index of the tree in a newick file",
+        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#name"
+      },
+      {
+        "name": "Description",
+        "required": false,
+        "dc:description": "Describe the method that was used to create the tree, etc.",
+        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#description"
+      },
+      {
+        "name": "Tree_Is_Rooted",
+        "required": false,
+        "datatype": {
+          "base": "boolean",
+          "format": "Yes|No"
+        },
+        "dc:description": "Whether the tree is rooted (Yes) or unrooted (No) (or no info is available (null))",
+        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#treeIsRooted"
+      },
+      {
+        "name": "Tree_Type",
+        "required": false,
+        "datatype": {
+          "base": "string",
+          "format": "summary|sample"
+        },
+        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#treeType",
+        "dc:description": "Whether the tree is a summary (or consensus) tree, i.e. can be analysed in isolation, or whether it is a sample, resulting from a method that creates multiple trees"
+      },
+      {
+        "name": "Tree_Branch_Length_Unit",
+        "required": false,
+        "datatype": {
+          "base": "string",
+          "format": "change|substitutions|years|centuries|millennia"
+        },
+        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#treeBranchLengthUnit",
+        "dc:description": "The unit used to measure evolutionary time in phylogenetic trees."
+      },
+      {
+        "name": "Media_ID",
+        "dc:description": "References a file containing a Newick representation of the tree, labeled with identifiers as described in the LanguageTable (the [Media_Type](https://cldf.clld.org/v1.0/terms.html#mediaType) column of this table should provide enough information to chose the appropriate tool to read the newick)",
+        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#mediaReference"
+      },
+      {
+        "name": "Source",
+        "datatype": {"base":  "string"},
+        "required": false,
+        "separator": ";",
+        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#source"
+      }
+    ]
+  }
+}

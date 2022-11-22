@@ -400,6 +400,24 @@
     </rdf:Property>
 
     <!--
+        Parameter properties
+    -->
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#columnSpec" dc:type="parameter-property">
+        <rdfs:comment rdf:parseType="Literal">
+            <p>A column specification given as JSON representation of a
+                <a href="https://www.w3.org/TR/tabular-metadata/#columns">CSVW column description</a>.
+                This column specification may be used by CLDF consumers to read a parameter's value as typed data.</p>
+            <p>Note that a CSVW datatye description is not sufficient, because parsing a string value
+                must also be informed by the column properties "null" and "separator".</p>
+        </rdfs:comment>
+        <csvw:name>"ColumnSpec"</csvw:name>
+        <csvw:datatype>{"base": "json"}</csvw:datatype>
+        <dc:extent>singlevalued</dc:extent>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/type" />
+        <dc:hasVersion rdf:resource="http://cldf.clld.org/v1.2"/>
+    </rdf:Property>
+
+    <!--
         Contribution properties
     -->
     <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#contributor" dc:type="contribution-property">
@@ -426,6 +444,40 @@
     </rdf:Property>
 
     <!--
+        Tree properties
+    -->
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#treeType" dc:type="tree-property">
+        <rdfs:comment rdf:parseType="Literal">
+            <p>The type of a tree ("summary" or "sample") describes how the tree can be used.
+                Summary (or consensus) trees can be analysed in isolation and should have type "summary".
+                Trees resulting from a method that creates multiple trees, and thus should be analysed as a whole
+                (or sampled appropriately) should have type "sample".</p>
+        </rdfs:comment>
+        <csvw:name>"Tree_Type"</csvw:name>
+        <csvw:datatype>{"base": "string", "format": "summary|sample"}</csvw:datatype>
+        <dc:hasVersion rdf:resource="http://cldf.clld.org/v1.2"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#treeIsRooted" dc:type="tree-property">
+        <rdfs:comment rdf:parseType="Literal">
+            <p>Whether a tree is rooted or not.</p>
+        </rdfs:comment>
+        <csvw:name>"Tree_Is_Rooted"</csvw:name>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Tree_(graph_theory)#Rooted_tree" />
+        <csvw:datatype>{"base": "boolean", "format": "Yes|No"}</csvw:datatype>
+        <dc:hasVersion rdf:resource="http://cldf.clld.org/v1.2"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#treeBranchLengthUnit" dc:type="tree-property">
+        <rdfs:comment rdf:parseType="Literal">
+            <p>The unit used to measure evolutionary time in phylogenetic trees.</p>
+        </rdfs:comment>
+        <csvw:name>"Tree_Branch_Length_Unit"</csvw:name>
+        <csvw:datatype>{"base": "string", "format": "change|substitutions|years|centuries|millennia"}</csvw:datatype>
+        <dc:hasVersion rdf:resource="http://cldf.clld.org/v1.2"/>
+    </rdf:Property>
+
+    <!--
         Media properties
     -->
     <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#mediaType" dc:type="media-property">
@@ -438,6 +490,16 @@
         <csvw:datatype>{"base": "string", "format": "[^/]+/.+"}</csvw:datatype>
         <rdfs:seeAlso rdf:resource="" />
         <dc:hasVersion rdf:resource="http://cldf.clld.org/v1.1"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#pathInZip" dc:type="media-property">
+        <rdfs:comment rdf:parseType="Literal">
+            <p>The name or path of a media file within the archive if it is archived within a
+                <a href="https://en.wikipedia.org/wiki/ZIP_(file_format)">ZIP</a> file.</p>
+        </rdfs:comment>
+        <csvw:name>"Path_In_Zip"</csvw:name>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/ZIP_(file_format)" />
+        <dc:hasVersion rdf:resource="http://cldf.clld.org/v1.2"/>
     </rdf:Property>
 
     <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#downloadUrl" dc:type="media-property">
@@ -474,7 +536,7 @@
             </p>
         </rdfs:comment>
         <csvw:name>"Analyzed_Word"</csvw:name>
-        <csvw:separator>"\\t"</csvw:separator>
+        <csvw:separator>"\t"</csvw:separator>
         <dc:extent>multivalued</dc:extent>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/GrammarUnit" />
     </rdf:Property>
@@ -486,7 +548,7 @@
             </p>
         </rdfs:comment>
         <csvw:name>"Gloss"</csvw:name>
-        <csvw:separator>"\\t"</csvw:separator>
+        <csvw:separator>"\t"</csvw:separator>
         <dc:extent>multivalued</dc:extent>
         <rdfs:seeAlso rdf:resource="http://purl.org/linguistics/gold/hasGlosses" />
     </rdf:Property>
@@ -861,5 +923,14 @@
         </rdfs:comment>
         <csvw:url>"functionalEquivalentsets.csv"</csvw:url>
     </rdfs:Class>
-    
+
+    <rdfs:Class rdf:about="http://cldf.clld.org/v1.0/terms.rdf#TreeTable" dc:type="table">
+        <csvw:name xml:lang="en">"TreeTable"</csvw:name>
+        <rdfs:comment>
+            A table listing language trees, i.e. phylogenetic trees or classifiations of languages conveyed
+            as tree structure with items of the LanguageTable as leaf nodes.
+        </rdfs:comment>
+        <csvw:url>"trees.csv"</csvw:url>
+    </rdfs:Class>
+
 </rdf:RDF>

@@ -4,7 +4,18 @@
 All notable changes to the CLDF specification will be documented in this file.
 The CLDF specification adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [v1.2] - 2022-11-22
+
+### Added
+
+New component `TreeTable` and associated properties.
+
+New properties
+- parameter property `columnSpec`
+- media property `pathInZip`
+
+Added three CLDF extension specifications.
+
 
 ## [v1.1.3] - 2022-07-06
 

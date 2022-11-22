@@ -23,6 +23,10 @@ Note that words in gloss and aligned text may be further split into morphemes an
 [Leipzig Glossing Rules](http://www.eva.mpg.de/lingua/resources/glossing-rules.php).
 Thus, `-` and `=` must not be used for the separator property of the corresponding column.
 
+Often, examples are glossed incompletely, e.g. leaving out person or place names or unparsable words.
+In such cases it is recommended to consistently use U+2026 - i.e. `…`, the [Unicode character "ellipsis"](https://en.wikipedia.org/wiki/Ellipsis) -
+in `Analyzed_Word` and `Gloss`.
+
 
 ## Editing examples
 
@@ -50,7 +54,7 @@ a Toolbox example like
 
 ## Example
 
-See https://github.com/dictionaria/daakaka/blob/master/cldf/examples.csv
+See https://github.com/dictionaria/daakaka/blob/v1.3/cldf/examples.csv
 
 ```csv
 ID,Language_ID,Primary_Text,Analyzed_Word,Gloss,Translated_Text,Meta_Language_ID,Comment,Corpus_Reference,Sense_IDs,alt_translation1
@@ -67,8 +71,8 @@ Name/Property | Datatype | Cardinality | Description
 [ID](http://cldf.clld.org/v1.0/terms.rdf#id) | `string` | singlevalued | <div> <p>A unique identifier for a row in a table.</p> <p> To allow usage of identifiers as path components of URLs IDs must only contain alphanumeric characters, underscore and hyphen. </p> </div> 
 [Language_ID](http://cldf.clld.org/v1.0/terms.rdf#languageReference) | `string` | singlevalued | <div> <p> An identifier referencing a language either </p> <ul> <li>by providing a foreign key into the LanguageTable or</li> <li>by using a known encoding scheme.</li> </ul> </div> <br>References LanguageTable
 [Primary_Text](http://cldf.clld.org/v1.0/terms.rdf#primaryText) | `string` | singlevalued | The example text in the source language.
-[Analyzed_Word](http://cldf.clld.org/v1.0/terms.rdf#analyzedWord) | list of `string` (separated by `\t`) | multivalued | The sequence of words of the primary text to be aligned with glosses
-[Gloss](http://cldf.clld.org/v1.0/terms.rdf#gloss) | list of `string` (separated by `\t`) | multivalued | The sequence of glosses aligned with the words of the primary text
+[Analyzed_Word](http://cldf.clld.org/v1.0/terms.rdf#analyzedWord) | list of `string` (separated by `	`) | multivalued | The sequence of words of the primary text to be aligned with glosses
+[Gloss](http://cldf.clld.org/v1.0/terms.rdf#gloss) | list of `string` (separated by `	`) | multivalued | The sequence of glosses aligned with the words of the primary text
 [Translated_Text](http://cldf.clld.org/v1.0/terms.rdf#translatedText) | `string` | singlevalued | The translation of the example text in a meta language
 [Meta_Language_ID](http://cldf.clld.org/v1.0/terms.rdf#metaLanguageReference) | `string` | singlevalued | References the language of the translated text<br>References LanguageTable
 [Comment](http://cldf.clld.org/v1.0/terms.rdf#comment) | `string` | unspecified | <div> <p> A human-readable comment on a resource, providing additional context. </p> </div> 
