@@ -21,7 +21,7 @@ key with `propertyUrl` `http://cldf.clld.org/v1.0/terms.rdf#codeReference`.
 
 ## Example
 
-See https://github.com/cldf-datasets/wals/blob/master/cldf/codes.csv
+See https://github.com/cldf-datasets/wals/blob/v2020.2/cldf/codes.csv
 
 ```csv
 ID,Parameter_ID,Name,Description,Number,icon

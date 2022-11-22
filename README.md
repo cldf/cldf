@@ -63,7 +63,7 @@ The default file names and column names are described in [`components`](componen
 [RFC4180](http://tools.ietf.org/html/rfc4180) using the [UTF-8](http://en.wikipedia.org/wiki/UTF-8) character encoding, 
 i.e. the CSV dialect specified as:
 
-```
+```json
 {
   "encoding": "utf-8",
   "lineTerminators": ["\r\n", "\n"],
@@ -181,7 +181,7 @@ In particular, each dataset description SHOULD include these properties:
 
 Thus, an example for a CLDF dataset description could look as follows:
 
-```
+```json
 {
   "@context": "http://www.w3.org/ns/csvw",
   "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#StructureDataset",
@@ -347,7 +347,7 @@ Reference properties MUST be interpreted as foreign keys, e.g. a
 `propertyUrl` `http://cldf.clld.org/v1.0/terms.rdf#languageReference`
 specified for column `Col1` of a table with `url` `table1.csv` is equivalent to a 
 [CSVW foreign key constraint](http://w3c.github.io/csvw/metadata/#schema-foreignKeys)
-```
+```json
   "foreignKeys": [
        {
            "columnReference": "Col1",
@@ -422,15 +422,17 @@ metadata file in the respective directory.
 - [Parameter metadata](components/parameters)
 - [Values](components/values) - as defined for a [`StructureDataset`](modules/StructureDataset)
 - [Codes](components/codes)
-- [Entries](components/entries)
-- [Senses](components/senses)
-- [Examples](components/examples)
+- [Dictionary Entries](components/entries)
+- [Dictionary Senses](components/senses)
+- [(Glossed) Examples](components/examples)
 - [Forms](components/forms) - as defined for a [`Wordlist`](modules/Wordlist)
 - [Cognates](components/cognates)
 - [CognateSets](components/cognatesets)
 - [Borrowings](components/borrowings)
 - [Functional Equivalents](components/functionalequivalents)
 - [Functional Equivalents Sets](components/functionalequivalentsets)
+- [(Classification) tree](components/trees)
+- [Media files](components/media)
 
 A component corresponds to a certain type of data. Thus, to make sure all instances of
 such a type have the same set of properties, we allow at most one component for each type
@@ -455,6 +457,17 @@ can be accessed via [releases of this repository](https://github.com/cldf/cldf/r
 released version is also reflected in the `master` branch of this repository,
 i.e. whatever you see navigating the directory tree at [https://github.com/cldf/cldf](https://github.com/cldf/cldf/tree/master)
 reflects the latest released version of the specification.
+
+
+## Extensions
+
+In addition to the specification of the CLDF data model and its representation on disk, several "mini-specifications"
+extend the scope of the CLDF specification, by describing best practices and recommendations for common usage patterns 
+of CLDF data.
+
+- [Dataset discovery](extensions/discovery.md)
+- [CLDF Markdown](extensions/markdown.md)
+- [CLDF SQL](extensions/sql.md)
 
 
 ## History

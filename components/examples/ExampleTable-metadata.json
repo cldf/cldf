@@ -34,7 +34,7 @@
                 "dc:description": "The sequence of words of the primary text to be aligned with glosses",
                 "dc:extent": "multivalued",
                 "datatype": "string",
-                "separator": "\\t"
+                "separator": "\t"
             },
             {
                 "name": "Gloss",
@@ -43,7 +43,7 @@
                 "dc:description": "The sequence of glosses aligned with the words of the primary text",
                 "dc:extent": "multivalued",
                 "datatype": "string",
-                "separator": "\\t"
+                "separator": "\t"
             },
             {
                 "name": "Translated_Text",

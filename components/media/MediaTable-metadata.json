@@ -28,13 +28,19 @@
         "name": "Media_Type",
         "required": true,
         "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#mediaType",
-        "datatype": "string"
+        "datatype": {"base": "string", "format": "[^/]+/.+"}
       },
       {
         "name": "Download_URL",
         "required": false,
         "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#downloadUrl",
-        "datatype": "anyURI"
+        "datatype": {"base": "anyURI"}
+      },
+      {
+        "name": "Path_In_Zip",
+        "required": false,
+        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#pathInZip",
+        "datatype": "string"
       }
     ]
   }
