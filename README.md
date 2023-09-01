@@ -23,7 +23,6 @@ interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119).
 * [CLDF Modules](#cldf-modules)
 * [CLDF Components](#cldf-components)
 * [Compatibility](#compatibility)
-* [Examples](#examples)
 * [Versioning](#versioning)
 * [History](#history)
 
