@@ -54,8 +54,8 @@ follow the default specification for the appropriate module regarding:
 - CSV dialect
 
 Thus, rather than not *having* any metadata, the dataset does not *specify*
-any; instead it falls back to using the defaults, i.e. "free" as in "beer" not
-as in "gluten-free". The CSV file MAY contain additional columns not specified in 
+any; instead it falls back to using the defaults.
+Such single-CSV file datasets MAY contain additional columns not specified in 
 the default module descriptions.
 
 The default file names and column names are described in [`components`](components). The default CSV dialect is 
