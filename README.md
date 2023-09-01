@@ -370,11 +370,11 @@ for rows where no reference can be specified.
 
 ### Sources reference file
 
-References to sources - if not referenced by Glottolog ID - can be supplied as part of a CLDF dataset as an UTF-8 
+References to sources can be supplied as part of a CLDF dataset as an UTF-8 
 encoded BibTeX file (with the citation keys serving as local Source IDs). The filename of this BibTeX file MUST be either:
 
 - `sources.bib` in case of metadata-free conformance
-- or specified as top-level common property `dc:source` in the dataset's metadata.
+- or specified as path relative to the metadata file given for top-level common property `dc:source` in the dataset's metadata.
 
 
 ## CLDF Modules
