@@ -1,7 +1,7 @@
 # CLDF SQL
 
 CLDF (like CSVW) provides all information necessary to load CLDF data into a [SQL](https://en.wikipedia.org/wiki/SQL) database.
-[pycldf](https://pycldf.readthedocs.io/en/latest/db.html) has exploited this fact for some time to provide conversion of CLDF to 
+[pycldf](https://pycldf.readthedocs.io/en/latest/ext_sql.html) has exploited this fact for some time to provide conversion of CLDF to
 SQLite.
 
 To make SQL queries acting on CLDF data reusable (modulo well-known [incompatibility issues between SQL databases](https://en.wikipedia.org/wiki/SQL#Reasons_for_incompatibility)), 
