@@ -121,11 +121,11 @@ Thus, conformant CLDF processing software MUST implement support for the CSVW sp
 
 ## CLDF Ontology
 
-CLDF data uses terms from the [CLDF Ontology](http://cldf.clld.org/v1.0/terms.rdf), as specified in the file `terms.rdf`, 
+CLDF data uses terms from the [CLDF Ontology](https://cldf.clld.org/v1.0/terms.rdf), as specified in the file `terms.rdf`, 
 to mark [`TableGroup`](http://w3c.github.io/csvw/metadata/#table-groups) or [`Table`](http://w3c.github.io/csvw/metadata/#tables) 
 objects which have special meaning (specifying modules or components respectively) within the CLDF framework.
 
-The CLDF Ontology also provides a set of [properties](http://cldf.clld.org/v1.0/terms.rdf#properties) to attach 
+The CLDF Ontology also provides a set of [properties](https://cldf.clld.org/v1.0/terms.rdf#properties) to attach 
 semantics to individual columns. While many of these properties are similar (or identical) to properties defined 
 elsewhere - most notably in the [General Ontology for Linguistic Description - GOLD](http://linguistics-ontology.org/) - 
 we opted for inclusion to avoid ambiguity, but made sure to reference the related properties in the ontology.
@@ -138,10 +138,10 @@ to the CLDF Ontology. Each property also has a `rdf:label` which might also be d
 - In an ill-advised attempt to version the ontology, `v1.0` has been baked into the term
   URIs. While this may be a good idea in case of incompatible changes (e.g. if the semantics
   of a term changed), it presents an obstacle for initeroperability in case of backwards-compatible
-  changes. So starting with CLDF 1.1, we will keep `http://cldf.clld.org/v1.0/terms.rdf`
+  changes. So starting with CLDF 1.1, we will keep `https://cldf.clld.org/v1.0/terms.rdf`
   as namespace for **all** versions of the 1.x series, and specify the particular version
   when a term was introduced using `dc:hasVersion` properties per term.
-- For better human readability the [CLDF Ontology](http://cldf.clld.org/v1.0/terms.rdf) should
+- For better human readability the [CLDF Ontology](https://cldf.clld.org/v1.0/terms.rdf) should
 be visited with a browser capable of rendering XSLT - such as Firefox.
 
 
@@ -163,7 +163,7 @@ To make tooling simpler, we restrict the metadata specification as follows:
   `"dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#Wordlist"`
 - The common property `dc:conformsTo` of a `Table` is used to associate tables with
   a particular role in a CLDF module using appropriate classes from the 
-  [CLDF Ontology](http://cldf.clld.org/v1.0/terms.rdf).
+  [CLDF Ontology](https://cldf.clld.org/v1.0/terms.rdf).
 - If each row in the data file corresponds to a resource on the web (i.e. a resource
   identified by a dereferenceable HTTP URI), the `tableSchema` property SHOULD provide an 
   `aboutUrl` property.
@@ -245,11 +245,11 @@ Thus, an example for a CLDF dataset description could look as follows:
 
 While it is possible to add any kind of CSV files to a CLDF dataset (by virtue of being an extension of CSVW), 
 the CLDF standard recognizes (and attaches specified semantics) to tables described with a common property 
-`dc:conformsTo` with one of the [component](#cldf-components) URIs of the [CLDF Ontology](http://cldf.clld.org/v1.0/terms.rdf) as value.
+`dc:conformsTo` with one of the [component](#cldf-components) URIs of the [CLDF Ontology](https://cldf.clld.org/v1.0/terms.rdf) as value.
 
 Additionally, CLDF semantics can be assigned to individual columns by 
 assigning one of the property URIs defined in the 
-[CLDF Ontology](http://cldf.clld.org/v1.0/terms.rdf) as `propertyUrl`.
+[CLDF Ontology](https://cldf.clld.org/v1.0/terms.rdf) as `propertyUrl`.
 CLDF conformant software MUST detect CLDF-specific columns by matching the `propertyUrl` to CLDF Ontology terms
 and NOT by matching column name to default column names recommended in the ontology.
 
@@ -340,10 +340,10 @@ group *forms* into *cognate sets*, creating a [many-to-many relationship](https:
 between a `FormTable` and a `CognatesetTable`. 
 
 To make such relations explicit, the CLDF Ontology provides a set of
-[reference properties](http://cldf.clld.org/v1.0/terms.rdf#reference-properties).
+[reference properties](https://cldf.clld.org/v1.0/terms.rdf#reference-properties).
 
 Reference properties MUST be interpreted as foreign keys, e.g. a 
-`propertyUrl` `http://cldf.clld.org/v1.0/terms.rdf#languageReference`
+`propertyUrl` `https://cldf.clld.org/v1.0/terms.rdf#languageReference`
 specified for column `Col1` of a table with `url` `table1.csv` is equivalent to a 
 [CSVW foreign key constraint](http://w3c.github.io/csvw/metadata/#schema-foreignKeys)
 ```json
@@ -357,11 +357,11 @@ specified for column `Col1` of a table with `url` `table1.csv` is equivalent to 
        }
    ]
 ```
-assuming that the `LanguageTable` component has `url` `languages.csv` and a column `ID` with `propertyUrl` `http://cldf.clld.org/v1.0/terms.rdf#id`.
+assuming that the `LanguageTable` component has `url` `languages.csv` and a column `ID` with `propertyUrl` `https://cldf.clld.org/v1.0/terms.rdf#id`.
 
 While spelling out foreign key constraints may feel cumbersome, it is still RECOMMENDED that metadata creators
 do so, to make the data compatible with CSVW tools. The foreign key constraints MUST be specified explicitly 
-if the referenced column does not have a `propertyUrl` `http://cldf.clld.org/v1.0/terms.rdf#id`.
+if the referenced column does not have a `propertyUrl` `https://cldf.clld.org/v1.0/terms.rdf#id`.
 
 Note that columns for reference properties may still be "nullable", i.e. contain `NULL` values, to allow
 for rows where no reference can be specified.
@@ -391,11 +391,11 @@ specification recognizes the following modules:
 - [Parallel text](modules/ParallelText)
 
 In addition, a CLDF dataset can be specified as 
-[*Generic*](http://cldf.clld.org/v1.0/terms.rdf#Generic), imposing no requirements
+[*Generic*](https://cldf.clld.org/v1.0/terms.rdf#Generic), imposing no requirements
 on tables or columns. Thus, *Generic* datasets are a way to evolve new data types 
 (to become recognized modules), while already providing (generic) tool support.
 
-In the CLDF Ontology [modules](http://cldf.clld.org/v1.0/terms.rdf#modules) are modeled 
+In the CLDF Ontology [modules](https://cldf.clld.org/v1.0/terms.rdf#modules) are modeled 
 as subclasses of [`dcat:Distribution`](http://www.w3.org/ns/dcat#Distribution), thus 
 additional metadata as recommended in the 
 [DCAT specification](https://www.w3.org/TR/vocab-dcat/#class-distribution) should be 

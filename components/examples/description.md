@@ -17,7 +17,7 @@ The default description of the example table is available in
 [`ExampleTable-metadata.json`](ExampleTable-metadata.json).
 
 Rows in the example table can then be referenced from other tables using a
-[`exampleReference`](http://cldf.clld.org/v1.0/terms.rdf#exampleReference) property.
+[`exampleReference`](https://cldf.clld.org/v1.0/terms.rdf#exampleReference) property.
 
 Note that words in gloss and aligned text may be further split into morphemes and clitics using `-` and `=` as separators according to the 
 [Leipzig Glossing Rules](http://www.eva.mpg.de/lingua/resources/glossing-rules.php).

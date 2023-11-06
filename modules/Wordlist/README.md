@@ -1,7 +1,7 @@
 # Wordlist Module
 
 In CLDF wordlists are marked by a common property `dc:conformsTo` with value
-[`http://cldf.clld.org/v1.0/terms.rdf#Wordlist`](http://cldf.clld.org/v1.0/terms.rdf#Wordlist)
+[`https://cldf.clld.org/v1.0/terms.rdf#Wordlist`](https://cldf.clld.org/v1.0/terms.rdf#Wordlist)
 on a `TableGroup`.
 
 In the simplest case, a wordlist is just a list of triples *(language, concept, word)*,

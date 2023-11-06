@@ -5,7 +5,7 @@ Typical examples are WALS datasets, e.g. the
 [list of coded values for the language Abau](http://wals.info/languoid/lect/wals_code_aba).
 
 In CLDF structure datasets are marked by a common property `dc:conformsTo` with value
-[`http://cldf.clld.org/v1.0/terms.rdf#StructureDataset`](http://cldf.clld.org/v1.0/terms.rdf#StructureDataset)
+[`https://cldf.clld.org/v1.0/terms.rdf#StructureDataset`](https://cldf.clld.org/v1.0/terms.rdf#StructureDataset)
 on a `TableGroup`.
 
 Structure datasets require only a [`ValueTable`](../../components/values), but often

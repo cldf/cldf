@@ -73,7 +73,7 @@ unknown parameters (to make CLDF Markdown documents renderable with multiple pro
 (to give the user feedback about accepted parameters).
 
 For example a CLDF Markdown formatter may offer different ways to render an example, e.g. including the
-[Primary_Text](http://cldf.clld.org/v1.0/terms.html#primaryText) or not. Such a switch could be controlled with a
+[Primary_Text](https://cldf.clld.org/v1.0/terms.html#primaryText) or not. Such a switch could be controlled with a
 query parameter as follows:
 ```markdown
 [Example 1](ExampleTable?with_primaryText#cldf:ex1)
@@ -99,7 +99,7 @@ file) may be used in the URL of a CLDF Markdown link. The particular piece of me
 
 So in the simplest case this could be `[](Metadata#cldf:"dc:license")`. A more complex example would be
 ```markdown
-[LaguageTable](Metadata#cldf:tables[?"dc:conformsTo"=='http://cldf.clld.org/v1.0/terms.rdf#LanguageTable'].url | [0])
+[LaguageTable](Metadata#cldf:tables[?"dc:conformsTo"=='https://cldf.clld.org/v1.0/terms.rdf#LanguageTable'].url | [0])
 ```
 to select the filename used for the `LanguageTable` component of the dataset.
 
@@ -140,7 +140,7 @@ would be included in the CLDF dataset, too. This could be done in two ways:
    "dc:conformsTo": "CLDF Markdown",
    ```
 2. Reference CLDF Markdown documents using items in a [CLDF MediaTable](../components/media/). In this case, these items
-   SHOULD have the value `text/markdown` in the [Media_Type](http://cldf.clld.org/v1.0/terms.rdf#mediaType) column,
+   SHOULD have the value `text/markdown` in the [Media_Type](https://cldf.clld.org/v1.0/terms.rdf#mediaType) column,
    and the value `CLDF Markdown` in an additional column of the MediaTable with `propertyUrl`
    [http://purl.org/dc/terms/conformsTo](http://purl.org/dc/terms/conformsTo).
 

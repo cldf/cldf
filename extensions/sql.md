@@ -16,8 +16,8 @@ loaded with the data from the dataset at a specified loaction.
 
 To make the resulting SQLite database useful without access to the datasets metadata, terms of the CLDF ontology
 MUST be used for database objects, i.e.
-- table names are component names (e.g. `ValueTable` for a table with `propertyUrl` http://cldf.clld.org/v1.0/terms.rdf#ValueTable),
-- column names are property names, prefixed with `cldf_` (e.g. a column with `propertyUrl` http://cldf.clld.org/v1.0/terms.rdf#id 
+- table names are component names (e.g. `ValueTable` for a table with `propertyUrl` https://cldf.clld.org/v1.0/terms.rdf#ValueTable),
+- column names are property names, prefixed with `cldf_` (e.g. a column with `propertyUrl` https://cldf.clld.org/v1.0/terms.rdf#id 
   will have the name `cldf_id` in the database),
 - non-component tables must have the last path component of their `url` property as table name,
 - non-CLDF columns keep their name.
@@ -78,7 +78,7 @@ CREATE TABLE `SourceTable` (
 );
 ```
 
-The list-valued pseudo-foreign keys specified by columns with `propertyUrl` http://cldf.clld.org/v1.0/terms.rdf#source
+The list-valued pseudo-foreign keys specified by columns with `propertyUrl` https://cldf.clld.org/v1.0/terms.rdf#source
 must - as above - result in an association table `<component>_SourceTable`. In the case of association tables with
 `SourceTable`, the `context` column stores the citation context.
 

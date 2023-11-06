@@ -6,7 +6,7 @@ include a data file `languages.csv` or a table with common property
 `"dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#LanguageTable"`.
 
 Rows in the language table can then be referenced from other tables using a
-[`languageReference`](http://cldf.clld.org/v1.0/terms.rdf#languageReference) property.
+[`languageReference`](https://cldf.clld.org/v1.0/terms.rdf#languageReference) property.
 
 
 ## What's a language?
@@ -14,7 +14,7 @@ Rows in the language table can then be referenced from other tables using a
 For the purposes of CLDF, a language is one of the objects whose attributes are studied, and stored
 as values for [parameters](../parameters). Thus, if a dataset contains the results of a sociolinguistic
 study, rows in `LanguageTable` will be likely be sociolects. Whether and how such rows are related to
-languoids as understood for example by Glottolog can be indicated in the [Glottocode](http://cldf.clld.org/v1.0/terms.rdf#glottocode) column.
+languoids as understood for example by Glottolog can be indicated in the [Glottocode](https://cldf.clld.org/v1.0/terms.rdf#glottocode) column.
 
 See also the related discussion in https://github.com/cldf/cldf/issues/68
 

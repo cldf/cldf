@@ -29,5 +29,5 @@ In contrast, the [World Loanword Database](https://wold.clld.org/) contains voca
 contributed by an expert on each language and its history. In this case, therefore,
 the contributions are linked to each language.
 
-Thus, for WALS Online one would add a column with `propertyURL` `http://cldf.clld.org/v1.0/terms.rdf#contributionReference`
+Thus, for WALS Online one would add a column with `propertyURL` `https://cldf.clld.org/v1.0/terms.rdf#contributionReference`
 to the ParameterTable, for WOLD it would be added to the LanguageTable.

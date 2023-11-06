@@ -1,7 +1,7 @@
 # Dictionary Module
 
 In CLDF dictionaries are marked by a common property `dc:conformsTo` with value
-[`http://cldf.clld.org/v1.0/terms.rdf#Dictionary`](http://cldf.clld.org/v1.0/terms.rdf#Dictionary)
+[`https://cldf.clld.org/v1.0/terms.rdf#Dictionary`](https://cldf.clld.org/v1.0/terms.rdf#Dictionary)
 on a `TableGroup`.
 
 A simple dictionary (e.g. for publication in [Dictionaria](http://dictionaria.clld.org)) 

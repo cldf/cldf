@@ -17,7 +17,7 @@ Like cognates, partial cognates refer to a form in a wordlist. But to make it
 possible to annotate parts of a form, the segmentation of the form
 **must** contain morpheme boundaries,
 i.e. the `FormTable` must contain a column with `propertyUrl`
-`http://cldf.clld.org/v1.0/terms.rdf#segments` where the secondary separator
+`https://cldf.clld.org/v1.0/terms.rdf#segments` where the secondary separator
 is used to delimit morphemes, e.g.
 ```json
 {
@@ -34,13 +34,13 @@ optionally using shortcut notation for ranges like `1:3`.
 The default description of the cognate
 table is available in [`CognateTable-metadata.json`](CognateTable-metadata.json).
 
-## [CognateTable](http://cldf.clld.org/v1.0/terms.rdf#CognateTable): `cognates.csv`
+## [CognateTable](https://cldf.clld.org/v1.0/terms.rdf#CognateTable): `cognates.csv`
 
 Name/Property | Datatype | Cardinality | Description
  --- | --- | --- | --- 
-[ID](http://cldf.clld.org/v1.0/terms.rdf#id) | `string` | singlevalued | <div> <p>A unique identifier for a row in a table.</p> <p> To allow usage of identifiers as path components of URLs IDs must only contain alphanumeric characters, underscore and hyphen. </p> </div> 
-[Form_ID](http://cldf.clld.org/v1.0/terms.rdf#formReference) | `string` | singlevalued | References the form which is judged to belong to a cognate set.<br>References FormTable
-[Cognateset_ID](http://cldf.clld.org/v1.0/terms.rdf#cognatesetReference) | `string` | singlevalued | References the cognate set a form is judged to belong to.<br>References CognatesetTable
-[Segment_Slice](http://cldf.clld.org/v1.0/terms.rdf#segmentSlice) | list of `string` (separated by ` `) | multivalued | Specifies the slice of morphemes of the form in case of partial cognacy.
-[Alignment](http://cldf.clld.org/v1.0/terms.rdf#alignment) | list of `string` (separated by ` `) | multivalued | The segments of the form aligned with respect to all other forms in the cognate set
-[Source](http://cldf.clld.org/v1.0/terms.rdf#source) | list of `string` (separated by `;`) | multivalued | <div> <p>List of source specifications, of the form &lt;source_ID&gt;[], e.g. http://glottolog.org/resource/reference/id/318814[34], or meier2015[3-12] where meier2015 is a citation key in the accompanying BibTeX file.</p> </div> 
+[ID](https://cldf.clld.org/v1.0/terms.rdf#id) | `string` | singlevalued | <div> <p>A unique identifier for a row in a table.</p> <p> To allow usage of identifiers as path components of URLs IDs must only contain alphanumeric characters, underscore and hyphen. </p> </div> 
+[Form_ID](https://cldf.clld.org/v1.0/terms.rdf#formReference) | `string` | singlevalued | References the form which is judged to belong to a cognate set.<br>References FormTable
+[Cognateset_ID](https://cldf.clld.org/v1.0/terms.rdf#cognatesetReference) | `string` | singlevalued | References the cognate set a form is judged to belong to.<br>References CognatesetTable
+[Segment_Slice](https://cldf.clld.org/v1.0/terms.rdf#segmentSlice) | list of `string` (separated by ` `) | multivalued | Specifies the slice of morphemes of the form in case of partial cognacy.
+[Alignment](https://cldf.clld.org/v1.0/terms.rdf#alignment) | list of `string` (separated by ` `) | multivalued | The segments of the form aligned with respect to all other forms in the cognate set
+[Source](https://cldf.clld.org/v1.0/terms.rdf#source) | list of `string` (separated by `;`) | multivalued | <div> <p>List of source specifications, of the form &lt;source_ID&gt;[], e.g. http://glottolog.org/resource/reference/id/318814[34], or meier2015[3-12] where meier2015 is a citation key in the accompanying BibTeX file.</p> </div> 

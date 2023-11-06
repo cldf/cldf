@@ -16,7 +16,7 @@ This specification can be done by adding a codes table with the default descript
 [`CodeTable-metadata.json`](CodeTable-metadata.json).
 
 In a `StructureDataset`'s `ValueTable` the codes can be referenced using a foreign
-key with `propertyUrl` `http://cldf.clld.org/v1.0/terms.rdf#codeReference`.
+key with `propertyUrl` `https://cldf.clld.org/v1.0/terms.rdf#codeReference`.
 
 
 ## Example

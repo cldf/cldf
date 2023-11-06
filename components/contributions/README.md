@@ -29,15 +29,15 @@ In contrast, the [World Loanword Database](https://wold.clld.org/) contains voca
 contributed by an expert on each language and its history. In this case, therefore,
 the contributions are linked to each language.
 
-Thus, for WALS Online one would add a column with `propertyURL` `http://cldf.clld.org/v1.0/terms.rdf#contributionReference`
+Thus, for WALS Online one would add a column with `propertyURL` `https://cldf.clld.org/v1.0/terms.rdf#contributionReference`
 to the ParameterTable, for WOLD it would be added to the LanguageTable.
 
-## [ContributionTable](http://cldf.clld.org/v1.0/terms.rdf#ContributionTable): `contributions.csv`
+## [ContributionTable](https://cldf.clld.org/v1.0/terms.rdf#ContributionTable): `contributions.csv`
 
 Name/Property | Datatype | Cardinality | Description
  --- | --- | --- | --- 
-[ID](http://cldf.clld.org/v1.0/terms.rdf#id) | `string` | singlevalued | <div> <p>A unique identifier for a row in a table.</p> <p> To allow usage of identifiers as path components of URLs IDs must only contain alphanumeric characters, underscore and hyphen. </p> </div> 
-[Name](http://cldf.clld.org/v1.0/terms.rdf#name) | `string` | unspecified | <div> <p>A title, name or label for an entity.</p> </div> 
-[Description](http://cldf.clld.org/v1.0/terms.rdf#description) | `string` | unspecified | <div> <p>A description for an entity.</p> </div> 
-[Contributor](http://cldf.clld.org/v1.0/terms.rdf#contributor) | `string` | unspecified | <div> <p>Contributor(s) to a citeable unit of a dataset.</p> </div> 
-[Citation](http://cldf.clld.org/v1.0/terms.rdf#citation) | `string` | unspecified | <div> <p>A full citation for a citeable unit of a dataset, preferably following the rules of the <a href="https://www.linguisticsociety.org/resource/unified-style-sheet">Unified Style Sheet for Linguistics Journals</a> or the best practices for <a href="https://site.uit.no/linguisticsdatacitation/">Linguistics Data Citation</a>. </p> </div> 
+[ID](https://cldf.clld.org/v1.0/terms.rdf#id) | `string` | singlevalued | <div> <p>A unique identifier for a row in a table.</p> <p> To allow usage of identifiers as path components of URLs IDs must only contain alphanumeric characters, underscore and hyphen. </p> </div> 
+[Name](https://cldf.clld.org/v1.0/terms.rdf#name) | `string` | unspecified | <div> <p>A title, name or label for an entity.</p> </div> 
+[Description](https://cldf.clld.org/v1.0/terms.rdf#description) | `string` | unspecified | <div> <p>A description for an entity.</p> </div> 
+[Contributor](https://cldf.clld.org/v1.0/terms.rdf#contributor) | `string` | unspecified | <div> <p>Contributor(s) to a citeable unit of a dataset.</p> </div> 
+[Citation](https://cldf.clld.org/v1.0/terms.rdf#citation) | `string` | unspecified | <div> <p>A full citation for a citeable unit of a dataset, preferably following the rules of the <a href="https://www.linguisticsociety.org/resource/unified-style-sheet">Unified Style Sheet for Linguistics Journals</a> or the best practices for <a href="https://site.uit.no/linguisticsdatacitation/">Linguistics Data Citation</a>. </p> </div> 

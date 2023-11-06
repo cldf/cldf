@@ -17,7 +17,7 @@ Like cognates, partial cognates refer to a form in a wordlist. But to make it
 possible to annotate parts of a form, the segmentation of the form
 **must** contain morpheme boundaries,
 i.e. the `FormTable` must contain a column with `propertyUrl`
-`http://cldf.clld.org/v1.0/terms.rdf#segments` where the secondary separator
+`https://cldf.clld.org/v1.0/terms.rdf#segments` where the secondary separator
 is used to delimit morphemes, e.g.
 ```json
 {

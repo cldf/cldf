@@ -90,7 +90,7 @@ $ cldf stats Wordlist-metadata.json
 <cldf:v1.0:Wordlist at ../../glottobank/cldf/examples/wordlist>
 key            value
 -------------  --------------------------------------------
-dc:conformsTo  http://cldf.clld.org/v1.0/terms.rdf#Wordlist
+dc:conformsTo  https://cldf.clld.org/v1.0/terms.rdf#Wordlist
 
 Path                 Type                     Rows
 -------------------  ---------------------  ------
