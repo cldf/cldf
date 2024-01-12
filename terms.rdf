@@ -82,6 +82,24 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment" />
     </rdf:Property>
 
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#position" dc:type="generic-property">
+        <rdfs:comment rdf:parseType="Literal">
+            <p>
+                A position of an item in a series or sequence of items. While integer is recommended
+                as datatype, any datatype that can be totally ordered (and this order is transparent
+                e.g. alphabetic order for strings) can be used. A column for this property may also
+                be list-valued (e.g. to implement multi-level orderings), in which case the typical
+                order for tuples is assumed.
+            </p>
+        </rdfs:comment>
+        <csvw:name>"Position"</csvw:name>
+        <csvw:separator>";"</csvw:separator>
+        <csvw:datatype>{"base": "string"}</csvw:datatype>
+        <rdfs:subPropertyOf rdf:resource="https://www.wikidata.org/wiki/Property:P1545" />
+        <rdfs:subPropertyOf rdf:resource="https://schema.org/position" />
+        <dc:hasVersion rdf:resource="http://cldf.clld.org/v1.3"/>
+    </rdf:Property>
+
     <!--
         Reference properties (aka foreign keys)
     -->
@@ -221,6 +239,34 @@
         <csvw:name>"Target_Form_ID"</csvw:name>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/references" />
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Foreign_key" />
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#sourceParameterReference"
+                  dc:type="reference-property">
+        <rdfs:comment rdf:parseType="Literal">
+            <p>
+                An identifier referencing the source parameter of a parameter network edge.
+            </p>
+        </rdfs:comment>
+        <dc:references rdf:resource="#Parameter"/>
+        <csvw:name>"Source_Parameter_ID"</csvw:name>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/references" />
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Foreign_key" />
+        <dc:hasVersion rdf:resource="http://cldf.clld.org/v1.3"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#targetParameterReference"
+                  dc:type="reference-property">
+        <rdfs:comment rdf:parseType="Literal">
+            <p>
+                An identifier referencing the target parameter of a parameter network edge.
+            </p>
+        </rdfs:comment>
+        <dc:references rdf:resource="#Parameter"/>
+        <csvw:name>"Target_Parameter_ID"</csvw:name>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/references" />
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Foreign_key" />
+        <dc:hasVersion rdf:resource="http://cldf.clld.org/v1.3"/>
     </rdf:Property>
 
     <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#cognatesetReference"
@@ -441,6 +487,19 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/bibliographicCitation" />
         <rdfs:seeAlso rdf:resource="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/bibliographicCitation" />
         <dc:hasVersion rdf:resource="http://cldf.clld.org/v1.1"/>
+    </rdf:Property>
+
+    <!--
+        Parameter network properties
+    -->
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#edgeIsDirected" dc:type="network-property">
+        <rdfs:comment rdf:parseType="Literal">
+            <p>Whether an edge in a graph is directed or not.</p>
+        </rdfs:comment>
+        <csvw:name>"Edge_Is_Directed"</csvw:name>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Mixed_graph" />
+        <csvw:datatype>{"base": "boolean", "format": "Yes|No"}</csvw:datatype>
+        <dc:hasVersion rdf:resource="http://cldf.clld.org/v1.3"/>
     </rdf:Property>
 
     <!--
@@ -931,6 +990,14 @@
             as tree structure with items of the LanguageTable as leaf nodes.
         </rdfs:comment>
         <csvw:url>"trees.csv"</csvw:url>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://cldf.clld.org/v1.0/terms.rdf#ParameterNetwork" dc:type="table">
+        <csvw:name xml:lang="en">"ParameterNetwork"</csvw:name>
+        <rdfs:comment>
+            A table listing edges of a parameter network, i.e. a graph with parameters as nodes.
+        </rdfs:comment>
+        <csvw:url>"parameter_network.csv"</csvw:url>
     </rdfs:Class>
 
 </rdf:RDF>

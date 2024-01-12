@@ -4,6 +4,14 @@
 All notable changes to the CLDF specification will be documented in this file.
 The CLDF specification adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+
+## [1.3] - ...
+
+### Added
+
+New component `ParameterNetwork` and associated properties.
+
+
 ## [v1.2] - 2022-11-22
 
 ### Added
