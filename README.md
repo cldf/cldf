@@ -30,11 +30,11 @@ interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119).
 ## Conformance Levels
 
 CLDF is based on W3C's suite of specifications for [CSV on the Web](https://www.w3.org/TR/tabular-data-primer/), 
-or short CSVW.
+or short CSVW. Thus, cross-linguistic data in CLDF is modeled as inter-related tabular data.
 A CLDF dataset is:
 
-- a set of UTF-8 encoded CSV files 
-- described by a [CSVW TableGroup](http://w3c.github.io/csvw/metadata/#table-groups) serialized as JSON file
+- a set of UTF-8 encoded [CSV](https://en.wikipedia.org/wiki/Comma-separated_values) files 
+- described by metadata in form of a [CSVW TableGroup](http://w3c.github.io/csvw/metadata/#table-groups) serialized as JSON file
 - with a [common property](http://w3c.github.io/csvw/metadata/#dfn-common-property) `dc:conformsTo` having one of the
   [CLDF module](#cldf-modules) URIs as value.
 
@@ -80,15 +80,32 @@ i.e. the CSV dialect specified as:
 }
 ```
 
-Some of the effects of this metadata-free conformance are:
-- The first line of each file must contain the comma-separated list of column names.
-- No comment lines are allowed.
+For the single CSV file of a metadata-free CLDF dataset
+- the first line must contain the comma-separated list of column names,
+- and no comment lines are allowed.
+
+> [!TIP]
+> Thus, a minimal metadata-free CLDF [StructureDataset](modules/StructureDataset) will consist of a CSV
+> file named `values.csv`, with content looking like the example below:
+
+```csv
+ID,Language_ID,Parameter_ID,Value
+1,stan1295,wals-1A,average
+```
 
 
 ### Extended conformance
 
-A dataset is CLDF conformant if it uses a custom metadata file, derived from the default profile for the appropriate 
-module. The metadata MUST specify a `dc:conformsTo` property with one of the CLDF module URIs as value.
+A dataset is CLDF conformant if 
+- it contains a metadata file, derived from the default profile for the appropriate module,
+- at least the minimal set of components (i.e. CSV data files) specified for the module. 
+
+The metadata MUST specify a `dc:conformsTo` property with one of the CLDF module URIs as value.
+
+> [!TIP]
+> Thus, a minimal extended CLDF [StructureDataset](modules/StructureDataset) will consist of
+> - a JSON file containing the metadata (whose name can be freely chosen),
+> - a CSV file containing the dataset's [ValueTable](components/values) (whose name is specified in the metadata).
 
 Providing a metadata file allows for considerable flexibility in describing the data files, because the following
 aspects can be customized (within the boundaries of the CSVW specification):
@@ -114,35 +131,74 @@ Thus, using extended conformance via metadata, a dataset may:
 - specify [relations between multiple tables](http://w3c.github.io/csvw/metadata/#foreign-key-reference-between-tables) in a dataset,
 - supply default values for required columns like `Language_ID`, using [virtual columns](http://w3c.github.io/csvw/metadata/#use-of-virtual-columns).
 
-In particular, since the metadata description resides in a separate file, it is often possible to retrofit existing CSV files into the CLDF framework by adding a metadata description.
+In particular, since the metadata description resides in a separate file, it is often possible to retrofit 
+existing CSV files into the CLDF framework by adding a metadata description.
 
 Thus, conformant CLDF processing software MUST implement support for the CSVW specification to the [extent necessary](#metadata).
+
+> [!TIP]
+> So, the minimal example from the previous section may consist of the following two files under extended conformance:
+> A metadata description file `cldf-metadata.json`:
+
+```json
+{
+  "@context": ["http://www.w3.org/ns/csvw", {"@language": "en"}],
+  "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#StructureDataset",
+  "dialect": {"commentPrefix": "#", "delimiter":  ";"},
+  "tables": [
+    {
+      "url": "data.csv",
+      "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#ValueTable",
+      "tableSchema": {
+        "columns": [
+          {"name": "No", "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id"},
+          {"name": "LID", "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#languageReference"},           
+          {"name": "PID", "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#parameterReference"},
+          {"name": "Val", "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#value"}
+        ]
+      }
+    }
+  ]
+}
+```
+
+> and `ValueTable` in a file `data.csv`:
+
+```csv
+No;LID;PID;Val
+# Comments are allowed now!
+1;stan1295;wals-1A;average
+```
 
 
 ## CLDF Ontology
 
-CLDF data uses terms from the [CLDF Ontology](http://cldf.clld.org/v1.0/terms.rdf), as specified in the file `terms.rdf`, 
-to mark [`TableGroup`](http://w3c.github.io/csvw/metadata/#table-groups) or [`Table`](http://w3c.github.io/csvw/metadata/#tables) 
-objects which have special meaning (specifying modules or components respectively) within the CLDF framework.
+CLDF metadata uses terms from the [CLDF Ontology](http://cldf.clld.org/v1.0/terms.rdf), as specified in the file [`terms.rdf`](terms.rdf), 
+to mark 
+- [`TableGroup`](http://w3c.github.io/csvw/metadata/#table-groups) objects as representing a [CLDF module](modules),
+- [`Table`](http://w3c.github.io/csvw/metadata/#tables) objects as representing a [CLDF component](components) or
+- individual columns as representing [CLDF properties](http://cldf.clld.org/v1.0/terms.rdf#properties).
 
-The CLDF Ontology also provides a set of [properties](http://cldf.clld.org/v1.0/terms.rdf#properties) to attach 
-semantics to individual columns. While many of these properties are similar (or identical) to properties defined 
+While many of these properties are similar (or identical) to properties defined 
 elsewhere - most notably in the [General Ontology for Linguistic Description - GOLD](http://linguistics-ontology.org/) - 
 we opted for inclusion to avoid ambiguity, but made sure to reference the related properties in the ontology.
 
-Note that the column *names* in the default table descriptions (e.g. [`formTable`](components/forms)) are not always 
-the same as the column *properties*. Each column has both a `csvw:name` and a separate `propertyURL` linking the column 
-to the CLDF Ontology. Each property also has a `rdf:label` which might also be different.
+> [!NOTE]
+> The column *names* in the default table descriptions (e.g. for [`formTable`](components/forms)) are not always 
+> the same as the column *properties*. Each column has both a `csvw:name` and a separate `propertyURL` linking the column 
+> to the CLDF Ontology. Each property also has a `rdf:label` which might also be different.
 
-**Notes:**
-- In an ill-advised attempt to version the ontology, `v1.0` has been baked into the term
-  URIs. While this may be a good idea in case of incompatible changes (e.g. if the semantics
-  of a term changed), it presents an obstacle for initeroperability in case of backwards-compatible
-  changes. So starting with CLDF 1.1, we will keep `http://cldf.clld.org/v1.0/terms.rdf`
-  as namespace for **all** versions of the 1.x series, and specify the particular version
-  when a term was introduced using `dc:hasVersion` properties per term.
-- For better human readability the [CLDF Ontology](http://cldf.clld.org/v1.0/terms.rdf) should
-be visited with a browser capable of rendering XSLT - such as Firefox.
+> [!CAUTION]
+> In an ill-advised attempt to version the ontology, `v1.0` has been baked into the term
+> URIs. While this may be a good idea in case of incompatible changes (e.g. if the semantics
+> of a term changed), it presents an obstacle for interoperability in case of backwards-compatible
+> changes. So starting with CLDF 1.1, we will keep `http://cldf.clld.org/v1.0/terms.rdf`
+> as namespace for **all** versions of the 1.x series, and specify the particular version
+> when a term was introduced using `dc:hasVersion` properties per term.
+
+> [!TIP]
+> For better human readability the [CLDF Ontology](http://cldf.clld.org/v1.0/terms.rdf) should
+> be visited with a browser capable of rendering XSLT - such as Firefox.
 
 
 ## CLDF Dataset
@@ -230,7 +286,7 @@ Thus, an example for a CLDF dataset description could look as follows:
             "virtual": true,
             "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#glottocode",
             "valueUrl": "{Language_ID}"
-          },
+          }
         ],
         "aboutUrl": "http://example.org/valuesets/{ID}",
         "primaryKey": "ID"
@@ -376,6 +432,22 @@ encoded BibTeX file (with the citation keys serving as local Source IDs). The fi
 - or specified as path relative to the metadata file given for top-level common property `dc:source` in the dataset's metadata.
 
 
+### Compressed data or reference files
+
+CLDF datasets may contain large data or reference files which may be inconvenient (e.g. because the size exceeds GitHub's
+100MB filesize limit). In such cases, the dataset creator may compress individual files using the
+[ZIP format](https://en.wikipedia.org/wiki/ZIP_(file_format)) (which works really well on CSV and BibTeX files).
+The resulting ZIP archive MUST contain the zipped file as single member and MUST be named after the original
+file, adding `.zip` as filename extension. The filename references in the metadata MUST be kept unchanged.
+
+CLDF processing software MAY implement zip-file discovery, i.e. if a filename referenced in the metadata cannot
+be found, but a file `filename.zip` is found, processing MUST proceed with the unzipped content of `filename.zip`.
+
+If CLDF processing software does not support zip-file discovery, it should signal the corresponding error
+in a transparent way. I.e. it should be clear for the user that the ZIP archive should be unzipped before
+running the processing software.
+
+
 ## CLDF Modules
 
 Much like 
@@ -438,7 +510,30 @@ such a type have the same set of properties, we allow at most one component for 
 in a CLDF dataset.
 
 
+## Extensions
+
+In addition to the specification of the CLDF data model and its representation on disk, several "mini-specifications"
+extend the scope of the CLDF specification, by describing best practices and recommendations for common usage patterns
+of CLDF data.
+
+- [Dataset discovery](extensions/discovery.md)
+- [CLDF Markdown](extensions/markdown.md)
+- [CLDF SQL](extensions/sql.md)
+
+
+## Reference implementation
+
+In order to be able to assess the validity of CLDF datasets, i.e. to check datasets for CLDF conformance,
+a reference implementation of CLDF is available as Python package [pycldf](https://pypi.org/project/pycldf/).
+
+This package provides commandline functionality to validate datasets as well as a Python API to
+programmatically read and write CLDF datasets.
+
+
 ## Compatibility
+
+Using CSV as basic format for data files ensures compatibility of CLDF with many off-the-shelf computing
+tools.
 
 - Using UTF-8 as character encoding means editing these files with MS Excel is not completely trivial, because Excel 
   assumes cp1252 as default character encoding - Libre Office Calc on the other hand handles these files just fine.
@@ -456,17 +551,6 @@ can be accessed via [releases of this repository](https://github.com/cldf/cldf/r
 released version is also reflected in the `master` branch of this repository,
 i.e. whatever you see navigating the directory tree at [https://github.com/cldf/cldf](https://github.com/cldf/cldf/tree/master)
 reflects the latest released version of the specification.
-
-
-## Extensions
-
-In addition to the specification of the CLDF data model and its representation on disk, several "mini-specifications"
-extend the scope of the CLDF specification, by describing best practices and recommendations for common usage patterns 
-of CLDF data.
-
-- [Dataset discovery](extensions/discovery.md)
-- [CLDF Markdown](extensions/markdown.md)
-- [CLDF SQL](extensions/sql.md)
 
 
 ## History
