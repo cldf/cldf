@@ -286,6 +286,20 @@
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Foreign_key" />
     </rdf:Property>
 
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#treeReference"
+                  dc:type="reference-property">
+        <rdfs:comment rdf:parseType="Literal">
+            <p>
+                An identifier referencing a language tree by providing a foreign key into TreeTable
+            </p>
+        </rdfs:comment>
+        <dc:references rdf:resource="#TreeTable"/>
+        <csvw:name>"Tree_ID"</csvw:name>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/references" />
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Foreign_key" />
+        <dc:hasVersion rdf:resource="http://cldf.clld.org/v1.3"/>
+    </rdf:Property>
+
     <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#mediaReference"
                   dc:type="reference-property">
         <rdfs:comment rdf:parseType="Literal">
