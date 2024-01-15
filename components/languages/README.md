@@ -26,6 +26,25 @@ property
 - to indicate the language-level object which might be used to compare data across datasets.
 
 
+## Speaker area
+
+Datasets may provide information about speaker areas of the languages they describe, i.e. the geographic
+areas where the speakers of the respective languages live.
+
+In this case, `LanguageTable` SHOULD contain a [`speakerArea`](http://cldf.clld.org/v1.0/terms.rdf#speakerArea)
+property, pointing to a media resource in `MediaTable`.
+The linked media resource may be an image of a map, depicting the area, or some other multimedia content 
+for human consumption. But it may also be a [GeoJSON](https://datatracker.ietf.org/doc/html/rfc7946) resource
+(i.e. a media resource with `mediaType` `application/geo+json`). In the latter case:
+
+1. If the GeoJSON object is of `type` `FeatureCollection` it MUST 
+   contain a [feature](https://datatracker.ietf.org/doc/html/rfc7946#section-3.2) with a [geometry](https://datatracker.ietf.org/doc/html/rfc7946#section-3.1) 
+   of type `Polygon` or `Multipolygon` and a key `cldf:languageReference` in its `properties` object with the 
+   linking language's `id` as value.
+2. If the GeoJSON object is of `type` `Feature` it MUST be of [geometry](https://datatracker.ietf.org/doc/html/rfc7946#section-3.1) 
+   `Polygon` or `Multipolygon`.
+
+
 ## Example
 
 See https://github.com/cldf-datasets/wals/blob/master/cldf/languages.csv

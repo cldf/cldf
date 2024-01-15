@@ -315,6 +315,34 @@
         <dc:hasVersion rdf:resource="http://cldf.clld.org/v1.1"/>
     </rdf:Property>
 
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#speakerArea"
+                  dc:type="reference-property">
+        <rdfs:comment rdf:parseType="Literal">
+            <p>
+                An identifier referencing a media resource by providing a foreign key into MediaTable.
+            </p>
+            <p>
+                This property can be used in <code>LanguageTable</code> to point to a media resource describing
+                the speaker area of a language, i.e. the geographic area where the speakers of the
+                language live.
+            </p>
+            <p>
+                The linked media resource may be an image of a map, depicting the area, or some other
+                multimedia content for human consumption. But it may also be a GeoJSON
+                resource (i.e. a media resource with <code>mediaType</code> <code>application/geo+json</code> ).
+                In the latter case, the GeoJSON object MUST contain a feature with a geometry of type
+                <code>Polygon</code> or <code>Multipolygon</code> and a key <code>cldf:languageReference</code>
+                in its <code>properties</code> object with the linking language's <code>id</code> as
+                value.
+            </p>
+        </rdfs:comment>
+        <dc:references rdf:resource="#MediaTable"/>
+        <csvw:name>"Media_ID"</csvw:name>
+        <rdfs:subPropertyOf rdf:resource="http://cldf.clld.org/v1.0/terms.rdf#mediaReference" />
+        <rdfs:seeAlso rdf:resource="https://datatracker.ietf.org/doc/html/rfc7946" />
+        <dc:hasVersion rdf:resource="http://cldf.clld.org/v1.3"/>
+    </rdf:Property>
+
     <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#contributionReference"
                   dc:type="reference-property">
         <rdfs:comment rdf:parseType="Literal">
