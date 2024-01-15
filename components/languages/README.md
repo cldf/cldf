@@ -11,12 +11,19 @@ Rows in the language table can then be referenced from other tables using a
 
 ## What's a language?
 
-For the purposes of CLDF, a language is one of the objects whose attributes are studied, and stored
-as values for [parameters](../parameters). Thus, if a dataset contains the results of a sociolinguistic
-study, rows in `LanguageTable` will be likely be sociolects. Whether and how such rows are related to
-languoids as understood for example by Glottolog can be indicated in the [Glottocode](http://cldf.clld.org/v1.0/terms.rdf#glottocode) column.
+For the purposes of CLDF, a language is one of the objects whose attributes are described in a dataset.
+Thus, if a dataset contains the results of a sociolinguistic study, rows in `LanguageTable` will
+likely be sociolects. Whether and how such rows are related to languoids as understood for example by 
+Glottolog can be indicated in the [Glottocode](http://cldf.clld.org/v1.0/terms.rdf#glottocode) column.
 
 See also the related discussion in https://github.com/cldf/cldf/issues/68
+
+### Dialects
+
+If a dataset contains data about dialects, it is recommended to add a [`parentLanguageGlottocode`](http://cldf.clld.org/v1.0/terms.rdf#parentLanguageGlottocode)
+property
+- to provide a stable reference to Glottolog,
+- to indicate the language-level object which might be used to compare data across datasets.
 
 
 ## Example

@@ -11,6 +11,8 @@ The CLDF specification adheres to [Semantic Versioning](http://semver.org/spec/v
 
 - New component `ParameterNetwork` and associated properties.
 - New module `TextCorpus` and associated properties.
+- New property `treeReference` to relate data to objects in `TreeTable`
+- New language property `parentLanguageGlottocode`.
 
 
 ## [v1.2] - 2022-11-22

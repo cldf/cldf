@@ -425,6 +425,19 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier" />
     </rdf:Property>
 
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#parentLanguageGlottocode" dc:type="language-property">
+        <rdfs:comment rdf:parseType="Literal">
+            <p>
+                A <a href="http://glottolog.org">Glottolog</a> code denoting the language-level languoid that is
+                a parent languoid of the languoid described by the row in <code>LanguageTable</code>.
+            </p>
+        </rdfs:comment>
+        <csvw:name>"Parent_Language_Glottocode"</csvw:name>
+        <csvw:datatype>{"base": "string", "format": "[a-z0-9]{4}[1-9][0-9]{3}"}</csvw:datatype>
+        <csvw:valueUrl>"http://glottolog.org/resource/languoid/id/{Glottocode}"</csvw:valueUrl>
+        <rdfs:seeAlso rdf:resource="https://glottolog.org/glottolog/glottologinformation" />
+    </rdf:Property>
+
     <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#macroarea" dc:type="language-property">
         <rdfs:comment rdf:parseType="Literal">
             <p>A macroarea as defined by <a href="http://glottolog.org">Glottolog</a>.</p>
