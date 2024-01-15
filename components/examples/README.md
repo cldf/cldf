@@ -28,6 +28,20 @@ In such cases it is recommended to consistently use U+2026 - i.e. `…`, the [Un
 in `Analyzed_Word` and `Gloss`.
 
 
+## Grammaticality judgements
+
+Sometimes it is useful to provide "ungrammatical" examples, i.e. sentences or phrases that are
+grammatically incorrect. Typically, this is marked using some typographical symbols to convey the
+[grammaticality judgement](https://github.com/cysouw/pandoc-ling?tab=readme-ov-file#the-basic-structure-of-a-linguistic-example).
+
+In CLDF, ungrammatical examples MUST
+- have a non-empty [`grammaticalityJudgement`](http://cldf.clld.org/v1.0/terms.rdf#grammaticalityJudgement) value, namely
+  the typographical marker to be used for the example,
+- link (via `languageReference`) to special item(s) in `LanguageTable` with an empty `Glottocode` to
+  prevent data aggregators from inadvertently assigning such an example to a proper language
+  (if they fail to honour `grammaticalityJudgement`).
+
+
 ## Editing examples
 
 The CSV format for examples specified above is not particularly suited for editing
@@ -75,4 +89,5 @@ Name/Property | Datatype | Cardinality | Description
 [Gloss](http://cldf.clld.org/v1.0/terms.rdf#gloss) | list of `string` (separated by `	`) | multivalued | The sequence of glosses aligned with the words of the primary text
 [Translated_Text](http://cldf.clld.org/v1.0/terms.rdf#translatedText) | `string` | singlevalued | The translation of the example text in a meta language
 [Meta_Language_ID](http://cldf.clld.org/v1.0/terms.rdf#metaLanguageReference) | `string` | singlevalued | References the language of the translated text<br>References LanguageTable
+[LGR_Conformance](http://cldf.clld.org/v1.0/terms.rdf#lgrConformance) | `string` | singlevalued | The level of conformance of the example with the Leipzig Glossing Rules
 [Comment](http://cldf.clld.org/v1.0/terms.rdf#comment) | `string` | unspecified | <div> <p> A human-readable comment on a resource, providing additional context. </p> </div> 

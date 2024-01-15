@@ -28,6 +28,20 @@ In such cases it is recommended to consistently use U+2026 - i.e. `…`, the [Un
 in `Analyzed_Word` and `Gloss`.
 
 
+## Grammaticality judgements
+
+Sometimes it is useful to provide "ungrammatical" examples, i.e. sentences or phrases that are
+grammatically incorrect. Typically, this is marked using some typographical symbols to convey the
+[grammaticality judgement](https://github.com/cysouw/pandoc-ling?tab=readme-ov-file#the-basic-structure-of-a-linguistic-example).
+
+In CLDF, ungrammatical examples MUST
+- have a non-empty [`grammaticalityJudgement`](http://cldf.clld.org/v1.0/terms.rdf#grammaticalityJudgement) value, namely
+  the typographical marker to be used for the example,
+- link (via `languageReference`) to special item(s) in `LanguageTable` with an empty `Glottocode` to
+  prevent data aggregators from inadvertently assigning such an example to a proper language
+  (if they fail to honour `grammaticalityJudgement`).
+
+
 ## Editing examples
 
 The CSV format for examples specified above is not particularly suited for editing

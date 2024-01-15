@@ -15,6 +15,7 @@ MODULES = {
     'StructureDataset': ['values'],
     'Dictionary': ['entries', 'senses'],
     'ParallelText': ['forms'],
+    'TextCorpus': ['examples'],
 }
 
 

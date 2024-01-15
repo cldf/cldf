@@ -622,6 +622,54 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/hasTranslationLine" />
     </rdf:Property>
 
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#lgrConformance" dc:type="example-property">
+        <rdfs:comment rdf:parseType="Literal">
+            <p>
+                The level of conformance of the example with the Leipzig Glossing Rules.
+            </p>
+            <p>
+                The following levels are distinguished:
+            </p>
+            <ol>
+                <li><code>WORD_ALIGNED</code>: Analyzed text and glosses obey LGR rule 1, "word-by-word alignment".</li>
+                <li><code>MORPHEME_ALIGNED</code>: Analyzed text and glosses obey LGR rule 2, "morpheme-by-morpheme correspondence".</li>
+            </ol>
+            <p>
+                No information regarding LGR conformance should be signaled with an empty string, i.e.
+                <code>null</code> value for the property.
+            </p>
+            <p>
+                While more information is needed to assess how to interpret IGT - e.g. whether rule 4a is
+                followed to group gloss elements for unsegmentable morpheme - the two levels considered here
+                are essential for decisions about automated re-use.
+            </p>
+        </rdfs:comment>
+        <rdfs:seeAlso rdf:resource="https://doi.org/10.5281/zenodo.10275705" />
+        <csvw:name>"LGR_Conformance"</csvw:name>
+        <csvw:datatype>{"base": "string", "format": "WORD_ALIGNED|MORPHEME_ALIGNED"}</csvw:datatype>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/conformsTo" />
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#grammaticalityJudgement" dc:type="example-property">
+        <rdfs:comment rdf:parseType="Literal">
+            <p>
+                A judgement about the (un)grammaticality of the example.
+            </p>
+            <p>
+                A non-<code>null</code> value for this property flags an example as ungrammatical
+                or unacceptable. The actual string value is the typographical symbol(s) or text which is to be
+                used to mark the example when formatting it in text (e.g. <code>*</code>).
+            </p>
+            <p>
+                <strong>Note:</strong> Ungrammatical examples should link (via <code>languageReference</code>)
+                to special item(s) in <code>LanguageTable</code> with an empty <code>Glottocode</code> to
+                prevent data aggregators from inadvertently assigning such an example to a proper language
+                (if they fail to honour <code>grammaticalityJudgement</code>).
+            </p>
+        </rdfs:comment>
+        <csvw:name>"Grammaticality_Judgement"</csvw:name>
+    </rdf:Property>
+
     <!--
         Dictionary entry properties
     -->
@@ -644,7 +692,7 @@
         <csvw:name>"Part_Of_Speech"</csvw:name>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/PartOfSpeechProperty" />
     </rdf:Property>
-    
+
     <!--
         Value properties
     -->
@@ -834,6 +882,16 @@
         <rdfs:comment rdf:parseType="Literal">
             <p>A dataset according to the
                 <a href="https://github.com/cldf/cldf/tree/master/modules/ParallelText">CLDF Parallel Text</a>
+                specification</p>
+        </rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://cldf.clld.org/v1.0/terms.rdf#TextCorpus" dc:type="module">
+        <csvw:name xml:lang="en">"TextCorpus"</csvw:name>
+        <rdfs:comment rdf:parseType="Literal">
+            <p>A dataset according to the
+                <a href="https://github.com/cldf/cldf/tree/master/modules/TextCorpus">CLDF Text Corpus</a>
                 specification</p>
         </rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>

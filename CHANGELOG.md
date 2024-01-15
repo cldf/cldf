@@ -9,7 +9,8 @@ The CLDF specification adheres to [Semantic Versioning](http://semver.org/spec/v
 
 ### Added
 
-New component `ParameterNetwork` and associated properties.
+- New component `ParameterNetwork` and associated properties.
+- New module `TextCorpus` and associated properties.
 
 
 ## [v1.2] - 2022-11-22

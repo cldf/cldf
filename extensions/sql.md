@@ -23,6 +23,16 @@ MUST be used for database objects, i.e.
 - non-CLDF columns keep their name.
 
 
+## Data types
+
+As much s possible, [CSVW datatypes](https://www.w3.org/TR/2015/REC-tabular-metadata-20151217/#built-in-datatypes)
+should be converted as much as possible to [SQLite datatypes](https://www.sqlite.org/datatype3.html).
+
+Since SQLite does not have support for any kind of array datatype, data for list-valued columns SHOULD be stored
+- in a `TEXT` column as it appears in the CSV file (i.e. delimited by the strings specified as `separator`) or
+- in a `TEXT` column, but serialized as JSON array, if the CSVW datatype is not `string`, but allows serialization as JSON.
+
+
 ## Association tables
 
 When a table specifies a list-valued foreign key, an association table must be created to implement this many-to-many relationship.
