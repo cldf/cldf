@@ -25,7 +25,7 @@ MUST be used for database objects, i.e.
 
 ## Data types
 
-As much s possible, [CSVW datatypes](https://www.w3.org/TR/2015/REC-tabular-metadata-20151217/#built-in-datatypes)
+As much as possible, [CSVW datatypes](https://www.w3.org/TR/2015/REC-tabular-metadata-20151217/#built-in-datatypes)
 should be converted as much as possible to [SQLite datatypes](https://www.sqlite.org/datatype3.html).
 
 Since SQLite does not have support for any kind of array datatype, data for list-valued columns SHOULD be stored

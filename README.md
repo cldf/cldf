@@ -80,7 +80,7 @@ i.e. the CSV dialect specified as:
 }
 ```
 
-For the single CSV file of a metadata-free CLDF dataset
+For a single CSV file to be a CLDF-compliant dataset without metadata
 - the first line must contain the comma-separated list of column names,
 - and no comment lines are allowed.
 
@@ -98,7 +98,7 @@ ID,Language_ID,Parameter_ID,Value
 
 A dataset is CLDF conformant if 
 - it contains a metadata file, derived from the default profile for the appropriate module,
-- at least the minimal set of components (i.e. CSV data files) specified for the module. 
+- it contains the minimal set of components (i.e. CSV data files) specified for the module at least.
 
 The metadata MUST specify a `dc:conformsTo` property with one of the CLDF module URIs as value.
 
@@ -441,7 +441,8 @@ The resulting ZIP archive MUST contain the zipped file as single member and MUST
 file, adding `.zip` as filename extension. The filename references in the metadata MUST be kept unchanged.
 
 CLDF processing software MAY implement zip-file discovery, i.e. if a filename referenced in the metadata cannot
-be found, but a file `filename.zip` is found, processing MUST proceed with the unzipped content of `filename.zip`.
+be found, but a file `filename_with_extension.zip` is found, processing MUST proceed with the unzipped content of 
+`filename_with_extension.zip`.
 
 If CLDF processing software does not support zip-file discovery, it should signal the corresponding error
 in a transparent way. I.e. it should be clear for the user that the ZIP archive should be unzipped before

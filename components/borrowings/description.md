@@ -11,10 +11,16 @@ linking two rows in the `FormTable` of a [wordlist](../../modules/Wordlist).
 Thus, CLDF provides a borrowing table, with the default description
 [`BorrowingTable-metadata.json`](BorrowingTable-metadata.json).
 
-A `null` value for the `sourceFormReference` marks missing knowledge about the source word
-(or donor language). In this case, a `Comment` should be used to describe the available
-knowledge.
+While ideally a particular source form in a particular donor language would be specified for each
+borrowing, this can often not be done. In these cases
+a `null` value for the `sourceFormReference` marks missing knowledge about the source word
+(or donor language). A `Comment` should be used to describe the available knowledge.
 
 Often datasets will add a column specifying reliability levels of the loan assessment
 (e.g. WOLD's ["borrowed score"](http://wold.clld.org/terms#borrowed_score)),
 but no common encoding scheme for such levels has been conventionalized yet.
+
+
+## Example
+
+- WOLD's `BorrowingTable` is described here: https://github.com/lexibank/wold/blob/v4.0/cldf/cldf-metadata.json#L533-L638
