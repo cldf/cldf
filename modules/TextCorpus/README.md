@@ -12,7 +12,7 @@ Text Corpora require only an [`ExampleTable`](../../components/examples), listin
 
 ## Multiple texts
 
-But typically a corpus will contain multiple texts. In this case, metadata about the texts should
+Typically, a corpus will contain multiple texts. In this case, metadata about the texts should
 be given as rows of a `ContributionTable` with the `name` property specifying the title of a text.
 Lines of text should be linked to a text using a `contributionReference` property in `ExampleTable`.
 

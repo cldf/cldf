@@ -30,7 +30,7 @@ interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119).
 ## Conformance Levels
 
 CLDF is based on W3C's suite of specifications for [CSV on the Web](https://www.w3.org/TR/tabular-data-primer/), 
-or short CSVW. Thus, cross-linguistic data in CLDF is modeled as inter-related tabular data.
+or short CSVW. Thus, cross-linguistic data in CLDF is modeled as interrelated tabular data.
 A CLDF dataset is:
 
 - a set of UTF-8 encoded [CSV](https://en.wikipedia.org/wiki/Comma-separated_values) files 
@@ -104,8 +104,8 @@ The metadata MUST specify a `dc:conformsTo` property with one of the CLDF module
 
 > [!TIP]
 > Thus, a minimal extended CLDF [StructureDataset](modules/StructureDataset) will consist of
-> - a JSON file containing the metadata (whose name can be freely chosen),
-> - a CSV file containing the dataset's [ValueTable](components/values) (whose name is specified in the metadata).
+> - a JSON file containing the metadata (with a freely chosen name),
+> - a CSV file containing the dataset's [ValueTable](components/values) (with a name as specified in the metadata).
 
 Providing a metadata file allows for considerable flexibility in describing the data files, because the following
 aspects can be customized (within the boundaries of the CSVW specification):
@@ -437,7 +437,7 @@ encoded BibTeX file (with the citation keys serving as local Source IDs). The fi
 CLDF datasets may contain large data or reference files which may be inconvenient (e.g. because the size exceeds GitHub's
 100MB filesize limit). In such cases, the dataset creator may compress individual files using the
 [ZIP format](https://en.wikipedia.org/wiki/ZIP_(file_format)) (which works really well on CSV and BibTeX files).
-The resulting ZIP archive MUST contain the zipped file as single member and MUST be named after the original
+The resulting ZIP archive MUST contain the zipped file and nothing else and MUST be named after the original
 file, adding `.zip` as filename extension. The filename references in the metadata MUST be kept unchanged.
 
 CLDF processing software MAY implement zip-file discovery, i.e. if a filename referenced in the metadata cannot

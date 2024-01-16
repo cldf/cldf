@@ -85,11 +85,12 @@
     <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#position" dc:type="generic-property">
         <rdfs:comment rdf:parseType="Literal">
             <p>
-                A position of an item in a series or sequence of items. While integer is recommended
-                as datatype, any datatype that can be totally ordered (and this order is transparent
-                e.g. alphabetic order for strings) can be used. A column for this property may also
-                be list-valued (e.g. to implement multi-level orderings), in which case the typical
-                order for tuples is assumed.
+                A position represents the placement of an item in a series or sequence of items.
+                Although an integer is the recommended datatype, any datatype that supports a total
+                ordering (where the order is transparent, such as alphabetic order for strings) is
+                acceptable. It is also possible to have a list-valued column for this property,
+                which can be useful for implementing multi-level orderings. In such cases, the
+                typical order for tuples is assumed.
             </p>
         </rdfs:comment>
         <csvw:name>"Position"</csvw:name>
@@ -110,7 +111,7 @@
                 An identifier referencing a language either
             </p>
             <ul>
-                <li>by providing a foreign key into the LanguageTable or</li>
+                <li>by providing a foreign key to the LanguageTable or</li>
                 <li>by using a known encoding scheme.</li>
             </ul>
         </rdfs:comment>
@@ -128,7 +129,7 @@
                 an example - either
             </p>
             <ul>
-                <li>by providing a foreign key into the LanguageTable or</li>
+                <li>by providing a foreign key to the LanguageTable or</li>
                 <li>by using a known encoding scheme.</li>
             </ul>
         </rdfs:comment>
@@ -145,7 +146,7 @@
                 An identifier referencing a parameter either
             </p>
             <ul>
-                <li>by providing a foreign key into the ParameterTable or</li>
+                <li>by providing a foreign key to the ParameterTable or</li>
                 <li>by using a known encoding scheme.</li>
             </ul>
         </rdfs:comment>
@@ -160,7 +161,7 @@
         <rdfs:comment rdf:parseType="Literal">
             <p>
                 An identifier referencing a code (aka category) description
-                by providing a foreign key into the CodeTable.
+                by providing a foreign key to the CodeTable.
             </p>
         </rdfs:comment>
         <dc:references rdf:resource="#CodeTable"/>
@@ -173,7 +174,7 @@
                   dc:type="reference-property">
         <rdfs:comment rdf:parseType="Literal">
             <p>
-                An identifier referencing an example by providing a foreign key into the
+                An identifier referencing an example by providing a foreign key to the
                 ExampleTable.
             </p>
         </rdfs:comment>
@@ -189,7 +190,7 @@
         <rdfs:comment rdf:parseType="Literal">
             <p>
                 An identifier referencing a dictionary entry
-                by providing a foreign key into the EntryTable.
+                by providing a foreign key to the EntryTable.
             </p>
         </rdfs:comment>
         <dc:references rdf:resource="#EntryTable"/>
@@ -204,7 +205,7 @@
         <rdfs:comment rdf:parseType="Literal">
             <p>
                 An identifier referencing a form
-                by providing a foreign key into the FormTable.
+                by providing a foreign key to the FormTable.
             </p>
         </rdfs:comment>
         <dc:references rdf:resource="#FormTable"/>
@@ -218,7 +219,7 @@
         <rdfs:comment rdf:parseType="Literal">
             <p>
                 An identifier referencing the source form of a loanword
-                by providing a foreign key into the FormTable.
+                by providing a foreign key to the FormTable.
             </p>
         </rdfs:comment>
         <dc:references rdf:resource="#FormTable"/>
@@ -232,7 +233,7 @@
         <rdfs:comment rdf:parseType="Literal">
             <p>
                 An identifier referencing a loanword
-                by providing a foreign key into the FormTable.
+                by providing a foreign key to the FormTable.
             </p>
         </rdfs:comment>
         <dc:references rdf:resource="#FormTable"/>
@@ -276,7 +277,7 @@
                 An identifier referencing a cognateset either
             </p>
             <ul>
-                <li>by providing a foreign key into the CognatesetTable or</li>
+                <li>by providing a foreign key to the CognatesetTable or</li>
                 <li>by using a known encoding scheme.</li>
             </ul>
         </rdfs:comment>
@@ -290,7 +291,7 @@
                   dc:type="reference-property">
         <rdfs:comment rdf:parseType="Literal">
             <p>
-                An identifier referencing a language tree by providing a foreign key into TreeTable
+                An identifier referencing a language tree by providing a foreign key to TreeTable.
             </p>
         </rdfs:comment>
         <dc:references rdf:resource="#TreeTable"/>
@@ -305,7 +306,7 @@
         <rdfs:comment rdf:parseType="Literal">
             <p>
                 An identifier referencing a media resource
-                by providing a foreign key into the MediaTable
+                by providing a foreign key to the MediaTable
             </p>
         </rdfs:comment>
         <dc:references rdf:resource="#MediaTable"/>
@@ -319,7 +320,7 @@
                   dc:type="reference-property">
         <rdfs:comment rdf:parseType="Literal">
             <p>
-                An identifier referencing a media resource by providing a foreign key into MediaTable.
+                An identifier referencing a media resource by providing a foreign key to MediaTable.
             </p>
             <p>
                 This property can be used in <code>LanguageTable</code> to point to a media resource describing
@@ -329,7 +330,7 @@
             <p>
                 The linked media resource may be an image of a map, depicting the area, or some other
                 multimedia content for human consumption. But it may also be a GeoJSON
-                resource (i.e. a media resource with <code>mediaType</code> <code>application/geo+json</code> ).
+                resource (i.e. a media resource with <code>mediaType</code> <code>application/geo+json</code>).
                 In the latter case, the GeoJSON object MUST contain a feature with a geometry of type
                 <code>Polygon</code> or <code>Multipolygon</code> and a key <code>cldf:languageReference</code>
                 in its <code>properties</code> object with the linking language's <code>id</code> as
@@ -348,7 +349,7 @@
         <rdfs:comment rdf:parseType="Literal">
             <p>
                 An identifier referencing a contribution
-                by providing a foreign key into the ContributionTable
+                by providing a foreign key to the ContributionTable
             </p>
         </rdfs:comment>
         <dc:references rdf:resource="#ContributionTable"/>
@@ -364,7 +365,7 @@
             <p> A functional equivalent set is a group of strings from different languages that express similar function.
                 This is an identifier referencing a cognateset either
                 <ul>
-                    <li>by providing a foreign key into the FunctionalEquivalentsetTable or</li>
+                    <li>by providing a foreign key to the FunctionalEquivalentsetTable or</li>
                     <li>by using a known encoding scheme.</li>
                 </ul>
             </p>
