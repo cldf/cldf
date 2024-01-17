@@ -68,12 +68,6 @@ a Toolbox example like
 
 ## Example
 
-See https://github.com/dictionaria/daakaka/blob/v1.3/cldf/examples.csv
-
-```csv
-ID,Language_ID,Primary_Text,Analyzed_Word,Gloss,Translated_Text,Meta_Language_ID,Comment,Corpus_Reference,Sense_IDs,alt_translation1
-XV000001,bpa,vyanten ente mwi abwilyep,vyanten\ten=te\tmw=i\tabwilyep,person\t$dem=$dem.med\tmw=i\tabwilyep,this man is a sorcerer,,,,SN000011,man ia i wan poson man
-XV000002,bpa,mesyu abwilyep swa sa ngetak,mesyu\tabwilyep\tswa\tsa\tnge=tak,fish\tpoisonous\tone\t$top\t$3sg=$dem.prox,this is a poisonous fish,,,,SN000012 ; SN001614,wan poson fis hem ia
-XV000003,bpa,nam akuorkote seli,na=m\takuor-kote\tseli,$1sg=$real\tcross-in.two\troad,I crossed the road,,,,SN000020 ; SN001408,mi krosem road
-...
-```
+The [examples](https://github.com/cldf-datasets/lgr/blob/v1.0/cldf/examples.csv) used in the 
+[Leipzig Glossing Rules](https://doi.org/10.5281/zenodo.10275705) document are available as CLDF dataset. The
+`ExampleTable` is described here: https://github.com/cldf-datasets/lgr/blob/v1.0/cldf/Generic-metadata.json#L43-L137

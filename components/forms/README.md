@@ -25,24 +25,22 @@ As with any CLDF component,
 
 ## Example
 
-See https://github.com/intercontinental-dictionary-series/lindseyende/blob/master/cldf/forms.csv
+Many examples for `FormTable` can be found in the datasets in the [lexibank community](https://zenodo.org/communities/lexibank).
 
-```csv
-ID,Local_ID,Language_ID,Parameter_ID,Value,Form,Segments,Comment,Source,Cognacy,Loan,Graphemes,Profile,Transcriptions,AlternativeValues
-ende1235-1-100-1,,ende1235,1-100,ekaklle ulle,ekaklle ulle,e k a k ɽ e + u ɽ e,,lindsey2019,,,^ e k a k ll e + u ll e $,default,StandardOrth;Phonetic,ekakɽe uɽe
-ende1235-1-210-1,,ende1235,1-210,ekaklle,ekaklle,e k a k ɽ e,,lindsey2019,,,^ e k a k ll e $,default,StandardOrth;Phonetic,ekakɽe
-ende1235-1-212-1,,ende1235,1-212,ekaklle,ekaklle,e k a k ɽ e,"also: täpe, matu",lindsey2019,,,^ e k a k ll e $,default,StandardOrth;Phonetic,ekakɽe
-ende1235-1-213-1,,ende1235,1-213,pänpän,pänpän,p ə n p ə n,,lindsey2019,,,^ p ä n p ä n $,default,StandardOrth;Phonetic,pənpən
-...
-```
+The one for the [Intercontinental Dictionary Series](https://ids.clld.org) is described here:
+https://github.com/intercontinental-dictionary-series/ids/blob/v4.3/cldf/cldf-metadata.json#L59-L171
+Datasets created using the lexibank workflow (implemented in the [`pylexibank` package](https://pypi.org/project/pylexibank/))
+derive the segmentation of a form using orthography profiles (see [Moran and Cysouw 2018](https://doi.org/10.5281/zenodo.129678))
+and the name of the profile used for a particular form is kept in the custom (non-CLDF) `profile`
+column.
 
 ## [FormTable](http://cldf.clld.org/v1.0/terms.rdf#FormTable): `forms.csv`
 
 Name/Property | Datatype | Cardinality | Description
  --- | --- | --- | --- 
 [ID](http://cldf.clld.org/v1.0/terms.rdf#id) | `string` | singlevalued | <div> <p>A unique identifier for a row in a table.</p> <p> To allow usage of identifiers as path components of URLs IDs must only contain alphanumeric characters, underscore and hyphen. </p> </div> 
-[Language_ID](http://cldf.clld.org/v1.0/terms.rdf#languageReference) | `string` | singlevalued | A reference to a language (or variety) the form belongs to<br>References LanguageTable
-[Parameter_ID](http://cldf.clld.org/v1.0/terms.rdf#parameterReference) | `string` | unspecified | A reference to the meaning denoted by the form<br>References ParameterTable
+[Language_ID](http://cldf.clld.org/v1.0/terms.rdf#languageReference) | `string` | singlevalued | A reference to a language (or variety) the form belongs to<br>References <code>LanguageTable</code>
+[Parameter_ID](http://cldf.clld.org/v1.0/terms.rdf#parameterReference) | `string` | unspecified | A reference to the meaning denoted by the form<br>References <code>ParameterTable</code>
 [Form](http://cldf.clld.org/v1.0/terms.rdf#form) | `string` | singlevalued | The written expression of the form. If possible the transcription system used for the written form should be described in CLDF metadata (e.g. via adding a common property `dc:conformsTo` to the column description using concept URLs of the GOLD Ontology (such as [phonemicRep](http://linguistics-ontology.org/gold/2010/phonemicRep) or [phoneticRep](http://linguistics-ontology.org/gold/2010/phoneticRep)) as values).
 [Segments](http://cldf.clld.org/v1.0/terms.rdf#segments) | list of `string` (separated by ` `) | multivalued | <div> <p> A list of segments (aka a sound sequence) is understood as the strict segmental representation of a <a href="http://linguistics-ontology.org/gold/2010/FormUnit">form unit</a> of a language, which is usually given in phonetic transcription. <a href="http://linguistics-ontology.org/gold/2010/Suprasegmental">Suprasegmental elements</a>, like tone or accent, of sound sequences are usually represented in a sequential form, although they are usually co-articulated along with the segmental elements of a sound sequence. Alternatively, suprasegmental aspects could also be represented as part of the <a href="#prosodicStructure">prosodic structure</a> of a word form. </p> </div> 
 [Comment](http://cldf.clld.org/v1.0/terms.rdf#comment) | `string` | unspecified | <div> <p> A human-readable comment on a resource, providing additional context. </p> </div> 

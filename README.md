@@ -453,7 +453,7 @@ running the processing software.
 
 Much like 
 [Dublin Core Application Profiles](http://dublincore.org/documents/profile-guidelines/),
-CLDF Modules group terms of the CLDF Ontology into tables.
+[CLDF Modules](modules) group terms of the CLDF Ontology into tables.
 Thus, CLDF module specifications are recommendations for groups
 of tables modeling typical cross-linguistic datatypes. Currently, the CLDF
 specification recognizes the following modules:
@@ -462,6 +462,7 @@ specification recognizes the following modules:
 - [Structure dataset](modules/StructureDataset)
 - [Dictionary](modules/Dictionary)
 - [Parallel text](modules/ParallelText)
+- [Text corpus](modules/TextCorpus)
 
 In addition, a CLDF dataset can be specified as 
 [*Generic*](http://cldf.clld.org/v1.0/terms.rdf#Generic), imposing no requirements
@@ -483,7 +484,7 @@ the corresponding default metadata.
 ## CLDF Components
 
 Some types of cross-linguistic data may be part of different CLDF modules. These
-types are specified as *components* in a way that can be re-used across modules 
+types are specified as [CLDF components](components) in a way that can be re-used across modules 
 (typically as [table descriptions](http://w3c.github.io/csvw/metadata/#tables), which can be appended 
 to the `tables` property of a module's metadata). A *component* is a CSVW table description with a
 `dc:conformsTo` property having one of the [component terms in the CLDF Ontology](https://cldf.clld.org/v1.0/terms.html#ValueTable) as value.
@@ -504,7 +505,10 @@ metadata file in the respective directory.
 - [Functional Equivalents](components/functionalequivalents)
 - [Functional Equivalents Sets](components/functionalequivalentsets)
 - [(Classification) tree](components/trees)
+- [Parameter networks](components/parameternetworks)
+- [Citeable units](components/contributions)
 - [Media files](components/media)
+
 
 A component corresponds to a certain type of data. Thus, to make sure all instances of
 such a type have the same set of properties, we allow at most one component for each type

@@ -47,23 +47,22 @@ for human consumption. But it may also be a [GeoJSON](https://datatracker.ietf.o
 
 ## Example
 
-See https://github.com/cldf-datasets/wals/blob/master/cldf/languages.csv
+Metadata about the languoids listed in [Glottolog](https://glottolog.org) is available in the
+`LanguageTable` of the [Glottolog CLDF dataset](https://zenodo.org/doi/10.5281/zenodo.3260727).
+This table is described here: https://github.com/glottolog/glottolog-cldf/blob/v4.8/cldf/cldf-metadata.json#L275-L402
 
-```csv
-ID,Name,Macroarea,Latitude,Longitude,Glottocode,ISO639P3code,Family,Subfamily,Genus,GenusIcon,ISO_codes,Samples_100,Samples_200,Country_ID,Source
-aab,Arapesh (Abu),,-3.45,142.95,,,Torricelli,,Kombio-Arapesh,c0000dd,,false,false,PG,Nekitel-1985
-aar,Aari,Africa,6,36.5833333333,aari1239,aiw,Afro-Asiatic,Omotic,South Omotic,ccccccc,aiw,false,false,ET,Hayward-1990a
-aba,Abau,Papunesia,-4,141.25,abau1245,aau,Sepik,,Upper Sepik,ddd0000,aau,false,false,PG,Bailey-1975
-...
-```
+> [!NOTE]
+> The `Family_ID` column in this table is a so-called "self-referencing foreign key", i.e. a foreign key
+> that references the same table.
+
 ## [LanguageTable](http://cldf.clld.org/v1.0/terms.rdf#LanguageTable): `languages.csv`
 
 Name/Property | Datatype | Cardinality | Description
  --- | --- | --- | --- 
 [ID](http://cldf.clld.org/v1.0/terms.rdf#id) | `string` | singlevalued | <div> <p>A unique identifier for a row in a table.</p> <p> To allow usage of identifiers as path components of URLs IDs must only contain alphanumeric characters, underscore and hyphen. </p> </div> 
 [Name](http://cldf.clld.org/v1.0/terms.rdf#name) | `string` | unspecified | <div> <p>A title, name or label for an entity.</p> </div> 
-[Macroarea](http://cldf.clld.org/v1.0/terms.rdf#macroarea) | `string` | unspecified | <div> <p>A macroarea as defined by <a href="http://glottolog.org">Glottolog</a>.</p> </div> 
+[Macroarea](http://cldf.clld.org/v1.0/terms.rdf#macroarea) | `string` | unspecified | <div> <p>The name of a macroarea as defined by <a href="http://glottolog.org">Glottolog</a>.</p> </div> 
 [Latitude](http://cldf.clld.org/v1.0/terms.rdf#latitude) | `decimal` | unspecified | <div> <p> A latitude in the <a href="https://en.wikipedia.org/wiki/World_Geodetic_System">WGS 84</a> standard coordinate system, specified as decimal number of degrees. </p> </div> 
 [Longitude](http://cldf.clld.org/v1.0/terms.rdf#longitude) | `decimal` | unspecified | <div> <p> A longitude in the <a href="https://en.wikipedia.org/wiki/World_Geodetic_System">WGS 84</a> standard coordinate system, specified as decimal number of degrees. </p> </div> 
-[Glottocode](http://cldf.clld.org/v1.0/terms.rdf#glottocode) | `string` | unspecified | <div> <p>A <a href="http://glottolog.org">Glottolog</a> code denoting a languoid.</p> </div> 
+[Glottocode](http://cldf.clld.org/v1.0/terms.rdf#glottocode) | `string` | unspecified | <div> <p>A Glottocode denoting a languoid described in <a href="http://glottolog.org">Glottolog</a>.</p> </div> 
 [ISO639P3code](http://cldf.clld.org/v1.0/terms.rdf#iso639P3code) | `string` | unspecified | <div> An ISO 639-3 language code, i.e. a three-letter code denoting a valid ISO 639-3 language or macrolanguage. </div> 

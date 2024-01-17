@@ -15,20 +15,14 @@ all possibilities, then this provides a way to document the full range of possib
 This specification can be done by adding a codes table with the default description
 [`CodeTable-metadata.json`](CodeTable-metadata.json).
 
-In a `StructureDataset`'s `ValueTable` the codes can be referenced using a foreign
+In a [`StructureDataset`'s](../../modules/StructureDataset) [`ValueTable`](../values) the codes can be referenced using a foreign
 key with `propertyUrl` `http://cldf.clld.org/v1.0/terms.rdf#codeReference`.
 
 
 ## Example
 
-See https://github.com/cldf-datasets/wals/blob/v2020.2/cldf/codes.csv
+WALS' [`CodeTable`](https://github.com/cldf-datasets/wals/blob/v2020.2/cldf/codes.csv) is described
+here https://github.com/cldf-datasets/wals/blob/v2020.2/cldf/StructureDataset-metadata.json#L214-L275
 
-```csv
-ID,Parameter_ID,Name,Description,Number,icon
-1A-1,1A,Small,Small,1,c0000dd
-1A-2,1A,Moderately small,Moderately small,2,c9999ff
-1A-3,1A,Average,Average,3,cffffff
-1A-4,1A,Moderately large,Moderately large,4,cff66ff
-1A-5,1A,Large,Large,5,cdd0000
-...
-```
+It contains a custom (i.e. non-CLDF) column `icon` which is used to relay information on how to display a certain
+code to the WALS web application.

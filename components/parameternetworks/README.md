@@ -24,6 +24,11 @@ a `ParameterNetwork`. E.g. a custom table listing individual colexifications, i.
 for different meanings in a `Wordlist`, could link each colexification to the edge in the concept network
 that is corroborated by the colexfication.
 
+
+## Example
+
+TODO: will be added, once the first datasets using this component are released.
+
 ## [ParameterNetwork](http://cldf.clld.org/v1.0/terms.rdf#ParameterNetwork): `parameter_network.csv`
 
 Rows in this table describe edges in a network of parameters.
@@ -32,6 +37,6 @@ Name/Property | Datatype | Cardinality | Description
  --- | --- | --- | --- 
 [ID](http://cldf.clld.org/v1.0/terms.rdf#id) | `string` | singlevalued | <div> <p>A unique identifier for a row in a table.</p> <p> To allow usage of identifiers as path components of URLs IDs must only contain alphanumeric characters, underscore and hyphen. </p> </div> 
 [Description](http://cldf.clld.org/v1.0/terms.rdf#description) | `string` | unspecified | <div> <p>A description for an entity.</p> </div> 
-[Target_Parameter_ID](http://cldf.clld.org/v1.0/terms.rdf#targetParameterReference) | `string` | unspecified | References the target node of the edge.<br>References Parameter
-[Source_Parameter_ID](http://cldf.clld.org/v1.0/terms.rdf#sourceParameterReference) | `string` | unspecified | References the source node of the edge.<br>References Parameter
+[Target_Parameter_ID](http://cldf.clld.org/v1.0/terms.rdf#targetParameterReference) | `string` | unspecified | References the target node of the edge.<br>References <code>Parameter</code>
+[Source_Parameter_ID](http://cldf.clld.org/v1.0/terms.rdf#sourceParameterReference) | `string` | unspecified | References the source node of the edge.<br>References <code>Parameter</code>
 [Edge_Is_Directed](http://cldf.clld.org/v1.0/terms.rdf#edgeIsDirected) | `boolean` | unspecified | Flag signaling whether the edge is directed or undirected.

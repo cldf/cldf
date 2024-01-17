@@ -10,7 +10,9 @@ properties of the [DCMI Metadata Terms vocabulary](https://www.dublincore.org/sp
 
 ## Example
 
-See https://github.com/lexibank/wold/blob/v4.0/cldf/contributions.csv
+[WOLD's vocabularies](https://wold.clld.org/vocabulary) are individually citeable units, thus are
+modeled using a [`ContributionTable`](https://github.com/lexibank/wold/blob/v4.0/cldf/contributions.csv),
+described here: https://github.com/lexibank/wold/blob/v4.0/cldf/cldf-metadata.json#L448-L532
 
 
 ## Linking to contributions

@@ -23,3 +23,8 @@ A `parameterEdgeReference` property can be used to link rows in CLDF tables to p
 a `ParameterNetwork`. E.g. a custom table listing individual colexifications, i.e. pairs of word counterparts
 for different meanings in a `Wordlist`, could link each colexification to the edge in the concept network
 that is corroborated by the colexfication.
+
+
+## Example
+
+TODO: will be added, once the first datasets using this component are released.

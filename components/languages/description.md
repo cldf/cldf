@@ -47,12 +47,10 @@ for human consumption. But it may also be a [GeoJSON](https://datatracker.ietf.o
 
 ## Example
 
-See https://github.com/cldf-datasets/wals/blob/master/cldf/languages.csv
+Metadata about the languoids listed in [Glottolog](https://glottolog.org) is available in the
+`LanguageTable` of the [Glottolog CLDF dataset](https://zenodo.org/doi/10.5281/zenodo.3260727).
+This table is described here: https://github.com/glottolog/glottolog-cldf/blob/v4.8/cldf/cldf-metadata.json#L275-L402
 
-```csv
-ID,Name,Macroarea,Latitude,Longitude,Glottocode,ISO639P3code,Family,Subfamily,Genus,GenusIcon,ISO_codes,Samples_100,Samples_200,Country_ID,Source
-aab,Arapesh (Abu),,-3.45,142.95,,,Torricelli,,Kombio-Arapesh,c0000dd,,false,false,PG,Nekitel-1985
-aar,Aari,Africa,6,36.5833333333,aari1239,aiw,Afro-Asiatic,Omotic,South Omotic,ccccccc,aiw,false,false,ET,Hayward-1990a
-aba,Abau,Papunesia,-4,141.25,abau1245,aau,Sepik,,Upper Sepik,ddd0000,aau,false,false,PG,Bailey-1975
-...
-```
+> [!NOTE]
+> The `Family_ID` column in this table is a so-called "self-referencing foreign key", i.e. a foreign key
+> that references the same table.
