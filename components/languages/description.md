@@ -52,5 +52,5 @@ Metadata about the languoids listed in [Glottolog](https://glottolog.org) is ava
 This table is described here: https://github.com/glottolog/glottolog-cldf/blob/v4.8/cldf/cldf-metadata.json#L275-L402
 
 > [!NOTE]
-> The `Family_ID` column in this table is a so-called "self-referencing foreign key", i.e. a foreign key
+> The *Family_ID* column in this table is a so-called "self-referencing foreign key", i.e. a foreign key
 > that references the same table.

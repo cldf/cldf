@@ -14,7 +14,7 @@ according to the [Leipzig Glossing Rules](http://www.eva.mpg.de/lingua/resources
 with two properties: The aligned primary text and aligned glosses.
 
 The default description of the example table is available in 
-[`ExampleTable-metadata.json`](ExampleTable-metadata.json).
+[*ExampleTable-metadata.json*](ExampleTable-metadata.json).
 
 Rows in the example table can then be referenced from other tables using a
 [`exampleReference`](http://cldf.clld.org/v1.0/terms.rdf#exampleReference) property.

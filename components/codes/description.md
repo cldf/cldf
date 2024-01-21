@@ -13,7 +13,7 @@ for a given parameter is useful for error checking. Or if a subset of the data d
 all possibilities, then this provides a way to document the full range of possibilities.
 
 This specification can be done by adding a codes table with the default description
-[`CodeTable-metadata.json`](CodeTable-metadata.json).
+[*CodeTable-metadata.json*](CodeTable-metadata.json).
 
 In a [`StructureDataset`'s](../../modules/StructureDataset) [`ValueTable`](../values) the codes can be referenced using a foreign
 key with `propertyUrl` `http://cldf.clld.org/v1.0/terms.rdf#codeReference`.
