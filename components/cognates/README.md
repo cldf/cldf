@@ -31,7 +31,7 @@ indicate the first three morphemes of a form are assigned to a cognate set,
 optionally using shortcut notation for ranges like `1:3`.
 
 The default description of the cognate
-table is available in [`CognateTable-metadata.json`](CognateTable-metadata.json).
+table is available in [*CognateTable-metadata.json*](CognateTable-metadata.json).
 
 
 ## Example

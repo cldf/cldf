@@ -17,8 +17,10 @@
             The CLDF Ontology is an RDF vocabulary describing the dataset types, tables
             and columns specified in the CLDF standard.
         </rdfs:comment>
-        <owl:versionInfo  rdf:resource="http://cldf.clld.org/v1.2"/>
-        <owl:priorVersion  rdf:resource="http://cldf.clld.org/v1.1"/>
+        <owl:versionInfo  rdf:resource="http://cldf.clld.org/v1.3"/>
+        <owl:priorVersion  rdf:resource="http://cldf.clld.org/v1.2"/>
+        <owl:backwardCompatibleWith rdf:resource="http://cldf.clld.org/v1.2"/>
+        <owl:backwardCompatibleWith rdf:resource="http://cldf.clld.org/v1.1"/>
         <owl:backwardCompatibleWith rdf:resource="http://cldf.clld.org/v1.0"/>
         <foaf:homepage rdf:resource="http://cldf.clld.org/" />
     </owl:Ontology>

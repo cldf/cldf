@@ -9,7 +9,7 @@ Conceptually, borrowings are the
 [associative entity](https://en.wikipedia.org/wiki/Associative_entity) 
 linking two rows in the [`FormTable`](../forms) of a [`Wordlist`](../../modules/Wordlist).
 Thus, CLDF provides a borrowing table, with the default description
-[`BorrowingTable-metadata.json`](BorrowingTable-metadata.json).
+[*BorrowingTable-metadata.json*](BorrowingTable-metadata.json).
 
 While ideally a particular source form in a particular donor language would be specified for each
 borrowing, this can often not be done. In these cases

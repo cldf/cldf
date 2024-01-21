@@ -8,7 +8,7 @@ annotations, e.g. a link to a form in `FormTable`. Thus, the need arises to enco
 cognate sets, such as a source or explanation or the link to a root form.
 
 The default description of the cognateset table is available in 
-[`CognatesetTable-metadata.json`](CognatesetTable-metadata.json).
+[*CognatesetTable-metadata.json*](CognatesetTable-metadata.json).
 
 
 ## Example
