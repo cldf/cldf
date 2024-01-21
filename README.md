@@ -10,23 +10,6 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
 interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119).
 
 
-**Table of Contents**
-
-* [Conformance Levels](#conformance-levels)
-   * [Metadata-free conformance](#metadata-free-conformance)
-   * [Extended conformance](#extended-conformance)
-* [CLDF Ontology](#cldf-ontology)
-* [CLDF Dataset](#cldf-dataset)
-   * [CLDF Metadata file](#cldf-metadata-file)
-   * [CDLF Data files](#cldf-data-files)
-   * [Sources reference file](#sources-reference-file)
-* [CLDF Modules](#cldf-modules)
-* [CLDF Components](#cldf-components)
-* [Compatibility](#compatibility)
-* [Versioning](#versioning)
-* [History](#history)
-
-
 ## Conformance Levels
 
 CLDF is based on W3C's suite of specifications for [CSV on the Web](https://www.w3.org/TR/tabular-data-primer/), 
