@@ -62,6 +62,14 @@
                 "datatype": "string"
             },
             {
+                "name": "LGR_Conformance",
+                "required": false,
+                "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#lgrConformance",
+                "dc:extent": "singlevalued",
+                "dc:description": "The level of conformance of the example with the Leipzig Glossing Rules",
+                "datatype": {"base": "string", "format": "WORD_ALIGNED|MORPHEME_ALIGNED"}
+            },
+            {
                 "name": "Comment",
                 "required": false,
                 "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#comment",

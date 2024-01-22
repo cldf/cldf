@@ -1,4 +1,4 @@
-## Structure Dataset
+# Structure Dataset
 
 Structure datasets are lists of values measured/coded/determined for a language and a (often typological) feature.
 Typical examples are WALS datasets, e.g. the 

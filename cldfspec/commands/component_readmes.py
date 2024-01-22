@@ -57,7 +57,7 @@ def colrow(col, pk, TERMS):
 
     if term and term.references:
         desc = (desc + '<br>') if desc else desc
-        desc += 'References {}'.format(term.references)
+        desc += 'References <code>{}</code>'.format(term.references)
 
     return ' | '.join([
         '[{}]({})'.format(col.name, col.propertyUrl)

@@ -16,7 +16,7 @@ property in the `ValueTable`.
 
 ## Typed parameter values
 
-Often, values for parameters are just text, e.g. word forms in the case of [CLDF Wordlists](../../modules/Wordlist).
+Often, values for parameters are just text, e.g. word forms in the case of a CLDF [`Wordlist`](../../modules/Wordlist).
 In this case, the text string representing the value in the CSV table can simply be interpreted "as is"
 by CLDF consumers.
 
@@ -39,9 +39,9 @@ varying data types (often numeric) into categorical data. Ideally, though, this 
 unless the "bins" have some theoretical foundation. To make it possible to store string representations of typed data
 in CSV while still specifying how this data should be interpreted, a
 [`columnSpec`](http://cldf.clld.org/v1.0/terms.rdf#columnSpec) column can be added to the `ParameterTable`. CLDF
-consumers should then consult the value of this column when reading values associated with the parameter.
+consumers SHOULD then consult the value of this column when reading values associated with the parameter.
 
-As an example, we use the Pyhon package [csvw](https://pypi.org/project/csvw) to obtain a reader for typed data as
+As an example, we use the Python package [csvw](https://pypi.org/project/csvw) to obtain a reader for typed data as
 specified by a [`columnSpec`](http://cldf.clld.org/v1.0/terms.rdf#columnSpec) value:
 ```python
 >>> import json
@@ -56,22 +56,24 @@ Decimal('3.4')
 ValueError: value must be <= 11
 ```
 
+> [!TIP]
+> This mechanism even allows list-valued parameter values. If for example a parameter's value for `columnSpec`
+> is the string `{"datatype": "integer", "separator": " "}` values for the parameter can be read as follows:
+
+```python
+reader = Column.fromvalue(json.loads('{"datatype": "integer", "separator": " "}'))
+reader.read('1 2 3')
+[1, 2, 3]
+```
+
 See also the related discussion at https://github.com/cldf/cldf/issues/109
 
 
 ## Example
 
-See https://github.com/intercontinental-dictionary-series/lindseyende/blob/v2.0/cldf/parameters.csv
-for an example of a `ParameterTable` in a `Wordlist`.
+The `ExampleTable` of a `Wordlist` from the [Intercontinental Dictionary Series](https://ids.clld.org)
+is described here: https://github.com/intercontinental-dictionary-series/lindseyende/blob/v2.0/cldf/cldf-metadata.json#L269-L300
 
-```csv
-ID,Name,Concepticon_ID,Concepticon_Gloss
-1-100,world,965,WORLD
-1-210,"earth, land",626,LAND
-1-212,"earth=ground, soil",1228,EARTH (SOIL)
-1-213,dust,2,DUST
-1-214,mud,640,MUD
-1-215,sand,671,SAND
-1-220,"mountain, hill",2118,MOUNTAIN OR HILL
-...
-```
+Since the parameters in this `Wordlist` are the lexical concepts listed in the [IDS concept list](https://concepticon.clld.org/contributions/Key-2016-1310),
+the corresponding [Concepticon concept sets](https://concepticon.clld.org/parameters) are specified
+using the `concepticonReference` property.

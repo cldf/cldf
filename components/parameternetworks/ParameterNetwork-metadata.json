@@ -1,0 +1,45 @@
+{
+  "url": "parameter_network.csv",
+  "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#ParameterNetwork",
+  "dc:description": "Rows in this table describe edges in a network of parameters.",
+  "tableSchema": {
+    "columns": [
+      {
+        "name": "ID",
+        "required": true,
+        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
+        "datatype": {
+          "base": "string",
+          "format": "[a-zA-Z0-9_\\-]+"
+        }
+      },
+      {
+        "name": "Description",
+        "required": false,
+        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#description",
+        "datatype": "string"
+      },
+      {
+        "name": "Target_Parameter_ID",
+        "required": true,
+        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#targetParameterReference",
+        "dc:description": "References the target node of the edge.",
+        "datatype": "string"
+      },
+      {
+        "name": "Source_Parameter_ID",
+        "required": true,
+        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#sourceParameterReference",
+        "dc:description": "References the source node of the edge.",
+        "datatype": "string"
+      },
+      {
+        "name": "Edge_Is_Directed",
+        "required": false,
+        "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#edgeIsDirected",
+        "dc:description": "Flag signaling whether the edge is directed or undirected.",
+        "datatype": {"base": "boolean", "format": "Yes|No"}
+      }
+    ]
+  }
+}

@@ -12,10 +12,10 @@ via [URL](https://en.wikipedia.org/wiki/URL) and [media type](https://en.wikiped
 Specification of URLs to access the media files is quite flexible:
 - Small amounts of media data may be included in a
   MediaTable directly storing a [data URI](https://en.wikipedia.org/wiki/Data_URI_scheme) as value
-  of [Download_URL](http://cldf.clld.org/v1.0/terms.rdf#downloadUrl).
+  of [downloadUrl](http://cldf.clld.org/v1.0/terms.rdf#downloadUrl).
 - It is also possible to package media files with the CLDF data and reference the files
   using relative [file URIs](https://en.wikipedia.org/wiki/File_URI_scheme) as value of
-  [Download_URL](http://cldf.clld.org/v1.0/terms.rdf#downloadUrl).
+  [downloadUrl](http://cldf.clld.org/v1.0/terms.rdf#downloadUrl).
 - If all media files are available from the same location, e.g. a file server, specifying
   the full URL for each item may unneccesarily inflate the dataset size. In this case,
   a `valueUrl` property on the MediaTable's `id` column can be used that specifies the
@@ -33,7 +33,16 @@ If a `MediaTable` contains a [Path_In_Zip](http://cldf.clld.org/v1.0/terms.rdf#p
 the value of a media item for this column is non-empty,
 - the URL MUST locate the containing Zip file,
 - the content retrieved when downloading the URL MUST be treated as Zip archive (i.e. as having media type `application/zip`) and
-- the value of the [Media_Type](http://cldf.clld.org/v1.0/terms.rdf#mediaType) column is understood as media type of the contained file.
+- the value of the [`mediaType`](http://cldf.clld.org/v1.0/terms.rdf#mediaType) column is understood as media type of the contained file.
+
+
+## Media types
+
+A `MediaTable` MUST contain a column of property `mediaType` which contains the [MIME type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)
+of each media resource. Datasets SHOULD make sure to use meaningful, standard MIME types to the extent possible,
+to guide automated interpretation of the content. E.g. [GeoJSON](https://geojson.org) files could be listed
+with `application/json` as `mediaType`, but the more specific [`application/geo+json`](https://datatracker.ietf.org/doc/html/rfc7946#section-12)
+should be preferred.
 
 
 ## Linking media items
@@ -47,3 +56,11 @@ Thus, for APiCS one would add a column with `propertyURL`
 to the `ContributionTable`, for Vanuatu Voices it would be added to the `FormTable`. Also,
 since audio recordings in Vanuatu Voices are provided in multiple media types, this
 reference could be made list-valued, thus short cutting the need for an association table.
+
+
+## Example
+
+[Phlorest](https://github.com/phlorest) phylogenies use a `MediaTable` to describe (and link to) NEXUS files which contain the
+the phylogenetic trees of a dataset encoded in the Newick format. The `MediaTable` of the 
+[Phlorest phylogeny derived from Atkinson 2006](https://doi.org/10.5281/zenodo.10149488) is described here:
+https://github.com/phlorest/atkinson2006/blob/v1.2/cldf/Generic-metadata.json#L220-L273

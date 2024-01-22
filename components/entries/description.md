@@ -6,13 +6,7 @@ each entry (a.k.a. headword, lemma, lemon's [LexicalEntry](http://lemon-model.ne
 
 ## Example
 
-See https://github.com/dictionaria/daakaka/blob/master/cldf/entries.csv
-
-```csv
-ID,Language_ID,Headword,Part_Of_Speech,1st_Person_Singular,2nd_Person_Singular,3rd_Person_Dual,3rd_Person_Singular,Dialectal_Variant,Encyclopedic_Information,Entry_IDs,Etymological_Source,Etymology,Lexical_Citation_Form,Paradigm,Reduplicated_Form,Usage
-a,bpa,a,dem,,,,,,,,,,,,,
-a_1,bpa,a,gram,,,,,,,,,,,,,
-a_2,bpa,a,intj,,,,,,,,,,,,,
-aa,bpa,aa,poss.pron,,,,,,,,,,,,,
-```
-
+The `EntryTable` of the [Daakaka dictionary](https://dictionaria.clld.org/contributions/daakaka#tabout) is described here: 
+https://github.com/dictionaria/daakaka/blob/v1.3/cldf/cldf-metadata.json#L45-L162
+Like most dictionaries collected in Dictionaria, it provides a lot more information for each entry
+than what is covered by the CLDF's default `EntryTable`, e.g. [encyclopedic information](https://dictionaria.clld.org/contributions/daakaka#twords2).

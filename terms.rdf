@@ -17,8 +17,10 @@
             The CLDF Ontology is an RDF vocabulary describing the dataset types, tables
             and columns specified in the CLDF standard.
         </rdfs:comment>
-        <owl:versionInfo  rdf:resource="http://cldf.clld.org/v1.2"/>
-        <owl:priorVersion  rdf:resource="http://cldf.clld.org/v1.1"/>
+        <owl:versionInfo  rdf:resource="http://cldf.clld.org/v1.3"/>
+        <owl:priorVersion  rdf:resource="http://cldf.clld.org/v1.2"/>
+        <owl:backwardCompatibleWith rdf:resource="http://cldf.clld.org/v1.2"/>
+        <owl:backwardCompatibleWith rdf:resource="http://cldf.clld.org/v1.1"/>
         <owl:backwardCompatibleWith rdf:resource="http://cldf.clld.org/v1.0"/>
         <foaf:homepage rdf:resource="http://cldf.clld.org/" />
     </owl:Ontology>
@@ -82,6 +84,25 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment" />
     </rdf:Property>
 
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#position" dc:type="generic-property">
+        <rdfs:comment rdf:parseType="Literal">
+            <p>
+                A position represents the placement of an item in a series or sequence of items.
+                Although an integer is the recommended datatype, any datatype that supports a total
+                ordering (where the order is transparent, such as alphabetic order for strings) is
+                acceptable. It is also possible to have a list-valued column for this property,
+                which can be useful for implementing multi-level orderings. In such cases, the
+                typical order for tuples is assumed.
+            </p>
+        </rdfs:comment>
+        <csvw:name>"Position"</csvw:name>
+        <csvw:separator>";"</csvw:separator>
+        <csvw:datatype>{"base": "string"}</csvw:datatype>
+        <rdfs:subPropertyOf rdf:resource="https://www.wikidata.org/wiki/Property:P1545" />
+        <rdfs:subPropertyOf rdf:resource="https://schema.org/position" />
+        <dc:hasVersion rdf:resource="http://cldf.clld.org/v1.3"/>
+    </rdf:Property>
+
     <!--
         Reference properties (aka foreign keys)
     -->
@@ -92,7 +113,7 @@
                 An identifier referencing a language either
             </p>
             <ul>
-                <li>by providing a foreign key into the LanguageTable or</li>
+                <li>by providing a foreign key to <code>LanguageTable</code> or</li>
                 <li>by using a known encoding scheme.</li>
             </ul>
         </rdfs:comment>
@@ -110,7 +131,7 @@
                 an example - either
             </p>
             <ul>
-                <li>by providing a foreign key into the LanguageTable or</li>
+                <li>by providing a foreign key to <code>LanguageTable</code> or</li>
                 <li>by using a known encoding scheme.</li>
             </ul>
         </rdfs:comment>
@@ -127,7 +148,7 @@
                 An identifier referencing a parameter either
             </p>
             <ul>
-                <li>by providing a foreign key into the ParameterTable or</li>
+                <li>by providing a foreign key to <code>ParameterTable</code> or</li>
                 <li>by using a known encoding scheme.</li>
             </ul>
         </rdfs:comment>
@@ -142,7 +163,7 @@
         <rdfs:comment rdf:parseType="Literal">
             <p>
                 An identifier referencing a code (aka category) description
-                by providing a foreign key into the CodeTable.
+                by providing a foreign key to <code>CodeTable</code>.
             </p>
         </rdfs:comment>
         <dc:references rdf:resource="#CodeTable"/>
@@ -155,8 +176,8 @@
                   dc:type="reference-property">
         <rdfs:comment rdf:parseType="Literal">
             <p>
-                An identifier referencing an example by providing a foreign key into the
-                ExampleTable.
+                An identifier referencing an example by providing a foreign key to
+                <code>ExampleTable</code>.
             </p>
         </rdfs:comment>
         <dc:references rdf:resource="#ExampleTable"/>
@@ -170,8 +191,7 @@
                   dc:type="reference-property">
         <rdfs:comment rdf:parseType="Literal">
             <p>
-                An identifier referencing a dictionary entry
-                by providing a foreign key into the EntryTable.
+                An identifier referencing a dictionary entry by providing a foreign key to <code>EntryTable</code>.
             </p>
         </rdfs:comment>
         <dc:references rdf:resource="#EntryTable"/>
@@ -186,7 +206,7 @@
         <rdfs:comment rdf:parseType="Literal">
             <p>
                 An identifier referencing a form
-                by providing a foreign key into the FormTable.
+                by providing a foreign key to <code>FormTable</code>.
             </p>
         </rdfs:comment>
         <dc:references rdf:resource="#FormTable"/>
@@ -200,7 +220,7 @@
         <rdfs:comment rdf:parseType="Literal">
             <p>
                 An identifier referencing the source form of a loanword
-                by providing a foreign key into the FormTable.
+                by providing a foreign key to <code>FormTable</code>.
             </p>
         </rdfs:comment>
         <dc:references rdf:resource="#FormTable"/>
@@ -214,13 +234,41 @@
         <rdfs:comment rdf:parseType="Literal">
             <p>
                 An identifier referencing a loanword
-                by providing a foreign key into the FormTable.
+                by providing a foreign key to <code>FormTable</code>.
             </p>
         </rdfs:comment>
         <dc:references rdf:resource="#FormTable"/>
         <csvw:name>"Target_Form_ID"</csvw:name>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/references" />
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Foreign_key" />
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#sourceParameterReference"
+                  dc:type="reference-property">
+        <rdfs:comment rdf:parseType="Literal">
+            <p>
+                An identifier referencing the source parameter of a parameter network edge.
+            </p>
+        </rdfs:comment>
+        <dc:references rdf:resource="#Parameter"/>
+        <csvw:name>"Source_Parameter_ID"</csvw:name>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/references" />
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Foreign_key" />
+        <dc:hasVersion rdf:resource="http://cldf.clld.org/v1.3"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#targetParameterReference"
+                  dc:type="reference-property">
+        <rdfs:comment rdf:parseType="Literal">
+            <p>
+                An identifier referencing the target parameter of a parameter network edge.
+            </p>
+        </rdfs:comment>
+        <dc:references rdf:resource="#Parameter"/>
+        <csvw:name>"Target_Parameter_ID"</csvw:name>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/references" />
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Foreign_key" />
+        <dc:hasVersion rdf:resource="http://cldf.clld.org/v1.3"/>
     </rdf:Property>
 
     <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#cognatesetReference"
@@ -230,7 +278,7 @@
                 An identifier referencing a cognateset either
             </p>
             <ul>
-                <li>by providing a foreign key into the CognatesetTable or</li>
+                <li>by providing a foreign key to <code>CognatesetTable</code> or</li>
                 <li>by using a known encoding scheme.</li>
             </ul>
         </rdfs:comment>
@@ -240,12 +288,26 @@
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Foreign_key" />
     </rdf:Property>
 
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#treeReference"
+                  dc:type="reference-property">
+        <rdfs:comment rdf:parseType="Literal">
+            <p>
+                An identifier referencing a language tree by providing a foreign key <code>TreeTable</code>.
+            </p>
+        </rdfs:comment>
+        <dc:references rdf:resource="#TreeTable"/>
+        <csvw:name>"Tree_ID"</csvw:name>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/references" />
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Foreign_key" />
+        <dc:hasVersion rdf:resource="http://cldf.clld.org/v1.3"/>
+    </rdf:Property>
+
     <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#mediaReference"
                   dc:type="reference-property">
         <rdfs:comment rdf:parseType="Literal">
             <p>
                 An identifier referencing a media resource
-                by providing a foreign key into the MediaTable
+                by providing a foreign key to <code>MediaTable</code>.
             </p>
         </rdfs:comment>
         <dc:references rdf:resource="#MediaTable"/>
@@ -255,12 +317,41 @@
         <dc:hasVersion rdf:resource="http://cldf.clld.org/v1.1"/>
     </rdf:Property>
 
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#speakerArea"
+                  dc:type="reference-property">
+        <rdfs:comment rdf:parseType="Literal">
+            <p>
+                An identifier referencing a media resource
+                by providing a foreign key to <code>MediaTable</code>.
+            </p>
+            <p>
+                This property can be used in <code>LanguageTable</code> to point to a media resource describing
+                the speaker area of a language, i.e. the geographic area where the speakers of the
+                language live.
+            </p>
+            <p>
+                The linked media resource may be an image of a map, depicting the area, or some other
+                multimedia content for human consumption. But it may also be a GeoJSON
+                resource (i.e. a media resource with <code>mediaType</code> <code>application/geo+json</code>).
+                In the latter case, the GeoJSON object MUST contain a feature with a geometry of type
+                <code>Polygon</code> or <code>Multipolygon</code> and a key <code>cldf:languageReference</code>
+                in its <code>properties</code> object with the linking language's <code>id</code> as
+                value.
+            </p>
+        </rdfs:comment>
+        <dc:references rdf:resource="#MediaTable"/>
+        <csvw:name>"Media_ID"</csvw:name>
+        <rdfs:subPropertyOf rdf:resource="http://cldf.clld.org/v1.0/terms.rdf#mediaReference" />
+        <rdfs:seeAlso rdf:resource="https://datatracker.ietf.org/doc/html/rfc7946" />
+        <dc:hasVersion rdf:resource="http://cldf.clld.org/v1.3"/>
+    </rdf:Property>
+
     <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#contributionReference"
                   dc:type="reference-property">
         <rdfs:comment rdf:parseType="Literal">
             <p>
                 An identifier referencing a contribution
-                by providing a foreign key into the ContributionTable
+                by providing a foreign key to <code>ContributionTable</code>.
             </p>
         </rdfs:comment>
         <dc:references rdf:resource="#ContributionTable"/>
@@ -276,7 +367,7 @@
             <p> A functional equivalent set is a group of strings from different languages that express similar function.
                 This is an identifier referencing a cognateset either
                 <ul>
-                    <li>by providing a foreign key into the FunctionalEquivalentsetTable or</li>
+                    <li>by providing a foreign key to <code>FunctionalEquivalentsetTable</code> or</li>
                     <li>by using a known encoding scheme.</li>
                 </ul>
             </p>
@@ -289,11 +380,16 @@
 
     <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#concepticonReference"
                   dc:type="reference-property">
-        <rdfs:comment>
-            A concept set groups a number of concept labels which are used in
-            different questionnaires and were judged to denote the same concept despite
-            potential differences among the concrete concept labels (be it their spelling,
-            or the language in which they were originally created).
+        <rdfs:comment rdf:parseType="Literal">
+            <p>
+                An identifier of a Concepticon concept set.
+            </p>
+            <p>
+                A concept set groups a number of concept labels which are used in
+                different questionnaires and were judged to denote the same concept despite
+                potential differences among the concrete concept labels (be it their spelling,
+                or the language in which they were originally created).
+            </p>
         </rdfs:comment>
         <csvw:name>"Concepticon_ID"</csvw:name>
         <csvw:datatype>{"base": "string", "format": "[0-9]+"}</csvw:datatype>
@@ -306,6 +402,14 @@
     <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#cltsReference"
                   dc:type="reference-property">
         <rdfs:comment rdf:parseType="Literal">
+            <p>
+                An identifier of a sound described in the CLTS dataset.
+            </p>
+            <p>
+                A sound identifier is the last path component of the sound's URL at
+                https://clts.clld.org/parameters , e.g. <code>short_neutral_tone</code> for
+                <code>https://clts.clld.org/parameters/short_neutral_tone</code>.
+            </p>
             <p>
                 References a sound in the Cross-Linguistic Transcription Systems database. Suitable to
                 mark parameters as phonemes, and consequently values as elements of phoneme inventories.
@@ -328,8 +432,11 @@
                   dc:type="reference-property">
         <rdfs:comment rdf:parseType="Literal">
             <p>
-                References a taxonomic unit in GBIF's Backbone Taxonomy. Can be used in for example in a
-                ParameterTable to mark a lexical concept as biological species. E.g.
+                A numeric identifier for a unit in GBIF's Backbone Taxonomy.
+            </p>
+            <p>
+                References a taxonomic unit in GBIF's Backbone Taxonomy. Can be used for example in
+                <code>ParameterTable</code> to mark a lexical concept as biological species. E.g.
                 <a href="https://www.gbif.org/species/5219404">5219404</a>.
             </p>
         </rdfs:comment>
@@ -356,18 +463,32 @@
 
     <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#glottocode" dc:type="language-property">
         <rdfs:comment rdf:parseType="Literal">
-            <p>A <a href="http://glottolog.org">Glottolog</a> code denoting a languoid.</p>
+            <p>A Glottocode denoting a languoid described in <a href="http://glottolog.org">Glottolog</a>.</p>
         </rdfs:comment>
         <csvw:name>"Glottocode"</csvw:name>
         <csvw:datatype>{"base": "string", "format": "[a-z0-9]{4}[1-9][0-9]{3}"}</csvw:datatype>
         <csvw:valueUrl>"http://glottolog.org/resource/languoid/id/{Glottocode}"</csvw:valueUrl>
-        <rdfs:seeAlso rdf:resource="http://glottolog.org" />
+        <rdfs:seeAlso rdf:resource="https://content.iospress.com/articles/semantic-web/sw212843" />
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier" />
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#parentLanguageGlottocode" dc:type="language-property">
+        <rdfs:comment rdf:parseType="Literal">
+            <p>
+                A <a href="http://glottolog.org">Glottocode</a> denoting the language-level languoid that is
+                a parent languoid of the languoid described by the row in <code>LanguageTable</code>.
+            </p>
+        </rdfs:comment>
+        <csvw:name>"Parent_Language_Glottocode"</csvw:name>
+        <csvw:datatype>{"base": "string", "format": "[a-z0-9]{4}[1-9][0-9]{3}"}</csvw:datatype>
+        <csvw:valueUrl>"http://glottolog.org/resource/languoid/id/{Glottocode}"</csvw:valueUrl>
+        <rdfs:seeAlso rdf:resource="https://glottolog.org/glottolog/glottologinformation" />
+        <dc:hasVersion rdf:resource="http://cldf.clld.org/v1.3"/>
     </rdf:Property>
 
     <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#macroarea" dc:type="language-property">
         <rdfs:comment rdf:parseType="Literal">
-            <p>A macroarea as defined by <a href="http://glottolog.org">Glottolog</a>.</p>
+            <p>The name of a macroarea as defined by <a href="http://glottolog.org">Glottolog</a>.</p>
         </rdfs:comment>
         <csvw:name>"Macroarea"</csvw:name>
         <rdfs:seeAlso rdf:resource="http://glottolog.org/meta/glossary#macroarea" />
@@ -408,7 +529,7 @@
                 <a href="https://www.w3.org/TR/tabular-metadata/#columns">CSVW column description</a>.
                 This column specification may be used by CLDF consumers to read a parameter's value as typed data.</p>
             <p>Note that a CSVW datatye description is not sufficient, because parsing a string value
-                must also be informed by the column properties "null" and "separator".</p>
+                must also be informed by the column properties <code>null</code> and <code>separator</code>.</p>
         </rdfs:comment>
         <csvw:name>"ColumnSpec"</csvw:name>
         <csvw:datatype>{"base": "json"}</csvw:datatype>
@@ -422,7 +543,7 @@
     -->
     <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#contributor" dc:type="contribution-property">
         <rdfs:comment rdf:parseType="Literal">
-            <p>Contributor(s) to a citeable unit of a dataset.</p>
+            <p>Names of contributor(s) to a citeable unit of a dataset.</p>
         </rdfs:comment>
         <csvw:name>"Contributor"</csvw:name>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/creator" />
@@ -444,14 +565,27 @@
     </rdf:Property>
 
     <!--
+        Parameter network properties
+    -->
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#edgeIsDirected" dc:type="network-property">
+        <rdfs:comment rdf:parseType="Literal">
+            <p>Flag signaling whether an edge in a graph is directed or not.</p>
+        </rdfs:comment>
+        <csvw:name>"Edge_Is_Directed"</csvw:name>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Mixed_graph" />
+        <csvw:datatype>{"base": "boolean", "format": "Yes|No"}</csvw:datatype>
+        <dc:hasVersion rdf:resource="http://cldf.clld.org/v1.3"/>
+    </rdf:Property>
+
+    <!--
         Tree properties
     -->
     <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#treeType" dc:type="tree-property">
         <rdfs:comment rdf:parseType="Literal">
-            <p>The type of a tree ("summary" or "sample") describes how the tree can be used.
-                Summary (or consensus) trees can be analysed in isolation and should have type "summary".
+            <p>The type of a tree (<code>summary</code> or <code>sample</code>) describes how the tree can be used.
+                Summary (or consensus) trees can be analysed in isolation and should have type <code>summary</code>.
                 Trees resulting from a method that creates multiple trees, and thus should be analysed as a whole
-                (or sampled appropriately) should have type "sample".</p>
+                (or sampled appropriately) should have type <code>sample</code>.</p>
         </rdfs:comment>
         <csvw:name>"Tree_Type"</csvw:name>
         <csvw:datatype>{"base": "string", "format": "summary|sample"}</csvw:datatype>
@@ -460,7 +594,7 @@
 
     <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#treeIsRooted" dc:type="tree-property">
         <rdfs:comment rdf:parseType="Literal">
-            <p>Whether a tree is rooted or not.</p>
+            <p>Flag signaling whether a tree is rooted or not.</p>
         </rdfs:comment>
         <csvw:name>"Tree_Is_Rooted"</csvw:name>
         <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Tree_(graph_theory)#Rooted_tree" />
@@ -563,6 +697,56 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/hasTranslationLine" />
     </rdf:Property>
 
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#lgrConformance" dc:type="example-property">
+        <rdfs:comment rdf:parseType="Literal">
+            <p>
+                The level of conformance of the example with the Leipzig Glossing Rules.
+            </p>
+            <p>
+                The following levels are distinguished:
+            </p>
+            <ol>
+                <li><code>WORD_ALIGNED</code>: Analyzed text and glosses obey LGR rule 1, "word-by-word alignment".</li>
+                <li><code>MORPHEME_ALIGNED</code>: Analyzed text and glosses obey LGR rule 2, "morpheme-by-morpheme correspondence".</li>
+            </ol>
+            <p>
+                No information regarding LGR conformance should be signaled with an empty string, i.e.
+                <code>null</code> value for the property.
+            </p>
+            <p>
+                While more information is needed to assess how to interpret IGT - e.g. whether rule 4a is
+                followed to group gloss elements for unsegmentable morpheme - the two levels considered here
+                are essential for decisions about automated re-use.
+            </p>
+        </rdfs:comment>
+        <rdfs:seeAlso rdf:resource="https://doi.org/10.5281/zenodo.10275705" />
+        <csvw:name>"LGR_Conformance"</csvw:name>
+        <csvw:datatype>{"base": "string", "format": "WORD_ALIGNED|MORPHEME_ALIGNED"}</csvw:datatype>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/conformsTo" />
+        <dc:hasVersion rdf:resource="http://cldf.clld.org/v1.3"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#grammaticalityJudgement" dc:type="example-property">
+        <rdfs:comment rdf:parseType="Literal">
+            <p>
+                A judgement about the (un)grammaticality of the example.
+            </p>
+            <p>
+                A non-<code>null</code> value for this property flags an example as ungrammatical
+                or unacceptable. The actual string value is the typographical symbol(s) or text which is to be
+                used to mark the example when formatting it in text (e.g. <code>*</code>).
+            </p>
+            <p>
+                <strong>Note:</strong> Ungrammatical examples should link (via <code>languageReference</code>)
+                to special item(s) in <code>LanguageTable</code> with an empty <code>Glottocode</code> to
+                prevent data aggregators from inadvertently assigning such an example to a proper language
+                (if they fail to honour <code>grammaticalityJudgement</code>).
+            </p>
+        </rdfs:comment>
+        <csvw:name>"Grammaticality_Judgement"</csvw:name>
+        <dc:hasVersion rdf:resource="http://cldf.clld.org/v1.3"/>
+    </rdf:Property>
+
     <!--
         Dictionary entry properties
     -->
@@ -579,13 +763,13 @@
     <rdf:Property rdf:about="http://cldf.clld.org/v1.0/terms.rdf#partOfSpeech" dc:type="entry-property">
         <rdfs:comment rdf:parseType="Literal">
             <p>
-                The part-of-speech of dictionary entry.
+                The part-of-speech of a dictionary entry.
             </p>
         </rdfs:comment>
         <csvw:name>"Part_Of_Speech"</csvw:name>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/PartOfSpeechProperty" />
     </rdf:Property>
-    
+
     <!--
         Value properties
     -->
@@ -597,8 +781,8 @@
             </p>
             <p>
                 For features with a limited, discrete set of valid values (a.k.a. categorical variables)
-                it is recommended to relate items of a ValueTable to the respective code
-                in the CodeTable.
+                it is recommended to relate items of <code>ValueTable</code> to the respective code
+                in <code>CodeTable</code>.
             </p>
         </rdfs:comment>
         <csvw:name>"Value"</csvw:name>
@@ -734,7 +918,7 @@
         <rdfs:comment rdf:parseType="Literal">
             <p>
                 A generic CLDF dataset; i.e. a set of cross-linguistic data which does
-                not fit any of the established CLDF modules.
+                not fit any of the other CLDF modules.
             </p>
         </rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
@@ -780,13 +964,24 @@
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
     </rdfs:Class>
 
+    <rdfs:Class rdf:about="http://cldf.clld.org/v1.0/terms.rdf#TextCorpus" dc:type="module">
+        <csvw:name xml:lang="en">"TextCorpus"</csvw:name>
+        <rdfs:comment rdf:parseType="Literal">
+            <p>A dataset according to the
+                <a href="https://github.com/cldf/cldf/tree/master/modules/TextCorpus">CLDF Text Corpus</a>
+                specification</p>
+        </rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <dc:hasVersion rdf:resource="http://cldf.clld.org/v1.3"/>
+    </rdfs:Class>
+
     <!--
         CLDF components
     -->
     <rdfs:Class rdf:about="http://cldf.clld.org/v1.0/terms.rdf#ValueTable" dc:type="table">
         <csvw:name xml:lang="en">"ValueTable"</csvw:name>
         <rdfs:comment>
-            The table of value assignments of a CLDF Structure Dataset
+            The table of value assignments of a <code>Structure Dataset</code>
         </rdfs:comment>
         <csvw:url>"values.csv"</csvw:url>
     </rdfs:Class>
@@ -804,7 +999,7 @@
     <rdfs:Class rdf:about="http://cldf.clld.org/v1.0/terms.rdf#ExampleTable" dc:type="table">
         <csvw:name xml:lang="en">"ExampleTable"</csvw:name>
         <rdfs:comment>
-            The table of examples provided with a CLDF dataset
+            The table of text examples provided with a CLDF dataset
         </rdfs:comment>
         <csvw:url>"examples.csv"</csvw:url>
     </rdfs:Class>
@@ -931,6 +1126,16 @@
             as tree structure with items of the LanguageTable as leaf nodes.
         </rdfs:comment>
         <csvw:url>"trees.csv"</csvw:url>
+        <dc:hasVersion rdf:resource="http://cldf.clld.org/v1.2"/>
+    </rdfs:Class>
+
+    <rdfs:Class rdf:about="http://cldf.clld.org/v1.0/terms.rdf#ParameterNetwork" dc:type="table">
+        <csvw:name xml:lang="en">"ParameterNetwork"</csvw:name>
+        <rdfs:comment>
+            A table listing edges of a parameter network, i.e. a graph with parameters as nodes.
+        </rdfs:comment>
+        <csvw:url>"parameter_network.csv"</csvw:url>
+        <dc:hasVersion rdf:resource="http://cldf.clld.org/v1.3"/>
     </rdfs:Class>
 
 </rdf:RDF>
