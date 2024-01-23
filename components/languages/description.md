@@ -54,3 +54,8 @@ This table is described here: https://github.com/glottolog/glottolog-cldf/blob/v
 > [!NOTE]
 > The *Family_ID* column in this table is a so-called "self-referencing foreign key", i.e. a foreign key
 > that references the same table.
+
+An example of a dataset which provides speaker area information is 
+[Speaker areas for Uralic languages as CLDF dataset derived from Rantanen et al. "Geographical database of the Uralic languages"](https://doi.org/10.5281/zenodo.10555488).
+As nice side-effect of just referencing the geo information in a proper GeoJSON file, this file
+is now part of the CLDF dataset **and** rendered as preview on GitHub: https://github.com/cldf-datasets/rantanenurageo/blob/main/cldf/speaker_areas.geojson
